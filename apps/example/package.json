@@ -1,0 +1,17 @@
+{
+  "name": "@demo-ds/example",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node -e \"console.log('example placeholder tests passed')\"",
+    "lint": "node -e \"console.log('example placeholder lint passed')\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "dev": "node -e \"console.log('Example app will be added in a later task')\""
+  },
+  "dependencies": {
+    "@demo-ds/components": "workspace:*",
+    "@demo-ds/mantine-theme": "workspace:*"
+  }
+}

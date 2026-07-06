@@ -6,7 +6,7 @@ The structure, token categories, token types, light/dark theme split, spacing, c
 
 Sanitisation applied:
 
-- Removed all `$extensions` blocks and design-tool IDs.
+- Removed source-tool metadata blocks and design-tool IDs.
 - Replaced source colour values with synthetic fixture palettes.
 - Renamed brand-specific typography labels to generic display labels.
 - Renamed payment-logo and some domain-specific icon labels to generic terms.

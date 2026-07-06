@@ -1,0 +1,18 @@
+{
+  "name": "@demo-ds/storybook",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node -e \"console.log('storybook placeholder tests passed')\"",
+    "lint": "node -e \"console.log('storybook placeholder lint passed')\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "storybook": "node -e \"console.log('Storybook will be added in a later task')\""
+  },
+  "dependencies": {
+    "@demo-ds/components": "workspace:*",
+    "@demo-ds/mantine-theme": "workspace:*",
+    "@demo-ds/tokens": "workspace:*"
+  }
+}

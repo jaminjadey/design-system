@@ -1,0 +1,4497 @@
+{
+  "$schema": "https://example.local/schemas/canonical-tokens.schema.json",
+  "meta": {
+    "name": "demo-design-system-tokens",
+    "version": "0.1.0",
+    "generatedAt": "1970-01-01T00:00:00.000Z",
+    "source": "sanitised-design-token-fixtures",
+    "generator": "@demo-ds/token-pipeline"
+  },
+  "modes": [
+    "light",
+    "dark"
+  ],
+  "tokens": {
+    "color": {
+      "primitive": {
+        "accent": {
+          "a": {
+            "5": {
+              "name": "color.primitive.accent.a.5",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "a",
+                "5"
+              ],
+              "type": "color",
+              "value": "#F5F3FF",
+              "cssVariable": "--ds-color-primitive-accent-a-5",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent A.5"
+              }
+            },
+            "10": {
+              "name": "color.primitive.accent.a.10",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "a",
+                "10"
+              ],
+              "type": "color",
+              "value": "#EDE9FE",
+              "cssVariable": "--ds-color-primitive-accent-a-10",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent A.10"
+              }
+            },
+            "20": {
+              "name": "color.primitive.accent.a.20",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "a",
+                "20"
+              ],
+              "type": "color",
+              "value": "#DDD6FE",
+              "cssVariable": "--ds-color-primitive-accent-a-20",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent A.20"
+              }
+            },
+            "30": {
+              "name": "color.primitive.accent.a.30",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "a",
+                "30"
+              ],
+              "type": "color",
+              "value": "#C4B5FD",
+              "cssVariable": "--ds-color-primitive-accent-a-30",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent A.30"
+              }
+            },
+            "40": {
+              "name": "color.primitive.accent.a.40",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "a",
+                "40"
+              ],
+              "type": "color",
+              "value": "#A78BFA",
+              "cssVariable": "--ds-color-primitive-accent-a-40",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent A.40"
+              }
+            },
+            "50": {
+              "name": "color.primitive.accent.a.50",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "a",
+                "50"
+              ],
+              "type": "color",
+              "value": "#8B5CF6",
+              "cssVariable": "--ds-color-primitive-accent-a-50",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent A.50"
+              }
+            },
+            "60": {
+              "name": "color.primitive.accent.a.60",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "a",
+                "60"
+              ],
+              "type": "color",
+              "value": "#7C3AED",
+              "cssVariable": "--ds-color-primitive-accent-a-60",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent A.60"
+              }
+            },
+            "70": {
+              "name": "color.primitive.accent.a.70",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "a",
+                "70"
+              ],
+              "type": "color",
+              "value": "#6D28D9",
+              "cssVariable": "--ds-color-primitive-accent-a-70",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent A.70"
+              }
+            },
+            "80": {
+              "name": "color.primitive.accent.a.80",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "a",
+                "80"
+              ],
+              "type": "color",
+              "value": "#5B21B6",
+              "cssVariable": "--ds-color-primitive-accent-a-80",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent A.80"
+              }
+            },
+            "90": {
+              "name": "color.primitive.accent.a.90",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "a",
+                "90"
+              ],
+              "type": "color",
+              "value": "#4C1D95",
+              "cssVariable": "--ds-color-primitive-accent-a-90",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent A.90"
+              }
+            },
+            "100": {
+              "name": "color.primitive.accent.a.100",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "a",
+                "100"
+              ],
+              "type": "color",
+              "value": "#2E1065",
+              "cssVariable": "--ds-color-primitive-accent-a-100",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent A.100"
+              }
+            }
+          },
+          "b": {
+            "5": {
+              "name": "color.primitive.accent.b.5",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "b",
+                "5"
+              ],
+              "type": "color",
+              "value": "#FFF7ED",
+              "cssVariable": "--ds-color-primitive-accent-b-5",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent B.5"
+              }
+            },
+            "10": {
+              "name": "color.primitive.accent.b.10",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "b",
+                "10"
+              ],
+              "type": "color",
+              "value": "#FFEDD5",
+              "cssVariable": "--ds-color-primitive-accent-b-10",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent B.10"
+              }
+            },
+            "20": {
+              "name": "color.primitive.accent.b.20",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "b",
+                "20"
+              ],
+              "type": "color",
+              "value": "#FED7AA",
+              "cssVariable": "--ds-color-primitive-accent-b-20",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent B.20"
+              }
+            },
+            "30": {
+              "name": "color.primitive.accent.b.30",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "b",
+                "30"
+              ],
+              "type": "color",
+              "value": "#FDBA74",
+              "cssVariable": "--ds-color-primitive-accent-b-30",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent B.30"
+              }
+            },
+            "40": {
+              "name": "color.primitive.accent.b.40",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "b",
+                "40"
+              ],
+              "type": "color",
+              "value": "#FB923C",
+              "cssVariable": "--ds-color-primitive-accent-b-40",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent B.40"
+              }
+            },
+            "50": {
+              "name": "color.primitive.accent.b.50",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "b",
+                "50"
+              ],
+              "type": "color",
+              "value": "#F97316",
+              "cssVariable": "--ds-color-primitive-accent-b-50",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent B.50"
+              }
+            },
+            "60": {
+              "name": "color.primitive.accent.b.60",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "b",
+                "60"
+              ],
+              "type": "color",
+              "value": "#EA580C",
+              "cssVariable": "--ds-color-primitive-accent-b-60",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent B.60"
+              }
+            },
+            "70": {
+              "name": "color.primitive.accent.b.70",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "b",
+                "70"
+              ],
+              "type": "color",
+              "value": "#C2410C",
+              "cssVariable": "--ds-color-primitive-accent-b-70",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent B.70"
+              }
+            }
+          },
+          "c": {
+            "5": {
+              "name": "color.primitive.accent.c.5",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "c",
+                "5"
+              ],
+              "type": "color",
+              "value": "#F7FEE7",
+              "cssVariable": "--ds-color-primitive-accent-c-5",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent C.5"
+              }
+            },
+            "10": {
+              "name": "color.primitive.accent.c.10",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "c",
+                "10"
+              ],
+              "type": "color",
+              "value": "#ECFCCB",
+              "cssVariable": "--ds-color-primitive-accent-c-10",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent C.10"
+              }
+            },
+            "20": {
+              "name": "color.primitive.accent.c.20",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "c",
+                "20"
+              ],
+              "type": "color",
+              "value": "#D9F99D",
+              "cssVariable": "--ds-color-primitive-accent-c-20",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent C.20"
+              }
+            },
+            "30": {
+              "name": "color.primitive.accent.c.30",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "c",
+                "30"
+              ],
+              "type": "color",
+              "value": "#BEF264",
+              "cssVariable": "--ds-color-primitive-accent-c-30",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent C.30"
+              }
+            },
+            "40": {
+              "name": "color.primitive.accent.c.40",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "c",
+                "40"
+              ],
+              "type": "color",
+              "value": "#A3E635",
+              "cssVariable": "--ds-color-primitive-accent-c-40",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent C.40"
+              }
+            },
+            "50": {
+              "name": "color.primitive.accent.c.50",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "c",
+                "50"
+              ],
+              "type": "color",
+              "value": "#84CC16",
+              "cssVariable": "--ds-color-primitive-accent-c-50",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent C.50"
+              }
+            },
+            "60": {
+              "name": "color.primitive.accent.c.60",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "c",
+                "60"
+              ],
+              "type": "color",
+              "value": "#65A30D",
+              "cssVariable": "--ds-color-primitive-accent-c-60",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent C.60"
+              }
+            },
+            "70": {
+              "name": "color.primitive.accent.c.70",
+              "path": [
+                "color",
+                "primitive",
+                "accent",
+                "c",
+                "70"
+              ],
+              "type": "color",
+              "value": "#4D7C0F",
+              "cssVariable": "--ds-color-primitive-accent-c-70",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Accent C.70"
+              }
+            }
+          },
+          "d": {
+            "accent": {
+              "d": {
+                "name": "color.primitive.accent.d.accent.d",
+                "path": [
+                  "color",
+                  "primitive",
+                  "accent",
+                  "d",
+                  "accent",
+                  "d"
+                ],
+                "type": "color",
+                "value": "#E0F2FE",
+                "cssVariable": "--ds-color-primitive-accent-d-accent-d",
+                "source": {
+                  "file": "primitives/Default.tokens.json",
+                  "path": "Accent D.Accent D"
+                }
+              }
+            }
+          }
+        },
+        "base": {
+          "black": {
+            "name": "color.primitive.base.black",
+            "path": [
+              "color",
+              "primitive",
+              "base",
+              "black"
+            ],
+            "type": "color",
+            "value": "#111827",
+            "cssVariable": "--ds-color-primitive-base-black",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Base colours.Black"
+            }
+          },
+          "surface": {
+            "subtle": {
+              "name": "color.primitive.base.surface.subtle",
+              "path": [
+                "color",
+                "primitive",
+                "base",
+                "surface",
+                "subtle"
+              ],
+              "type": "color",
+              "value": "#F8FAFC",
+              "cssVariable": "--ds-color-primitive-base-surface-subtle",
+              "source": {
+                "file": "primitives/Default.tokens.json",
+                "path": "Base colours.Surface subtle"
+              }
+            }
+          },
+          "white": {
+            "name": "color.primitive.base.white",
+            "path": [
+              "color",
+              "primitive",
+              "base",
+              "white"
+            ],
+            "type": "color",
+            "value": "#FDFDFD",
+            "cssVariable": "--ds-color-primitive-base-white",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Base colours.White"
+            }
+          }
+        },
+        "danger": {
+          "5": {
+            "name": "color.primitive.danger.5",
+            "path": [
+              "color",
+              "primitive",
+              "danger",
+              "5"
+            ],
+            "type": "color",
+            "value": "#FEF2F2",
+            "cssVariable": "--ds-color-primitive-danger-5",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Danger.5"
+            }
+          },
+          "10": {
+            "name": "color.primitive.danger.10",
+            "path": [
+              "color",
+              "primitive",
+              "danger",
+              "10"
+            ],
+            "type": "color",
+            "value": "#FEE2E2",
+            "cssVariable": "--ds-color-primitive-danger-10",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Danger.10"
+            }
+          },
+          "20": {
+            "name": "color.primitive.danger.20",
+            "path": [
+              "color",
+              "primitive",
+              "danger",
+              "20"
+            ],
+            "type": "color",
+            "value": "#FECACA",
+            "cssVariable": "--ds-color-primitive-danger-20",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Danger.20"
+            }
+          },
+          "30": {
+            "name": "color.primitive.danger.30",
+            "path": [
+              "color",
+              "primitive",
+              "danger",
+              "30"
+            ],
+            "type": "color",
+            "value": "#FCA5A5",
+            "cssVariable": "--ds-color-primitive-danger-30",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Danger.30"
+            }
+          },
+          "40": {
+            "name": "color.primitive.danger.40",
+            "path": [
+              "color",
+              "primitive",
+              "danger",
+              "40"
+            ],
+            "type": "color",
+            "value": "#F87171",
+            "cssVariable": "--ds-color-primitive-danger-40",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Danger.40"
+            }
+          },
+          "50": {
+            "name": "color.primitive.danger.50",
+            "path": [
+              "color",
+              "primitive",
+              "danger",
+              "50"
+            ],
+            "type": "color",
+            "value": "#EF4444",
+            "cssVariable": "--ds-color-primitive-danger-50",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Danger.50"
+            }
+          },
+          "60": {
+            "name": "color.primitive.danger.60",
+            "path": [
+              "color",
+              "primitive",
+              "danger",
+              "60"
+            ],
+            "type": "color",
+            "value": "#DC2626",
+            "cssVariable": "--ds-color-primitive-danger-60",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Danger.60"
+            }
+          },
+          "70": {
+            "name": "color.primitive.danger.70",
+            "path": [
+              "color",
+              "primitive",
+              "danger",
+              "70"
+            ],
+            "type": "color",
+            "value": "#B91C1C",
+            "cssVariable": "--ds-color-primitive-danger-70",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Danger.70"
+            }
+          },
+          "80": {
+            "name": "color.primitive.danger.80",
+            "path": [
+              "color",
+              "primitive",
+              "danger",
+              "80"
+            ],
+            "type": "color",
+            "value": "#991B1B",
+            "cssVariable": "--ds-color-primitive-danger-80",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Danger.80"
+            }
+          },
+          "90": {
+            "name": "color.primitive.danger.90",
+            "path": [
+              "color",
+              "primitive",
+              "danger",
+              "90"
+            ],
+            "type": "color",
+            "value": "#7F1D1D",
+            "cssVariable": "--ds-color-primitive-danger-90",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Danger.90"
+            }
+          },
+          "100": {
+            "name": "color.primitive.danger.100",
+            "path": [
+              "color",
+              "primitive",
+              "danger",
+              "100"
+            ],
+            "type": "color",
+            "value": "#450A0A",
+            "cssVariable": "--ds-color-primitive-danger-100",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Danger.100"
+            }
+          }
+        },
+        "neutral": {
+          "5": {
+            "name": "color.primitive.neutral.5",
+            "path": [
+              "color",
+              "primitive",
+              "neutral",
+              "5"
+            ],
+            "type": "color",
+            "value": "#F8FAFC",
+            "cssVariable": "--ds-color-primitive-neutral-5",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Neutral.5"
+            }
+          },
+          "10": {
+            "name": "color.primitive.neutral.10",
+            "path": [
+              "color",
+              "primitive",
+              "neutral",
+              "10"
+            ],
+            "type": "color",
+            "value": "#F1F5F9",
+            "cssVariable": "--ds-color-primitive-neutral-10",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Neutral.10"
+            }
+          },
+          "20": {
+            "name": "color.primitive.neutral.20",
+            "path": [
+              "color",
+              "primitive",
+              "neutral",
+              "20"
+            ],
+            "type": "color",
+            "value": "#E2E8F0",
+            "cssVariable": "--ds-color-primitive-neutral-20",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Neutral.20"
+            }
+          },
+          "30": {
+            "name": "color.primitive.neutral.30",
+            "path": [
+              "color",
+              "primitive",
+              "neutral",
+              "30"
+            ],
+            "type": "color",
+            "value": "#CBD5E1",
+            "cssVariable": "--ds-color-primitive-neutral-30",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Neutral.30"
+            }
+          },
+          "40": {
+            "name": "color.primitive.neutral.40",
+            "path": [
+              "color",
+              "primitive",
+              "neutral",
+              "40"
+            ],
+            "type": "color",
+            "value": "#94A3B8",
+            "cssVariable": "--ds-color-primitive-neutral-40",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Neutral.40"
+            }
+          },
+          "50": {
+            "name": "color.primitive.neutral.50",
+            "path": [
+              "color",
+              "primitive",
+              "neutral",
+              "50"
+            ],
+            "type": "color",
+            "value": "#64748B",
+            "cssVariable": "--ds-color-primitive-neutral-50",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Neutral.50"
+            }
+          },
+          "60": {
+            "name": "color.primitive.neutral.60",
+            "path": [
+              "color",
+              "primitive",
+              "neutral",
+              "60"
+            ],
+            "type": "color",
+            "value": "#475569",
+            "cssVariable": "--ds-color-primitive-neutral-60",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Neutral.60"
+            }
+          },
+          "70": {
+            "name": "color.primitive.neutral.70",
+            "path": [
+              "color",
+              "primitive",
+              "neutral",
+              "70"
+            ],
+            "type": "color",
+            "value": "#334155",
+            "cssVariable": "--ds-color-primitive-neutral-70",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Neutral.70"
+            }
+          },
+          "80": {
+            "name": "color.primitive.neutral.80",
+            "path": [
+              "color",
+              "primitive",
+              "neutral",
+              "80"
+            ],
+            "type": "color",
+            "value": "#1E293B",
+            "cssVariable": "--ds-color-primitive-neutral-80",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Neutral.80"
+            }
+          },
+          "90": {
+            "name": "color.primitive.neutral.90",
+            "path": [
+              "color",
+              "primitive",
+              "neutral",
+              "90"
+            ],
+            "type": "color",
+            "value": "#0F172A",
+            "cssVariable": "--ds-color-primitive-neutral-90",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Neutral.90"
+            }
+          },
+          "100": {
+            "name": "color.primitive.neutral.100",
+            "path": [
+              "color",
+              "primitive",
+              "neutral",
+              "100"
+            ],
+            "type": "color",
+            "value": "#020617",
+            "cssVariable": "--ds-color-primitive-neutral-100",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Neutral.100"
+            }
+          }
+        },
+        "primary": {
+          "5": {
+            "name": "color.primitive.primary.5",
+            "path": [
+              "color",
+              "primitive",
+              "primary",
+              "5"
+            ],
+            "type": "color",
+            "value": "#ECFEFF",
+            "cssVariable": "--ds-color-primitive-primary-5",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Primary.5"
+            }
+          },
+          "10": {
+            "name": "color.primitive.primary.10",
+            "path": [
+              "color",
+              "primitive",
+              "primary",
+              "10"
+            ],
+            "type": "color",
+            "value": "#CFFAFE",
+            "cssVariable": "--ds-color-primitive-primary-10",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Primary.10"
+            }
+          },
+          "20": {
+            "name": "color.primitive.primary.20",
+            "path": [
+              "color",
+              "primitive",
+              "primary",
+              "20"
+            ],
+            "type": "color",
+            "value": "#A5F3FC",
+            "cssVariable": "--ds-color-primitive-primary-20",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Primary.20"
+            }
+          },
+          "30": {
+            "name": "color.primitive.primary.30",
+            "path": [
+              "color",
+              "primitive",
+              "primary",
+              "30"
+            ],
+            "type": "color",
+            "value": "#67E8F9",
+            "cssVariable": "--ds-color-primitive-primary-30",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Primary.30"
+            }
+          },
+          "40": {
+            "name": "color.primitive.primary.40",
+            "path": [
+              "color",
+              "primitive",
+              "primary",
+              "40"
+            ],
+            "type": "color",
+            "value": "#22D3EE",
+            "cssVariable": "--ds-color-primitive-primary-40",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Primary.40"
+            }
+          },
+          "50": {
+            "name": "color.primitive.primary.50",
+            "path": [
+              "color",
+              "primitive",
+              "primary",
+              "50"
+            ],
+            "type": "color",
+            "value": "#06B6D4",
+            "cssVariable": "--ds-color-primitive-primary-50",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Primary.50"
+            }
+          },
+          "60": {
+            "name": "color.primitive.primary.60",
+            "path": [
+              "color",
+              "primitive",
+              "primary",
+              "60"
+            ],
+            "type": "color",
+            "value": "#0891B2",
+            "cssVariable": "--ds-color-primitive-primary-60",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Primary.60"
+            }
+          },
+          "70": {
+            "name": "color.primitive.primary.70",
+            "path": [
+              "color",
+              "primitive",
+              "primary",
+              "70"
+            ],
+            "type": "color",
+            "value": "#0E7490",
+            "cssVariable": "--ds-color-primitive-primary-70",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Primary.70"
+            }
+          },
+          "80": {
+            "name": "color.primitive.primary.80",
+            "path": [
+              "color",
+              "primitive",
+              "primary",
+              "80"
+            ],
+            "type": "color",
+            "value": "#155E75",
+            "cssVariable": "--ds-color-primitive-primary-80",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Primary.80"
+            }
+          },
+          "90": {
+            "name": "color.primitive.primary.90",
+            "path": [
+              "color",
+              "primitive",
+              "primary",
+              "90"
+            ],
+            "type": "color",
+            "value": "#164E63",
+            "cssVariable": "--ds-color-primitive-primary-90",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Primary.90"
+            }
+          },
+          "100": {
+            "name": "color.primitive.primary.100",
+            "path": [
+              "color",
+              "primitive",
+              "primary",
+              "100"
+            ],
+            "type": "color",
+            "value": "#083344",
+            "cssVariable": "--ds-color-primitive-primary-100",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Primary.100"
+            }
+          }
+        },
+        "success": {
+          "5": {
+            "name": "color.primitive.success.5",
+            "path": [
+              "color",
+              "primitive",
+              "success",
+              "5"
+            ],
+            "type": "color",
+            "value": "#F0FDF4",
+            "cssVariable": "--ds-color-primitive-success-5",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Success.5"
+            }
+          },
+          "10": {
+            "name": "color.primitive.success.10",
+            "path": [
+              "color",
+              "primitive",
+              "success",
+              "10"
+            ],
+            "type": "color",
+            "value": "#DCFCE7",
+            "cssVariable": "--ds-color-primitive-success-10",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Success.10"
+            }
+          },
+          "20": {
+            "name": "color.primitive.success.20",
+            "path": [
+              "color",
+              "primitive",
+              "success",
+              "20"
+            ],
+            "type": "color",
+            "value": "#BBF7D0",
+            "cssVariable": "--ds-color-primitive-success-20",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Success.20"
+            }
+          },
+          "30": {
+            "name": "color.primitive.success.30",
+            "path": [
+              "color",
+              "primitive",
+              "success",
+              "30"
+            ],
+            "type": "color",
+            "value": "#86EFAC",
+            "cssVariable": "--ds-color-primitive-success-30",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Success.30"
+            }
+          },
+          "40": {
+            "name": "color.primitive.success.40",
+            "path": [
+              "color",
+              "primitive",
+              "success",
+              "40"
+            ],
+            "type": "color",
+            "value": "#4ADE80",
+            "cssVariable": "--ds-color-primitive-success-40",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Success.40"
+            }
+          },
+          "50": {
+            "name": "color.primitive.success.50",
+            "path": [
+              "color",
+              "primitive",
+              "success",
+              "50"
+            ],
+            "type": "color",
+            "value": "#22C55E",
+            "cssVariable": "--ds-color-primitive-success-50",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Success.50"
+            }
+          },
+          "60": {
+            "name": "color.primitive.success.60",
+            "path": [
+              "color",
+              "primitive",
+              "success",
+              "60"
+            ],
+            "type": "color",
+            "value": "#16A34A",
+            "cssVariable": "--ds-color-primitive-success-60",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Success.60"
+            }
+          },
+          "70": {
+            "name": "color.primitive.success.70",
+            "path": [
+              "color",
+              "primitive",
+              "success",
+              "70"
+            ],
+            "type": "color",
+            "value": "#15803D",
+            "cssVariable": "--ds-color-primitive-success-70",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Success.70"
+            }
+          },
+          "80": {
+            "name": "color.primitive.success.80",
+            "path": [
+              "color",
+              "primitive",
+              "success",
+              "80"
+            ],
+            "type": "color",
+            "value": "#166534",
+            "cssVariable": "--ds-color-primitive-success-80",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Success.80"
+            }
+          },
+          "90": {
+            "name": "color.primitive.success.90",
+            "path": [
+              "color",
+              "primitive",
+              "success",
+              "90"
+            ],
+            "type": "color",
+            "value": "#14532D",
+            "cssVariable": "--ds-color-primitive-success-90",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Success.90"
+            }
+          },
+          "100": {
+            "name": "color.primitive.success.100",
+            "path": [
+              "color",
+              "primitive",
+              "success",
+              "100"
+            ],
+            "type": "color",
+            "value": "#052E16",
+            "cssVariable": "--ds-color-primitive-success-100",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Success.100"
+            }
+          }
+        },
+        "warning": {
+          "5": {
+            "name": "color.primitive.warning.5",
+            "path": [
+              "color",
+              "primitive",
+              "warning",
+              "5"
+            ],
+            "type": "color",
+            "value": "#FFFBEB",
+            "cssVariable": "--ds-color-primitive-warning-5",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Warning.5"
+            }
+          },
+          "10": {
+            "name": "color.primitive.warning.10",
+            "path": [
+              "color",
+              "primitive",
+              "warning",
+              "10"
+            ],
+            "type": "color",
+            "value": "#FEF3C7",
+            "cssVariable": "--ds-color-primitive-warning-10",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Warning.10"
+            }
+          },
+          "20": {
+            "name": "color.primitive.warning.20",
+            "path": [
+              "color",
+              "primitive",
+              "warning",
+              "20"
+            ],
+            "type": "color",
+            "value": "#FDE68A",
+            "cssVariable": "--ds-color-primitive-warning-20",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Warning.20"
+            }
+          },
+          "30": {
+            "name": "color.primitive.warning.30",
+            "path": [
+              "color",
+              "primitive",
+              "warning",
+              "30"
+            ],
+            "type": "color",
+            "value": "#FCD34D",
+            "cssVariable": "--ds-color-primitive-warning-30",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Warning.30"
+            }
+          },
+          "40": {
+            "name": "color.primitive.warning.40",
+            "path": [
+              "color",
+              "primitive",
+              "warning",
+              "40"
+            ],
+            "type": "color",
+            "value": "#FBBF24",
+            "cssVariable": "--ds-color-primitive-warning-40",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Warning.40"
+            }
+          },
+          "50": {
+            "name": "color.primitive.warning.50",
+            "path": [
+              "color",
+              "primitive",
+              "warning",
+              "50"
+            ],
+            "type": "color",
+            "value": "#F59E0B",
+            "cssVariable": "--ds-color-primitive-warning-50",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Warning.50"
+            }
+          },
+          "60": {
+            "name": "color.primitive.warning.60",
+            "path": [
+              "color",
+              "primitive",
+              "warning",
+              "60"
+            ],
+            "type": "color",
+            "value": "#D97706",
+            "cssVariable": "--ds-color-primitive-warning-60",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Warning.60"
+            }
+          },
+          "70": {
+            "name": "color.primitive.warning.70",
+            "path": [
+              "color",
+              "primitive",
+              "warning",
+              "70"
+            ],
+            "type": "color",
+            "value": "#B45309",
+            "cssVariable": "--ds-color-primitive-warning-70",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Warning.70"
+            }
+          },
+          "80": {
+            "name": "color.primitive.warning.80",
+            "path": [
+              "color",
+              "primitive",
+              "warning",
+              "80"
+            ],
+            "type": "color",
+            "value": "#92400E",
+            "cssVariable": "--ds-color-primitive-warning-80",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Warning.80"
+            }
+          },
+          "90": {
+            "name": "color.primitive.warning.90",
+            "path": [
+              "color",
+              "primitive",
+              "warning",
+              "90"
+            ],
+            "type": "color",
+            "value": "#78350F",
+            "cssVariable": "--ds-color-primitive-warning-90",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Warning.90"
+            }
+          },
+          "100": {
+            "name": "color.primitive.warning.100",
+            "path": [
+              "color",
+              "primitive",
+              "warning",
+              "100"
+            ],
+            "type": "color",
+            "value": "#451A03",
+            "cssVariable": "--ds-color-primitive-warning-100",
+            "source": {
+              "file": "primitives/Default.tokens.json",
+              "path": "Warning.100"
+            }
+          }
+        }
+      },
+      "semantic": {
+        "background": {
+          "body": {
+            "name": "color.semantic.background.body",
+            "path": [
+              "color",
+              "semantic",
+              "background",
+              "body"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#F8FAFC",
+              "dark": "#0F172A"
+            },
+            "cssVariable": "--ds-color-background-body",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Background general colours.Body background"
+            }
+          },
+          "card": {
+            "name": "color.semantic.background.card",
+            "path": [
+              "color",
+              "semantic",
+              "background",
+              "card"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#FDFDFD",
+              "dark": "#1E293B"
+            },
+            "cssVariable": "--ds-color-background-card",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Background general colours.Card background"
+            }
+          }
+        },
+        "border": {
+          "alert": {
+            "name": "color.semantic.border.alert",
+            "path": [
+              "color",
+              "semantic",
+              "border",
+              "alert"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#FEE2E2",
+              "dark": "#475569"
+            },
+            "cssVariable": "--ds-color-border-alert",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Border colours.Alert border"
+            }
+          },
+          "dark": {
+            "name": "color.semantic.border.dark",
+            "path": [
+              "color",
+              "semantic",
+              "border",
+              "dark"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#0F172A",
+              "dark": "#FDFDFD"
+            },
+            "cssVariable": "--ds-color-border-dark",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Border colours.Dark border"
+            }
+          },
+          "info": {
+            "name": "color.semantic.border.info",
+            "path": [
+              "color",
+              "semantic",
+              "border",
+              "info"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#CFFAFE",
+              "dark": "#475569"
+            },
+            "cssVariable": "--ds-color-border-info",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Border colours.Info border"
+            }
+          },
+          "light": {
+            "name": "color.semantic.border.light",
+            "path": [
+              "color",
+              "semantic",
+              "border",
+              "light"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#CBD5E1",
+              "dark": "#475569"
+            },
+            "cssVariable": "--ds-color-border-light",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Border colours.Light border"
+            }
+          },
+          "lighter": {
+            "name": "color.semantic.border.lighter",
+            "path": [
+              "color",
+              "semantic",
+              "border",
+              "lighter"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#E2E8F0",
+              "dark": "#475569"
+            },
+            "cssVariable": "--ds-color-border-lighter",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Border colours.Lighter border"
+            }
+          },
+          "lightest": {
+            "name": "color.semantic.border.lightest",
+            "path": [
+              "color",
+              "semantic",
+              "border",
+              "lightest"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#F1F5F9",
+              "dark": "#475569"
+            },
+            "cssVariable": "--ds-color-border-lightest",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Border colours.Lightest border"
+            }
+          },
+          "medium": {
+            "name": "color.semantic.border.medium",
+            "path": [
+              "color",
+              "semantic",
+              "border",
+              "medium"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#94A3B8",
+              "dark": "#475569"
+            },
+            "cssVariable": "--ds-color-border-medium",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Border colours.Medium border"
+            }
+          },
+          "segmented": {
+            "control": {
+              "name": "color.semantic.border.segmented.control",
+              "path": [
+                "color",
+                "semantic",
+                "border",
+                "segmented",
+                "control"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#CBD5E1",
+                "dark": "#0F172A"
+              },
+              "cssVariable": "--ds-color-border-segmented-control",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Border colours.Segmented control border"
+              }
+            }
+          },
+          "selection": {
+            "input": {
+              "name": "color.semantic.border.selection.input",
+              "path": [
+                "color",
+                "semantic",
+                "border",
+                "selection",
+                "input"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#94A3B8",
+                "dark": "#CBD5E1"
+              },
+              "cssVariable": "--ds-color-border-selection-input",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Border colours.Selection input border"
+              }
+            }
+          },
+          "text": {
+            "input": {
+              "name": "color.semantic.border.text.input",
+              "path": [
+                "color",
+                "semantic",
+                "border",
+                "text",
+                "input"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#CBD5E1",
+                "dark": "#64748B"
+              },
+              "cssVariable": "--ds-color-border-text-input",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Border colours.Text input border"
+              },
+              "active": {
+                "name": "color.semantic.border.text.input.active",
+                "path": [
+                  "color",
+                  "semantic",
+                  "border",
+                  "text",
+                  "input",
+                  "active"
+                ],
+                "type": "color",
+                "value": {
+                  "light": "#94A3B8",
+                  "dark": "#94A3B8"
+                },
+                "cssVariable": "--ds-color-border-text-input-active",
+                "source": {
+                  "file": "tokens/Dark.tokens.json",
+                  "path": "Border colours.Text input active border"
+                }
+              },
+              "danger": {
+                "name": "color.semantic.border.text.input.danger",
+                "path": [
+                  "color",
+                  "semantic",
+                  "border",
+                  "text",
+                  "input",
+                  "danger"
+                ],
+                "type": "color",
+                "value": {
+                  "light": "#DC2626",
+                  "dark": "#94A3B8"
+                },
+                "cssVariable": "--ds-color-border-text-input-danger",
+                "source": {
+                  "file": "tokens/Dark.tokens.json",
+                  "path": "Border colours.Text input danger border"
+                }
+              },
+              "dropdown": {
+                "name": "color.semantic.border.text.input.dropdown",
+                "path": [
+                  "color",
+                  "semantic",
+                  "border",
+                  "text",
+                  "input",
+                  "dropdown"
+                ],
+                "type": "color",
+                "value": {
+                  "light": "#F1F5F9",
+                  "dark": "#64748B"
+                },
+                "cssVariable": "--ds-color-border-text-input-dropdown",
+                "source": {
+                  "file": "tokens/Dark.tokens.json",
+                  "path": "Border colours.Text input dropdown border"
+                }
+              }
+            }
+          },
+          "warning": {
+            "name": "color.semantic.border.warning",
+            "path": [
+              "color",
+              "semantic",
+              "border",
+              "warning"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#FEF3C7",
+              "dark": "#475569"
+            },
+            "cssVariable": "--ds-color-border-warning",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Border colours.Warning border"
+            }
+          }
+        },
+        "button": {
+          "button": {
+            "secondary": {
+              "name": "color.semantic.button.button.secondary",
+              "path": [
+                "color",
+                "semantic",
+                "button",
+                "button",
+                "secondary"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#155E75",
+                "dark": "#475569"
+              },
+              "cssVariable": "--ds-color-button-button-secondary",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Button colours.Button secondary border"
+              },
+              "disabled": {
+                "name": "color.semantic.button.button.secondary.disabled",
+                "path": [
+                  "color",
+                  "semantic",
+                  "button",
+                  "button",
+                  "secondary",
+                  "disabled"
+                ],
+                "type": "color",
+                "value": {
+                  "light": "#F1F5F9",
+                  "dark": "#475569"
+                },
+                "cssVariable": "--ds-color-button-button-secondary-disabled",
+                "source": {
+                  "file": "tokens/Dark.tokens.json",
+                  "path": "Button colours.Button secondary disabled border"
+                }
+              }
+            }
+          },
+          "destructive": {
+            "name": "color.semantic.button.destructive",
+            "path": [
+              "color",
+              "semantic",
+              "button",
+              "destructive"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#DC2626",
+              "dark": "#DC2626"
+            },
+            "cssVariable": "--ds-color-button-destructive",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Button colours.Destructive background"
+            },
+            "hover": {
+              "name": "color.semantic.button.destructive.hover",
+              "path": [
+                "color",
+                "semantic",
+                "button",
+                "destructive",
+                "hover"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#B91C1C",
+                "dark": "#B91C1C"
+              },
+              "cssVariable": "--ds-color-button-destructive-hover",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Button colours.Destructive hover background"
+              }
+            },
+            "secondary": {
+              "name": "color.semantic.button.destructive.secondary",
+              "path": [
+                "color",
+                "semantic",
+                "button",
+                "destructive",
+                "secondary"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#DC2626",
+                "dark": "#FDFDFD"
+              },
+              "cssVariable": "--ds-color-button-destructive-secondary",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Button colours.Destructive secondary border"
+              }
+            }
+          },
+          "disabled": {
+            "name": "color.semantic.button.disabled",
+            "path": [
+              "color",
+              "semantic",
+              "button",
+              "disabled"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#E2E8F0",
+              "dark": "#334155"
+            },
+            "cssVariable": "--ds-color-button-disabled",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Button colours.Disabled background"
+            }
+          },
+          "primary": {
+            "name": "color.semantic.button.primary",
+            "path": [
+              "color",
+              "semantic",
+              "button",
+              "primary"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#155E75",
+              "dark": "#0E7490"
+            },
+            "cssVariable": "--ds-color-button-primary",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Button colours.Primary background"
+            },
+            "hover": {
+              "name": "color.semantic.button.primary.hover",
+              "path": [
+                "color",
+                "semantic",
+                "button",
+                "primary",
+                "hover"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#164E63",
+                "dark": "#155E75"
+              },
+              "cssVariable": "--ds-color-button-primary-hover",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Button colours.Primary hover background"
+              }
+            }
+          },
+          "secondary": {
+            "name": "color.semantic.button.secondary",
+            "path": [
+              "color",
+              "semantic",
+              "button",
+              "secondary"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#FDFDFD",
+              "dark": "#64748B"
+            },
+            "cssVariable": "--ds-color-button-secondary",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Button colours.Secondary background"
+            },
+            "hover": {
+              "name": "color.semantic.button.secondary.hover",
+              "path": [
+                "color",
+                "semantic",
+                "button",
+                "secondary",
+                "hover"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#F1F5F9",
+                "dark": "#64748B"
+              },
+              "cssVariable": "--ds-color-button-secondary-hover",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Button colours.Secondary hover background"
+              }
+            }
+          }
+        },
+        "date-picker": {
+          "background": {
+            "datepicker": {
+              "range": {
+                "name": "color.semantic.date-picker.background.datepicker.range",
+                "path": [
+                  "color",
+                  "semantic",
+                  "date-picker",
+                  "background",
+                  "datepicker",
+                  "range"
+                ],
+                "type": "color",
+                "value": {
+                  "light": "#ECFEFF",
+                  "dark": "#334155"
+                },
+                "cssVariable": "--ds-color-date-picker-background-datepicker-range",
+                "source": {
+                  "file": "tokens/Dark.tokens.json",
+                  "path": "Date picker backgrounds.Datepicker range background"
+                }
+              }
+            },
+            "disabled": {
+              "date": {
+                "name": "color.semantic.date-picker.background.disabled.date",
+                "path": [
+                  "color",
+                  "semantic",
+                  "date-picker",
+                  "background",
+                  "disabled",
+                  "date"
+                ],
+                "type": "color",
+                "value": {
+                  "light": "#CBD5E1",
+                  "dark": "#64748B"
+                },
+                "cssVariable": "--ds-color-date-picker-background-disabled-date",
+                "source": {
+                  "file": "tokens/Dark.tokens.json",
+                  "path": "Date picker backgrounds.Disabled date background"
+                }
+              }
+            },
+            "hover": {
+              "date": {
+                "name": "color.semantic.date-picker.background.hover.date",
+                "path": [
+                  "color",
+                  "semantic",
+                  "date-picker",
+                  "background",
+                  "hover",
+                  "date"
+                ],
+                "type": "color",
+                "value": {
+                  "light": "#0891B2",
+                  "dark": "#334155"
+                },
+                "cssVariable": "--ds-color-date-picker-background-hover-date",
+                "source": {
+                  "file": "tokens/Dark.tokens.json",
+                  "path": "Date picker backgrounds.Hover date background"
+                }
+              }
+            },
+            "selected": {
+              "date": {
+                "name": "color.semantic.date-picker.background.selected.date",
+                "path": [
+                  "color",
+                  "semantic",
+                  "date-picker",
+                  "background",
+                  "selected",
+                  "date"
+                ],
+                "type": "color",
+                "value": {
+                  "light": "#164E63",
+                  "dark": "#155E75"
+                },
+                "cssVariable": "--ds-color-date-picker-background-selected-date",
+                "source": {
+                  "file": "tokens/Dark.tokens.json",
+                  "path": "Date picker backgrounds.Selected date background"
+                }
+              }
+            },
+            "today": {
+              "date": {
+                "name": "color.semantic.date-picker.background.today.date",
+                "path": [
+                  "color",
+                  "semantic",
+                  "date-picker",
+                  "background",
+                  "today",
+                  "date"
+                ],
+                "type": "color",
+                "value": {
+                  "light": "#F1F5F9",
+                  "dark": "#64748B"
+                },
+                "cssVariable": "--ds-color-date-picker-background-today-date",
+                "source": {
+                  "file": "tokens/Dark.tokens.json",
+                  "path": "Date picker backgrounds.Today date background"
+                }
+              }
+            }
+          }
+        },
+        "form": {
+          "background": {
+            "input": {
+              "disabled": {
+                "name": "color.semantic.form.background.input.disabled",
+                "path": [
+                  "color",
+                  "semantic",
+                  "form",
+                  "background",
+                  "input",
+                  "disabled"
+                ],
+                "type": "color",
+                "value": {
+                  "light": "#E2E8F0",
+                  "dark": "#1E293B"
+                },
+                "cssVariable": "--ds-color-form-background-input-disabled",
+                "source": {
+                  "file": "tokens/Dark.tokens.json",
+                  "path": "Form input backgrounds.Input disabled background"
+                }
+              }
+            },
+            "segmented": {
+              "control": {
+                "name": "color.semantic.form.background.segmented.control",
+                "path": [
+                  "color",
+                  "semantic",
+                  "form",
+                  "background",
+                  "segmented",
+                  "control"
+                ],
+                "type": "color",
+                "value": {
+                  "light": "#F1F5F9",
+                  "dark": "#334155"
+                },
+                "cssVariable": "--ds-color-form-background-segmented-control",
+                "source": {
+                  "file": "tokens/Dark.tokens.json",
+                  "path": "Form input backgrounds.Segmented control background"
+                },
+                "active": {
+                  "name": "color.semantic.form.background.segmented.control.active",
+                  "path": [
+                    "color",
+                    "semantic",
+                    "form",
+                    "background",
+                    "segmented",
+                    "control",
+                    "active"
+                  ],
+                  "type": "color",
+                  "value": {
+                    "light": "#FDFDFD",
+                    "dark": "#0F172A"
+                  },
+                  "cssVariable": "--ds-color-form-background-segmented-control-active",
+                  "source": {
+                    "file": "tokens/Dark.tokens.json",
+                    "path": "Form input backgrounds.Segmented control active background"
+                  }
+                }
+              }
+            },
+            "selection": {
+              "input": {
+                "name": "color.semantic.form.background.selection.input",
+                "path": [
+                  "color",
+                  "semantic",
+                  "form",
+                  "background",
+                  "selection",
+                  "input"
+                ],
+                "type": "color",
+                "value": {
+                  "light": "#A5F3FC",
+                  "dark": "#06B6D4"
+                },
+                "cssVariable": "--ds-color-form-background-selection-input",
+                "source": {
+                  "file": "tokens/Dark.tokens.json",
+                  "path": "Form input backgrounds.Selection input background"
+                },
+                "active": {
+                  "name": "color.semantic.form.background.selection.input.active",
+                  "path": [
+                    "color",
+                    "semantic",
+                    "form",
+                    "background",
+                    "selection",
+                    "input",
+                    "active"
+                  ],
+                  "type": "color",
+                  "value": {
+                    "light": "#0E7490",
+                    "dark": "#155E75"
+                  },
+                  "cssVariable": "--ds-color-form-background-selection-input-active",
+                  "source": {
+                    "file": "tokens/Dark.tokens.json",
+                    "path": "Form input backgrounds.Selection input active"
+                  }
+                }
+              }
+            },
+            "text": {
+              "input": {
+                "name": "color.semantic.form.background.text.input",
+                "path": [
+                  "color",
+                  "semantic",
+                  "form",
+                  "background",
+                  "text",
+                  "input"
+                ],
+                "type": "color",
+                "value": {
+                  "light": "#FDFDFD",
+                  "dark": "#334155"
+                },
+                "cssVariable": "--ds-color-form-background-text-input",
+                "source": {
+                  "file": "tokens/Dark.tokens.json",
+                  "path": "Form input backgrounds.Text input background"
+                },
+                "dropdown": {
+                  "name": "color.semantic.form.background.text.input.dropdown",
+                  "path": [
+                    "color",
+                    "semantic",
+                    "form",
+                    "background",
+                    "text",
+                    "input",
+                    "dropdown"
+                  ],
+                  "type": "color",
+                  "value": {
+                    "light": "#FDFDFD",
+                    "dark": "#334155"
+                  },
+                  "cssVariable": "--ds-color-form-background-text-input-dropdown",
+                  "source": {
+                    "file": "tokens/Dark.tokens.json",
+                    "path": "Form input backgrounds.Text input dropdown background"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "icon": {
+          "accent": {
+            "a": {
+              "name": "color.semantic.icon.accent.a",
+              "path": [
+                "color",
+                "semantic",
+                "icon",
+                "accent",
+                "a"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#C4B5FD",
+                "dark": "#6D28D9"
+              },
+              "cssVariable": "--ds-color-icon-accent-a",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Icon colour picker.Accent A"
+              },
+              "icon": {
+                "name": "color.semantic.icon.accent.a.icon",
+                "path": [
+                  "color",
+                  "semantic",
+                  "icon",
+                  "accent",
+                  "a",
+                  "icon"
+                ],
+                "type": "color",
+                "value": {
+                  "light": "#C4B5FD",
+                  "dark": "#7C3AED"
+                },
+                "cssVariable": "--ds-color-icon-accent-a-icon",
+                "source": {
+                  "file": "tokens/Dark.tokens.json",
+                  "path": "Icons.Accent A icon background"
+                }
+              },
+              "item": {
+                "icon": {
+                  "name": "color.semantic.icon.accent.a.item.icon",
+                  "path": [
+                    "color",
+                    "semantic",
+                    "icon",
+                    "accent",
+                    "a",
+                    "item",
+                    "icon"
+                  ],
+                  "type": "color",
+                  "value": {
+                    "light": "#083344",
+                    "dark": "#FDFDFD"
+                  },
+                  "cssVariable": "--ds-color-icon-accent-a-item-icon",
+                  "source": {
+                    "file": "tokens/Dark.tokens.json",
+                    "path": "Icons.Accent A item icon background"
+                  }
+                }
+              }
+            },
+            "b": {
+              "name": "color.semantic.icon.accent.b",
+              "path": [
+                "color",
+                "semantic",
+                "icon",
+                "accent",
+                "b"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#FDBA74",
+                "dark": "#EA580C"
+              },
+              "cssVariable": "--ds-color-icon-accent-b",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Icon colour picker.Accent B"
+              },
+              "icon": {
+                "name": "color.semantic.icon.accent.b.icon",
+                "path": [
+                  "color",
+                  "semantic",
+                  "icon",
+                  "accent",
+                  "b",
+                  "icon"
+                ],
+                "type": "color",
+                "value": {
+                  "light": "#FDBA74",
+                  "dark": "#F97316"
+                },
+                "cssVariable": "--ds-color-icon-accent-b-icon",
+                "source": {
+                  "file": "tokens/Dark.tokens.json",
+                  "path": "Icons.Accent B icon colour"
+                }
+              },
+              "item": {
+                "icon": {
+                  "name": "color.semantic.icon.accent.b.item.icon",
+                  "path": [
+                    "color",
+                    "semantic",
+                    "icon",
+                    "accent",
+                    "b",
+                    "item",
+                    "icon"
+                  ],
+                  "type": "color",
+                  "value": {
+                    "light": "#083344",
+                    "dark": "#FDFDFD"
+                  },
+                  "cssVariable": "--ds-color-icon-accent-b-item-icon",
+                  "source": {
+                    "file": "tokens/Dark.tokens.json",
+                    "path": "Icons.Accent B item icon background"
+                  }
+                }
+              }
+            }
+          },
+          "danger": {
+            "icon": {
+              "name": "color.semantic.icon.danger.icon",
+              "path": [
+                "color",
+                "semantic",
+                "icon",
+                "danger",
+                "icon"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#FCA5A5",
+                "dark": "#EF4444"
+              },
+              "cssVariable": "--ds-color-icon-danger-icon",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Icons.Danger icon colour"
+              }
+            }
+          },
+          "empty": {
+            "state": {
+              "icon": {
+                "name": "color.semantic.icon.empty.state.icon",
+                "path": [
+                  "color",
+                  "semantic",
+                  "icon",
+                  "empty",
+                  "state",
+                  "icon"
+                ],
+                "type": "color",
+                "value": {
+                  "light": "#F8FAFC",
+                  "dark": "#475569"
+                },
+                "cssVariable": "--ds-color-icon-empty-state-icon",
+                "source": {
+                  "file": "tokens/Dark.tokens.json",
+                  "path": "Icons.Empty state icon colour"
+                }
+              }
+            }
+          },
+          "neutral": {
+            "icon": {
+              "name": "color.semantic.icon.neutral.icon",
+              "path": [
+                "color",
+                "semantic",
+                "icon",
+                "neutral",
+                "icon"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#F1F5F9",
+                "dark": "#334155"
+              },
+              "cssVariable": "--ds-color-icon-neutral-icon",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Icons.Neutral icon colour"
+              }
+            }
+          },
+          "primary": {
+            "name": "color.semantic.icon.primary",
+            "path": [
+              "color",
+              "semantic",
+              "icon",
+              "primary"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#67E8F9",
+              "dark": "#0E7490"
+            },
+            "cssVariable": "--ds-color-icon-primary",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Icon colour picker.Primary"
+            },
+            "icon": {
+              "name": "color.semantic.icon.primary.icon",
+              "path": [
+                "color",
+                "semantic",
+                "icon",
+                "primary",
+                "icon"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#22D3EE",
+                "dark": "#0891B2"
+              },
+              "cssVariable": "--ds-color-icon-primary-icon",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Icons.Primary icon colour"
+              }
+            },
+            "item": {
+              "icon": {
+                "name": "color.semantic.icon.primary.item.icon",
+                "path": [
+                  "color",
+                  "semantic",
+                  "icon",
+                  "primary",
+                  "item",
+                  "icon"
+                ],
+                "type": "color",
+                "value": {
+                  "light": "#083344",
+                  "dark": "#FDFDFD"
+                },
+                "cssVariable": "--ds-color-icon-primary-item-icon",
+                "source": {
+                  "file": "tokens/Dark.tokens.json",
+                  "path": "Icons.Primary item icon background"
+                }
+              }
+            }
+          },
+          "success": {
+            "name": "color.semantic.icon.success",
+            "path": [
+              "color",
+              "semantic",
+              "icon",
+              "success"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#86EFAC",
+              "dark": "#15803D"
+            },
+            "cssVariable": "--ds-color-icon-success",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Icon colour picker.Success"
+            },
+            "icon": {
+              "name": "color.semantic.icon.success.icon",
+              "path": [
+                "color",
+                "semantic",
+                "icon",
+                "success",
+                "icon"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#4ADE80",
+                "dark": "#16A34A"
+              },
+              "cssVariable": "--ds-color-icon-success-icon",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Icons.Success icon colour"
+              }
+            },
+            "item": {
+              "icon": {
+                "name": "color.semantic.icon.success.item.icon",
+                "path": [
+                  "color",
+                  "semantic",
+                  "icon",
+                  "success",
+                  "item",
+                  "icon"
+                ],
+                "type": "color",
+                "value": {
+                  "light": "#083344",
+                  "dark": "#FDFDFD"
+                },
+                "cssVariable": "--ds-color-icon-success-item-icon",
+                "source": {
+                  "file": "tokens/Dark.tokens.json",
+                  "path": "Icons.Success item icon background"
+                }
+              }
+            }
+          },
+          "user": {
+            "icon": {
+              "name": "color.semantic.icon.user.icon",
+              "path": [
+                "color",
+                "semantic",
+                "icon",
+                "user",
+                "icon"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#155E75",
+                "dark": "#0E7490"
+              },
+              "cssVariable": "--ds-color-icon-user-icon",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Icons.User icon colour"
+              }
+            }
+          },
+          "warning": {
+            "icon": {
+              "name": "color.semantic.icon.warning.icon",
+              "path": [
+                "color",
+                "semantic",
+                "icon",
+                "warning",
+                "icon"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#FEF3C7",
+                "dark": "#D97706"
+              },
+              "cssVariable": "--ds-color-icon-warning-icon",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Icons.Warning icon colour"
+              }
+            }
+          }
+        },
+        "loading": {
+          "spinner": {
+            "name": "color.semantic.loading.spinner",
+            "path": [
+              "color",
+              "semantic",
+              "loading",
+              "spinner"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#94A3B8",
+              "dark": "#FDFDFD"
+            },
+            "cssVariable": "--ds-color-loading-spinner",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Loading states.Spinner background"
+            }
+          }
+        },
+        "lozenge": {
+          "danger": {
+            "name": "color.semantic.lozenge.danger",
+            "path": [
+              "color",
+              "semantic",
+              "lozenge",
+              "danger"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#FECACA",
+              "dark": "#B91C1C"
+            },
+            "cssVariable": "--ds-color-lozenge-danger",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Lozenge.Danger text"
+            }
+          },
+          "neutral": {
+            "name": "color.semantic.lozenge.neutral",
+            "path": [
+              "color",
+              "semantic",
+              "lozenge",
+              "neutral"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#E2E8F0",
+              "dark": "#475569"
+            },
+            "cssVariable": "--ds-color-lozenge-neutral",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Lozenge.Neutral text"
+            }
+          },
+          "primary": {
+            "name": "color.semantic.lozenge.primary",
+            "path": [
+              "color",
+              "semantic",
+              "lozenge",
+              "primary"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#A5F3FC",
+              "dark": "#0891B2"
+            },
+            "cssVariable": "--ds-color-lozenge-primary",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Lozenge.Primary text"
+            }
+          },
+          "success": {
+            "name": "color.semantic.lozenge.success",
+            "path": [
+              "color",
+              "semantic",
+              "lozenge",
+              "success"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#BBF7D0",
+              "dark": "#16A34A"
+            },
+            "cssVariable": "--ds-color-lozenge-success",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Lozenge.Success text"
+            }
+          },
+          "warning": {
+            "name": "color.semantic.lozenge.warning",
+            "path": [
+              "color",
+              "semantic",
+              "lozenge",
+              "warning"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#FDE68A",
+              "dark": "#D97706"
+            },
+            "cssVariable": "--ds-color-lozenge-warning",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Lozenge.Warning text"
+            }
+          }
+        },
+        "mark": {
+          "external": {
+            "payment": {
+              "name": "color.semantic.mark.external.payment",
+              "path": [
+                "color",
+                "semantic",
+                "mark",
+                "external",
+                "payment"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#EC4899",
+                "dark": "#FDFDFD"
+              },
+              "cssVariable": "--ds-color-mark-external-payment",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Marks.External payment mark"
+              }
+            }
+          }
+        },
+        "navigation": {
+          "dot": {
+            "active": {
+              "name": "color.semantic.navigation.dot.active",
+              "path": [
+                "color",
+                "semantic",
+                "navigation",
+                "dot",
+                "active"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#1E293B",
+                "dark": "#CBD5E1"
+              },
+              "cssVariable": "--ds-color-navigation-dot-active",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Navigation.Dot active"
+              }
+            },
+            "inactive": {
+              "name": "color.semantic.navigation.dot.inactive",
+              "path": [
+                "color",
+                "semantic",
+                "navigation",
+                "dot",
+                "inactive"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#CBD5E1",
+                "dark": "#475569"
+              },
+              "cssVariable": "--ds-color-navigation-dot-inactive",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Navigation.Dot inactive"
+              }
+            }
+          },
+          "mobile": {
+            "active": {
+              "item": {
+                "name": "color.semantic.navigation.mobile.active.item",
+                "path": [
+                  "color",
+                  "semantic",
+                  "navigation",
+                  "mobile",
+                  "active",
+                  "item"
+                ],
+                "type": "color",
+                "value": {
+                  "light": "#155E75",
+                  "dark": "#FDFDFD"
+                },
+                "cssVariable": "--ds-color-navigation-mobile-active-item",
+                "source": {
+                  "file": "tokens/Dark.tokens.json",
+                  "path": "Navigation.Mobile active item"
+                }
+              }
+            }
+          }
+        },
+        "notification": {
+          "alert": {
+            "notification": {
+              "name": "color.semantic.notification.alert.notification",
+              "path": [
+                "color",
+                "semantic",
+                "notification",
+                "alert",
+                "notification"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#B91C1C",
+                "dark": "#FDFDFD"
+              },
+              "cssVariable": "--ds-color-notification-alert-notification",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Notifications.Alert notification background"
+              }
+            }
+          },
+          "default": {
+            "notification": {
+              "name": "color.semantic.notification.default.notification",
+              "path": [
+                "color",
+                "semantic",
+                "notification",
+                "default",
+                "notification"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#E2E8F0",
+                "dark": "#475569"
+              },
+              "cssVariable": "--ds-color-notification-default-notification",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Notifications.Default notification background"
+              }
+            }
+          },
+          "info": {
+            "notification": {
+              "name": "color.semantic.notification.info.notification",
+              "path": [
+                "color",
+                "semantic",
+                "notification",
+                "info",
+                "notification"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#0E7490",
+                "dark": "#FDFDFD"
+              },
+              "cssVariable": "--ds-color-notification-info-notification",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Notifications.Info notification background"
+              }
+            }
+          },
+          "success": {
+            "notification": {
+              "name": "color.semantic.notification.success.notification",
+              "path": [
+                "color",
+                "semantic",
+                "notification",
+                "success",
+                "notification"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#15803D",
+                "dark": "#FDFDFD"
+              },
+              "cssVariable": "--ds-color-notification-success-notification",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Notifications.Success notification background"
+              }
+            }
+          },
+          "warning": {
+            "notification": {
+              "name": "color.semantic.notification.warning.notification",
+              "path": [
+                "color",
+                "semantic",
+                "notification",
+                "warning",
+                "notification"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#B45309",
+                "dark": "#FDFDFD"
+              },
+              "cssVariable": "--ds-color-notification-warning-notification",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Notifications.Warning notification background"
+              }
+            }
+          }
+        },
+        "text": {
+          "alert": {
+            "name": "color.semantic.text.alert",
+            "path": [
+              "color",
+              "semantic",
+              "text",
+              "alert"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#DC2626",
+              "dark": "#F87171"
+            },
+            "cssVariable": "--ds-color-text-alert",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Font colours.Alert text"
+            }
+          },
+          "button": {
+            "disabled": {
+              "name": "color.semantic.text.button.disabled",
+              "path": [
+                "color",
+                "semantic",
+                "text",
+                "button",
+                "disabled"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#475569",
+                "dark": "#94A3B8"
+              },
+              "cssVariable": "--ds-color-text-button-disabled",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Font colours.Button disabled text"
+              }
+            },
+            "secondary": {
+              "name": "color.semantic.text.button.secondary",
+              "path": [
+                "color",
+                "semantic",
+                "text",
+                "button",
+                "secondary"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#164E63",
+                "dark": "#FDFDFD"
+              },
+              "cssVariable": "--ds-color-text-button-secondary",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Font colours.Button secondary text"
+              }
+            }
+          },
+          "card": {
+            "heading": {
+              "primary": {
+                "name": "color.semantic.text.card.heading.primary",
+                "path": [
+                  "color",
+                  "semantic",
+                  "text",
+                  "card",
+                  "heading",
+                  "primary"
+                ],
+                "type": "color",
+                "value": {
+                  "light": "#155E75",
+                  "dark": "#E2E8F0"
+                },
+                "cssVariable": "--ds-color-text-card-heading-primary",
+                "source": {
+                  "file": "tokens/Dark.tokens.json",
+                  "path": "Font colours.Card heading primary text"
+                }
+              }
+            }
+          },
+          "default": {
+            "name": "color.semantic.text.default",
+            "path": [
+              "color",
+              "semantic",
+              "text",
+              "default"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#083344",
+              "dark": "#FDFDFD"
+            },
+            "cssVariable": "--ds-color-text-default",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Font colours.Default text"
+            }
+          },
+          "inverted": {
+            "name": "color.semantic.text.inverted",
+            "path": [
+              "color",
+              "semantic",
+              "text",
+              "inverted"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#FDFDFD",
+              "dark": "#083344"
+            },
+            "cssVariable": "--ds-color-text-inverted",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Font colours.Inverted text"
+            }
+          },
+          "light": {
+            "name": "color.semantic.text.light",
+            "path": [
+              "color",
+              "semantic",
+              "text",
+              "light"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#475569",
+              "dark": "#CBD5E1"
+            },
+            "cssVariable": "--ds-color-text-light",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Font colours.Light text"
+            }
+          },
+          "lighter": {
+            "name": "color.semantic.text.lighter",
+            "path": [
+              "color",
+              "semantic",
+              "text",
+              "lighter"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#64748B",
+              "dark": "#94A3B8"
+            },
+            "cssVariable": "--ds-color-text-lighter",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Font colours.Lighter text"
+            }
+          },
+          "lightest": {
+            "name": "color.semantic.text.lightest",
+            "path": [
+              "color",
+              "semantic",
+              "text",
+              "lightest"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#94A3B8",
+              "dark": "#94A3B8"
+            },
+            "cssVariable": "--ds-color-text-lightest",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Font colours.Lightest text"
+            }
+          },
+          "link": {
+            "default": {
+              "name": "color.semantic.text.link.default",
+              "path": [
+                "color",
+                "semantic",
+                "text",
+                "link",
+                "default"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#155E75",
+                "dark": "#67E8F9"
+              },
+              "cssVariable": "--ds-color-text-link-default",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Font colours.Link default"
+              }
+            },
+            "disabled": {
+              "name": "color.semantic.text.link.disabled",
+              "path": [
+                "color",
+                "semantic",
+                "text",
+                "link",
+                "disabled"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#94A3B8",
+                "dark": "#64748B"
+              },
+              "cssVariable": "--ds-color-text-link-disabled",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Font colours.Link disabled"
+              }
+            },
+            "hover": {
+              "name": "color.semantic.text.link.hover",
+              "path": [
+                "color",
+                "semantic",
+                "text",
+                "link",
+                "hover"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#0891B2",
+                "dark": "#22D3EE"
+              },
+              "cssVariable": "--ds-color-text-link-hover",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Font colours.Link hover"
+              }
+            }
+          },
+          "messaging": {
+            "bubble": {
+              "name": "color.semantic.text.messaging.bubble",
+              "path": [
+                "color",
+                "semantic",
+                "text",
+                "messaging",
+                "bubble"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#155E75",
+                "dark": "#FDFDFD"
+              },
+              "cssVariable": "--ds-color-text-messaging-bubble",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Font colours.Messaging bubble"
+              }
+            }
+          },
+          "success": {
+            "name": "color.semantic.text.success",
+            "path": [
+              "color",
+              "semantic",
+              "text",
+              "success"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#15803D",
+              "dark": "#BBF7D0"
+            },
+            "cssVariable": "--ds-color-text-success",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Font colours.Success text"
+            }
+          },
+          "warning": {
+            "name": "color.semantic.text.warning",
+            "path": [
+              "color",
+              "semantic",
+              "text",
+              "warning"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#B45309",
+              "dark": "#FBBF24"
+            },
+            "cssVariable": "--ds-color-text-warning",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Font colours.Warning text"
+            }
+          }
+        },
+        "tooltip": {
+          "tooltip": {
+            "name": "color.semantic.tooltip.tooltip",
+            "path": [
+              "color",
+              "semantic",
+              "tooltip",
+              "tooltip"
+            ],
+            "type": "color",
+            "value": {
+              "light": "#083344",
+              "dark": "#FDFDFD"
+            },
+            "cssVariable": "--ds-color-tooltip-tooltip",
+            "source": {
+              "file": "tokens/Dark.tokens.json",
+              "path": "Tooltips.Tooltip background"
+            },
+            "icon": {
+              "name": "color.semantic.tooltip.tooltip.icon",
+              "path": [
+                "color",
+                "semantic",
+                "tooltip",
+                "tooltip",
+                "icon"
+              ],
+              "type": "color",
+              "value": {
+                "light": "#FDFDFD",
+                "dark": "#083344"
+              },
+              "cssVariable": "--ds-color-tooltip-tooltip-icon",
+              "source": {
+                "file": "tokens/Dark.tokens.json",
+                "path": "Tooltips.Tooltip icon"
+              }
+            }
+          }
+        }
+      }
+    },
+    "space": {
+      "10xl": {
+        "name": "space.10xl",
+        "path": [
+          "space",
+          "10xl"
+        ],
+        "type": "dimension",
+        "value": 88,
+        "unit": "px",
+        "cssVariable": "--ds-space-10xl",
+        "source": {
+          "file": "spacing/Mode 1.tokens.json",
+          "path": "Space-10XL"
+        }
+      },
+      "11xl": {
+        "name": "space.11xl",
+        "path": [
+          "space",
+          "11xl"
+        ],
+        "type": "dimension",
+        "value": 96,
+        "unit": "px",
+        "cssVariable": "--ds-space-11xl",
+        "source": {
+          "file": "spacing/Mode 1.tokens.json",
+          "path": "Space-11XL"
+        }
+      },
+      "12xl": {
+        "name": "space.12xl",
+        "path": [
+          "space",
+          "12xl"
+        ],
+        "type": "dimension",
+        "value": 112,
+        "unit": "px",
+        "cssVariable": "--ds-space-12xl",
+        "source": {
+          "file": "spacing/Mode 1.tokens.json",
+          "path": "Space-12XL"
+        }
+      },
+      "13xl": {
+        "name": "space.13xl",
+        "path": [
+          "space",
+          "13xl"
+        ],
+        "type": "dimension",
+        "value": 128,
+        "unit": "px",
+        "cssVariable": "--ds-space-13xl",
+        "source": {
+          "file": "spacing/Mode 1.tokens.json",
+          "path": "Space-13XL"
+        }
+      },
+      "14xl": {
+        "name": "space.14xl",
+        "path": [
+          "space",
+          "14xl"
+        ],
+        "type": "dimension",
+        "value": 144,
+        "unit": "px",
+        "cssVariable": "--ds-space-14xl",
+        "source": {
+          "file": "spacing/Mode 1.tokens.json",
+          "path": "Space-14XL"
+        }
+      },
+      "15xl": {
+        "name": "space.15xl",
+        "path": [
+          "space",
+          "15xl"
+        ],
+        "type": "dimension",
+        "value": 160,
+        "unit": "px",
+        "cssVariable": "--ds-space-15xl",
+        "source": {
+          "file": "spacing/Mode 1.tokens.json",
+          "path": "Space-15XL"
+        }
+      },
+      "16xl": {
+        "name": "space.16xl",
+        "path": [
+          "space",
+          "16xl"
+        ],
+        "type": "dimension",
+        "value": 176,
+        "unit": "px",
+        "cssVariable": "--ds-space-16xl",
+        "source": {
+          "file": "spacing/Mode 1.tokens.json",
+          "path": "Space-16XL"
+        }
+      },
+      "17xl": {
+        "name": "space.17xl",
+        "path": [
+          "space",
+          "17xl"
+        ],
+        "type": "dimension",
+        "value": 192,
+        "unit": "px",
+        "cssVariable": "--ds-space-17xl",
+        "source": {
+          "file": "spacing/Mode 1.tokens.json",
+          "path": "Space-17XL"
+        }
+      },
+      "2xl": {
+        "name": "space.2xl",
+        "path": [
+          "space",
+          "2xl"
+        ],
+        "type": "dimension",
+        "value": 24,
+        "unit": "px",
+        "cssVariable": "--ds-space-2xl",
+        "source": {
+          "file": "spacing/Mode 1.tokens.json",
+          "path": "Space-2XL"
+        }
+      },
+      "3xl": {
+        "name": "space.3xl",
+        "path": [
+          "space",
+          "3xl"
+        ],
+        "type": "dimension",
+        "value": 32,
+        "unit": "px",
+        "cssVariable": "--ds-space-3xl",
+        "source": {
+          "file": "spacing/Mode 1.tokens.json",
+          "path": "Space-3XL"
+        }
+      },
+      "4xl": {
+        "name": "space.4xl",
+        "path": [
+          "space",
+          "4xl"
+        ],
+        "type": "dimension",
+        "value": 40,
+        "unit": "px",
+        "cssVariable": "--ds-space-4xl",
+        "source": {
+          "file": "spacing/Mode 1.tokens.json",
+          "path": "Space-4XL"
+        }
+      },
+      "5xl": {
+        "name": "space.5xl",
+        "path": [
+          "space",
+          "5xl"
+        ],
+        "type": "dimension",
+        "value": 48,
+        "unit": "px",
+        "cssVariable": "--ds-space-5xl",
+        "source": {
+          "file": "spacing/Mode 1.tokens.json",
+          "path": "Space-5XL"
+        }
+      },
+      "6xl": {
+        "name": "space.6xl",
+        "path": [
+          "space",
+          "6xl"
+        ],
+        "type": "dimension",
+        "value": 56,
+        "unit": "px",
+        "cssVariable": "--ds-space-6xl",
+        "source": {
+          "file": "spacing/Mode 1.tokens.json",
+          "path": "Space-6XL"
+        }
+      },
+      "7xl": {
+        "name": "space.7xl",
+        "path": [
+          "space",
+          "7xl"
+        ],
+        "type": "dimension",
+        "value": 64,
+        "unit": "px",
+        "cssVariable": "--ds-space-7xl",
+        "source": {
+          "file": "spacing/Mode 1.tokens.json",
+          "path": "Space-7XL"
+        }
+      },
+      "8xl": {
+        "name": "space.8xl",
+        "path": [
+          "space",
+          "8xl"
+        ],
+        "type": "dimension",
+        "value": 72,
+        "unit": "px",
+        "cssVariable": "--ds-space-8xl",
+        "source": {
+          "file": "spacing/Mode 1.tokens.json",
+          "path": "Space-8XL"
+        }
+      },
+      "9xl": {
+        "name": "space.9xl",
+        "path": [
+          "space",
+          "9xl"
+        ],
+        "type": "dimension",
+        "value": 80,
+        "unit": "px",
+        "cssVariable": "--ds-space-9xl",
+        "source": {
+          "file": "spacing/Mode 1.tokens.json",
+          "path": "Space-9XL"
+        }
+      },
+      "lg": {
+        "name": "space.lg",
+        "path": [
+          "space",
+          "lg"
+        ],
+        "type": "dimension",
+        "value": 12,
+        "unit": "px",
+        "cssVariable": "--ds-space-lg",
+        "source": {
+          "file": "spacing/Mode 1.tokens.json",
+          "path": "Space-Lge"
+        }
+      },
+      "md": {
+        "name": "space.md",
+        "path": [
+          "space",
+          "md"
+        ],
+        "type": "dimension",
+        "value": 8,
+        "unit": "px",
+        "cssVariable": "--ds-space-md",
+        "source": {
+          "file": "spacing/Mode 1.tokens.json",
+          "path": "Space-Med"
+        }
+      },
+      "sm": {
+        "name": "space.sm",
+        "path": [
+          "space",
+          "sm"
+        ],
+        "type": "dimension",
+        "value": 4,
+        "unit": "px",
+        "cssVariable": "--ds-space-sm",
+        "source": {
+          "file": "spacing/Mode 1.tokens.json",
+          "path": "Space-Sml"
+        }
+      },
+      "xl": {
+        "name": "space.xl",
+        "path": [
+          "space",
+          "xl"
+        ],
+        "type": "dimension",
+        "value": 16,
+        "unit": "px",
+        "cssVariable": "--ds-space-xl",
+        "source": {
+          "file": "spacing/Mode 1.tokens.json",
+          "path": "Space-XL"
+        }
+      },
+      "xs": {
+        "name": "space.xs",
+        "path": [
+          "space",
+          "xs"
+        ],
+        "type": "dimension",
+        "value": 2,
+        "unit": "px",
+        "cssVariable": "--ds-space-xs",
+        "source": {
+          "file": "spacing/Mode 1.tokens.json",
+          "path": "Space-ExtraSml"
+        }
+      }
+    },
+    "radius": {
+      "10xl": {
+        "name": "radius.10xl",
+        "path": [
+          "radius",
+          "10xl"
+        ],
+        "type": "radius",
+        "value": 72,
+        "unit": "px",
+        "cssVariable": "--ds-radius-10xl",
+        "source": {
+          "file": "corners/Mode 1.tokens.json",
+          "path": "Corder-radius.Corner-10XL"
+        }
+      },
+      "11xl": {
+        "name": "radius.11xl",
+        "path": [
+          "radius",
+          "11xl"
+        ],
+        "type": "radius",
+        "value": 80,
+        "unit": "px",
+        "cssVariable": "--ds-radius-11xl",
+        "source": {
+          "file": "corners/Mode 1.tokens.json",
+          "path": "Corder-radius.Corner-11XL"
+        }
+      },
+      "2xl": {
+        "name": "radius.2xl",
+        "path": [
+          "radius",
+          "2xl"
+        ],
+        "type": "radius",
+        "value": 20,
+        "unit": "px",
+        "cssVariable": "--ds-radius-2xl",
+        "source": {
+          "file": "corners/Mode 1.tokens.json",
+          "path": "Corder-radius.Corner-2XL"
+        }
+      },
+      "3xl": {
+        "name": "radius.3xl",
+        "path": [
+          "radius",
+          "3xl"
+        ],
+        "type": "radius",
+        "value": 24,
+        "unit": "px",
+        "cssVariable": "--ds-radius-3xl",
+        "source": {
+          "file": "corners/Mode 1.tokens.json",
+          "path": "Corder-radius.Corner-3XL"
+        }
+      },
+      "4xl": {
+        "name": "radius.4xl",
+        "path": [
+          "radius",
+          "4xl"
+        ],
+        "type": "radius",
+        "value": 28,
+        "unit": "px",
+        "cssVariable": "--ds-radius-4xl",
+        "source": {
+          "file": "corners/Mode 1.tokens.json",
+          "path": "Corder-radius.Corner-4XL"
+        }
+      },
+      "5xl": {
+        "name": "radius.5xl",
+        "path": [
+          "radius",
+          "5xl"
+        ],
+        "type": "radius",
+        "value": 32,
+        "unit": "px",
+        "cssVariable": "--ds-radius-5xl",
+        "source": {
+          "file": "corners/Mode 1.tokens.json",
+          "path": "Corder-radius.Corner-5XL"
+        }
+      },
+      "6xl": {
+        "name": "radius.6xl",
+        "path": [
+          "radius",
+          "6xl"
+        ],
+        "type": "radius",
+        "value": 40,
+        "unit": "px",
+        "cssVariable": "--ds-radius-6xl",
+        "source": {
+          "file": "corners/Mode 1.tokens.json",
+          "path": "Corder-radius.Corner-6XL"
+        }
+      },
+      "7xl": {
+        "name": "radius.7xl",
+        "path": [
+          "radius",
+          "7xl"
+        ],
+        "type": "radius",
+        "value": 48,
+        "unit": "px",
+        "cssVariable": "--ds-radius-7xl",
+        "source": {
+          "file": "corners/Mode 1.tokens.json",
+          "path": "Corder-radius.Corner-7XL"
+        }
+      },
+      "8xl": {
+        "name": "radius.8xl",
+        "path": [
+          "radius",
+          "8xl"
+        ],
+        "type": "radius",
+        "value": 56,
+        "unit": "px",
+        "cssVariable": "--ds-radius-8xl",
+        "source": {
+          "file": "corners/Mode 1.tokens.json",
+          "path": "Corder-radius.Corner-8XL"
+        }
+      },
+      "9xl": {
+        "name": "radius.9xl",
+        "path": [
+          "radius",
+          "9xl"
+        ],
+        "type": "radius",
+        "value": 64,
+        "unit": "px",
+        "cssVariable": "--ds-radius-9xl",
+        "source": {
+          "file": "corners/Mode 1.tokens.json",
+          "path": "Corder-radius.Corner-9XL"
+        }
+      },
+      "lg": {
+        "name": "radius.lg",
+        "path": [
+          "radius",
+          "lg"
+        ],
+        "type": "radius",
+        "value": 12,
+        "unit": "px",
+        "cssVariable": "--ds-radius-lg",
+        "source": {
+          "file": "corners/Mode 1.tokens.json",
+          "path": "Corder-radius.Corner-Lge"
+        }
+      },
+      "md": {
+        "name": "radius.md",
+        "path": [
+          "radius",
+          "md"
+        ],
+        "type": "radius",
+        "value": 8,
+        "unit": "px",
+        "cssVariable": "--ds-radius-md",
+        "source": {
+          "file": "corners/Mode 1.tokens.json",
+          "path": "Corder-radius.Corner-Med"
+        }
+      },
+      "sm": {
+        "name": "radius.sm",
+        "path": [
+          "radius",
+          "sm"
+        ],
+        "type": "radius",
+        "value": 4,
+        "unit": "px",
+        "cssVariable": "--ds-radius-sm",
+        "source": {
+          "file": "corners/Mode 1.tokens.json",
+          "path": "Corder-radius.Corner-Sml"
+        }
+      },
+      "xl": {
+        "name": "radius.xl",
+        "path": [
+          "radius",
+          "xl"
+        ],
+        "type": "radius",
+        "value": 16,
+        "unit": "px",
+        "cssVariable": "--ds-radius-xl",
+        "source": {
+          "file": "corners/Mode 1.tokens.json",
+          "path": "Corder-radius.Corner-XL"
+        }
+      },
+      "xs": {
+        "name": "radius.xs",
+        "path": [
+          "radius",
+          "xs"
+        ],
+        "type": "radius",
+        "value": 2,
+        "unit": "px",
+        "cssVariable": "--ds-radius-xs",
+        "source": {
+          "file": "corners/Mode 1.tokens.json",
+          "path": "Corder-radius.Corner-X-sml"
+        }
+      }
+    },
+    "typography": {
+      "body": {
+        "ex": {
+          "sml": {
+            "bold": {
+              "name": "typography.body.ex.sml.bold",
+              "path": [
+                "typography",
+                "body",
+                "ex",
+                "sml",
+                "bold"
+              ],
+              "type": "typography",
+              "value": {
+                "fontSize": 10,
+                "lineHeight": 14,
+                "fontWeight": 700
+              },
+              "source": {
+                "file": "typography/Default.tokens.json",
+                "path": "Bdy ex sml bold.FontSize"
+              }
+            },
+            "medium": {
+              "name": "typography.body.ex.sml.medium",
+              "path": [
+                "typography",
+                "body",
+                "ex",
+                "sml",
+                "medium"
+              ],
+              "type": "typography",
+              "value": {
+                "fontSize": 10,
+                "lineHeight": 14,
+                "fontWeight": 500
+              },
+              "source": {
+                "file": "typography/Default.tokens.json",
+                "path": "Bdy ex sml medium.FontSize"
+              }
+            },
+            "regular": {
+              "name": "typography.body.ex.sml.regular",
+              "path": [
+                "typography",
+                "body",
+                "ex",
+                "sml",
+                "regular"
+              ],
+              "type": "typography",
+              "value": {
+                "fontSize": 10,
+                "lineHeight": 14,
+                "fontWeight": 400
+              },
+              "source": {
+                "file": "typography/Default.tokens.json",
+                "path": "Bdy ex sml regular.FontSize"
+              }
+            },
+            "semi": {
+              "bold": {
+                "name": "typography.body.ex.sml.semi.bold",
+                "path": [
+                  "typography",
+                  "body",
+                  "ex",
+                  "sml",
+                  "semi",
+                  "bold"
+                ],
+                "type": "typography",
+                "value": {
+                  "fontSize": 10,
+                  "lineHeight": 14,
+                  "fontWeight": 600
+                },
+                "source": {
+                  "file": "typography/Default.tokens.json",
+                  "path": "Bdy ex sml semiBold.FontSize"
+                }
+              }
+            }
+          }
+        },
+        "lge": {
+          "bold": {
+            "name": "typography.body.lge.bold",
+            "path": [
+              "typography",
+              "body",
+              "lge",
+              "bold"
+            ],
+            "type": "typography",
+            "value": {
+              "fontSize": 16,
+              "lineHeight": 24,
+              "fontWeight": 700
+            },
+            "source": {
+              "file": "typography/Default.tokens.json",
+              "path": "Bdy lge bold.FontSize"
+            }
+          },
+          "medium": {
+            "name": "typography.body.lge.medium",
+            "path": [
+              "typography",
+              "body",
+              "lge",
+              "medium"
+            ],
+            "type": "typography",
+            "value": {
+              "fontSize": 16,
+              "lineHeight": 24,
+              "fontWeight": 500
+            },
+            "source": {
+              "file": "typography/Default.tokens.json",
+              "path": "Bdy lge medium.FontSize"
+            }
+          },
+          "regular": {
+            "name": "typography.body.lge.regular",
+            "path": [
+              "typography",
+              "body",
+              "lge",
+              "regular"
+            ],
+            "type": "typography",
+            "value": {
+              "fontSize": 16,
+              "lineHeight": 24,
+              "fontWeight": 400
+            },
+            "source": {
+              "file": "typography/Default.tokens.json",
+              "path": "Bdy lge regular.FontSize"
+            }
+          },
+          "semibold": {
+            "name": "typography.body.lge.semibold",
+            "path": [
+              "typography",
+              "body",
+              "lge",
+              "semibold"
+            ],
+            "type": "typography",
+            "value": {
+              "fontSize": 16,
+              "lineHeight": 24,
+              "fontWeight": 600
+            },
+            "source": {
+              "file": "typography/Default.tokens.json",
+              "path": "Bdy lge semibold.FontSize"
+            }
+          }
+        },
+        "med": {
+          "bold": {
+            "name": "typography.body.med.bold",
+            "path": [
+              "typography",
+              "body",
+              "med",
+              "bold"
+            ],
+            "type": "typography",
+            "value": {
+              "fontSize": 14,
+              "lineHeight": 20,
+              "fontWeight": 700
+            },
+            "source": {
+              "file": "typography/Default.tokens.json",
+              "path": "Bdy med bold.FontSize"
+            }
+          },
+          "medium": {
+            "name": "typography.body.med.medium",
+            "path": [
+              "typography",
+              "body",
+              "med",
+              "medium"
+            ],
+            "type": "typography",
+            "value": {
+              "fontSize": 14,
+              "lineHeight": 20,
+              "fontWeight": 500
+            },
+            "source": {
+              "file": "typography/Default.tokens.json",
+              "path": "Bdy med medium.FontSize"
+            }
+          },
+          "regular": {
+            "name": "typography.body.med.regular",
+            "path": [
+              "typography",
+              "body",
+              "med",
+              "regular"
+            ],
+            "type": "typography",
+            "value": {
+              "fontSize": 14,
+              "lineHeight": 20,
+              "fontWeight": 400
+            },
+            "source": {
+              "file": "typography/Default.tokens.json",
+              "path": "Bdy med regular.FontSize"
+            }
+          },
+          "semibold": {
+            "name": "typography.body.med.semibold",
+            "path": [
+              "typography",
+              "body",
+              "med",
+              "semibold"
+            ],
+            "type": "typography",
+            "value": {
+              "fontSize": 14,
+              "lineHeight": 20,
+              "fontWeight": 600
+            },
+            "source": {
+              "file": "typography/Default.tokens.json",
+              "path": "Bdy med semibold.FontSize"
+            }
+          }
+        },
+        "sml": {
+          "bold": {
+            "name": "typography.body.sml.bold",
+            "path": [
+              "typography",
+              "body",
+              "sml",
+              "bold"
+            ],
+            "type": "typography",
+            "value": {
+              "fontSize": 12,
+              "lineHeight": 16,
+              "fontWeight": 700
+            },
+            "source": {
+              "file": "typography/Default.tokens.json",
+              "path": "Bdy sml bold.FontSize"
+            }
+          },
+          "medium": {
+            "name": "typography.body.sml.medium",
+            "path": [
+              "typography",
+              "body",
+              "sml",
+              "medium"
+            ],
+            "type": "typography",
+            "value": {
+              "fontSize": 12,
+              "lineHeight": 16,
+              "fontWeight": 500
+            },
+            "source": {
+              "file": "typography/Default.tokens.json",
+              "path": "Bdy sml medium.FontSize"
+            }
+          },
+          "regular": {
+            "name": "typography.body.sml.regular",
+            "path": [
+              "typography",
+              "body",
+              "sml",
+              "regular"
+            ],
+            "type": "typography",
+            "value": {
+              "fontSize": 12,
+              "lineHeight": 16,
+              "fontWeight": 400
+            },
+            "source": {
+              "file": "typography/Default.tokens.json",
+              "path": "Bdy sml regular.FontSize"
+            }
+          },
+          "semibold": {
+            "name": "typography.body.sml.semibold",
+            "path": [
+              "typography",
+              "body",
+              "sml",
+              "semibold"
+            ],
+            "type": "typography",
+            "value": {
+              "fontSize": 12,
+              "lineHeight": 16,
+              "fontWeight": 600
+            },
+            "source": {
+              "file": "typography/Default.tokens.json",
+              "path": "Bdy sml semibold.FontSize"
+            }
+          }
+        }
+      },
+      "display": {
+        "2xl": {
+          "bold": {
+            "name": "typography.display.2xl.bold",
+            "path": [
+              "typography",
+              "display",
+              "2xl",
+              "bold"
+            ],
+            "type": "typography",
+            "value": {
+              "fontSize": 72,
+              "lineHeight": 80,
+              "fontWeight": 700
+            },
+            "source": {
+              "file": "typography/Default.tokens.json",
+              "path": "Display 2XL Bold.FontSize"
+            }
+          },
+          "medium": {
+            "name": "typography.display.2xl.medium",
+            "path": [
+              "typography",
+              "display",
+              "2xl",
+              "medium"
+            ],
+            "type": "typography",
+            "value": {
+              "fontSize": 72,
+              "lineHeight": 80,
+              "fontWeight": 500
+            },
+            "source": {
+              "file": "typography/Default.tokens.json",
+              "path": "Display 2XL Medium.FontSize"
+            }
+          }
+        },
+        "lg": {
+          "bold": {
+            "name": "typography.display.lg.bold",
+            "path": [
+              "typography",
+              "display",
+              "lg",
+              "bold"
+            ],
+            "type": "typography",
+            "value": {
+              "fontSize": 48,
+              "lineHeight": 56,
+              "fontWeight": 700
+            },
+            "source": {
+              "file": "typography/Default.tokens.json",
+              "path": "Display LG Bold.FontSize"
+            }
+          },
+          "medium": {
+            "name": "typography.display.lg.medium",
+            "path": [
+              "typography",
+              "display",
+              "lg",
+              "medium"
+            ],
+            "type": "typography",
+            "value": {
+              "fontSize": 48,
+              "lineHeight": 56,
+              "fontWeight": 500
+            },
+            "source": {
+              "file": "typography/Default.tokens.json",
+              "path": "Display LG Medium.FontSize"
+            }
+          }
+        },
+        "md": {
+          "bold": {
+            "name": "typography.display.md.bold",
+            "path": [
+              "typography",
+              "display",
+              "md",
+              "bold"
+            ],
+            "type": "typography",
+            "value": {
+              "fontSize": 36,
+              "lineHeight": 44,
+              "fontWeight": 700
+            },
+            "source": {
+              "file": "typography/Default.tokens.json",
+              "path": "Display MD Bold.FontSize"
+            }
+          },
+          "medium": {
+            "name": "typography.display.md.medium",
+            "path": [
+              "typography",
+              "display",
+              "md",
+              "medium"
+            ],
+            "type": "typography",
+            "value": {
+              "fontSize": 36,
+              "lineHeight": 44,
+              "fontWeight": 500
+            },
+            "source": {
+              "file": "typography/Default.tokens.json",
+              "path": "Display MD Medium.FontSize"
+            }
+          }
+        },
+        "sm": {
+          "bold": {
+            "name": "typography.display.sm.bold",
+            "path": [
+              "typography",
+              "display",
+              "sm",
+              "bold"
+            ],
+            "type": "typography",
+            "value": {
+              "fontSize": 30,
+              "lineHeight": 38,
+              "fontWeight": 700
+            },
+            "source": {
+              "file": "typography/Default.tokens.json",
+              "path": "Display SM Bold.FontSize"
+            }
+          },
+          "medium": {
+            "name": "typography.display.sm.medium",
+            "path": [
+              "typography",
+              "display",
+              "sm",
+              "medium"
+            ],
+            "type": "typography",
+            "value": {
+              "fontSize": 30,
+              "lineHeight": 38,
+              "fontWeight": 500
+            },
+            "source": {
+              "file": "typography/Default.tokens.json",
+              "path": "Display SM Medium.FontSize"
+            }
+          }
+        },
+        "xl": {
+          "bold": {
+            "name": "typography.display.xl.bold",
+            "path": [
+              "typography",
+              "display",
+              "xl",
+              "bold"
+            ],
+            "type": "typography",
+            "value": {
+              "fontSize": 60,
+              "lineHeight": 68,
+              "fontWeight": 700
+            },
+            "source": {
+              "file": "typography/Default.tokens.json",
+              "path": "Display XL Bold.FontSize"
+            }
+          },
+          "medium": {
+            "name": "typography.display.xl.medium",
+            "path": [
+              "typography",
+              "display",
+              "xl",
+              "medium"
+            ],
+            "type": "typography",
+            "value": {
+              "fontSize": 60,
+              "lineHeight": 68,
+              "fontWeight": 500
+            },
+            "source": {
+              "file": "typography/Default.tokens.json",
+              "path": "Display XL Medium.FontSize"
+            }
+          }
+        }
+      },
+      "heading": {
+        "h1": {
+          "name": "typography.heading.h1",
+          "path": [
+            "typography",
+            "heading",
+            "h1"
+          ],
+          "type": "typography",
+          "value": {
+            "fontSize": 32,
+            "lineHeight": 40,
+            "fontWeight": 700
+          },
+          "source": {
+            "file": "typography/Default.tokens.json",
+            "path": "H1.FontSize"
+          }
+        },
+        "h2": {
+          "name": "typography.heading.h2",
+          "path": [
+            "typography",
+            "heading",
+            "h2"
+          ],
+          "type": "typography",
+          "value": {
+            "fontSize": 28,
+            "lineHeight": 36,
+            "fontWeight": 600
+          },
+          "source": {
+            "file": "typography/Default.tokens.json",
+            "path": "H2.FontSize"
+          }
+        },
+        "h3": {
+          "name": "typography.heading.h3",
+          "path": [
+            "typography",
+            "heading",
+            "h3"
+          ],
+          "type": "typography",
+          "value": {
+            "fontSize": 24,
+            "lineHeight": 32,
+            "fontWeight": 600
+          },
+          "source": {
+            "file": "typography/Default.tokens.json",
+            "path": "H3.FontSize"
+          }
+        },
+        "h4": {
+          "name": "typography.heading.h4",
+          "path": [
+            "typography",
+            "heading",
+            "h4"
+          ],
+          "type": "typography",
+          "value": {
+            "fontSize": 20,
+            "lineHeight": 28,
+            "fontWeight": 600
+          },
+          "source": {
+            "file": "typography/Default.tokens.json",
+            "path": "H4.FontSize"
+          }
+        },
+        "h5": {
+          "name": "typography.heading.h5",
+          "path": [
+            "typography",
+            "heading",
+            "h5"
+          ],
+          "type": "typography",
+          "value": {
+            "fontSize": 18,
+            "lineHeight": 24,
+            "fontWeight": 600
+          },
+          "source": {
+            "file": "typography/Default.tokens.json",
+            "path": "H5.FontSize"
+          }
+        },
+        "h6": {
+          "name": "typography.heading.h6",
+          "path": [
+            "typography",
+            "heading",
+            "h6"
+          ],
+          "type": "typography",
+          "value": {
+            "fontSize": 16,
+            "lineHeight": 24,
+            "fontWeight": 600
+          },
+          "source": {
+            "file": "typography/Default.tokens.json",
+            "path": "H6.FontSize"
+          }
+        }
+      },
+      "oversized": {
+        "name": "typography.oversized",
+        "path": [
+          "typography",
+          "oversized"
+        ],
+        "type": "typography",
+        "value": {
+          "fontSize": 40,
+          "lineHeight": 48,
+          "fontWeight": 600
+        },
+        "source": {
+          "file": "typography/Default.tokens.json",
+          "path": "Oversized.FontSize"
+        }
+      }
+    }
+  }
+}

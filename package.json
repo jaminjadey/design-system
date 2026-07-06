@@ -1,0 +1,21 @@
+{
+  "name": "demo-design-system",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@9.15.4",
+  "scripts": {
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "format:check": "node scripts/format-check.mjs",
+    "format": "node scripts/format-check.mjs",
+    "tokens:scan": "pnpm --filter @demo-ds/token-pipeline scan:fixtures",
+    "storybook": "pnpm --filter @demo-ds/storybook storybook"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "turbo": "^2.5.6",
+    "typescript": "^5.8.3"
+  }
+}

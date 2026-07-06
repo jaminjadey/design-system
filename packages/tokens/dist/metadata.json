@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "generatedBy": "@demo-ds/token-pipeline",
+    "doNotEdit": true,
+    "source": "sanitised-design-token-fixtures"
+  },
+  "name": "demo-design-system-tokens",
+  "source": "sanitised-design-token-fixtures",
+  "tokenCount": 222,
+  "modes": [
+    "light",
+    "dark"
+  ],
+  "categories": [
+    "color",
+    "radius",
+    "space",
+    "typography"
+  ]
+}
