@@ -1,0 +1,86 @@
+{
+  "Space-ExtraSml": {
+    "$type": "number",
+    "$value": 2
+  },
+  "Space-Sml": {
+    "$type": "number",
+    "$value": 4
+  },
+  "Space-Med": {
+    "$type": "number",
+    "$value": 8
+  },
+  "Space-Lge": {
+    "$type": "number",
+    "$value": 12
+  },
+  "Space-XL": {
+    "$type": "number",
+    "$value": 16
+  },
+  "Space-2XL": {
+    "$type": "number",
+    "$value": 24
+  },
+  "Space-3XL": {
+    "$type": "number",
+    "$value": 32
+  },
+  "Space-4XL": {
+    "$type": "number",
+    "$value": 40
+  },
+  "Space-5XL": {
+    "$type": "number",
+    "$value": 48
+  },
+  "Space-6XL": {
+    "$type": "number",
+    "$value": 56
+  },
+  "Space-7XL": {
+    "$type": "number",
+    "$value": 64
+  },
+  "Space-8XL": {
+    "$type": "number",
+    "$value": 72
+  },
+  "Space-9XL": {
+    "$type": "number",
+    "$value": 80
+  },
+  "Space-10XL": {
+    "$type": "number",
+    "$value": 88
+  },
+  "Space-11XL": {
+    "$type": "number",
+    "$value": 96
+  },
+  "Space-12XL": {
+    "$type": "number",
+    "$value": 112
+  },
+  "Space-13XL": {
+    "$type": "number",
+    "$value": 128
+  },
+  "Space-14XL": {
+    "$type": "number",
+    "$value": 144
+  },
+  "Space-15XL": {
+    "$type": "number",
+    "$value": 160
+  },
+  "Space-16XL": {
+    "$type": "number",
+    "$value": 176
+  },
+  "Space-17XL": {
+    "$type": "number",
+    "$value": 192
+  }
+}

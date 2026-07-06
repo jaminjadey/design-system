@@ -1,0 +1,64 @@
+{
+  "Corder-radius": {
+    "Corner-X-sml": {
+      "$type": "number",
+      "$value": 2
+    },
+    "Corner-Sml": {
+      "$type": "number",
+      "$value": 4
+    },
+    "Corner-Med": {
+      "$type": "number",
+      "$value": 8
+    },
+    "Corner-Lge": {
+      "$type": "number",
+      "$value": 12
+    },
+    "Corner-XL": {
+      "$type": "number",
+      "$value": 16
+    },
+    "Corner-2XL": {
+      "$type": "number",
+      "$value": 20
+    },
+    "Corner-3XL": {
+      "$type": "number",
+      "$value": 24
+    },
+    "Corner-4XL": {
+      "$type": "number",
+      "$value": 28
+    },
+    "Corner-5XL": {
+      "$type": "number",
+      "$value": 32
+    },
+    "Corner-6XL": {
+      "$type": "number",
+      "$value": 40
+    },
+    "Corner-7XL": {
+      "$type": "number",
+      "$value": 48
+    },
+    "Corner-8XL": {
+      "$type": "number",
+      "$value": 56
+    },
+    "Corner-9XL": {
+      "$type": "number",
+      "$value": 64
+    },
+    "Corner-10XL": {
+      "$type": "number",
+      "$value": 72
+    },
+    "Corner-11XL": {
+      "$type": "number",
+      "$value": 80
+    }
+  }
+}

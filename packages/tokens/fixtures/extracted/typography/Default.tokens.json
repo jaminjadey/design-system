@@ -1,0 +1,464 @@
+{
+  "H1": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 32
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 40
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 700
+    }
+  },
+  "H2": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 28
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 36
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 600
+    }
+  },
+  "H3": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 24
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 32
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 600
+    }
+  },
+  "H4": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 20
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 28
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 600
+    }
+  },
+  "H5": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 18
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 24
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 600
+    }
+  },
+  "H6": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 16
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 24
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 600
+    }
+  },
+  "Bdy ex sml regular": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 10
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 14
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 400
+    }
+  },
+  "Bdy ex sml medium": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 10
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 14
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 500
+    }
+  },
+  "Bdy ex sml semiBold": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 10
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 14
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 600
+    }
+  },
+  "Bdy ex sml bold": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 10
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 14
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 700
+    }
+  },
+  "Bdy sml regular": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 12
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 16
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 400
+    }
+  },
+  "Bdy sml medium": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 12
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 16
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 500
+    }
+  },
+  "Bdy sml semibold": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 12
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 16
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 600
+    }
+  },
+  "Bdy sml bold": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 12
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 16
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 700
+    }
+  },
+  "Bdy med regular": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 14
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 20
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 400
+    }
+  },
+  "Bdy med medium": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 14
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 20
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 500
+    }
+  },
+  "Bdy med semibold": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 14
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 20
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 600
+    }
+  },
+  "Bdy med bold": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 14
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 20
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 700
+    }
+  },
+  "Bdy lge regular": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 16
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 24
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 400
+    }
+  },
+  "Bdy lge medium": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 16
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 24
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 500
+    }
+  },
+  "Bdy lge semibold": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 16
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 24
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 600
+    }
+  },
+  "Bdy lge bold": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 16
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 24
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 700
+    }
+  },
+  "Oversized": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 40
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 48
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 600
+    }
+  },
+  "Display XL Bold": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 60
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 68
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 700
+    }
+  },
+  "Display XL Medium": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 60
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 68
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 500
+    }
+  },
+  "Display 2XL Bold": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 72
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 80
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 700
+    }
+  },
+  "Display 2XL Medium": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 72
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 80
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 500
+    }
+  },
+  "Display LG Bold": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 48
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 56
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 700
+    }
+  },
+  "Display LG Medium": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 48
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 56
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 500
+    }
+  },
+  "Display MD Bold": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 36
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 44
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 700
+    }
+  },
+  "Display MD Medium": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 36
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 44
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 500
+    }
+  },
+  "Display SM Bold": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 30
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 38
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 700
+    }
+  },
+  "Display SM Medium": {
+    "FontSize": {
+      "$type": "number",
+      "$value": 30
+    },
+    "LineHeight": {
+      "$type": "number",
+      "$value": 38
+    },
+    "FontWeight": {
+      "$type": "number",
+      "$value": 500
+    }
+  }
+}

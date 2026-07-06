@@ -1,0 +1,17 @@
+{
+  "fixture": "sanitised-design-token-fixtures",
+  "purpose": "Synthetic design-token fixtures for pipeline testing",
+  "included": [
+    "primitives",
+    "tokens",
+    "spacing",
+    "corners",
+    "typography"
+  ],
+  "notes": [
+    "Source-specific metadata removed",
+    "Colour values replaced",
+    "Brand-specific typography labels replaced",
+    "Some exact numeric scales normalised"
+  ]
+}
