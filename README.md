@@ -112,7 +112,7 @@ Use token CSS variables in component CSS when a value belongs to the design syst
 
 ```css
 .surface {
-  background: var(--ds-color-surface-default);
+  background: var(--ds-color-background-card);
   border-radius: var(--ds-radius-md);
   padding: var(--ds-space-md);
 }
@@ -123,7 +123,7 @@ Use TypeScript token names when code needs a token reference:
 ```ts
 import { cssVar } from '@demo-ds/tokens';
 
-const background = cssVar('color.semantic.background.page');
+const background = cssVar('color.semantic.background.body');
 ```
 
 ## Development Workflow

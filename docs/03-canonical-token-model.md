@@ -86,7 +86,7 @@ Examples:
 | `Base colours.Black` | `color.primitive.base.black` |
 | `Primary.10` | `color.primitive.primary.10` |
 | `Font colours.Default text` | `color.semantic.text.default` |
-| `Background general colours.Page background` | `color.semantic.background.page` |
+| `Background general colours.Body` | `color.semantic.background.body` |
 | `Space-2XL` | `space.2xl` |
 | `Corder-radius.Corner-Med` | `radius.md` |
 | `H1.FontSize` | `typography.heading.h1.font-size` |

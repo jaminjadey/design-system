@@ -40,7 +40,7 @@ Recommended naming:
 ```txt
 --ds-color-primitive-primary-10
 --ds-color-text-default
---ds-color-background-page
+--ds-color-background-body
 --ds-space-md
 --ds-radius-md
 --ds-font-size-heading-h1
@@ -59,12 +59,12 @@ Example CSS:
 
 [data-mantine-color-scheme='light'] {
   --ds-color-text-default: #083344;
-  --ds-color-background-page: #F8FAFC;
+  --ds-color-background-body: #F8FAFC;
 }
 
 [data-mantine-color-scheme='dark'] {
   --ds-color-text-default: #FDFDFD;
-  --ds-color-background-page: #0F172A;
+  --ds-color-background-body: #0F172A;
 }
 ```
 
@@ -93,7 +93,7 @@ export const tokens = {
 
 export type TokenName =
   | 'color.semantic.text.default'
-  | 'color.semantic.background.page'
+  | 'color.semantic.background.body'
   | 'space.md'
   | 'radius.md';
 ```

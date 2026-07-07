@@ -81,7 +81,7 @@ Example:
 ```css
 .ds-page {
   color: var(--ds-color-text-default);
-  background: var(--ds-color-background-page);
+  background: var(--ds-color-background-body);
 }
 ```
 
