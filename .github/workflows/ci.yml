@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Scan sanitised fixtures
+      - name: Scan demo token fixtures
         run: pnpm tokens:scan
 
       - name: Lint
