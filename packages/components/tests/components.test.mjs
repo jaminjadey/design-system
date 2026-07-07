@@ -31,6 +31,15 @@ test("Button renders children and maps tone/emphasis attributes", () => {
   assert.match(markup, /data-emphasis="medium"/u);
 });
 
+test("Button passes through native button type", () => {
+  const markup = renderWithTheme(
+    React.createElement(Button, { type: "submit" }, "Save")
+  );
+
+  assert.match(markup, /type="submit"/u);
+  assert.match(markup, /Save/u);
+});
+
 test("TextInput renders label and helper text", () => {
   const markup = renderWithTheme(
     React.createElement(TextInput, {

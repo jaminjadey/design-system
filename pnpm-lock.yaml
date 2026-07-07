@@ -26,6 +26,34 @@ importers:
       '@demo-ds/mantine-theme':
         specifier: workspace:*
         version: link:../../packages/mantine-theme
+      '@demo-ds/tokens':
+        specifier: workspace:^
+        version: link:../../packages/tokens
+      '@mantine/core':
+        specifier: ^9.4.1
+        version: 9.4.1(@mantine/hooks@9.4.1(react@19.2.7))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@mantine/hooks':
+        specifier: ^9.4.1
+        version: 9.4.1(react@19.2.7)
+      '@vitejs/plugin-react':
+        specifier: ^6.0.3
+        version: 6.0.3(vite@8.1.3(@types/node@22.20.0)(esbuild@0.28.1))
+      react:
+        specifier: ^19.2.7
+        version: 19.2.7
+      react-dom:
+        specifier: ^19.2.7
+        version: 19.2.7(react@19.2.7)
+      vite:
+        specifier: ^8.1.3
+        version: 8.1.3(@types/node@22.20.0)(esbuild@0.28.1)
+    devDependencies:
+      '@types/react':
+        specifier: ^19.2.17
+        version: 19.2.17
+      '@types/react-dom':
+        specifier: ^19.2.3
+        version: 19.2.3(@types/react@19.2.17)
 
   apps/storybook:
     dependencies:
@@ -936,6 +964,19 @@ packages:
 
   '@types/resolve@1.20.6':
     resolution: {integrity: sha512-A4STmOXPhMUtHH+S6ymgE2GiBSMqf4oTvcQZMcHzokuTLVYzXTB8ttjcgxOVaAp2lGwEdzZ0J+cRbbeevQj1UQ==}
+
+  '@vitejs/plugin-react@6.0.3':
+    resolution: {integrity: sha512-vmFvco5/QuC2f9Oj+wTk0+9XeDFkHxSamwZKYc7MxYwKICfvUvlMhqKI0VuICPltGqh1neqBKDvO4kes1ya8vg==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    peerDependencies:
+      '@rolldown/plugin-babel': ^0.1.7 || ^0.2.0
+      babel-plugin-react-compiler: ^1.0.0
+      vite: ^8.0.0
+    peerDependenciesMeta:
+      '@rolldown/plugin-babel':
+        optional: true
+      babel-plugin-react-compiler:
+        optional: true
 
   '@vitest/expect@3.2.4':
     resolution: {integrity: sha512-Io0yyORnB6sikFlt8QW5K7slY4OjqNX9jmJQ02QDda8lyM6B5oNgVWoSoKPac8/kgnCUzuHQKrSLtu/uOqqrig==}
@@ -2282,6 +2323,11 @@ snapshots:
       csstype: 3.2.3
 
   '@types/resolve@1.20.6': {}
+
+  '@vitejs/plugin-react@6.0.3(vite@8.1.3(@types/node@22.20.0)(esbuild@0.28.1))':
+    dependencies:
+      '@rolldown/pluginutils': 1.0.1
+      vite: 8.1.3(@types/node@22.20.0)(esbuild@0.28.1)
 
   '@vitest/expect@3.2.4':
     dependencies:

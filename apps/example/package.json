@@ -4,14 +4,25 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "test": "node -e \"console.log('example placeholder tests passed')\"",
+    "build": "tsc -p tsconfig.json && vite build",
+    "test": "pnpm run build && node --test tests/*.test.mjs",
     "lint": "node -e \"console.log('example placeholder lint passed')\"",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "dev": "node -e \"console.log('Example app will be added in a later task')\""
+    "dev": "vite --host 127.0.0.1 --port 5173"
   },
   "dependencies": {
     "@demo-ds/components": "workspace:*",
-    "@demo-ds/mantine-theme": "workspace:*"
+    "@demo-ds/mantine-theme": "workspace:*",
+    "@demo-ds/tokens": "workspace:*",
+    "@mantine/core": "^9.4.1",
+    "@mantine/hooks": "^9.4.1",
+    "@vitejs/plugin-react": "^6.0.3",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "vite": "^8.1.3"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3"
   }
 }
