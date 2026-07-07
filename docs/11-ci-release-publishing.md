@@ -189,21 +189,19 @@ Counterpoint: in some production repos generated artifacts are not committed. Fo
 - Avoid unnecessary dependencies.
 - Add a dependency only when it has a clear job.
 - Keep generator dependencies out of runtime packages where possible.
-- Put React and Mantine as peer dependencies for publishable component/theme packages.
+- Keep rendering-library dependencies inside the design-system packages so apps consume `@demo-ds/*`, not Mantine directly.
 
-## Runtime package peer dependencies
+## Runtime package dependencies
 
-For `@demo-ds/mantine-theme` and `@demo-ds/components`, use peer dependencies for:
+For this demo, `@demo-ds/mantine-theme` and `@demo-ds/components` own the Mantine implementation dependency:
 
 ```json
 {
-  "peerDependencies": {
-    "@mantine/core": ">=7",
-    "@mantine/hooks": ">=7",
-    "react": ">=18",
-    "react-dom": ">=18"
+  "dependencies": {
+    "@mantine/core": "^9",
+    "@mantine/hooks": "^9"
   }
 }
 ```
 
-Adjust exact ranges during implementation based on installed versions and compatibility testing.
+If these packages are published later, decide deliberately whether React stays a peer dependency. Mantine should remain hidden from app-level imports unless the design-system API explicitly changes.

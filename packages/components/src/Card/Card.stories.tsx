@@ -1,5 +1,3 @@
-import { Text } from "@mantine/core";
-
 import { Card } from "./Card.js";
 
 export default {
@@ -10,8 +8,8 @@ export default {
 export const Default = {
   render: () => (
     <Card>
-      <Text fw={600}>Project summary</Text>
-      <Text c="dimmed">A compact surface for related content.</Text>
+      <strong>Project summary</strong>
+      <p>A compact surface for related content.</p>
     </Card>
   )
 };
@@ -19,8 +17,8 @@ export const Default = {
 export const Interactive = {
   render: () => (
     <Card interactive onClick={() => undefined}>
-      <Text fw={600}>Open details</Text>
-      <Text c="dimmed">Keyboard and pointer users can activate this card.</Text>
+      <strong>Open details</strong>
+      <p>Keyboard and pointer users can activate this card.</p>
     </Card>
   )
 };

@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { DemoThemeProvider } from "@demo-ds/mantine-theme";
-import "@mantine/core/styles.css";
-import "@demo-ds/tokens/tokens.css";
+import "@demo-ds/mantine-theme/styles.css";
 import "./app.css";
 
 import { App } from "./App.js";

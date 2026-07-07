@@ -1,22 +1,30 @@
-import { Paper, type PaperProps } from "@mantine/core";
-import type { KeyboardEvent, KeyboardEventHandler, MouseEventHandler, ReactNode } from "react";
+import { Paper } from "@mantine/core";
+import type {
+  CSSProperties,
+  KeyboardEvent,
+  KeyboardEventHandler,
+  MouseEventHandler,
+  ReactNode
+} from "react";
 
-export interface CardProps extends PaperProps {
+export interface CardProps {
   readonly children?: ReactNode;
   readonly interactive?: boolean;
   readonly onClick?: MouseEventHandler<HTMLDivElement>;
   readonly onKeyDown?: KeyboardEventHandler<HTMLDivElement>;
+  readonly id?: string;
+  readonly className?: string;
+  readonly style?: CSSProperties;
 }
 
 export function Card({
   interactive = false,
-  withBorder = true,
-  radius = "md",
-  p = "md",
   onClick,
   onKeyDown,
+  id,
+  className,
   style,
-  ...props
+  children
 }: CardProps) {
   const isInteractive = interactive || onClick !== undefined;
 
@@ -32,9 +40,11 @@ export function Card({
 
   return (
     <Paper
-      withBorder={withBorder}
-      radius={radius}
-      p={p}
+      id={id}
+      className={className}
+      withBorder
+      radius="md"
+      p="md"
       role={isInteractive ? "button" : undefined}
       tabIndex={isInteractive ? 0 : undefined}
       data-interactive={isInteractive || undefined}
@@ -47,7 +57,8 @@ export function Card({
         cursor: isInteractive ? "pointer" : undefined,
         ...style
       }}
-      {...props}
-    />
+    >
+      {children}
+    </Paper>
   );
 }

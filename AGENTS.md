@@ -66,7 +66,7 @@ pnpm --filter @demo-ds/example build
 - Add tests in the same change as implementation code.
 - Do not silently change generated snapshots. Explain why snapshots changed.
 - Prefer accessible components by default.
-- Do not wrap every Mantine component. Create wrappers only when they encode design-system decisions.
+- Do not expose Mantine components or Mantine prop types as the app-facing API. Create design-system components only when they encode design-system decisions.
 - Use semantic token names in application and component CSS. Avoid hardcoded colours in components.
 
 ## Token naming rules

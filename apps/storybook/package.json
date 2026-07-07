@@ -14,7 +14,6 @@
     "@demo-ds/components": "workspace:*",
     "@demo-ds/mantine-theme": "workspace:*",
     "@demo-ds/tokens": "workspace:*",
-    "@mantine/core": "^9.4.1",
     "@storybook/addon-docs": "^10.4.6",
     "@storybook/react-vite": "^10.4.6",
     "react": "^19.2.7",

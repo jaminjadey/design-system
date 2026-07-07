@@ -1,15 +1,13 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import React from "react";
 import { renderToString } from "react-dom/server";
 import test from "node:test";
 
 import { tokens } from "@demo-ds/tokens";
-import {
-  DemoThemeProvider,
-  defaultFontFamily,
-  demoCssVariablesResolver,
-  demoTheme
-} from "../dist/index.js";
+import { DemoThemeProvider, demoThemeSummary } from "../dist/index.js";
+import { demoCssVariablesResolver } from "../dist/cssVariablesResolver.js";
+import { defaultFontFamily, demoTheme } from "../dist/theme.js";
 
 test("theme maps primary primitive palette to Mantine colors", () => {
   assert.equal(demoTheme.primaryColor, "primary");
@@ -96,4 +94,18 @@ test("theme uses only generic font names", () => {
   assert.equal(serialized.includes("private"), false);
   assert.equal(serialized.includes("company"), false);
   assert.equal(serialized.includes("proprietary"), false);
+});
+
+test("package root exposes a design-system theme summary instead of Mantine objects", () => {
+  assert.equal(demoThemeSummary.primaryColor, "primary");
+  assert.equal(demoThemeSummary.primaryShadeCount, 10);
+  assert.equal(demoThemeSummary.defaultRadius, "md");
+  assert.equal(demoThemeSummary.headingFontFamily, defaultFontFamily);
+});
+
+test("package root declarations do not expose Mantine types", async () => {
+  const rootDeclaration = await readFile(new URL("../dist/index.d.ts", import.meta.url), "utf8");
+
+  assert.equal(rootDeclaration.includes("@mantine/"), false);
+  assert.equal(rootDeclaration.includes("Mantine"), false);
 });

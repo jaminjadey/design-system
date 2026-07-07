@@ -31,8 +31,6 @@ apps/example/
     "@demo-ds/components": "workspace:*",
     "@demo-ds/mantine-theme": "workspace:*",
     "@demo-ds/tokens": "workspace:*",
-    "@mantine/core": "latest",
-    "@mantine/hooks": "latest",
     "@vitejs/plugin-react": "latest",
     "react": "latest",
     "react-dom": "latest"
@@ -50,6 +48,7 @@ Pin exact versions during implementation after install. Avoid leaving floating `
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { DemoThemeProvider } from '@demo-ds/mantine-theme';
+import '@demo-ds/mantine-theme/styles.css';
 import { App } from './App';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -109,7 +108,7 @@ Show:
 
 ## App shell
 
-Use Mantine layout primitives or a simple custom shell. Keep it generic.
+Use design-system components plus a simple custom shell. Keep it generic.
 
 Suggested nav:
 
@@ -123,11 +122,12 @@ Tokens
 ## What the app should prove
 
 - Packages can be consumed through workspace dependencies.
-- Mantine theme works in a real app.
+- The generated theme works in a real app.
 - CSS variables are available at runtime.
 - Components render in light and dark modes.
 - Bundling works outside Storybook.
 - No raw token imports are needed.
+- No direct Mantine imports are needed in app code.
 
 ## Build command
 
@@ -161,6 +161,7 @@ Deep component tests belong in the component package.
 ## Avoid these mistakes
 
 - Do not import from `packages/components/src`.
+- Do not import from `@mantine/core` in app code.
 - Do not hardcode token values in app CSS.
 - Do not add product-specific copy.
 - Do not use the app as the only documentation; Storybook remains the design-system site.

@@ -1,11 +1,16 @@
-import { Badge, type BadgeProps } from "@mantine/core";
-import type { ReactNode } from "react";
+import { Badge } from "@mantine/core";
+import type { CSSProperties, ReactNode } from "react";
 
 export type StatusBadgeTone = "neutral" | "success" | "warning" | "danger" | "info";
+export type StatusBadgeEmphasis = "soft" | "solid" | "outline";
 
-export interface StatusBadgeProps extends Omit<BadgeProps, "children" | "color"> {
+export interface StatusBadgeProps {
   readonly tone: StatusBadgeTone;
+  readonly emphasis?: StatusBadgeEmphasis;
   readonly children: ReactNode;
+  readonly id?: string;
+  readonly className?: string;
+  readonly style?: CSSProperties;
 }
 
 const toneColor: Record<StatusBadgeTone, string> = {
@@ -16,9 +21,31 @@ const toneColor: Record<StatusBadgeTone, string> = {
   info: "primary"
 };
 
-export function StatusBadge({ tone, children, variant = "light", ...props }: StatusBadgeProps) {
+const emphasisVariant: Record<StatusBadgeEmphasis, "light" | "filled" | "outline"> = {
+  soft: "light",
+  solid: "filled",
+  outline: "outline"
+};
+
+export function StatusBadge({
+  tone,
+  emphasis = "soft",
+  children,
+  id,
+  className,
+  style
+}: StatusBadgeProps) {
   return (
-    <Badge role="status" color={toneColor[tone]} variant={variant} data-tone={tone} {...props}>
+    <Badge
+      id={id}
+      className={className}
+      style={style}
+      role="status"
+      color={toneColor[tone]}
+      variant={emphasisVariant[emphasis]}
+      data-tone={tone}
+      data-emphasis={emphasis}
+    >
       {children}
     </Badge>
   );

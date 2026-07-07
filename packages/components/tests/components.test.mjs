@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { readdir, readFile } from "node:fs/promises";
 import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import test from "node:test";
@@ -119,3 +119,31 @@ test("tone mappings use design-system palette names instead of Mantine built-ins
     assert.equal(/:\s*"gray"|:\s*"red"|:\s*"green"|:\s*"yellow"/u.test(source), false);
   }
 });
+
+test("public component declarations do not expose Mantine types", async () => {
+  const declarationFiles = await collectDeclarationFiles(new URL("../dist/", import.meta.url));
+
+  for (const file of declarationFiles) {
+    const source = await readFile(file, "utf8");
+    assert.equal(source.includes("@mantine/"), false, `${file.pathname} should not expose Mantine`);
+  }
+});
+
+async function collectDeclarationFiles(directoryUrl) {
+  const entries = await readdir(directoryUrl, { withFileTypes: true });
+  const files = [];
+
+  for (const entry of entries) {
+    const childUrl = new URL(entry.name, directoryUrl);
+    if (entry.isDirectory()) {
+      files.push(...(await collectDeclarationFiles(new URL(`${entry.name}/`, directoryUrl))));
+      continue;
+    }
+
+    if (entry.isFile() && entry.name.endsWith(".d.ts")) {
+      files.push(childUrl);
+    }
+  }
+
+  return files;
+}

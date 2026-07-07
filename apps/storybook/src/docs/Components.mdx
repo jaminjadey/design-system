@@ -6,13 +6,12 @@ import { DemoThemeProvider } from '@demo-ds/mantine-theme';
 
 # Components
 
-The component package builds on Mantine and uses the generated theme and token
-CSS variables supplied by `DemoThemeProvider`.
+The component package is implemented with Mantine internally and uses the
+generated theme and token CSS variables supplied by `DemoThemeProvider`.
 
-The wrappers exist where the design system has a real decision to encode:
-semantic tones, token-backed spacing, consistent radius, accessible status
-patterns, and theme switching. Lower-level layout remains Mantine so apps do
-not lose the flexibility of the underlying framework.
+Apps consume `@demo-ds/components`, not Mantine components or Mantine prop
+types. That keeps the public API tied to design-system decisions instead of the
+underlying rendering library.
 
 ## Initial Components
 
@@ -22,7 +21,7 @@ not lose the flexibility of the underlying framework.
 - `Card`: token-backed surface, radius, and border styling.
 - `StatusBadge`: compact semantic state display.
 - `PageHeader`: page-level title, description, and actions.
-- `ThemeToggle`: Mantine colour-scheme integration.
+- `ThemeToggle`: design-system colour-scheme integration.
 
 ## Demo
 

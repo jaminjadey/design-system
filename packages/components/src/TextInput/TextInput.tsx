@@ -1,17 +1,30 @@
-import {
-  TextInput as MantineTextInput,
-  type TextInputProps as MantineTextInputProps
-} from "@mantine/core";
-import type { ReactNode } from "react";
+import { TextInput as MantineTextInput } from "@mantine/core";
+import type { CSSProperties, ChangeEventHandler, ReactNode } from "react";
 
-export interface TextInputProps extends MantineTextInputProps {
+export interface TextInputProps {
+  readonly label?: ReactNode;
+  readonly placeholder?: string;
+  readonly value?: string;
+  readonly defaultValue?: string;
   readonly helperText?: ReactNode;
+  readonly description?: ReactNode;
+  readonly error?: ReactNode;
+  readonly disabled?: boolean;
+  readonly required?: boolean;
+  readonly readOnly?: boolean;
+  readonly name?: string;
+  readonly id?: string;
+  readonly type?: "text" | "email" | "password" | "search" | "tel" | "url";
+  readonly autoComplete?: string;
+  readonly className?: string;
+  readonly style?: CSSProperties;
+  readonly onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 
-export function TextInput({ helperText, description, radius = "md", ...props }: TextInputProps) {
+export function TextInput({ helperText, description, ...props }: TextInputProps) {
   return (
     <MantineTextInput
-      radius={radius}
+      radius="md"
       description={description ?? helperText}
       styles={{
         input: {

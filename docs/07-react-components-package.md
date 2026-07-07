@@ -1,12 +1,16 @@
-# 07 - React components package
+# 07 - React Components Package
 
 ## Purpose
 
-The React component package demonstrates how product teams would consume the design system. It should be built on Mantine but expose a design-system API where useful.
+The React component package is the app-facing design-system API. It may use
+Mantine internally, but consumers should import components and types only from
+`@demo-ds/components`.
 
-The package should not wrap every Mantine component. Wrap Mantine components only when the wrapper adds meaningful design-system value.
+This protects applications from being coupled to Mantine prop names, component
+composition, or replacement cost. If the rendering layer changes later, the
+design-system API can remain stable.
 
-## Package location
+## Package Location
 
 ```txt
 packages/components/
@@ -26,74 +30,43 @@ packages/components/
   package.json
 ```
 
-Story files can live in the component package and be consumed by the Storybook app, or they can live in the Storybook app. For a demo repo, colocated stories are useful because each component has implementation, tests, and docs together.
+Story files can live in the component package and be consumed by the Storybook
+app. For this demo, colocated stories are useful because each component has
+implementation, tests, and docs together.
 
-## Component strategy
+## API Strategy
 
-Use three levels of component abstraction:
+Use the component package as an API firewall:
 
-### 1. Theme-first Mantine usage
+- App code imports `@demo-ds/components`.
+- Component props use design-system names such as `tone`, `emphasis`, and `helperText`.
+- Public props do not extend Mantine prop types.
+- Mantine imports stay inside implementation files.
+- Stories and examples should demonstrate design-system components, not direct Mantine usage.
 
-For simple cases, consumers can use Mantine components directly under `DemoThemeProvider`.
-
-Example:
-
-```tsx
-import { Button } from '@mantine/core';
-
-<Button variant="filled">Save</Button>
-```
-
-### 2. Thin design-system wrappers
-
-Use wrappers when default props, variants, naming, or accessibility behaviour should be standardised.
-
-Example:
-
-```tsx
-import { Button } from '@demo-ds/components';
-
-<Button tone="primary">Save</Button>
-```
-
-### 3. Composed application patterns
-
-Use composed components for repeated patterns.
-
-Examples:
-
-- `AlertBanner`
-- `PageHeader`
-- `EmptyState`
-- `FormSection`
-- `DataCard`
-
-## Initial component set
+## Initial Component Set
 
 ### `Button`
 
 Purpose:
 
-- Demonstrate tone and variant mapping.
+- Demonstrate tone and emphasis mapping.
 - Provide standard loading and icon spacing behaviour.
+- Hide the underlying button implementation.
 
 Suggested props:
 
 ```ts
-export interface ButtonProps extends Omit<MantineButtonProps, 'color'> {
+export interface ButtonProps {
+  children: React.ReactNode;
   tone?: 'primary' | 'neutral' | 'danger' | 'success';
   emphasis?: 'high' | 'medium' | 'low';
+  size?: 'sm' | 'md' | 'lg';
+  loading?: boolean;
+  disabled?: boolean;
+  type?: 'button' | 'submit' | 'reset';
 }
 ```
-
-Mapping:
-
-| `tone` | Mantine colour or CSS variable |
-| --- | --- |
-| `primary` | `primary` |
-| `neutral` | semantic neutral styling |
-| `danger` | danger palette or semantic danger variable |
-| `success` | success palette or semantic success variable |
 
 ### `TextInput`
 
@@ -101,12 +74,18 @@ Purpose:
 
 - Demonstrate form field defaults.
 - Standardise error/help text behaviour.
+- Keep input API independent from Mantine.
 
 Suggested props:
 
 ```ts
-export interface TextInputProps extends MantineTextInputProps {
+export interface TextInputProps {
+  label?: React.ReactNode;
   helperText?: React.ReactNode;
+  error?: React.ReactNode;
+  value?: string;
+  defaultValue?: string;
+  disabled?: boolean;
 }
 ```
 
@@ -132,12 +111,15 @@ export interface AlertBannerProps {
 Purpose:
 
 - Demonstrate surface, border, radius, and spacing tokens.
+- Provide an accessible interactive-card pattern when needed.
 
 Suggested props:
 
 ```ts
-export interface CardProps extends MantinePaperProps {
+export interface CardProps {
+  children?: React.ReactNode;
   interactive?: boolean;
+  onClick?: React.MouseEventHandler<HTMLDivElement>;
 }
 ```
 
@@ -152,6 +134,7 @@ Suggested props:
 ```ts
 export interface StatusBadgeProps {
   tone: 'neutral' | 'success' | 'warning' | 'danger' | 'info';
+  emphasis?: 'soft' | 'solid' | 'outline';
   children: React.ReactNode;
 }
 ```
@@ -176,20 +159,20 @@ export interface PageHeaderProps {
 
 Purpose:
 
-- Demonstrate light/dark scheme integration.
+- Demonstrate light/dark scheme integration through the design-system provider.
 
-Use Mantine colour-scheme hooks internally.
+Use rendering-layer colour-scheme hooks internally, but do not expose them in
+the public API.
 
-## Styling rules
+## Styling Rules
 
-- Prefer Mantine props for standard component variations.
-- Use CSS modules for custom styles.
 - Use semantic CSS variables for colour decisions.
 - Avoid hardcoded hex values.
 - Avoid reaching into generated token internals.
 - Use `var(--ds-...)` for design-system variables.
+- Keep rendering-library props inside implementation files.
 
-Example CSS module:
+Example CSS:
 
 ```css
 .root {
@@ -200,7 +183,7 @@ Example CSS module:
 }
 ```
 
-## Accessibility rules
+## Accessibility Rules
 
 - Buttons must have accessible names.
 - Icon-only buttons must require `aria-label`.
@@ -209,9 +192,10 @@ Example CSS module:
 - Interactive cards must be keyboard accessible or avoid pretending to be buttons.
 - Do not remove focus indicators.
 
-## Public exports
+## Public Exports
 
-The package root should export only public components and types:
+The package root should export only public components and design-system-owned
+types:
 
 ```ts
 export { Button } from './Button';
@@ -220,7 +204,7 @@ export { AlertBanner } from './AlertBanner';
 export type { AlertBannerProps } from './AlertBanner';
 ```
 
-Do not export internal utilities unless they are intended to be stable.
+Do not export Mantine components, Mantine prop types, or internal utilities.
 
 ## Tests
 
@@ -229,7 +213,7 @@ Each component should have:
 - Render test.
 - Accessibility smoke test.
 - Prop mapping test for important variants.
-- Snapshot only where useful.
+- Public declaration check to ensure no Mantine types leak from `dist`.
 
 Example test goals:
 
@@ -238,9 +222,10 @@ Button renders children.
 Button maps tone="danger" to danger styling.
 Icon-only Button requires aria-label or test documents expected behaviour.
 AlertBanner sets role="status" or role="alert" based on tone.
+Generated component declarations do not import @mantine/core.
 ```
 
-## Storybook stories
+## Storybook Stories
 
 Each component should have stories for:
 
@@ -251,7 +236,10 @@ Each component should have stories for:
 - Light and dark backgrounds.
 - Accessibility notes.
 
-## Component maturity labels
+Stories should use design-system components and normal HTML/CSS for supporting
+content rather than importing Mantine directly.
+
+## Component Maturity Labels
 
 Use maturity labels in docs:
 
@@ -261,4 +249,5 @@ Use maturity labels in docs:
 | Stable | Safe for demo app usage. |
 | Deprecated | Kept only for compatibility. |
 
-For the initial repo, most components can be experimental except the provider and token outputs.
+For the initial repo, most components can be experimental except the provider
+and token outputs.

@@ -43,7 +43,7 @@ Example `preview.tsx`:
 ```tsx
 import type { Preview } from '@storybook/react-vite';
 import { DemoThemeProvider } from '@demo-ds/mantine-theme';
-import '@demo-ds/tokens/css';
+import '@demo-ds/mantine-theme/styles.css';
 
 const preview: Preview = {
   decorators: [
@@ -220,4 +220,5 @@ push to main -> install -> build packages -> build storybook -> upload static ar
 - Do not manually copy token values into MDX.
 - Do not import raw fixture files into Storybook.
 - Do not bypass `DemoThemeProvider`.
+- Do not import Mantine directly in stories or docs examples.
 - Do not make Storybook the only consumer; keep the example app as a separate validation point.

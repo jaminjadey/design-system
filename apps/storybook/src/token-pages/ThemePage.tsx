@@ -1,4 +1,4 @@
-import { demoTheme } from "@demo-ds/mantine-theme";
+import { demoThemeSummary } from "@demo-ds/mantine-theme";
 
 import { ModePreview } from "./ModePreview.js";
 
@@ -14,19 +14,19 @@ export function ThemePage() {
       <dl className="metadata-grid">
         <div>
           <dt>Primary colour</dt>
-          <dd>{demoTheme.primaryColor}</dd>
+          <dd>{demoThemeSummary.primaryColor}</dd>
         </div>
         <div>
           <dt>Primary shades</dt>
-          <dd>{demoTheme.colors?.primary?.length ?? "-"}</dd>
+          <dd>{demoThemeSummary.primaryShadeCount}</dd>
         </div>
         <div>
           <dt>Default radius</dt>
-          <dd>{demoTheme.defaultRadius}</dd>
+          <dd>{demoThemeSummary.defaultRadius}</dd>
         </div>
         <div>
           <dt>Heading font</dt>
-          <dd>{demoTheme.headings?.fontFamily ?? "-"}</dd>
+          <dd>{demoThemeSummary.headingFontFamily}</dd>
         </div>
       </dl>
       <ModePreview>

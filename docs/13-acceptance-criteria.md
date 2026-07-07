@@ -46,7 +46,7 @@ The MVP is complete when the repo can demonstrate the full path from demo token 
 ### Components
 
 - At least five components exist.
-- Components use Mantine and token variables.
+- Components use token variables and do not expose Mantine prop types.
 - Components have tests.
 - Components have Storybook stories.
 - Components avoid hardcoded hex values.

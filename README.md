@@ -13,8 +13,8 @@ The important idea is separation of concerns:
 - Source token files model what a design tool exports.
 - `@demo-ds/token-pipeline` validates and converts that source shape.
 - `@demo-ds/tokens` exposes generated CSS, JSON, and TypeScript contracts.
-- `@demo-ds/mantine-theme` maps generated tokens into Mantine.
-- `@demo-ds/components` wraps Mantine only where the design system needs fixed decisions.
+- `@demo-ds/mantine-theme` keeps Mantine setup behind `DemoThemeProvider`.
+- `@demo-ds/components` exposes the design-system component API; Mantine stays an internal rendering dependency.
 - Storybook and the example app consume the packages through public exports.
 
 ## Pipeline
@@ -38,8 +38,8 @@ flowchart LR
 ```txt
 packages/token-pipeline   build, validation, and scanner utilities
 packages/tokens           generated token package
-packages/mantine-theme    Mantine theme and DemoThemeProvider
-packages/components       wrapped design-system components
+packages/mantine-theme    internal Mantine theme adapter and DemoThemeProvider
+packages/components       public design-system component API
 apps/storybook            token, theme, and component documentation
 apps/example              Vite app proving package consumption
 ```
@@ -95,6 +95,7 @@ Wrap an app with the demo theme provider:
 ```tsx
 import { DemoThemeProvider } from '@demo-ds/mantine-theme';
 import { Button, Card, PageHeader } from '@demo-ds/components';
+import '@demo-ds/mantine-theme/styles.css';
 
 export function App() {
   return (

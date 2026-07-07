@@ -7,7 +7,7 @@ Figma-style design-token JSON and ends with consumable UI packages and a demo
 application.
 
 The goal is to demonstrate the engineering workflow: token ingestion,
-canonical modelling, generated package outputs, Mantine theming, wrapped React
+canonical modelling, generated package outputs, themed React
 components, Storybook documentation, and an app consuming the same public
 exports.
 
@@ -18,7 +18,7 @@ exports.
 3. The repo can produce a stable canonical token contract.
 4. CSS, TypeScript, JSON, and documentation data can be generated from one contract.
 5. Mantine can be themed from generated tokens.
-6. React components can consume the Mantine theme and semantic CSS variables.
+6. React components can consume the generated theme and semantic CSS variables.
 7. Storybook can document the tokens, theme, and components.
 8. An example app can consume the packages the same way another app would.
 9. Tests and CI can protect the pipeline from drift.
@@ -28,7 +28,7 @@ exports.
 > We start with demo design-token JSON shaped like a Figma token export. The
 > pipeline validates and normalises it into a canonical token model. From that
 > single contract, we generate CSS variables, TypeScript token exports,
-> documentation data, a Mantine theme package, and a React component package.
+> documentation data, a theme adapter package, and a React component package.
 > Storybook and the example app consume those packages through public exports.
 
 ## Intended Audience
@@ -47,7 +47,7 @@ The repo should not:
 - Include brand-specific values, logos, fonts, screenshots, or product copy.
 - Depend on private registries or internal systems.
 - Optimise for every possible platform output in the first version.
-- Wrap every Mantine component when a package export or usage pattern is enough.
+- Expose Mantine components or prop types as the app-facing design-system API.
 
 ## MVP Scope
 
@@ -58,7 +58,7 @@ The complete demo includes:
 - Canonical token JSON.
 - CSS variables for light and dark modes.
 - TypeScript token exports.
-- Mantine theme package.
+- Theme adapter package.
 - A small React component package.
 - Storybook docs for tokens, theme, and components.
 - A Vite React example app.

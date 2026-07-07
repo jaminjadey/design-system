@@ -21,7 +21,8 @@ Create components:
 - ThemeToggle
 
 Requirements:
-- Build on Mantine components.
+- Use Mantine components internally.
+- Do not expose Mantine components or Mantine prop types from package exports.
 - Use DemoThemeProvider in tests where needed.
 - Avoid hardcoded hex values.
 - Use semantic CSS variables for custom styles.

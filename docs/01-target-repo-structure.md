@@ -93,27 +93,26 @@ Suggested exports:
 
 ### `packages/mantine-theme`
 
-Package that maps generated tokens to Mantine.
+Internal adapter package that maps generated tokens to Mantine.
 
 Responsibilities:
 
 - Import generated tokens from `@demo-ds/tokens`.
-- Export a Mantine theme object.
-- Export a `DemoThemeProvider` that wraps `MantineProvider`.
+- Export a `DemoThemeProvider` as the app-facing theme entry point.
+- Keep Mantine theme objects and resolvers behind the adapter boundary.
 - Keep font handling generic with safe fallback fonts.
 - Keep Mantine-specific mapping out of the canonical token model.
 
 Suggested exports:
 
 ```ts
-export { demoTheme } from './theme';
-export { demoCssVariablesResolver } from './cssVariablesResolver';
 export { DemoThemeProvider } from './DemoThemeProvider';
+export { demoThemeSummary } from './themeSummary';
 ```
 
 ### `packages/components`
 
-React component package built on Mantine and the generated theme.
+React component package implemented with Mantine internally and the generated theme.
 
 Responsibilities:
 
@@ -121,6 +120,7 @@ Responsibilities:
 - Encode design-system variants, defaults, and accessibility patterns.
 - Use token variables for design-system values.
 - Keep implementation generic and reusable.
+- Do not expose Mantine components or Mantine prop types from package exports.
 
 Initial components:
 
@@ -139,7 +139,7 @@ Storybook documentation app.
 Responsibilities:
 
 - Show token swatches and scales.
-- Show generated Mantine theme values.
+- Show generated theme values.
 - Show components and variants.
 - Provide usage docs and accessibility notes.
 - Serve as the public design-system showcase.
@@ -210,6 +210,6 @@ implementation logic:
 
 - The token pipeline is isolated and testable.
 - Generated assets are separated from generator code.
-- Mantine-specific mapping is not mixed into canonical token generation.
-- Components consume theme outputs like real downstream users would.
+- Mantine-specific mapping stays inside the theme adapter.
+- Components consume theme outputs like real downstream users would while hiding Mantine from app code.
 - Storybook and the example app validate the packages from the outside.

@@ -2,9 +2,9 @@
 
 ## Purpose
 
-The Mantine theme package bridges canonical design tokens into Mantine's theming system. It should keep Mantine-specific choices outside the canonical token model.
+The Mantine theme package is an adapter that bridges canonical design tokens into Mantine's theming system. It should keep Mantine-specific choices outside the canonical token model and outside app-facing component APIs.
 
-Mantine's theme object is where application colours, fonts, spacing, radius, and related design tokens are stored. MantineProvider should be placed at the application root, where it provides the theme context and manages Mantine CSS variables.
+Mantine's theme object is where the adapter stores colours, fonts, spacing, radius, and related design tokens. App code should use `DemoThemeProvider`, not `MantineProvider` directly.
 
 ## Package location
 
@@ -34,13 +34,14 @@ It should not read raw fixture files.
 
 ## Outputs
 
-The package exports:
+The app-facing package export is:
 
 ```ts
-export { demoTheme } from './theme';
-export { demoCssVariablesResolver } from './cssVariablesResolver';
 export { DemoThemeProvider } from './DemoThemeProvider';
+export { demoThemeSummary } from './themeSummary';
 ```
+
+Mantine-specific theme objects can exist inside the package for tests and adapter implementation, but application code should not depend on them.
 
 ## Mapping canonical tokens to Mantine
 
@@ -153,13 +154,11 @@ const defaultFontFamily = [
 
 ## DemoThemeProvider
 
-Create a provider that imports Mantine styles, generated token CSS, and wraps children in `MantineProvider`.
+Create a provider that wraps children in `MantineProvider`, and expose a design-system stylesheet that imports Mantine styles and generated token CSS. This keeps styling setup behind the design-system package boundary.
 
 Example:
 
 ```tsx
-import '@mantine/core/styles.css';
-import '@demo-ds/tokens/css';
 import { MantineProvider } from '@mantine/core';
 import { demoTheme } from './theme';
 import { demoCssVariablesResolver } from './cssVariablesResolver';
@@ -190,9 +189,11 @@ Recommended split:
 
 | Output | Use |
 | --- | --- |
-| `@demo-ds/tokens/css` | Full design-system token variables. |
-| `demoTheme` | Mantine-supported theme keys. |
-| `demoCssVariablesResolver` | Additional app-level variables that should move with Mantine mode. |
+| `@demo-ds/mantine-theme/styles.css` | App-facing stylesheet import. |
+| `@demo-ds/tokens/tokens.css` | Internal full design-system token variables. |
+| `demoTheme` | Internal Mantine-supported theme keys. |
+| `demoCssVariablesResolver` | Internal variables that should move with Mantine mode. |
+| `demoThemeSummary` | App-safe documentation summary. |
 
 ## Component defaults
 
@@ -226,7 +227,7 @@ Use Mantine's colour scheme support. The token CSS should target the same attrib
 }
 ```
 
-The Storybook decorator and example app should both use `DemoThemeProvider` so mode behaviour is consistent.
+The Storybook decorator and example app should both use `DemoThemeProvider` so mode behaviour is consistent and app code never imports Mantine directly.
 
 ## Tests
 
@@ -248,3 +249,4 @@ Test the Mantine theme package for:
 - Do not add private fonts.
 - Do not put application-specific copy into the theme package.
 - Do not make components import from `packages/tokens/src`; use public package exports.
+- Do not make apps import `@mantine/core` directly.

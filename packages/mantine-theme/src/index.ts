@@ -1,3 +1,2 @@
-export { DemoThemeProvider, type DemoThemeProviderProps } from "./DemoThemeProvider.js";
-export { demoCssVariablesResolver } from "./cssVariablesResolver.js";
-export { defaultFontFamily, demoTheme } from "./theme.js";
+export { DemoThemeProvider, type DemoColorScheme, type DemoThemeProviderProps } from "./DemoThemeProvider.js";
+export { demoThemeSummary, type DemoThemeSummary } from "./themeSummary.js";

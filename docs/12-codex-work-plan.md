@@ -109,7 +109,7 @@ docs/codex/prompt-06-components-and-stories.md
 Acceptance criteria:
 
 - Initial components exist.
-- Components use Mantine and design-system variables.
+- Components use Mantine internally and expose design-system-owned props.
 - Unit tests pass.
 - Stories exist for each component.
 

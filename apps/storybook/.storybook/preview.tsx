@@ -1,7 +1,6 @@
 import type { Preview } from "@storybook/react-vite";
 import { DemoThemeProvider } from "@demo-ds/mantine-theme";
-import "@mantine/core/styles.css";
-import "@demo-ds/tokens/tokens.css";
+import "@demo-ds/mantine-theme/styles.css";
 import "../src/storybook.css";
 
 type StorybookColorScheme = "light" | "dark";

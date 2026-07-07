@@ -3,4 +3,4 @@ declare module "@demo-ds/tokens/token-docs.json" {
   export default value;
 }
 
-declare module "@demo-ds/tokens/tokens.css";
+declare module "@demo-ds/mantine-theme/styles.css";

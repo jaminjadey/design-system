@@ -1,12 +1,14 @@
-import { MantineProvider, type MantineColorScheme } from "@mantine/core";
+import { MantineProvider } from "@mantine/core";
 import type { ReactNode } from "react";
 
 import { demoCssVariablesResolver } from "./cssVariablesResolver.js";
 import { demoTheme } from "./theme.js";
 
+export type DemoColorScheme = "light" | "dark" | "auto";
+
 export interface DemoThemeProviderProps {
   readonly children: ReactNode;
-  readonly defaultColorScheme?: MantineColorScheme;
+  readonly defaultColorScheme?: DemoColorScheme;
   readonly forceColorScheme?: "light" | "dark";
 }
 
