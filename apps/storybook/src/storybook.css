@@ -1,3 +1,51 @@
+html,
+body,
+#storybook-root,
+.sb-show-main {
+  background: var(--ds-color-background-body) !important;
+  color: var(--ds-color-text-default) !important;
+}
+
+.storybook-theme-root {
+  background: var(--ds-color-background-body);
+  color: var(--ds-color-text-default);
+  min-height: 100vh;
+}
+
+.sbdocs-wrapper,
+.sbdocs-content {
+  background: var(--ds-color-background-body) !important;
+  color: var(--ds-color-text-default) !important;
+}
+
+.sbdocs-content h1,
+.sbdocs-content h2,
+.sbdocs-content h3,
+.sbdocs-content h4,
+.sbdocs-content h5,
+.sbdocs-content h6 {
+  color: var(--ds-color-text-default);
+}
+
+.sbdocs-content p,
+.sbdocs-content li {
+  color: var(--ds-color-text-light);
+}
+
+.sbdocs-content a {
+  color: var(--ds-color-text-link-default);
+}
+
+.sbdocs-content :not(pre) > code {
+  background: var(--ds-color-background-card) !important;
+  border: 1px solid var(--ds-color-border-lightest) !important;
+  color: var(--ds-color-text-default) !important;
+}
+
+.sbdocs-content hr {
+  border-color: var(--ds-color-border-light);
+}
+
 .docs-page {
   display: grid;
   gap: var(--ds-space-xl);
@@ -16,6 +64,16 @@
   font-size: 0.875rem;
 }
 
+.token-table tr,
+.token-table th,
+.token-table td {
+  background: var(--ds-color-background-body) !important;
+}
+
+.token-table tbody tr:nth-child(even) td {
+  background: var(--ds-color-background-card) !important;
+}
+
 .token-table caption {
   color: var(--ds-color-text-default);
   font-weight: var(--ds-font-weight-heading-h6);
@@ -32,16 +90,18 @@
 }
 
 .token-table th {
-  color: var(--ds-color-text-default);
+  color: var(--ds-color-text-default) !important;
   font-weight: var(--ds-font-weight-heading-h6);
 }
 
 .token-table td {
-  color: var(--ds-color-text-light);
+  color: var(--ds-color-text-light) !important;
 }
 
 .token-table code {
-  color: var(--ds-color-text-default);
+  background: transparent !important;
+  border: 0 !important;
+  color: var(--ds-color-text-default) !important;
 }
 
 .color-swatch,

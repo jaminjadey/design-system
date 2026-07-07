@@ -55,12 +55,24 @@ jobs:
 
 ## Storybook deployment
 
-Deploy built Storybook to GitHub Pages after CI passes on `main`.
+Deploy built Storybook to GitHub Pages from `main`.
 
-Suggested flow:
+Workflow:
 
 ```txt
-build Storybook -> upload artifact -> deploy Pages
+.github/workflows/storybook-pages.yml
+```
+
+Flow:
+
+```txt
+install -> scan fixtures -> build workspace -> upload artifact -> deploy Pages
+```
+
+Published URL:
+
+```txt
+https://jaminjadey.github.io/design-system/
 ```
 
 Keep deployment separate from pull request CI if you want faster PR feedback.

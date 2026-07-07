@@ -1,6 +1,6 @@
 # Demo Design System Pipeline
 
-This repo shows a complete design-system pipeline: design-token JSON shaped like a Figma token export is transformed into a canonical token contract, generated CSS variables, typed TypeScript exports, a Mantine theme, wrapped React components, Storybook documentation, and a Vite example app.
+This repo shows a complete design-system pipeline: design-token JSON shaped like a Figma token export is transformed into a canonical token contract, generated CSS variables, typed TypeScript exports, an internal Mantine theme adapter, public design-system React components, Storybook documentation, and a Vite example app.
 
 It is intentionally generic. The token values, component copy, and app content are demo data so the repo can focus on the engineering shape of the pipeline rather than on a specific brand.
 
@@ -26,9 +26,9 @@ flowchart LR
   C --> D[canonical.json]
   D --> E[CSS variables]
   D --> F[TypeScript exports]
-  E --> G[Mantine theme]
+  E --> G[Internal Mantine adapter]
   F --> G
-  G --> H[Wrapped React components]
+  G --> H[Design-system React components]
   H --> I[Storybook docs]
   H --> J[Example React app]
 ```
@@ -80,6 +80,19 @@ Run Storybook:
 
 ```sh
 pnpm storybook
+```
+
+Build the static Storybook site:
+
+```sh
+pnpm --filter @demo-ds/storybook build
+```
+
+The published Storybook is deployed from `main` by the `Storybook Pages`
+workflow to:
+
+```txt
+https://jaminjadey.github.io/design-system/
 ```
 
 Run the example app:
@@ -167,7 +180,7 @@ git diff -- packages/tokens/dist
 | `docs/03-canonical-token-model.md` | Canonical token contract and naming rules. |
 | `docs/04-token-build-pipeline.md` | Build stages from source JSON to package outputs. |
 | `docs/05-generated-token-outputs.md` | CSS, TypeScript, JSON, and docs data outputs. |
-| `docs/06-mantine-theme-generation.md` | Mapping generated tokens into Mantine. |
+| `docs/06-mantine-theme-generation.md` | Mapping generated tokens into the internal Mantine adapter. |
 | `docs/07-react-components-package.md` | Component package architecture. |
 | `docs/08-storybook-site.md` | Storybook documentation app. |
 | `docs/09-example-react-app.md` | Example app package-consumption pattern. |
@@ -183,6 +196,7 @@ GitHub Actions verifies the repo from a fresh checkout:
 - scan demo token sources
 - lint, typecheck, test, and build
 - build Storybook and the example app
+- deploy Storybook to GitHub Pages after the Pages workflow succeeds
 - verify package exports
 - scan the repo for forbidden markers and secret-like patterns
 - check formatting

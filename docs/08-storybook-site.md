@@ -34,31 +34,16 @@ apps/storybook/
 - Provide copy-paste usage examples.
 - Demonstrate the example package consumption pattern.
 
-## Decorators
+## Theme setup
 
-All stories should render inside `DemoThemeProvider`.
+All stories and MDX docs should render inside `DemoThemeProvider`. The preview
+configuration should also set `data-mantine-color-scheme` on the document so
+token CSS variables, docs pages, and component stories switch mode together.
 
-Example `preview.tsx`:
+The Storybook preview owns this setup:
 
-```tsx
-import type { Preview } from '@storybook/react-vite';
-import { DemoThemeProvider } from '@demo-ds/mantine-theme';
-import '@demo-ds/mantine-theme/styles.css';
-
-const preview: Preview = {
-  decorators: [
-    (Story) => (
-      <DemoThemeProvider defaultColorScheme="light">
-        <Story />
-      </DemoThemeProvider>
-    )
-  ],
-  parameters: {
-    controls: { expanded: true }
-  }
-};
-
-export default preview;
+```txt
+apps/storybook/.storybook/preview.tsx
 ```
 
 ## Story discovery
@@ -167,7 +152,9 @@ Options:
 2. Add stories that render both modes side by side.
 3. Add a `ThemeToggle` component in docs pages.
 
-For the MVP, rendering both modes side by side is easiest and most reliable.
+Use a toolbar global for light/dark mode, and keep token documentation pages
+styled with generated `--ds-*` variables so the docs surface changes with the
+selected mode.
 
 ## Accessibility checks
 
@@ -209,10 +196,23 @@ pnpm --filter @demo-ds/storybook storybook
 
 For a public demo, deploy the built Storybook to GitHub Pages.
 
-Suggested CI flow:
+Workflow:
 
 ```txt
-push to main -> install -> build packages -> build storybook -> upload static artifact -> deploy Pages
+.github/workflows/storybook-pages.yml
+```
+
+Flow:
+
+```txt
+push to main -> install -> scan fixtures -> build workspace -> upload static artifact -> deploy Pages
+```
+
+Published URL:
+
+```txt
+https://jaminjadey.github.io/design-system/
+```
 ```
 
 ## Avoid these mistakes

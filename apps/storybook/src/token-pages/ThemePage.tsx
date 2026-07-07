@@ -7,9 +7,10 @@ export function ThemePage() {
     <div className="docs-page">
       <h1>Theme</h1>
       <p>
-        The Mantine theme consumes generated token package exports. Primitive token
-        palettes become Mantine colour tuples, common spacing and radius values map to
-        Mantine keys, and semantic colours remain available through CSS variables.
+        The theme adapter consumes generated token package exports. Primitive token
+        palettes, common spacing, radius, and typography values are mapped behind the
+        design-system provider, while semantic colours remain available through CSS
+        variables.
       </p>
       <dl className="metadata-grid">
         <div>
