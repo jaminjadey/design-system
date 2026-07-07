@@ -1,5 +1,6 @@
-import { Meta } from '@storybook/addon-docs/blocks';
+import { Meta, Source } from '@storybook/addon-docs/blocks';
 import { Button, AlertBanner, Card, PageHeader, StatusBadge, TextInput, ThemeToggle } from '@demo-ds/components';
+import { appSetupUsage, componentUsage } from './componentUsageSnippets';
 
 <Meta title="Docs/Components" />
 
@@ -41,3 +42,14 @@ underlying rendering library.
   </div>
   <ThemeToggle />
 </div>
+
+## Usage Code
+
+The app sets up the design-system provider and stylesheet once.
+
+<Source code={appSetupUsage} language="tsx" />
+
+Component code imports from `@demo-ds/components`; Mantine stays behind the
+design-system package boundary.
+
+<Source code={componentUsage} language="tsx" />
