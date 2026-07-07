@@ -1,7 +1,7 @@
-import { componentPackageStatus } from "@demo-ds/components";
+import { Button } from "@demo-ds/components";
 import { demoTheme } from "@demo-ds/mantine-theme";
 
 export const examplePackageStatus = {
-  componentPackageStatus,
-  themeSource: demoTheme.source
+  componentExport: Button.name,
+  themePrimaryColor: demoTheme.primaryColor
 } as const;

@@ -1,0 +1,34 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { metadata } from '@demo-ds/tokens';
+
+<Meta title="Docs/Introduction" />
+
+# Demo Design System
+
+This Storybook documents a public demo design-system pipeline. It shows how
+sanitised fixture tokens become canonical tokens, generated CSS variables,
+generated TypeScript exports, a Mantine theme, and React components.
+
+This repo is not production design guidance and does not contain private source
+exports, private assets, or brand-specific material.
+
+## Package Flow
+
+- `@demo-ds/tokens` exposes generated token artifacts.
+- `@demo-ds/mantine-theme` maps generated tokens into Mantine.
+- `@demo-ds/components` exports design-system wrappers and patterns.
+- Storybook consumes those public package exports.
+
+## Token Package
+
+The current generated token package is `{metadata.name}` with
+`{metadata.tokenCount}` generated tokens.
+
+## Local Commands
+
+```sh
+pnpm tokens:scan
+pnpm --filter @demo-ds/tokens build
+pnpm --filter @demo-ds/storybook storybook
+pnpm --filter @demo-ds/storybook build
+```

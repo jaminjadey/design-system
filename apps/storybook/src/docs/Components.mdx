@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Button, AlertBanner, Card, PageHeader, StatusBadge, TextInput, ThemeToggle } from '@demo-ds/components';
+import { DemoThemeProvider } from '@demo-ds/mantine-theme';
+
+<Meta title="Docs/Components" />
+
+# Components
+
+The component package builds on Mantine and uses the generated theme and token
+CSS variables supplied by `DemoThemeProvider`.
+
+## Initial Components
+
+- `Button`: token-backed tone and emphasis mapping.
+- `TextInput`: standard description and error behaviour.
+- `AlertBanner`: accessible status and alert messaging.
+- `Card`: token-backed surface, radius, and border styling.
+- `StatusBadge`: compact semantic state display.
+- `PageHeader`: page-level title, description, and actions.
+- `ThemeToggle`: Mantine colour-scheme integration.
+
+## Demo
+
+<DemoThemeProvider defaultColorScheme="light">
+  <div className="component-demo-stack">
+    <PageHeader
+      title="Project overview"
+      description="Generic page content using package exports."
+      actions={<Button>New item</Button>}
+    />
+    <Card>
+      <TextInput label="Project name" helperText="Use a generic demo value." defaultValue="Demo project" />
+    </Card>
+    <AlertBanner tone="success" title="Saved">The demo configuration was saved.</AlertBanner>
+    <div className="component-demo-row">
+      <StatusBadge tone="neutral">Draft</StatusBadge>
+      <StatusBadge tone="success">Live</StatusBadge>
+      <StatusBadge tone="warning">Needs review</StatusBadge>
+    </div>
+    <ThemeToggle />
+  </div>
+</DemoThemeProvider>

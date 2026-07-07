@@ -4,15 +4,26 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "storybook build",
     "test": "node -e \"console.log('storybook placeholder tests passed')\"",
     "lint": "node -e \"console.log('storybook placeholder lint passed')\"",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "storybook": "node -e \"console.log('Storybook will be added in a later task')\""
+    "storybook": "storybook dev -p 6006"
   },
   "dependencies": {
     "@demo-ds/components": "workspace:*",
     "@demo-ds/mantine-theme": "workspace:*",
-    "@demo-ds/tokens": "workspace:*"
+    "@demo-ds/tokens": "workspace:*",
+    "@mantine/core": "^9.4.1",
+    "@storybook/addon-docs": "^10.4.6",
+    "@storybook/react-vite": "^10.4.6",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "storybook": "^10.4.6",
+    "vite": "^8.1.3"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3"
   }
 }

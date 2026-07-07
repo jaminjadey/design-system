@@ -13,11 +13,19 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "node -e \"console.log('mantine-theme placeholder tests passed')\"",
+    "test": "pnpm run build && node --test tests/*.test.mjs",
     "lint": "node -e \"console.log('mantine-theme placeholder lint passed')\"",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@demo-ds/tokens": "workspace:*"
+    "@demo-ds/tokens": "workspace:*",
+    "@mantine/core": "^9.4.1",
+    "@mantine/hooks": "^9.4.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3"
   }
 }
