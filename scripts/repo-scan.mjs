@@ -45,11 +45,11 @@ const assetExtensions = new Set([
   ".zip"
 ]);
 
-const allowedAssetFiles = new Set(["packages/tokens/fixtures/sanitised-design-token-fixtures.zip"]);
+const allowedAssetFiles = new Set(["packages/tokens/fixtures/demo-design-token-fixtures.zip"]);
 
 const markerAllowlist = new Map(
   [
-    "docs/02-token-source-and-sanitisation.md",
+    "docs/02-token-source-and-demo-fixtures.md",
     "docs/codex/prompt-02-fixtures-and-safety.md",
     "packages/token-pipeline/src/safety/forbiddenMarkers.ts",
     "packages/token-pipeline/dist/safety/forbiddenMarkers.js",

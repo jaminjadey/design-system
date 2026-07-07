@@ -2,7 +2,7 @@
 
 ## MVP acceptance criteria
 
-The MVP is complete when the repo can demonstrate the full path from sanitised tokens to app usage.
+The MVP is complete when the repo can demonstrate the full path from demo token source files to app usage.
 
 ### Repo
 
@@ -14,9 +14,8 @@ The MVP is complete when the repo can demonstrate the full path from sanitised t
 
 ### Token source
 
-- Sanitised fixtures are committed in a clear fixture location.
-- No raw work token zips are committed.
-- Safety scan passes.
+- Demo token fixtures are committed in a clear fixture location.
+- Token source scan passes.
 - Fixture README explains synthetic nature.
 
 ### Canonical tokens
@@ -109,7 +108,7 @@ A reviewer should be able to answer these questions from the repo:
 Suggested showcase flow:
 
 1. Open repo README and explain architecture diagram.
-2. Show sanitised fixture files.
+2. Show demo token fixture files.
 3. Run `pnpm tokens:scan`.
 4. Run `pnpm tokens:build`.
 5. Show `canonical.json` and generated CSS.

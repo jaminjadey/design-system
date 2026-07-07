@@ -2,7 +2,7 @@
 
 ## Repository mission
 
-Build a public demo design-system pipeline from sanitised fixture tokens to canonical design tokens, generated CSS variables, generated TypeScript exports, a generated Mantine theme, a React component package, a Storybook site, and an example React app.
+Build a public demo design-system pipeline from demo Figma-style token fixtures to canonical design tokens, generated CSS variables, generated TypeScript exports, a generated Mantine theme, a React component package, a Storybook site, and an example React app.
 
 This repo is a demonstration of process and engineering quality. It must not contain work-specific, client-specific, confidential, proprietary, or brand-identifying source material.
 
@@ -11,9 +11,9 @@ This repo is a demonstration of process and engineering quality. It must not con
 - Do not copy raw work token exports into this repository.
 - Do not add files with private company names, internal brand names, private project names, or work system names.
 - Do not add private fonts, logos, icon sets, screenshots, product copy, customer examples, or internal URLs.
-- Do not add original unsanitised colour values or Figma metadata.
-- Treat `packages/tokens/fixtures/sanitised-design-token-fixtures.zip` or its extracted contents as the only allowed token source.
-- Generated output must be derived from the sanitised fixture only.
+- Do not add brand-specific colour values or source-tool metadata.
+- Treat `packages/tokens/fixtures/extracted` as the only allowed token source.
+- Generated output must be derived from the demo token fixtures only.
 - Any test fixtures must be synthetic and generic.
 
 ## Engineering conventions

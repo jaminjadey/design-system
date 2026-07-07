@@ -1,12 +1,12 @@
-# 04 - Token build pipeline
+# 04 - Token Build Pipeline
 
-## Pipeline overview
+## Pipeline Overview
 
-The pipeline turns sanitised source fixtures into generated artifacts.
+The pipeline turns demo token source files into package artifacts.
 
 ```mermaid
 flowchart TD
-  A[Fixture files] --> B[Safety scan]
+  A[Demo token JSON] --> B[Source scan]
   B --> C[Read and parse]
   C --> D[Source validation]
   D --> E[Normalise names]
@@ -14,15 +14,13 @@ flowchart TD
   F --> G[Canonical validation]
   G --> H[Generate CSS]
   G --> I[Generate TS]
-  G --> J[Generate Mantine inputs]
-  G --> K[Generate docs data]
-  H --> L[Package outputs]
-  I --> L
-  J --> L
-  K --> L
+  G --> J[Generate docs data]
+  H --> K[Package outputs]
+  I --> K
+  J --> K
 ```
 
-## Stage 1: fixture preparation
+## Stage 1: Fixture Discovery
 
 Inputs:
 
@@ -40,37 +38,24 @@ Responsibilities:
 - Confirm expected files exist.
 - Confirm files are JSON.
 - Confirm no unsupported binary files were introduced.
-- Make the file list deterministic by sorting paths.
+- Sort paths for deterministic processing.
 
-Suggested command:
-
-```sh
-pnpm --filter @demo-ds/token-pipeline prepare:fixtures
-```
-
-## Stage 2: safety scan
+## Stage 2: Source Scan
 
 Responsibilities:
 
 - Search for forbidden strings.
 - Search for forbidden JSON keys.
 - Fail on source-tool metadata.
-- Produce a machine-readable report for CI.
+- Produce a useful CI log.
 
-Suggested outputs:
-
-```txt
-packages/tokens/generated/reports/safety-report.json
-packages/tokens/generated/reports/safety-report.md
-```
-
-Suggested command:
+Command:
 
 ```sh
-pnpm --filter @demo-ds/token-pipeline scan:fixtures
+pnpm tokens:scan
 ```
 
-## Stage 3: source parsing
+## Stage 3: Source Parsing
 
 Responsibilities:
 
@@ -89,7 +74,7 @@ interface SourceTokenRecord {
 }
 ```
 
-## Stage 4: source validation
+## Stage 4: Source Validation
 
 Responsibilities:
 
@@ -99,9 +84,7 @@ Responsibilities:
 - Ensure typography groups have the expected properties.
 - Fail clearly on unknown or malformed input.
 
-Unknown tokens should fail by default in the MVP. Once the pipeline is mature, unknown tokens can be reported as warnings if needed.
-
-## Stage 5: normalisation and mapping
+## Stage 5: Normalisation And Mapping
 
 Responsibilities:
 
@@ -119,7 +102,7 @@ packages/token-pipeline/src/mapping/nameNormalisation.ts
 
 Keep explicit mapping tables close to tests.
 
-## Stage 6: canonical transform
+## Stage 6: Canonical Transform
 
 Responsibilities:
 
@@ -130,19 +113,13 @@ Responsibilities:
 - Group typography attributes into coherent typography tokens.
 - Attach source provenance for debugging.
 
-Suggested command:
-
-```sh
-pnpm --filter @demo-ds/tokens build:canonical
-```
-
-Suggested output:
+Output:
 
 ```txt
 packages/tokens/dist/canonical.json
 ```
 
-## Stage 7: canonical validation
+## Stage 7: Canonical Validation
 
 Responsibilities:
 
@@ -152,34 +129,28 @@ Responsibilities:
 - Ensure no source-only metadata exists.
 - Ensure all mode-aware tokens contain exactly `light` and `dark` keys.
 
-Suggested command:
+## Stage 8: Output Generation
 
-```sh
-pnpm --filter @demo-ds/tokens validate:canonical
-```
-
-## Stage 8: output generation
-
-Generate the following outputs:
+Generate:
 
 ```txt
 packages/tokens/dist/canonical.json
 packages/tokens/dist/tokens.css
 packages/tokens/dist/tokens.light.css
 packages/tokens/dist/tokens.dark.css
-packages/tokens/dist/index.ts
-packages/tokens/dist/token-names.ts
+packages/tokens/dist/index.js
+packages/tokens/dist/index.d.ts
+packages/tokens/dist/token-names.js
+packages/tokens/dist/token-names.d.ts
 packages/tokens/dist/metadata.json
-packages/mantine-theme/src/generated/themeTokens.ts
+packages/tokens/dist/token-docs.json
 ```
 
 Do not manually edit generated files.
 
-## Stage 9: package build
+## Stage 9: Package Build
 
-Build TypeScript packages into distributable output.
-
-Suggested package-level commands:
+Build TypeScript packages into distributable output:
 
 ```sh
 pnpm --filter @demo-ds/token-pipeline build
@@ -188,17 +159,17 @@ pnpm --filter @demo-ds/mantine-theme build
 pnpm --filter @demo-ds/components build
 ```
 
-## Stage 10: documentation build
+## Stage 10: Documentation And App Build
 
-Storybook should consume generated artifacts rather than duplicating token values.
-
-Suggested command:
+Storybook and the example app should consume generated artifacts through package
+exports.
 
 ```sh
 pnpm --filter @demo-ds/storybook build
+pnpm --filter @demo-ds/example build
 ```
 
-## Recommended script naming
+## Recommended Scripts
 
 At root:
 
@@ -207,7 +178,6 @@ At root:
   "scripts": {
     "tokens:scan": "pnpm --filter @demo-ds/token-pipeline scan:fixtures",
     "tokens:build": "pnpm --filter @demo-ds/tokens build",
-    "tokens:check": "pnpm tokens:scan && pnpm --filter @demo-ds/tokens test",
     "build": "turbo run build",
     "test": "turbo run test",
     "lint": "turbo run lint",
@@ -216,20 +186,7 @@ At root:
 }
 ```
 
-Inside `packages/tokens/package.json`:
-
-```json
-{
-  "scripts": {
-    "clean": "rimraf dist generated",
-    "build": "pnpm clean && token-pipeline build --fixtures ./fixtures/extracted --out ./dist",
-    "test": "vitest run",
-    "validate": "token-pipeline validate --canonical ./dist/canonical.json"
-  }
-}
-```
-
-## Failure policy
+## Failure Policy
 
 Fail fast on:
 
@@ -242,9 +199,9 @@ Fail fast on:
 - Missing light/dark values.
 - Generated output drift in CI.
 
-## Output drift check
+## Output Drift Check
 
-Add a CI check that regenerates outputs and verifies the working tree is clean:
+Regenerate outputs and verify the working tree is clean:
 
 ```sh
 pnpm tokens:build

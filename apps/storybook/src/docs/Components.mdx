@@ -9,6 +9,11 @@ import { DemoThemeProvider } from '@demo-ds/mantine-theme';
 The component package builds on Mantine and uses the generated theme and token
 CSS variables supplied by `DemoThemeProvider`.
 
+The wrappers exist where the design system has a real decision to encode:
+semantic tones, token-backed spacing, consistent radius, accessible status
+patterns, and theme switching. Lower-level layout remains Mantine so apps do
+not lose the flexibility of the underlying framework.
+
 ## Initial Components
 
 - `Button`: token-backed tone and emphasis mapping.

@@ -2,7 +2,7 @@
   "meta": {
     "generatedBy": "@demo-ds/token-pipeline",
     "doNotEdit": true,
-    "source": "sanitised-design-token-fixtures"
+    "source": "demo-design-token-fixtures"
   },
   "groups": [
     {

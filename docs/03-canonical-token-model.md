@@ -1,21 +1,24 @@
-# 03 - Canonical token model
+# 03 - Canonical Token Model
 
 ## Purpose
 
-The canonical token model is the stable contract between source-token ingestion and all generated outputs.
+The canonical token model is the stable contract between source-token ingestion
+and all generated outputs.
 
-Source exports can change shape. Mantine can change APIs. Storybook can change configuration. The canonical token model should be the repo's internal source of truth after ingestion.
+Source exports can change shape. Mantine can change APIs. Storybook can change
+configuration. The canonical token model keeps downstream packages independent
+from the source-file shape.
 
-## Design principles
+## Design Principles
 
-- Canonical tokens are generated from sanitised source fixtures.
+- Canonical tokens are generated from demo source fixtures.
 - Canonical tokens use generic, stable, documented names.
 - Canonical tokens preserve modes where needed.
 - Canonical values are easy to emit to CSS, TypeScript, JSON, and Mantine.
 - Canonical schema validation happens before outputs are generated.
-- Source-specific metadata is not allowed in canonical output.
+- Source-tool metadata is not allowed in canonical output.
 
-## Canonical file
+## Canonical File
 
 Recommended output:
 
@@ -31,8 +34,8 @@ Recommended structure:
   "meta": {
     "name": "demo-design-system-tokens",
     "version": "0.1.0",
-    "generatedAt": "2026-07-06T00:00:00.000Z",
-    "source": "sanitised-design-token-fixtures",
+    "generatedAt": "1970-01-01T00:00:00.000Z",
+    "source": "demo-design-token-fixtures",
     "generator": "@demo-ds/token-pipeline"
   },
   "modes": ["light", "dark"],
@@ -45,9 +48,10 @@ Recommended structure:
 }
 ```
 
-For deterministic snapshots, avoid writing wall-clock `generatedAt` in committed generated fixtures unless it is controlled by an environment variable or excluded from snapshots.
+For deterministic snapshots, avoid writing wall-clock timestamps in committed
+generated files unless the value is controlled.
 
-## Token identity
+## Token Identity
 
 Each token should have:
 
@@ -56,13 +60,14 @@ Each token should have:
 | `path` | Array path, for example `['color', 'semantic', 'text', 'default']`. |
 | `name` | Dot path, for example `color.semantic.text.default`. |
 | `cssVariable` | CSS custom property name, for example `--ds-color-text-default`. |
-| `type` | Canonical type, for example `color`, `dimension`, `number`, `typography`. |
+| `type` | Canonical type, for example `color`, `dimension`, `radius`, `typography`. |
 | `value` | Canonical value, or mode map for mode-aware tokens. |
-| `source` | Optional debug provenance pointing to sanitised fixture file and source path. |
+| `source` | Optional debug provenance pointing to the fixture file and source path. |
 
-## Naming rules
+## Naming Rules
 
-Source labels can contain spaces, capitals, inconsistent wording, or typos. Canonical names should not.
+Source labels can contain spaces, capitals, inconsistent wording, or typos.
+Canonical names should not.
 
 Rules:
 
@@ -86,11 +91,13 @@ Examples:
 | `Corder-radius.Corner-Med` | `radius.md` |
 | `H1.FontSize` | `typography.heading.h1.font-size` |
 
-The source has a category spelling like `Corder-radius`. Do not preserve that typo in canonical output. Map it to `radius`.
+The source has a category spelling like `Corder-radius`. Do not preserve that
+typo in canonical output. Map it to `radius`.
 
-## Colour values
+## Colour Values
 
-Source fixture colour values are objects like:
+Source fixture colour values may be objects with a colour space, numeric
+components, alpha, and hex value:
 
 ```json
 {
@@ -101,7 +108,8 @@ Source fixture colour values are objects like:
 }
 ```
 
-Canonical colour values should be normalised to uppercase hex strings where alpha is `1`:
+Canonical colour values should be normalised to uppercase hex strings where
+alpha is `1`:
 
 ```json
 {
@@ -110,11 +118,11 @@ Canonical colour values should be normalised to uppercase hex strings where alph
 }
 ```
 
-If alpha is not `1`, prefer an `rgba()` or 8-digit hex strategy and test it. Pick one format and apply it consistently.
+## Mode-Aware Semantic Colours
 
-## Mode-aware semantic colours
-
-The light and dark semantic token files share the same broad structure but contain mode-specific values. Canonical output should merge matching semantic paths:
+The light and dark semantic token files share the same broad structure but
+contain mode-specific values. Canonical output should merge matching semantic
+paths:
 
 ```json
 {
@@ -128,9 +136,10 @@ The light and dark semantic token files share the same broad structure but conta
 }
 ```
 
-Generated CSS should then emit light and dark values under different selectors.
+Generated CSS then emits light and dark values under Mantine colour-scheme
+selectors.
 
-## Dimensions and numbers
+## Dimensions And Typography
 
 Keep numeric source values as numbers in canonical JSON:
 
@@ -144,11 +153,7 @@ Keep numeric source values as numbers in canonical JSON:
 }
 ```
 
-Emit `8px` only in CSS output. This keeps TypeScript consumers able to use numbers where needed.
-
-## Typography
-
-Typography source values are groups with `FontSize`, `LineHeight`, and `FontWeight`. Canonical output should group them as coherent text styles:
+Typography source values are grouped into coherent text styles:
 
 ```json
 {
@@ -162,64 +167,9 @@ Typography source values are groups with `FontSize`, `LineHeight`, and `FontWeig
 }
 ```
 
-Use generic font families in generated Mantine output:
-
-```ts
-fontFamily: 'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
-```
-
-Do not include private font names or font files.
-
-## Suggested TypeScript types
-
-```ts
-export type TokenMode = 'light' | 'dark';
-
-export type TokenType =
-  | 'color'
-  | 'dimension'
-  | 'number'
-  | 'radius'
-  | 'typography';
-
-export interface CanonicalTokenBase<TValue> {
-  name: string;
-  path: string[];
-  type: TokenType;
-  value: TValue;
-  cssVariable?: string;
-  description?: string;
-  source?: {
-    file: string;
-    path: string;
-  };
-}
-
-export type ModeValue<T> = T | Record<TokenMode, T>;
-
-export type CanonicalColorToken = CanonicalTokenBase<ModeValue<string>> & {
-  type: 'color';
-};
-
-export type CanonicalDimensionToken = CanonicalTokenBase<number> & {
-  type: 'dimension' | 'radius';
-  unit: 'px';
-};
-
-export interface CanonicalTypographyValue {
-  fontSize: number;
-  lineHeight: number;
-  fontWeight: number;
-}
-
-export type CanonicalTypographyToken = CanonicalTokenBase<CanonicalTypographyValue> & {
-  type: 'typography';
-};
-```
-
 ## Validation
 
-Use a runtime validator such as Zod or JSON Schema. Validate:
+Validate:
 
 - Required top-level keys.
 - Allowed token types.
@@ -228,20 +178,16 @@ Use a runtime validator such as Zod or JSON Schema. Validate:
 - Matching mode keys for mode-aware semantic tokens.
 - Unique canonical token names.
 - Unique CSS variable names.
-- No forbidden metadata keys.
+- No source-tool metadata keys.
 
-## Relationship to DTCG-style tokens
-
-The source fixtures already use `$type` and `$value`, which aligns with the direction of modern design-token formats. Still, the demo repo should define its own canonical contract. This avoids coupling downstream packages directly to a source-tool export shape or to a changing external specification.
-
-## Generated versus source canonical tokens
+## Generated Versus Source Tokens
 
 Do not hand-edit `canonical.json`. Instead:
 
-1. Edit source fixtures only when intentionally changing test input.
-2. Edit pipeline mapping rules.
-3. Regenerate canonical output.
-4. Review the diff.
-5. Update tests.
+1. Edit source fixtures or mapping rules.
+2. Regenerate canonical output.
+3. Review the diff.
+4. Update tests deliberately.
 
-Generated files should include a header or adjacent metadata indicating how they were created.
+Generated files should include a header or metadata indicating how they were
+created.

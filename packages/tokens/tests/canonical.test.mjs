@@ -63,7 +63,7 @@ test("generated TypeScript declarations include token-name union members", () =>
 
 test("generated metadata contains deterministic package summary", () => {
   assert.equal(metadata.name, "demo-design-system-tokens");
-  assert.equal(metadata.source, "sanitised-design-token-fixtures");
+  assert.equal(metadata.source, "demo-design-token-fixtures");
   assert.equal(metadata.meta.generatedBy, "@demo-ds/token-pipeline");
   assert.deepEqual(metadata.modes, ["light", "dark"]);
   assert.deepEqual(metadata.categories, ["color", "radius", "space", "typography"]);

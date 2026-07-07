@@ -7,7 +7,7 @@ import { metadata } from '@demo-ds/tokens';
 
 The token pipeline is deterministic and package-oriented:
 
-1. Sanitised fixtures are safety-scanned.
+1. Demo token JSON is scanned before generation.
 2. Source token JSON is parsed into flat source records.
 3. Source paths are mapped into canonical token paths.
 4. Canonical tokens are validated.
@@ -28,4 +28,4 @@ contains `{metadata.categories.join(', ')}` categories.
 - `token-docs.json`
 
 Storybook token pages import `token-docs.json`; they do not scrape CSS and do
-not read raw fixture files.
+not read source token files.

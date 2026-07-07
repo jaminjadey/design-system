@@ -2,10 +2,10 @@
   "meta": {
     "generatedBy": "@demo-ds/token-pipeline",
     "doNotEdit": true,
-    "source": "sanitised-design-token-fixtures"
+    "source": "demo-design-token-fixtures"
   },
   "name": "demo-design-system-tokens",
-  "source": "sanitised-design-token-fixtures",
+  "source": "demo-design-token-fixtures",
   "tokenCount": 222,
   "modes": [
     "light",

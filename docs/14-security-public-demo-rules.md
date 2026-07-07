@@ -1,10 +1,10 @@
 # 14 - Security and public-demo rules
 
-## Core rule
+## Core Rule
 
-The public repo must demonstrate process, not expose private source material.
+The repo must demonstrate the design-system process with generic demo data.
 
-## Forbidden content
+## Forbidden Content
 
 Do not commit:
 
@@ -22,20 +22,16 @@ Do not commit:
 - Work email domains.
 - API keys or environment files.
 
-## Token-specific risks
+## Token Source Checks
 
-Design tokens can be sensitive because they may expose:
+Design-token source files can accidentally include tool metadata or
+environment-specific content. The scanner rejects those markers before
+generation.
 
-- Brand palette fingerprints.
-- Product-specific semantic naming.
-- Accessibility decisions.
-- Source-tool IDs.
-- Proprietary typography.
-- Internal implementation structure.
+Treat fixture changes like any source change: scan, build, test, and review the
+generated diff.
 
-The sanitised fixture bundle is safe enough for a demo because values and identifying names were replaced. Still, treat all future fixture changes as risky until scanned and reviewed.
-
-## Required repo scan
+## Required Repo Scan
 
 Add a script that scans the whole repo for forbidden terms:
 
@@ -60,13 +56,13 @@ It should skip:
 - build caches.
 - generated binary artifacts.
 
-## Allowlist policy
+## Allowlist Policy
 
 Some docs may mention forbidden marker names as examples. Keep a narrow allowlist for known documentation files if needed.
 
 Prefer wording docs to avoid repeated sensitive names. If the scanner has to allow too much, the docs should be rewritten.
 
-## Secret scanning
+## Secret Scanning
 
 Use GitHub secret scanning where available. Also add local patterns for:
 
@@ -94,7 +90,7 @@ CC BY 4.0 for docs, if desired
 
 A single MIT license for the whole demo repo is simpler, provided all content is yours and synthetic.
 
-## Public copy rules
+## Public Copy Rules
 
 Use generic product copy:
 
@@ -117,7 +113,7 @@ Internal feature names
 Internal channel names
 ```
 
-## Visual assets
+## Visual Assets
 
 Use no external brand imagery. For icons, use an open-source icon library with a compatible license.
 
@@ -129,20 +125,20 @@ Use system fonts or open fonts installed through normal package/CDN workflows.
 
 Do not copy private font files. Do not include private font family names in CSS, tests, or docs.
 
-## Review checklist before public push
+## Review Checklist Before Public Push
 
 Before pushing publicly:
 
-- Run fixture safety scan.
+- Run the token source scan.
 - Run repo-wide forbidden marker scan.
-- Search manually for internal names.
+- Search manually for brand-specific names.
 - Inspect package tarball contents if publishing.
 - Inspect Storybook built static files if deploying.
 - Confirm no raw zips are present.
 - Confirm no private assets are present.
 - Confirm example content is generic.
 
-## Incident response
+## Incident Response
 
 If private material is accidentally committed:
 

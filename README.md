@@ -1,51 +1,69 @@
-# Design system pipeline demo repo documentation
+# Demo Design System Pipeline
 
-This documentation pack describes how to build a public demo repository from the sanitised design-token fixtures through to canonical tokens, generated Mantine theme output, a React component package, Storybook documentation, and an example React application.
+This repo shows a complete design-system pipeline: design-token JSON shaped like a Figma token export is transformed into a canonical token contract, generated CSS variables, typed TypeScript exports, a Mantine theme, wrapped React components, Storybook documentation, and a Vite example app.
 
-The intended repository is a demo and engineering proof of concept. It must use only sanitised fixture tokens, generic names, generic sample content, and open-source dependencies. Do not copy raw work token exports, private font files, brand assets, screenshots, internal naming, or original colour values into the public repo.
+It is intentionally generic. The token values, component copy, and app content are demo data so the repo can focus on the engineering shape of the pipeline rather than on a specific brand.
 
-## Target outcome
+## Why This Exists
 
-The finished repo should demonstrate an end-to-end design-system pipeline:
+Design systems become easier to maintain when tokens are treated as a build artifact rather than hand-copied values. This demo shows how to keep one source of truth and generate the package outputs that applications actually consume.
+
+The important idea is separation of concerns:
+
+- Source token files model what a design tool exports.
+- `@demo-ds/token-pipeline` validates and converts that source shape.
+- `@demo-ds/tokens` exposes generated CSS, JSON, and TypeScript contracts.
+- `@demo-ds/mantine-theme` maps generated tokens into Mantine.
+- `@demo-ds/components` wraps Mantine only where the design system needs fixed decisions.
+- Storybook and the example app consume the packages through public exports.
+
+## Pipeline
 
 ```mermaid
 flowchart LR
-  A[Sanitised source token fixtures] --> B[Token safety scan]
+  A[Figma-style demo token JSON] --> B[Token source scan]
   B --> C[Canonical token builder]
-  C --> D[Validated canonical JSON]
-  D --> E[CSS variable output]
-  D --> F[TypeScript token output]
-  D --> G[Mantine theme output]
-  E --> H[React component package]
-  F --> H
-  G --> H
-  H --> I[Storybook site]
+  C --> D[canonical.json]
+  D --> E[CSS variables]
+  D --> F[TypeScript exports]
+  E --> G[Mantine theme]
+  F --> G
+  G --> H[Wrapped React components]
+  H --> I[Storybook docs]
   H --> J[Example React app]
 ```
 
-The repo should be able to run:
+## Packages And Apps
 
-```sh
-pnpm install
-pnpm tokens:scan
-pnpm repo:scan
-pnpm lint
-pnpm typecheck
-pnpm test
-pnpm build
-pnpm storybook
-pnpm --filter @demo-ds/example dev
+```txt
+packages/token-pipeline   build, validation, and scanner utilities
+packages/tokens           generated token package
+packages/mantine-theme    Mantine theme and DemoThemeProvider
+packages/components       wrapped design-system components
+apps/storybook            token, theme, and component documentation
+apps/example              Vite app proving package consumption
 ```
 
-## Local development
+## Generated Token Outputs
 
-Install dependencies from the lockfile:
+`@demo-ds/tokens` generates and publishes the files downstream packages need:
+
+- `canonical.json`: stable internal token contract.
+- `tokens.css`: all `--ds-*` variables, including light/dark semantic selectors.
+- `tokens.light.css` and `tokens.dark.css`: single-mode CSS outputs.
+- `index.js` and `index.d.ts`: token maps, metadata, and `cssVar()`.
+- `token-names.js` and `token-names.d.ts`: type-safe token names.
+- `metadata.json` and `token-docs.json`: data for documentation and CI checks.
+
+## Run Locally
+
+Install dependencies:
 
 ```sh
 pnpm install --frozen-lockfile
 ```
 
-Run the main quality gates:
+Run the full quality gate:
 
 ```sh
 pnpm tokens:scan
@@ -58,111 +76,123 @@ pnpm package:check
 pnpm format:check
 ```
 
-Check generated output drift after a build:
-
-```sh
-git diff --exit-code
-```
-
-That command should be clean after generated files are intentionally committed.
-
-## Visual review
-
 Run Storybook:
 
 ```sh
 pnpm storybook
 ```
 
-Run the standalone example app:
+Run the example app:
 
 ```sh
 pnpm --filter @demo-ds/example dev
 ```
 
-Both apps consume public package exports. Storybook is the documentation and component review
-surface; the example app proves the packages work outside Storybook.
+## How To Use The Packages
 
-## CI
+Wrap an app with the demo theme provider:
 
-GitHub Actions runs the same public-demo gates:
+```tsx
+import { DemoThemeProvider } from '@demo-ds/mantine-theme';
+import { Button, Card, PageHeader } from '@demo-ds/components';
 
-- install with `pnpm install --frozen-lockfile`
-- fixture safety scan
-- lint, typecheck, tests, and build
-- Storybook and example app builds
-- package export checks
-- repo-wide forbidden marker and secret-pattern scan
-- format check
-- generated output drift check
-
-## Recommended monorepo shape
-
-Use a pnpm workspace with package-level build tasks. Turborepo is optional but useful once there are multiple packages and apps.
-
-```txt
-apps/
-  example/
-  storybook/
-packages/
-  token-pipeline/
-  tokens/
-  mantine-theme/
-  components/
-docs/
-  ...these files...
-AGENTS.md
-package.json
-pnpm-workspace.yaml
-turbo.json
+export function App() {
+  return (
+    <DemoThemeProvider defaultColorScheme="light">
+      <PageHeader title="Project overview" />
+      <Card>
+        <Button>New item</Button>
+      </Card>
+    </DemoThemeProvider>
+  );
+}
 ```
 
-## How to use this pack
+Use token CSS variables in component CSS when a value belongs to the design system:
 
-1. Create a new public or private GitHub repo.
-2. Copy this documentation pack into the repo root.
-3. Copy the previously generated `sanitised-design-token-fixtures.zip` into a safe fixture area, for example `packages/tokens/fixtures/`.
-4. Use `docs/12-codex-work-plan.md` and the prompt files in `docs/codex/` to drive Codex in small, reviewable implementation tasks.
-5. Keep `AGENTS.md` in the repo root so Codex has durable project instructions.
+```css
+.surface {
+  background: var(--ds-color-surface-default);
+  border-radius: var(--ds-radius-md);
+  padding: var(--ds-space-md);
+}
+```
 
-## Documentation map
+Use TypeScript token names when code needs a token reference:
+
+```ts
+import { cssVar } from '@demo-ds/tokens';
+
+const background = cssVar('color.semantic.background.page');
+```
+
+## Development Workflow
+
+When token source files or mapping rules change:
+
+```sh
+pnpm tokens:scan
+pnpm --filter @demo-ds/tokens build
+pnpm --filter @demo-ds/tokens test
+```
+
+When theme or components change:
+
+```sh
+pnpm --filter @demo-ds/mantine-theme test
+pnpm --filter @demo-ds/components test
+pnpm --filter @demo-ds/storybook build
+```
+
+When the example app changes:
+
+```sh
+pnpm --filter @demo-ds/example build
+```
+
+Generated token outputs are committed so reviewers can inspect the contract without running the generator. After regenerating outputs, check drift with:
+
+```sh
+git diff -- packages/tokens/dist
+```
+
+## Documentation Map
 
 | File | Purpose |
 | --- | --- |
-| `AGENTS.md` | Root instructions for Codex and other coding agents. |
-| `docs/00-product-vision.md` | What the demo repo is trying to prove. |
-| `docs/01-target-repo-structure.md` | Proposed monorepo layout and package boundaries. |
-| `docs/02-token-source-and-sanitisation.md` | Rules for using the sanitised fixtures safely. |
+| `docs/00-product-vision.md` | What the demo proves and who it is for. |
+| `docs/01-target-repo-structure.md` | Monorepo layout and dependency direction. |
+| `docs/02-token-source-and-demo-fixtures.md` | Demo token source shape and scanner expectations. |
 | `docs/03-canonical-token-model.md` | Canonical token contract and naming rules. |
-| `docs/04-token-build-pipeline.md` | End-to-end build stages and script responsibilities. |
-| `docs/05-generated-token-outputs.md` | CSS, TypeScript, JSON, and documentation outputs. |
-| `docs/06-mantine-theme-generation.md` | Mapping canonical tokens to Mantine. |
-| `docs/07-react-components-package.md` | React component package architecture. |
-| `docs/08-storybook-site.md` | Storybook app and design-system documentation site. |
-| `docs/09-example-react-app.md` | Example app that consumes the packages. |
+| `docs/04-token-build-pipeline.md` | Build stages from source JSON to package outputs. |
+| `docs/05-generated-token-outputs.md` | CSS, TypeScript, JSON, and docs data outputs. |
+| `docs/06-mantine-theme-generation.md` | Mapping generated tokens into Mantine. |
+| `docs/07-react-components-package.md` | Component package architecture. |
+| `docs/08-storybook-site.md` | Storybook documentation app. |
+| `docs/09-example-react-app.md` | Example app package-consumption pattern. |
 | `docs/10-tests-and-quality-gates.md` | Test strategy and quality gates. |
-| `docs/11-ci-release-publishing.md` | CI, package versioning, and release approach. |
-| `docs/12-codex-work-plan.md` | Ordered implementation plan for Codex. |
-| `docs/13-acceptance-criteria.md` | Definition of done for MVP and full demo. |
-| `docs/14-security-public-demo-rules.md` | Public-demo safety, IP, and hygiene rules. |
-| `docs/15-troubleshooting.md` | Common implementation issues and fixes. |
-| `docs/16-tooling-references.md` | Official documentation references checked for this plan. |
+| `docs/11-ci-release-publishing.md` | CI, versioning, and release approach. |
+| `docs/13-acceptance-criteria.md` | MVP and full-demo criteria. |
 
-## Non-negotiables
+## CI
 
-- Only use the sanitised fixture bundle as the token source outside the work environment.
-- Do not add raw source token exports to Git.
-- Do not add private fonts, private brand imagery, or internal screenshots.
-- Keep token generation deterministic and testable.
-- Keep package APIs stable and documented.
-- Keep generated files clearly marked as generated.
+GitHub Actions verifies the repo from a fresh checkout:
 
-## Suggested first milestone
+- install with `pnpm install --frozen-lockfile`
+- scan demo token sources
+- lint, typecheck, test, and build
+- build Storybook and the example app
+- verify package exports
+- scan the repo for forbidden markers and secret-like patterns
+- check formatting
+- verify generated output drift
 
-The first useful milestone is not a full component library. It is a working token pipeline:
+## Public Demo Rules
 
-```txt
-sanitised fixtures -> safety scan -> canonical JSON -> CSS vars -> TS exports -> unit tests
-```
+Keep the repo generic and reproducible:
 
-Once that is reliable, build the Mantine theme, then Storybook, then the component package, then the example app.
+- Use demo token values and generic sample content.
+- Do not add private fonts, logos, screenshots, customer examples, internal URLs, or brand-specific naming.
+- Do not hand-edit generated files.
+- Keep package APIs documented and stable.
+- Keep generation deterministic and protected by tests.

@@ -35,7 +35,7 @@ Acceptance criteria:
 - TypeScript, lint, format, test, and build scripts are wired.
 - Root commands run.
 
-## Task 2: fixtures and safety scan
+## Task 2: fixtures and source scan
 
 Prompt file:
 
@@ -48,7 +48,7 @@ Acceptance criteria:
 - Sanitised fixture files are in `packages/tokens/fixtures`.
 - Safety scanner exists and is tested.
 - Forbidden markers fail tests.
-- Fixture scan passes on sanitised fixtures.
+- Fixture scan passes on demo fixtures.
 
 ## Task 3: canonical transformer
 

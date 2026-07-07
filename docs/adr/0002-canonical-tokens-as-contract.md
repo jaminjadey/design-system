@@ -10,7 +10,7 @@ Source token exports can contain source-tool-specific structures. Downstream out
 
 ## Decision
 
-The repo will transform sanitised source fixtures into a canonical token document. All outputs will be generated from that canonical document.
+The repo will transform demo source fixtures into a canonical token document. All outputs will be generated from that canonical document.
 
 ## Consequences
 

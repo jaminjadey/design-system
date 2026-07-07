@@ -4,7 +4,7 @@
 
 Possible causes:
 
-- Raw source files were copied instead of sanitised fixtures.
+- Source files include unsupported metadata or forbidden markers.
 - A generated file contains forbidden metadata.
 - A docs file mentions a forbidden marker and is not allowlisted.
 - A new fixture includes source-tool IDs.

@@ -1,9 +1,11 @@
-# Sanitised token fixtures
+# Demo token fixtures
 
-These fixtures are synthetic data for the public demo design-system pipeline.
+These fixtures are synthetic design-token data for the demo pipeline.
 
-They are not production design guidance and must not be treated as brand, product, or accessibility decisions. The files exist only to test parsing, safety scanning, canonical token generation, and downstream package builds.
+They model common token categories from a Figma-style export: primitive colours,
+semantic colours, spacing, radius, and typography. The files are used to test
+parsing, token scanning, canonical token generation, and downstream package
+builds.
 
-The fixture structure intentionally preserves generic token categories such as primitive colours, semantic colours, spacing, radius, and typography while replacing sensitive values and source-specific metadata.
-
-Use real source integrations only in a private environment. Do not copy raw work token exports, private fonts, logos, screenshots, internal URLs, or source-tool metadata into this repository.
+They are not production design guidance. Treat changes to these files like any
+source-token change: scan them, regenerate token outputs, and review the diff.

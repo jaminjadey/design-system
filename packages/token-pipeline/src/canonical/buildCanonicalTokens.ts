@@ -142,7 +142,7 @@ export function buildCanonicalTokensFromRecords(
       name: "demo-design-system-tokens",
       version: "0.1.0",
       generatedAt: "1970-01-01T00:00:00.000Z",
-      source: "sanitised-design-token-fixtures",
+      source: "demo-design-token-fixtures",
       generator: "@demo-ds/token-pipeline"
     },
     modes: ["light", "dark"],

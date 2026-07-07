@@ -4,14 +4,14 @@
 You are working in this repository. Follow AGENTS.md.
 
 Read these files before editing:
-- docs/02-token-source-and-sanitisation.md
+- docs/02-token-source-and-demo-fixtures.md
 - docs/10-tests-and-quality-gates.md
 - docs/14-security-public-demo-rules.md
 
 Task:
-Add the sanitised fixture handling and safety scanner.
+Add the demo fixture handling and source scanner.
 
-Assume the sanitised fixture files will live at:
+Assume the demo fixture files will live at:
 packages/tokens/fixtures/extracted/
 
 Implement in @demo-ds/token-pipeline:
@@ -41,7 +41,7 @@ Acceptance criteria:
 - pnpm tokens:scan works.
 - Scanner tests pass.
 - Scanner reports useful file/path findings.
-- Sanitised fixtures pass when present.
+- Demo fixtures pass when present.
 - A synthetic unsafe fixture fails in tests.
 
 Run:

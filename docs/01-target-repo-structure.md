@@ -1,6 +1,6 @@
-# 01 - Target repo structure
+# 01 - Target Repo Structure
 
-## Recommended structure
+## Recommended Structure
 
 ```txt
 repo-root/
@@ -20,8 +20,6 @@ repo-root/
       package.json
     tokens/
       fixtures/
-      src/
-      generated/
       dist/
       package.json
     mantine-theme/
@@ -40,15 +38,16 @@ repo-root/
   tsconfig.base.json
 ```
 
-## Package responsibilities
+## Package Responsibilities
 
 ### `packages/token-pipeline`
 
-Private package containing the build logic.
+Private build package containing token ingestion, validation, mapping, and output
+generation.
 
 Responsibilities:
 
-- Read extracted sanitised fixture token files.
+- Read extracted demo token files.
 - Validate allowed source files and directories.
 - Scan for forbidden terms and source-tool metadata.
 - Normalise token names.
@@ -64,7 +63,8 @@ export function buildCanonicalTokens(options: BuildOptions): CanonicalTokenDocum
 export function generateTokenOutputs(document: CanonicalTokenDocument, options: OutputOptions): void;
 ```
 
-This package can remain private because consumers should use generated packages, not generator internals.
+This package can remain private because consumers should use generated packages,
+not generator internals.
 
 ### `packages/tokens`
 
@@ -72,7 +72,7 @@ Public-consumable package containing generated token outputs.
 
 Responsibilities:
 
-- Store the sanitised fixture zip or extracted fixture files.
+- Store demo token fixtures used by the generator.
 - Expose generated canonical JSON.
 - Expose generated CSS variables.
 - Expose generated TypeScript token maps and types.
@@ -99,9 +99,9 @@ Responsibilities:
 
 - Import generated tokens from `@demo-ds/tokens`.
 - Export a Mantine theme object.
-- Export semantic CSS variable resolver or CSS file.
 - Export a `DemoThemeProvider` that wraps `MantineProvider`.
 - Keep font handling generic with safe fallback fonts.
+- Keep Mantine-specific mapping out of the canonical token model.
 
 Suggested exports:
 
@@ -119,7 +119,7 @@ Responsibilities:
 
 - Export reusable design-system components.
 - Encode design-system variants, defaults, and accessibility patterns.
-- Avoid hardcoded source colours.
+- Use token variables for design-system values.
 - Keep implementation generic and reusable.
 
 Initial components:
@@ -131,7 +131,6 @@ Initial components:
 - `StatusBadge`
 - `PageHeader`
 - `ThemeToggle`
-- `StackedForm`
 
 ### `apps/storybook`
 
@@ -156,7 +155,7 @@ Responsibilities:
 - Demonstrate realistic but generic screens.
 - Avoid importing package internals.
 
-## Dependency direction
+## Dependency Direction
 
 Keep dependencies flowing in one direction:
 
@@ -172,11 +171,12 @@ flowchart TD
   components --> example
 ```
 
-Avoid reverse dependencies. For example, `@demo-ds/tokens` must not import `@demo-ds/mantine-theme`, and packages must not import from apps.
+Avoid reverse dependencies. For example, `@demo-ds/tokens` must not import
+`@demo-ds/mantine-theme`, and packages must not import from apps.
 
-## Workspace naming
+## Workspace Naming
 
-Use a neutral package scope. Example:
+Use a neutral package scope:
 
 ```txt
 @demo-ds/token-pipeline
@@ -187,9 +187,10 @@ Use a neutral package scope. Example:
 @demo-ds/example
 ```
 
-## Root scripts
+## Root Scripts
 
-Root scripts should orchestrate package scripts rather than containing implementation logic:
+Root scripts should orchestrate package scripts rather than containing
+implementation logic:
 
 ```json
 {
@@ -198,17 +199,17 @@ Root scripts should orchestrate package scripts rather than containing implement
     "test": "turbo run test",
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck",
-    "format": "prettier . --check",
-    "format:write": "prettier . --write",
+    "format:check": "node scripts/format-check.mjs",
+    "tokens:scan": "pnpm --filter @demo-ds/token-pipeline scan:fixtures",
     "storybook": "pnpm --filter @demo-ds/storybook storybook"
   }
 }
 ```
 
-## Why this structure works
+## Why This Structure Works
 
 - The token pipeline is isolated and testable.
 - Generated assets are separated from generator code.
 - Mantine-specific mapping is not mixed into canonical token generation.
 - Components consume theme outputs like real downstream users would.
-- Storybook and example app validate the packages from the outside.
+- Storybook and the example app validate the packages from the outside.

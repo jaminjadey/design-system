@@ -49,7 +49,7 @@ export interface CanonicalTokenDocument {
     readonly name: "demo-design-system-tokens";
     readonly version: "0.1.0";
     readonly generatedAt: "1970-01-01T00:00:00.000Z";
-    readonly source: "sanitised-design-token-fixtures";
+    readonly source: "demo-design-token-fixtures";
     readonly generator: "@demo-ds/token-pipeline";
   };
   readonly modes: readonly TokenMode[];

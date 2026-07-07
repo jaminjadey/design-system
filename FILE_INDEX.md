@@ -6,7 +6,7 @@ Generated documentation files:
 - `README.md`
 - `docs/00-product-vision.md`
 - `docs/01-target-repo-structure.md`
-- `docs/02-token-source-and-sanitisation.md`
+- `docs/02-token-source-and-demo-fixtures.md`
 - `docs/03-canonical-token-model.md`
 - `docs/04-token-build-pipeline.md`
 - `docs/05-generated-token-outputs.md`
@@ -21,7 +21,7 @@ Generated documentation files:
 - `docs/14-security-public-demo-rules.md`
 - `docs/15-troubleshooting.md`
 - `docs/16-tooling-references.md`
-- `docs/adr/0001-use-sanitised-fixtures-only.md`
+- `docs/adr/0001-use-demo-token-fixtures.md`
 - `docs/adr/0002-canonical-tokens-as-contract.md`
 - `docs/adr/0003-mantine-as-rendering-layer.md`
 - `docs/codex/prompt-01-bootstrap-monorepo.md`

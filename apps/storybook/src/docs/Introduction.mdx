@@ -5,18 +5,18 @@ import { metadata } from '@demo-ds/tokens';
 
 # Demo Design System
 
-This Storybook documents a public demo design-system pipeline. It shows how
-sanitised fixture tokens become canonical tokens, generated CSS variables,
-generated TypeScript exports, a Mantine theme, and React components.
+This Storybook documents a demo design-system pipeline. It shows how
+Figma-style token JSON becomes canonical tokens, generated CSS variables,
+generated TypeScript exports, a Mantine theme, and wrapped React components.
 
-This repo is not production design guidance and does not contain private source
-exports, private assets, or brand-specific material.
+The token values and example content are generic demo data. The point is the
+package workflow: one token contract feeds the theme, components, docs, and app.
 
 ## Package Flow
 
 - `@demo-ds/tokens` exposes generated token artifacts.
 - `@demo-ds/mantine-theme` maps generated tokens into Mantine.
-- `@demo-ds/components` exports design-system wrappers and patterns.
+- `@demo-ds/components` exports themed wrappers and component patterns.
 - Storybook consumes those public package exports.
 
 ## Token Package
@@ -24,11 +24,13 @@ exports, private assets, or brand-specific material.
 The current generated token package is `{metadata.name}` with
 `{metadata.tokenCount}` generated tokens.
 
+The generated source label is `{metadata.source}`.
+
 ## Local Commands
 
 ```sh
 pnpm tokens:scan
 pnpm --filter @demo-ds/tokens build
-pnpm --filter @demo-ds/storybook storybook
+pnpm storybook
 pnpm --filter @demo-ds/storybook build
 ```
