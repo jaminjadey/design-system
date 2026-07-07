@@ -27,7 +27,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/mantine-theme
       '@demo-ds/tokens':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../packages/tokens
       '@mantine/core':
         specifier: ^9.4.1

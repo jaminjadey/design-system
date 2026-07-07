@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    name: Build and verify
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Scan sanitised fixtures
+        run: pnpm tokens:scan
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Test
+        run: pnpm test
+
+      - name: Build workspace
+        run: pnpm build
+
+      - name: Build Storybook
+        run: pnpm --filter @demo-ds/storybook build
+
+      - name: Build example app
+        run: pnpm --filter @demo-ds/example build
+
+      - name: Check package exports
+        run: pnpm package:check
+
+      - name: Scan full repository
+        run: pnpm repo:scan
+
+      - name: Check formatting
+        run: pnpm format:check
+
+      - name: Check generated output drift
+        run: git diff --exit-code

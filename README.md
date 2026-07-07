@@ -27,11 +27,74 @@ The repo should be able to run:
 
 ```sh
 pnpm install
-pnpm build
+pnpm tokens:scan
+pnpm repo:scan
+pnpm lint
+pnpm typecheck
 pnpm test
+pnpm build
 pnpm storybook
 pnpm --filter @demo-ds/example dev
 ```
+
+## Local development
+
+Install dependencies from the lockfile:
+
+```sh
+pnpm install --frozen-lockfile
+```
+
+Run the main quality gates:
+
+```sh
+pnpm tokens:scan
+pnpm repo:scan
+pnpm lint
+pnpm typecheck
+pnpm test
+pnpm build
+pnpm package:check
+pnpm format:check
+```
+
+Check generated output drift after a build:
+
+```sh
+git diff --exit-code
+```
+
+That command should be clean after generated files are intentionally committed.
+
+## Visual review
+
+Run Storybook:
+
+```sh
+pnpm storybook
+```
+
+Run the standalone example app:
+
+```sh
+pnpm --filter @demo-ds/example dev
+```
+
+Both apps consume public package exports. Storybook is the documentation and component review
+surface; the example app proves the packages work outside Storybook.
+
+## CI
+
+GitHub Actions runs the same public-demo gates:
+
+- install with `pnpm install --frozen-lockfile`
+- fixture safety scan
+- lint, typecheck, tests, and build
+- Storybook and example app builds
+- package export checks
+- repo-wide forbidden marker and secret-pattern scan
+- format check
+- generated output drift check
 
 ## Recommended monorepo shape
 
