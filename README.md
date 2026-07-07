@@ -101,6 +101,16 @@ Run the example app:
 pnpm --filter @demo-ds/example dev
 ```
 
+## Private Brand Token Input
+
+Use `.private/design-system/` for real brand exports or local experiments that
+must never be committed. The folder is ignored by Git, skipped by repo scans,
+and protected by CI through `pnpm private:check`, which fails if anything under
+`.private/` is force-added.
+
+The public demo fixtures under `packages/tokens/fixtures/` must stay synthetic
+and generic.
+
 ## How To Use The Packages
 
 Wrap an app with the demo theme provider:

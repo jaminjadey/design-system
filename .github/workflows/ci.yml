@@ -30,6 +30,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Check private paths
+        run: pnpm private:check
+
       - name: Scan demo token fixtures
         run: pnpm tokens:scan
 

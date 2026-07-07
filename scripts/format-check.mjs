@@ -1,7 +1,14 @@
 import { readdir, readFile } from "node:fs/promises";
 import { join, relative } from "node:path";
 
-const ignoredDirectories = new Set([".git", ".turbo", "node_modules", "dist", "storybook-static"]);
+const ignoredDirectories = new Set([
+  ".git",
+  ".private",
+  ".turbo",
+  "node_modules",
+  "dist",
+  "storybook-static"
+]);
 const checkedExtensions = new Set([
   ".json",
   ".js",

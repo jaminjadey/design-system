@@ -9,6 +9,7 @@ import {
 
 const ignoredDirectories = new Set([
   ".git",
+  ".private",
   ".turbo",
   "coverage",
   "node_modules",
