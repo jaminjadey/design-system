@@ -9,3 +9,6 @@ tokens, spacing, radius, and typography scales.
 The fixtures are development inputs, not production design guidance. Change
 them only when you want to demonstrate a token-source change, then run the
 scanner and regenerate the token package.
+
+Real raw exports and real imported output must stay under `.private/` in this
+public repo. Do not use this directory for private brand values.

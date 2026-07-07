@@ -5,6 +5,7 @@ const ignoredDirectories = new Set([
   ".git",
   ".private",
   ".turbo",
+  ".tmp",
   "node_modules",
   "dist",
   "storybook-static"

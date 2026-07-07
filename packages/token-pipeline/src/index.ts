@@ -39,6 +39,24 @@ export {
 } from "./mapping/nameNormalisation.js";
 export { sourcePathToCanonicalPath, type SourceMapping } from "./mapping/sourceToCanonical.js";
 export {
+  importRawTokenDirectory,
+  importRawTokenDocuments,
+  writeRawTokenImportOutput,
+  type RawTokenImportDocument,
+  type RawTokenImportFileReport,
+  type RawTokenImportFinding,
+  type RawTokenImportReport,
+  type RawTokenImportResult
+} from "./raw/importRawTokens.js";
+export {
+  defaultMetadataKeysToStrip,
+  defineRawTokenImportConfig,
+  parseRawTokenImportConfig,
+  type RawImportUnsupportedPolicy,
+  type RawTokenImportConfig,
+  type RawTokenImportFileRule
+} from "./raw/rawTokenImportConfig.js";
+export {
   defaultForbiddenMarkers,
   type ForbiddenMarker
 } from "./safety/forbiddenMarkers.js";

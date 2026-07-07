@@ -1,0 +1,11 @@
+{
+  "Spacing": {
+    "Space-2xs": 2,
+    "Space-X-Sml": "4",
+    "Space-Sml": 8,
+    "Space-Med": 12,
+    "Space-Lge": 16,
+    "Space-2XL": 32
+  }
+}
+

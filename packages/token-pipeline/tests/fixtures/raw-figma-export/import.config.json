@@ -1,0 +1,34 @@
+{
+  "files": [
+    {
+      "source": "primitive-colours.raw.json",
+      "target": "primitives/Default.tokens.json",
+      "stripPathPrefix": ["Primitive colours"]
+    },
+    {
+      "source": "semantic-light.raw.json",
+      "target": "tokens/Light.tokens.json",
+      "stripPathPrefix": ["Semantic colours"]
+    },
+    {
+      "source": "semantic-dark.raw.json",
+      "target": "tokens/Dark.tokens.json",
+      "stripPathPrefix": ["Semantic colours"]
+    },
+    {
+      "source": "spacing.raw.json",
+      "target": "spacing/Mode 1.tokens.json",
+      "stripPathPrefix": ["Spacing"]
+    },
+    {
+      "source": "radius.raw.json",
+      "target": "corners/Mode 1.tokens.json"
+    },
+    {
+      "source": "typography.raw.json",
+      "target": "typography/Default.tokens.json",
+      "stripPathPrefix": ["Typography"]
+    }
+  ]
+}
+

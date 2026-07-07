@@ -31,6 +31,22 @@ generation.
 Treat fixture changes like any source change: scan, build, test, and review the
 generated diff.
 
+## Private Raw Export Location
+
+Real brand token exports must only be placed in:
+
+```txt
+.private/design-system/
+```
+
+The folder is ignored by Git and guarded by `pnpm private:check`, which fails if
+anything below `.private/` becomes tracked. Use this path for local import
+testing, then write normalised output to another `.private/` directory unless
+you are working in a private repo intended to hold those brand values.
+
+Never copy real raw export files or real imported token output into the public
+demo fixtures.
+
 ## Required Repo Scan
 
 Add a script that scans the whole repo for forbidden terms:

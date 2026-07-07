@@ -11,6 +11,7 @@
     "format:check": "node scripts/format-check.mjs",
     "format": "node scripts/format-check.mjs",
     "private:check": "node scripts/check-private-paths.mjs",
+    "tokens:import:raw": "pnpm --filter @demo-ds/token-pipeline import:raw",
     "tokens:scan": "pnpm --filter @demo-ds/token-pipeline scan:fixtures",
     "repo:scan": "pnpm --filter @demo-ds/token-pipeline build && node scripts/repo-scan.mjs",
     "package:check": "node scripts/check-package-exports.mjs",

@@ -1,0 +1,33 @@
+{
+  "Semantic colours": {
+    "Font colours": {
+      "Default text": "{Primitive colours.Neutral.50}",
+      "Muted text": "Primitive colours/Neutral/100",
+      "Inverse text": "Primitive colours/Neutral/900",
+      "Link text": "Primitive colours/Primary/100"
+    },
+    "Background general colours": {
+      "Body background": "Primitive colours/Neutral/900",
+      "Surface background": "Primitive colours/Neutral/700",
+      "Muted background": "Primitive colours/Neutral/900"
+    },
+    "Border colours": {
+      "Default border": "Primitive colours/Neutral/700",
+      "Strong border": "Primitive colours/Neutral/100"
+    },
+    "Button colours": {
+      "Primary background": "Primitive colours/Primary/100",
+      "Primary foreground": "Primitive colours/Neutral/900",
+      "Neutral background": "Primitive colours/Neutral/700",
+      "Neutral foreground": "Primitive colours/Neutral/50",
+      "Danger background": "Primitive colours/Danger/50",
+      "Danger foreground": "Primitive colours/Danger/600"
+    },
+    "Notifications": {
+      "Success background": "Primitive colours/Success/600",
+      "Warning background": "Primitive colours/Warning/600",
+      "Danger background": "Primitive colours/Danger/600"
+    }
+  }
+}
+

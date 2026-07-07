@@ -1,0 +1,25 @@
+{
+  "Typography": {
+    "H1": {
+      "FontSize": 32,
+      "LineHeight": 40,
+      "FontWeight": "Bold",
+      "FontFamily": "System UI"
+    },
+    "H2": {
+      "fontsize": 24,
+      "lineheight": 32,
+      "fontweight": "Semi Bold"
+    },
+    "Bdy-Med": {
+      "FontSize": 16,
+      "LineHeight": 24,
+      "FontWeight": "Regular"
+    },
+    "Bdy-Sml": {
+      "FontSize": 14,
+      "LineHeight": 20,
+      "FontWeight": 400
+    }
+  }
+}

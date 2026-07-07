@@ -6,19 +6,60 @@ The pipeline turns demo token source files into package artifacts.
 
 ```mermaid
 flowchart TD
-  A[Demo token JSON] --> B[Source scan]
-  B --> C[Read and parse]
-  C --> D[Source validation]
-  D --> E[Normalise names]
-  E --> F[Canonical transform]
-  F --> G[Canonical validation]
-  G --> H[Generate CSS]
-  G --> I[Generate TS]
-  G --> J[Generate docs data]
-  H --> K[Package outputs]
-  I --> K
-  J --> K
+  A[Optional raw token export] --> B[Raw import config]
+  B --> C[Normalised token JSON]
+  D[Demo token JSON] --> E[Source scan]
+  C --> E
+  E --> F[Read and parse]
+  F --> G[Source validation]
+  G --> H[Normalise names]
+  H --> I[Canonical transform]
+  I --> J[Canonical validation]
+  J --> K[Generate CSS]
+  J --> L[Generate TS]
+  J --> M[Generate docs data]
+  K --> N[Package outputs]
+  L --> N
+  M --> N
 ```
+
+The public repo uses synthetic demo token JSON directly. The raw import stage is
+for private work repos or local experiments where the starting point is a raw
+design-tool export.
+
+## Optional Stage 0: Raw Export Import
+
+Inputs:
+
+```txt
+.private/design-system/
+  import.config.json
+  raw-token-export-files.json
+```
+
+Responsibilities:
+
+- Read only configured raw files.
+- Strip source-tool metadata keys before output.
+- Reject forbidden markers in remaining keys and values.
+- Resolve slash aliases such as `Primitive colours/Primary/600`.
+- Resolve brace aliases such as `{Primitive colours.Primary.600}`.
+- Convert common colour objects with `Hex`, `Alpha`, `Components`, and
+  `ColorSpace` fields into normalised colour tokens.
+- Convert spacing and radius numbers into normalised numeric source tokens.
+- Convert typography `FontSize`, `LineHeight`, and `FontWeight` groups into
+  numeric source tokens.
+- Write a deterministic `import-report.json`.
+
+Command:
+
+```sh
+pnpm tokens:import:raw -- .private/design-system .private/normalised-token-output .private/design-system/import.config.json
+```
+
+Keep the output under `.private/` when it contains real brand values. In a
+private work repo, point the output directory at the token source directory used
+by the package build.
 
 ## Stage 1: Fixture Discovery
 
@@ -194,6 +235,7 @@ Fail fast on:
 - Invalid JSON.
 - Forbidden markers.
 - Unknown token types.
+- Ambiguous or unresolved raw token aliases.
 - Duplicate canonical names.
 - Invalid colour values.
 - Missing light/dark values.

@@ -11,6 +11,7 @@ const ignoredDirectories = new Set([
   ".git",
   ".private",
   ".turbo",
+  ".tmp",
   "coverage",
   "node_modules",
   "storybook-static"
@@ -52,8 +53,11 @@ const markerAllowlist = new Map(
   [
     "docs/02-token-source-and-demo-fixtures.md",
     "docs/codex/prompt-02-fixtures-and-safety.md",
+    "packages/token-pipeline/src/raw/rawTokenImportConfig.ts",
     "packages/token-pipeline/src/safety/forbiddenMarkers.ts",
+    "packages/token-pipeline/dist/raw/rawTokenImportConfig.js",
     "packages/token-pipeline/dist/safety/forbiddenMarkers.js",
+    "packages/token-pipeline/tests/rawImport.test.mjs",
     "packages/token-pipeline/tests/scanFixture.test.mjs",
     "packages/tokens/tests/canonical.test.mjs"
   ].map((filePath) => [filePath, new Set(defaultForbiddenMarkers)])

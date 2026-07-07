@@ -20,6 +20,16 @@ These files are synthetic demo data shaped like common token exports from design
 tools. They exist so the pipeline can demonstrate parsing, validation,
 canonical mapping, mode merging, and downstream package generation.
 
+The token pipeline also includes a raw-import path for local private exports.
+Those files belong only in:
+
+```txt
+.private/design-system/
+```
+
+That directory is ignored by Git, skipped by repo scans, and checked by CI so it
+cannot be committed accidentally.
+
 ## Fixture Coverage
 
 | Area | Purpose |
@@ -72,3 +82,42 @@ When changing token fixtures:
 
 The generated token package should be deterministic. Re-running generation with
 the same source files should not produce a diff.
+
+## Raw Export Import
+
+The public importer fixture lives in:
+
+```txt
+packages/token-pipeline/tests/fixtures/raw-figma-export/
+```
+
+It is a synthetic raw export with invented values. It exercises nested colour
+objects, slash aliases, brace aliases, light/dark modes, spacing, radius,
+typography, metadata stripping, unsupported-token reporting, and deterministic
+normalised output.
+
+The importer is config-driven. A file rule maps one raw input file to one
+normalised token-source output:
+
+```json
+{
+  "files": [
+    {
+      "source": "primitive-colours.raw.json",
+      "target": "primitives/Default.tokens.json",
+      "stripPathPrefix": ["Primitive colours"]
+    }
+  ]
+}
+```
+
+Run a local private import with:
+
+```sh
+pnpm tokens:import:raw -- .private/design-system .private/normalised-token-output .private/design-system/import.config.json
+```
+
+The output directory contains normalised token JSON plus `import-report.json`.
+Keep that output under `.private/` when it contains real brand values. In a
+private work repo, the same command can target the token source directory used
+by the build.

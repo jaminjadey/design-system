@@ -7,7 +7,7 @@ import { metadata } from '@demo-ds/tokens';
 
 The token pipeline is deterministic and package-oriented:
 
-1. Demo token JSON is scanned before generation.
+1. Demo token JSON, or locally imported private raw-token output, is scanned before generation.
 2. Source token JSON is parsed into flat source records.
 3. Source paths are mapped into canonical token paths.
 4. Canonical tokens are validated.
@@ -29,3 +29,17 @@ contains `{metadata.categories.join(', ')}` categories.
 
 Storybook token pages import `token-docs.json`; they do not scrape CSS and do
 not read source token files.
+
+## Raw Export Import
+
+For local private raw exports, put files under `.private/design-system/` and
+configure `import.config.json` to map raw files to the normalised source files
+used by the token package.
+
+```sh
+pnpm tokens:import:raw -- .private/design-system .private/normalised-token-output .private/design-system/import.config.json
+```
+
+The importer strips source-tool metadata, rejects forbidden markers, resolves
+aliases, and writes an `import-report.json` with file/path findings. Keep real
+brand inputs and imported outputs under `.private/` in this public repo.

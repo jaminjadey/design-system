@@ -111,6 +111,30 @@ and protected by CI through `pnpm private:check`, which fails if anything under
 The public demo fixtures under `packages/tokens/fixtures/` must stay synthetic
 and generic.
 
+For local raw-export testing, put files here:
+
+```txt
+.private/design-system/
+  import.config.json
+  raw-token-export-files.json
+```
+
+Then run the importer into another private output folder:
+
+```sh
+pnpm tokens:import:raw -- .private/design-system .private/normalised-token-output .private/design-system/import.config.json
+```
+
+The importer uses `import.config.json` to map raw files into the normalised
+token-source files consumed by the rest of the pipeline. It strips source-tool
+metadata, rejects forbidden markers, resolves common aliases, and writes an
+`import-report.json` with emitted-token counts, stripped metadata counts, alias
+counts, and file/path warnings.
+
+In this public repo, do not copy private importer output into
+`packages/tokens/fixtures/extracted`. In a private work repo, the same importer
+can write to the token source directory that `@demo-ds/tokens` builds from.
+
 ## How To Use The Packages
 
 Wrap an app with the demo theme provider:
