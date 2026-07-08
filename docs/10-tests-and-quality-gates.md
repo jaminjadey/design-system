@@ -46,6 +46,8 @@ Test categories:
 | Colour conversion tests | Source colour objects become hex values. |
 | Mode merge tests | Light and dark semantic tokens merge correctly. |
 | Typography grouping tests | FontSize/LineHeight/FontWeight become one token. |
+| Configurable mapping tests | Alternate source files, modes, and category prefixes map correctly. |
+| Import/build report tests | Reports include useful counts, warnings, and source paths. |
 | Canonical validation tests | Invalid canonical documents fail. |
 
 Example cases:
@@ -70,6 +72,7 @@ Test categories:
 - Generated CSS contains expected variables.
 - Generated CSS contains light and dark selectors.
 - Generated TypeScript exports expected token names.
+- Generated build report explains source records, skipped records, and generated files.
 - No forbidden markers appear in generated outputs.
 - Running generation twice produces the same output.
 
@@ -121,13 +124,18 @@ Required:
 
 ```sh
 pnpm --filter @demo-ds/storybook build
+pnpm --filter @demo-ds/storybook test
 ```
+
+Current:
+
+- Accessibility addon.
+- Playwright smoke tests against built Storybook.
+- Light/dark smoke checks for key docs and component pages.
 
 Optional later:
 
 - Storybook test runner.
-- Accessibility addon.
-- Playwright smoke tests against built Storybook.
 - Visual regression screenshots.
 
 ## Example app checks

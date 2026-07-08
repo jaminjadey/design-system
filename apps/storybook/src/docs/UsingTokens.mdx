@@ -1,0 +1,29 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Docs/Using Tokens" />
+
+# Using Tokens
+
+Applications and components should consume generated token artifacts from
+`@demo-ds/tokens`, not raw source files.
+
+Use CSS variables in styling:
+
+```css
+.surface {
+  color: var(--ds-color-text-default);
+  background: var(--ds-color-background-body);
+  padding: var(--ds-space-md);
+  border-radius: var(--ds-radius-md);
+}
+```
+
+Use typed token names when code needs a token reference:
+
+```ts
+import { cssVar } from '@demo-ds/tokens';
+
+const textColor = cssVar('color.semantic.text.default');
+```
+
+Token docs in this Storybook read `token-docs.json`; they do not scrape CSS.

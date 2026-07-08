@@ -1,0 +1,32 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Docs/Replacing Demo Tokens With Brand Tokens" />
+
+# Replacing Demo Tokens With Brand Tokens
+
+For local testing, put private raw exports here:
+
+```txt
+.private/design-system/
+```
+
+This repo also ignores `tokens/raw/` and `tokens/imported/` for teams that use
+that local convention. These paths are guarded so force-added private files fail
+CI.
+
+Run the raw importer:
+
+```sh
+pnpm tokens:import -- --input .private/design-system --output .private/normalised-token-output --config .private/design-system/import.config.json
+```
+
+In a private work repo, point the output directory at the token source folder
+used by the token package build. Then run:
+
+```sh
+pnpm tokens:build
+```
+
+Mapping rules live in `token-pipeline.config.json`. Change that file when raw
+export group names, mode names, semantic categories, spacing, radius, or
+typography naming conventions differ from the demo.

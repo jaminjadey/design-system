@@ -1,10 +1,21 @@
 export {
   buildCanonicalTokens,
+  buildCanonicalTokensFromRecordsWithReport,
+  buildCanonicalTokensWithReport,
   buildCanonicalTokensFromRecords,
   readSourceTokenRecords,
-  type BuildOptions
+  withGeneratedFiles,
+  type BuildOptions,
+  type CanonicalBuildFinding,
+  type CanonicalBuildReport,
+  type CanonicalPathMappingReport,
+  type SemanticModeMissingReport
 } from "./canonical/buildCanonicalTokens.js";
-export { generateTokenOutputs, type OutputOptions } from "./canonical/generateTokenOutputs.js";
+export {
+  generateTokenOutputs,
+  type GeneratedTokenOutputReport,
+  type OutputOptions
+} from "./canonical/generateTokenOutputs.js";
 export { normaliseColorValue } from "./canonical/color.js";
 export {
   canonicalTokenJsonSchema,
@@ -24,6 +35,16 @@ export type {
   TokenMode,
   TokenType
 } from "./canonical/types.js";
+export {
+  defaultCanonicalMappingConfig,
+  defaultTokenPipelineConfig,
+  loadTokenPipelineConfig,
+  parseTokenPipelineConfig,
+  type CanonicalMappingConfig,
+  type SemanticColorFileMapping,
+  type TokenPipelineConfig,
+  type UnsupportedTokenPolicy
+} from "./config/tokenPipelineConfig.js";
 
 export {
   discoverFixtureFiles,

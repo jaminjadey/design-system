@@ -1,3 +1,7 @@
+import {
+  defaultCanonicalMappingConfig,
+  type CanonicalMappingConfig
+} from "../config/tokenPipelineConfig.js";
 import { discoverFixtureFiles } from "../fixtures/discoverFixtureFiles.js";
 import { cssVariableName, tokenName } from "../mapping/nameNormalisation.js";
 import { sourcePathToCanonicalPath } from "../mapping/sourceToCanonical.js";
@@ -12,25 +16,56 @@ import type {
   CanonicalTypographyValue,
   TokenMode
 } from "./types.js";
-import { validateCanonicalTokenDocument } from "./validateCanonicalTokens.js";
+import { collectCanonicalTokens, validateCanonicalTokenDocument } from "./validateCanonicalTokens.js";
 
 export interface BuildOptions {
   readonly fixtureDirectory: string;
+  readonly config?: CanonicalMappingConfig;
 }
 
-const expectedJsonFiles = new Set([
-  "primitives/Default.tokens.json",
-  "tokens/Light.tokens.json",
-  "tokens/Dark.tokens.json",
-  "spacing/Mode 1.tokens.json",
-  "corners/Mode 1.tokens.json",
-  "typography/Default.tokens.json"
-]);
+export interface CanonicalBuildFinding {
+  readonly file: string;
+  readonly path: string;
+  readonly message: string;
+}
+
+export interface CanonicalPathMappingReport {
+  readonly file: string;
+  readonly sourcePath: string;
+  readonly canonicalPath: string;
+  readonly category: SourceMappingCategory;
+}
+
+export interface SemanticModeMissingReport {
+  readonly tokenName: string;
+  readonly missingModes: readonly TokenMode[];
+}
+
+export interface CanonicalBuildReport {
+  readonly sourceRecordsRead: number;
+  readonly tokensGenerated: number;
+  readonly recordsMapped: number;
+  readonly recordsSkipped: number;
+  readonly renamedPaths: readonly CanonicalPathMappingReport[];
+  readonly unsupportedRecords: readonly CanonicalBuildFinding[];
+  readonly semanticTokensMissingModes: readonly SemanticModeMissingReport[];
+  readonly generatedFiles: readonly string[];
+  readonly warnings: readonly CanonicalBuildFinding[];
+}
+
+type SourceMappingCategory =
+  | "primitive-color"
+  | "semantic-color"
+  | "space"
+  | "radius"
+  | "typography-part";
 
 export async function readSourceTokenRecords(
-  fixtureDirectory: string
+  fixtureDirectory: string,
+  config: CanonicalMappingConfig = defaultCanonicalMappingConfig
 ): Promise<SourceTokenRecord[]> {
   const discovered = await discoverFixtureFiles(fixtureDirectory);
+  const expectedJsonFiles = new Set(expectedSourceFiles(config));
   const jsonFiles = discovered.filter((file) => expectedJsonFiles.has(file.relativePath));
   const missing = [...expectedJsonFiles].filter(
     (expectedFile) => !jsonFiles.some((file) => file.relativePath === expectedFile)
@@ -49,23 +84,67 @@ export async function readSourceTokenRecords(
 export async function buildCanonicalTokens(
   options: BuildOptions
 ): Promise<CanonicalTokenDocument> {
-  const records = await readSourceTokenRecords(options.fixtureDirectory);
-  return buildCanonicalTokensFromRecords(records);
+  const records = await readSourceTokenRecords(
+    options.fixtureDirectory,
+    options.config ?? defaultCanonicalMappingConfig
+  );
+  return buildCanonicalTokensFromRecords(records, { config: options.config });
+}
+
+export async function buildCanonicalTokensWithReport(
+  options: BuildOptions
+): Promise<{ readonly document: CanonicalTokenDocument; readonly report: CanonicalBuildReport }> {
+  const config = options.config ?? defaultCanonicalMappingConfig;
+  const records = await readSourceTokenRecords(options.fixtureDirectory, config);
+  return buildCanonicalTokensFromRecordsWithReport(records, { config });
 }
 
 export function buildCanonicalTokensFromRecords(
-  records: readonly SourceTokenRecord[]
+  records: readonly SourceTokenRecord[],
+  options: { readonly config?: CanonicalMappingConfig } = {}
 ): CanonicalTokenDocument {
+  return buildCanonicalTokensFromRecordsWithReport(records, options).document;
+}
+
+export function buildCanonicalTokensFromRecordsWithReport(
+  records: readonly SourceTokenRecord[],
+  options: { readonly config?: CanonicalMappingConfig } = {}
+): { readonly document: CanonicalTokenDocument; readonly report: CanonicalBuildReport } {
+  const config = options.config ?? defaultCanonicalMappingConfig;
   const sourceRecordLookup = new Map(records.map((record) => [sourceRecordKey(record), record]));
   const primitiveColors: CanonicalColorToken[] = [];
   const semanticColors = new Map<string, MutableSemanticColor>();
   const dimensions: CanonicalDimensionToken[] = [];
   const typographyParts = new Map<string, MutableTypographyValue>();
+  const renamedPaths: CanonicalPathMappingReport[] = [];
+  const unsupportedRecords: CanonicalBuildFinding[] = [];
+  const warnings: CanonicalBuildFinding[] = [];
+  let recordsMapped = 0;
 
   for (const record of records) {
-    const mapping = sourcePathToCanonicalPath(record);
+    const mapping = sourcePathToCanonicalPath(record, config);
     if (mapping === undefined) {
+      const finding = {
+        file: record.file,
+        path: record.sourcePath.join("."),
+        message: `No canonical mapping for ${record.type} source record`
+      };
+      unsupportedRecords.push(finding);
+      warnings.push(finding);
+      if (config.unsupportedTokenPolicy === "fail") {
+        throw new Error(`${record.file}:${record.sourcePath.join(".")}: ${finding.message}`);
+      }
       continue;
+    }
+
+    recordsMapped += 1;
+    if (mapping.canonicalPath.join(".") !== record.sourcePath.join(".")) {
+      renamedPaths.push({
+        file: record.file,
+        sourcePath: record.sourcePath.join("."),
+        canonicalPath: mapping.canonicalPath.join("."),
+        category: mapping.category
+      });
     }
 
     if (mapping.category === "primitive-color") {
@@ -113,11 +192,20 @@ export function buildCanonicalTokensFromRecords(
   }
 
   const semanticColorTokens = [...semanticColors.values()].map((entry) => {
-    if (entry.value.light === undefined || entry.value.dark === undefined) {
+    const missingModes = (["light", "dark"] as const).filter(
+      (mode) => entry.value[mode] === undefined
+    );
+    if (missingModes.length > 0) {
       throw new Error(`Semantic colour ${tokenName(entry.canonicalPath)} is missing light or dark value`);
     }
 
-    return makeColorToken(entry.canonicalPath, { light: entry.value.light, dark: entry.value.dark }, entry.source);
+    const light = entry.value.light;
+    const dark = entry.value.dark;
+    if (light === undefined || dark === undefined) {
+      throw new Error(`Semantic colour ${tokenName(entry.canonicalPath)} is missing light or dark value`);
+    }
+
+    return makeColorToken(entry.canonicalPath, { light, dark }, entry.source);
   });
 
   const typographyTokens = [...typographyParts.entries()].map(([name, value]) => {
@@ -164,7 +252,34 @@ export function buildCanonicalTokensFromRecords(
   };
 
   validateCanonicalTokenDocument(document);
-  return document;
+  const tokensGenerated = collectCanonicalTokens(document).length;
+
+  return {
+    document,
+    report: {
+      sourceRecordsRead: records.length,
+      tokensGenerated,
+      recordsMapped,
+      recordsSkipped: records.length - recordsMapped,
+      renamedPaths: renamedPaths.sort((left, right) =>
+        `${left.file}:${left.sourcePath}`.localeCompare(`${right.file}:${right.sourcePath}`)
+      ),
+      unsupportedRecords,
+      semanticTokensMissingModes: collectMissingSemanticModes(semanticColors),
+      generatedFiles: [],
+      warnings
+    }
+  };
+}
+
+export function withGeneratedFiles(
+  report: CanonicalBuildReport,
+  generatedFiles: readonly string[]
+): CanonicalBuildReport {
+  return {
+    ...report,
+    generatedFiles: [...generatedFiles].sort()
+  };
 }
 
 function makeColorToken(
@@ -268,6 +383,28 @@ function sourceRecordKey(record: SourceTokenRecord): string {
 
 function sortTokens<TToken extends CanonicalToken>(tokens: readonly TToken[]): TToken[] {
   return [...tokens].sort((left, right) => left.name.localeCompare(right.name));
+}
+
+function expectedSourceFiles(config: CanonicalMappingConfig): string[] {
+  return [
+    ...config.files.primitiveColors,
+    ...config.files.semanticColors.map((entry) => entry.file),
+    config.files.spacing,
+    config.files.radius,
+    config.files.typography
+  ].sort();
+}
+
+function collectMissingSemanticModes(
+  semanticColors: ReadonlyMap<string, MutableSemanticColor>
+): readonly SemanticModeMissingReport[] {
+  return [...semanticColors.values()]
+    .map((entry) => ({
+      tokenName: tokenName(entry.canonicalPath),
+      missingModes: (["light", "dark"] as const).filter((mode) => entry.value[mode] === undefined)
+    }))
+    .filter((entry) => entry.missingModes.length > 0)
+    .sort((left, right) => left.tokenName.localeCompare(right.tokenName));
 }
 
 function nestTokens(tokens: readonly CanonicalToken[], prefix: readonly string[]): Record<string, unknown> {

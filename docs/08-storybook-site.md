@@ -16,7 +16,14 @@ apps/storybook/
   src/
     docs/
       Introduction.mdx
+      GettingStarted.mdx
       TokenPipeline.mdx
+      UsingTokens.mdx
+      UsingComponents.mdx
+      ReplacingDemoTokens.mdx
+      TokenNamingRules.mdx
+      PipelineOutputContract.mdx
+      WhatAppsShouldImport.mdx
       Theme.mdx
     token-pages/
       ColorTokensPage.tsx
@@ -158,12 +165,14 @@ selected mode.
 
 ## Accessibility checks
 
-Add Storybook accessibility tooling if desired. At minimum:
+Storybook uses `@storybook/addon-a11y` and a Playwright smoke test against the
+built static site. At minimum:
 
 - Document expected keyboard behaviour.
 - Use semantic HTML in stories.
 - Avoid inaccessible example-only components.
 - Include component tests outside Storybook.
+- Check key docs and component pages in light and dark modes.
 
 ## Visual regression
 
@@ -178,6 +187,12 @@ Keep this optional until the pipeline and components are stable.
 
 ```sh
 pnpm --filter @demo-ds/storybook build
+```
+
+## Smoke test command
+
+```sh
+pnpm --filter @demo-ds/storybook test
 ```
 
 ## Local command

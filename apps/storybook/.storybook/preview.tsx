@@ -90,6 +90,9 @@ const preview: Preview = {
     }
   ],
   parameters: {
+    a11y: {
+      test: "todo"
+    },
     controls: { expanded: true },
     docs: {
       container: DocsThemeContainer,

@@ -1,0 +1,63 @@
+{
+  "canonical": {
+    "files": {
+      "primitiveColors": ["primitives/Default.tokens.json"],
+      "semanticColors": [
+        {
+          "file": "tokens/Light.tokens.json",
+          "sourceMode": "Light",
+          "mode": "light"
+        },
+        {
+          "file": "tokens/Dark.tokens.json",
+          "sourceMode": "Dark",
+          "mode": "dark"
+        }
+      ],
+      "spacing": "spacing/Mode 1.tokens.json",
+      "radius": "corners/Mode 1.tokens.json",
+      "typography": "typography/Default.tokens.json"
+    },
+    "primitiveColors": {
+      "ignoredPathSegments": ["colour", "colours", "color", "colors"]
+    },
+    "semanticColors": {
+      "categoryPrefixes": {
+        "font-colours": ["text"],
+        "background-general-colours": ["background"],
+        "border-colours": ["border"],
+        "button-colours": ["button"],
+        "icon-colour-picker": ["icon"],
+        "icons": ["icon"],
+        "loading-states": ["loading"],
+        "tooltips": ["tooltip"],
+        "notifications": ["notification"],
+        "form-input-backgrounds": ["form", "background"],
+        "date-picker-backgrounds": ["date-picker", "background"],
+        "navigation": ["navigation"],
+        "drop-shadows-cards": ["shadow", "card"],
+        "lozenge": ["lozenge"],
+        "marks": ["mark"]
+      },
+      "leafSuffixes": ["text", "background", "border", "colour", "color"]
+    },
+    "spacing": {
+      "sizePathIndex": 0
+    },
+    "radius": {
+      "sizePathIndex": 1,
+      "fallbackSizePathIndex": 0
+    },
+    "typography": {
+      "properties": {
+        "fontSize": ["FontSize"],
+        "lineHeight": ["LineHeight"],
+        "fontWeight": ["FontWeight"]
+      },
+      "headingPattern": "^h[1-6]$",
+      "bodyPrefix": "bdy-",
+      "displayPrefix": "display-"
+    },
+    "unsupportedTokenPolicy": "skip"
+  }
+}

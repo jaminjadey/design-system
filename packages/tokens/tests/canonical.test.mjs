@@ -9,6 +9,7 @@ const tokensCss = await readFile(new URL("../dist/tokens.css", import.meta.url),
 const tokenNamesDts = await readFile(new URL("../dist/token-names.d.ts", import.meta.url), "utf8");
 const metadata = JSON.parse(await readFile(new URL("../dist/metadata.json", import.meta.url), "utf8"));
 const tokenDocs = JSON.parse(await readFile(new URL("../dist/token-docs.json", import.meta.url), "utf8"));
+const buildReport = JSON.parse(await readFile(new URL("../dist/build-report.json", import.meta.url), "utf8"));
 
 test("generated canonical JSON contains core token groups", () => {
   assert.ok(canonical.tokens.color.primitive);
@@ -70,6 +71,24 @@ test("generated metadata contains deterministic package summary", () => {
   assert.equal(metadata.tokenCount, 222);
 });
 
+test("generated build report explains pipeline output", () => {
+  assert.equal(buildReport.sourceRecordsRead, 479);
+  assert.equal(buildReport.tokensGenerated, metadata.tokenCount);
+  assert.deepEqual(buildReport.semanticTokensMissingModes, []);
+  assert.ok(buildReport.recordsMapped > 0);
+  assert.ok(buildReport.recordsSkipped > 0);
+  assert.ok(buildReport.generatedFiles.includes("canonical.json"));
+  assert.ok(buildReport.generatedFiles.includes("build-report.json"));
+  assert.ok(buildReport.generatedFiles.includes("tokens.css"));
+  assert.ok(
+    buildReport.renamedPaths.some(
+      (entry) =>
+        entry.sourcePath === "Font colours.Default text" &&
+        entry.canonicalPath === "color.semantic.text.default"
+    )
+  );
+});
+
 test("generated token docs are consumable without scraping CSS", () => {
   const semanticTextGroup = tokenDocs.groups.find((group) => group.name === "color.semantic.text");
   assert.ok(semanticTextGroup);
@@ -86,10 +105,19 @@ test("generated token docs are consumable without scraping CSS", () => {
 
 test("generated token outputs are deterministic", async () => {
   const before = await hashDistFiles();
-  execFileSync("node", ["../token-pipeline/dist/cli/buildCanonical.js", "./fixtures/extracted", "./dist"], {
-    cwd: new URL("..", import.meta.url),
-    stdio: "pipe"
-  });
+  execFileSync(
+    "node",
+    [
+      "../token-pipeline/dist/cli/buildCanonical.js",
+      "./fixtures/extracted",
+      "./dist",
+      "../../token-pipeline.config.json"
+    ],
+    {
+      cwd: new URL("..", import.meta.url),
+      stdio: "pipe"
+    }
+  );
   const after = await hashDistFiles();
 
   assert.deepEqual(after, before);
@@ -99,6 +127,7 @@ async function hashDistFiles() {
   const distUrl = new URL("../dist/", import.meta.url);
   const files = (await readdir(distUrl)).filter((file) =>
     [
+      "build-report.json",
       "canonical.json",
       "index.d.ts",
       "index.js",

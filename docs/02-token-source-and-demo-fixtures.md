@@ -114,10 +114,15 @@ normalised token-source output:
 Run a local private import with:
 
 ```sh
-pnpm tokens:import:raw -- .private/design-system .private/normalised-token-output .private/design-system/import.config.json
+pnpm tokens:import -- --input .private/design-system --output .private/normalised-token-output --config .private/design-system/import.config.json
 ```
 
 The output directory contains normalised token JSON plus `import-report.json`.
 Keep that output under `.private/` when it contains real brand values. In a
 private work repo, the same command can target the token source directory used
 by the build.
+
+Canonical source-to-token mapping rules live in `token-pipeline.config.json`.
+The token package build writes `build-report.json` so reviewers can see source
+record counts, skipped records, path renames, missing modes, generated files,
+and warnings.

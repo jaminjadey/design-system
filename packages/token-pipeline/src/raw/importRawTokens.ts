@@ -25,6 +25,8 @@ export interface RawTokenImportFinding {
 export interface RawTokenImportFileReport {
   readonly source: string;
   readonly target: string;
+  readonly tokensImported: number;
+  readonly tokensSkipped: number;
   readonly recordsEmitted: number;
   readonly metadataKeysStripped: number;
   readonly aliasesResolved: number;
@@ -33,6 +35,8 @@ export interface RawTokenImportFileReport {
 
 export interface RawTokenImportReport {
   readonly filesRead: number;
+  readonly tokensImported: number;
+  readonly tokensSkipped: number;
   readonly recordsEmitted: number;
   readonly metadataKeysStripped: number;
   readonly aliasesResolved: number;
@@ -55,6 +59,8 @@ interface SanitisedRawDocument extends RawTokenImportDocument {
 interface MutableFileReport {
   source: string;
   target: string;
+  tokensImported: number;
+  tokensSkipped: number;
   recordsEmitted: number;
   metadataKeysStripped: number;
   aliasesResolved: number;
@@ -63,6 +69,8 @@ interface MutableFileReport {
 
 interface MutableReport {
   filesRead: number;
+  tokensImported: number;
+  tokensSkipped: number;
   recordsEmitted: number;
   metadataKeysStripped: number;
   aliasesResolved: number;
@@ -607,6 +615,7 @@ function emitRecord(
     type,
     value
   });
+  context.fileReports[document.index].tokensImported += 1;
   context.fileReports[document.index].recordsEmitted += 1;
 }
 
@@ -696,12 +705,15 @@ function addWarning(
     path: rawPath.join("."),
     message
   };
+  context.fileReports[document.index].tokensSkipped += 1;
   context.fileReports[document.index].warnings.push(finding);
 }
 
 function createReport(documents: readonly RawTokenImportDocument[]): MutableReport {
   return {
     filesRead: documents.length,
+    tokensImported: 0,
+    tokensSkipped: 0,
     recordsEmitted: 0,
     metadataKeysStripped: 0,
     aliasesResolved: 0,
@@ -709,6 +721,8 @@ function createReport(documents: readonly RawTokenImportDocument[]): MutableRepo
     files: documents.map((document) => ({
       source: toPosix(document.source),
       target: toPosix(document.target),
+      tokensImported: 0,
+      tokensSkipped: 0,
       recordsEmitted: 0,
       metadataKeysStripped: 0,
       aliasesResolved: 0,
@@ -726,6 +740,8 @@ function finaliseReport(report: MutableReport): RawTokenImportReport {
   const warnings = files.flatMap((file) => file.warnings);
   return {
     filesRead: report.filesRead,
+    tokensImported: files.reduce((total, file) => total + file.tokensImported, 0),
+    tokensSkipped: files.reduce((total, file) => total + file.tokensSkipped, 0),
     recordsEmitted: files.reduce((total, file) => total + file.recordsEmitted, 0),
     metadataKeysStripped: files.reduce((total, file) => total + file.metadataKeysStripped, 0),
     aliasesResolved: files.reduce((total, file) => total + file.aliasesResolved, 0),

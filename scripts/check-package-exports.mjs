@@ -7,6 +7,21 @@ const packageDirectories = [
   "packages/mantine-theme",
   "packages/components"
 ];
+const packageReadyDirectories = new Set([
+  "packages/tokens",
+  "packages/mantine-theme",
+  "packages/components"
+]);
+const requiredTokenExports = [
+  "./tokens.css",
+  "./tokens.light.css",
+  "./tokens.dark.css",
+  "./canonical.json",
+  "./metadata.json",
+  "./token-docs.json",
+  "./build-report.json"
+];
+const requiredRuntimePeers = ["react", "react-dom", "@mantine/core", "@mantine/hooks"];
 
 const failures = [];
 
@@ -18,6 +33,18 @@ for (const packageDirectory of packageDirectories) {
   addTarget(targets, packageJson.main);
   addTarget(targets, packageJson.types);
   collectExportTargets(packageJson.exports, targets);
+
+  if (packageReadyDirectories.has(packageDirectory)) {
+    await checkPackageReadiness(packageDirectory, packageJson);
+  }
+
+  if (packageJson.name === "@demo-ds/tokens") {
+    for (const exportName of requiredTokenExports) {
+      if (!hasExport(packageJson.exports, exportName)) {
+        failures.push(`${packageJson.name}: missing required export ${exportName}`);
+      }
+    }
+  }
 
   for (const target of [...targets].sort()) {
     const targetPath = join(packageDirectory, target);
@@ -62,4 +89,36 @@ function addTarget(targets, value) {
   if (typeof value === "string" && value.startsWith("./")) {
     targets.add(value);
   }
+}
+
+async function checkPackageReadiness(packageDirectory, packageJson) {
+  try {
+    await access(join(packageDirectory, "README.md"));
+  } catch {
+    failures.push(`${packageJson.name}: missing README.md`);
+  }
+
+  if (!Array.isArray(packageJson.files) || packageJson.files.length === 0) {
+    failures.push(`${packageJson.name}: missing package files field`);
+  }
+
+  for (const fileEntry of packageJson.files ?? []) {
+    try {
+      await access(join(packageDirectory, fileEntry));
+    } catch {
+      failures.push(`${packageJson.name}: files entry does not exist: ${fileEntry}`);
+    }
+  }
+
+  if (packageJson.name === "@demo-ds/mantine-theme" || packageJson.name === "@demo-ds/components") {
+    for (const dependencyName of requiredRuntimePeers) {
+      if (packageJson.peerDependencies?.[dependencyName] === undefined) {
+        failures.push(`${packageJson.name}: missing peer dependency ${dependencyName}`);
+      }
+    }
+  }
+}
+
+function hasExport(exports, exportName) {
+  return exports !== null && typeof exports === "object" && Object.hasOwn(exports, exportName);
 }

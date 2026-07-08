@@ -21,16 +21,19 @@ The important idea is separation of concerns:
 
 ```mermaid
 flowchart LR
-  A[Figma-style demo token JSON] --> B[Token source scan]
-  B --> C[Canonical token builder]
-  C --> D[canonical.json]
-  D --> E[CSS variables]
-  D --> F[TypeScript exports]
-  E --> G[Internal Mantine adapter]
-  F --> G
-  G --> H[Design-system React components]
-  H --> I[Storybook docs]
-  H --> J[Example React app]
+  A[Optional raw export] --> B[Raw importer]
+  B --> C[Normalised token JSON]
+  C --> D[Token source scan]
+  E[Figma-style demo token JSON] --> D
+  D --> F[Config-driven canonical builder]
+  F --> G[canonical.json + build-report.json]
+  G --> H[CSS variables]
+  G --> I[TypeScript exports]
+  H --> J[Internal Mantine adapter]
+  I --> J
+  J --> K[Design-system React components]
+  K --> L[Storybook docs]
+  K --> M[Example React app]
 ```
 
 ## Packages And Apps
@@ -54,6 +57,7 @@ apps/example              Vite app proving package consumption
 - `index.js` and `index.d.ts`: token maps, metadata, and `cssVar()`.
 - `token-names.js` and `token-names.d.ts`: type-safe token names.
 - `metadata.json` and `token-docs.json`: data for documentation and CI checks.
+- `build-report.json`: source record counts, skipped records, path renames, generated files, and warnings.
 
 ## Run Locally
 
@@ -122,7 +126,7 @@ For local raw-export testing, put files here:
 Then run the importer into another private output folder:
 
 ```sh
-pnpm tokens:import:raw -- .private/design-system .private/normalised-token-output .private/design-system/import.config.json
+pnpm tokens:import -- --input .private/design-system --output .private/normalised-token-output --config .private/design-system/import.config.json
 ```
 
 The importer uses `import.config.json` to map raw files into the normalised
@@ -134,6 +138,10 @@ counts, and file/path warnings.
 In this public repo, do not copy private importer output into
 `packages/tokens/fixtures/extracted`. In a private work repo, the same importer
 can write to the token source directory that `@demo-ds/tokens` builds from.
+
+Canonical mapping rules live in `token-pipeline.config.json`. Configure that
+file when primitive groups, semantic groups, source mode names, spacing/radius
+paths, typography fields, or unsupported-token policy differ from the demo.
 
 ## How To Use The Packages
 
@@ -180,7 +188,7 @@ When token source files or mapping rules change:
 
 ```sh
 pnpm tokens:scan
-pnpm --filter @demo-ds/tokens build
+pnpm tokens:build
 pnpm --filter @demo-ds/tokens test
 ```
 
@@ -230,6 +238,7 @@ GitHub Actions verifies the repo from a fresh checkout:
 - scan demo token sources
 - lint, typecheck, test, and build
 - build Storybook and the example app
+- run a Playwright smoke test against built Storybook
 - deploy Storybook to GitHub Pages after the Pages workflow succeeds
 - verify package exports
 - scan the repo for forbidden markers and secret-like patterns

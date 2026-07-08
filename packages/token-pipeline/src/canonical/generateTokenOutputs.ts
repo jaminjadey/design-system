@@ -14,10 +14,14 @@ export interface OutputOptions {
   readonly outputDirectory: string;
 }
 
+export interface GeneratedTokenOutputReport {
+  readonly files: readonly string[];
+}
+
 export async function generateTokenOutputs(
   document: CanonicalTokenDocument,
   options: OutputOptions
-): Promise<void> {
+): Promise<GeneratedTokenOutputReport> {
   await mkdir(options.outputDirectory, { recursive: true });
   const tokens = collectCanonicalTokens(document);
 
@@ -39,6 +43,10 @@ export async function generateTokenOutputs(
   )) {
     await writeFile(join(options.outputDirectory, fileName), contents, "utf8");
   }
+
+  return {
+    files: Object.keys(outputs).sort()
+  };
 }
 
 function generateCombinedCss(tokens: readonly CanonicalToken[]): string {

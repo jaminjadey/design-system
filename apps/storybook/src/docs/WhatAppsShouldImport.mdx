@@ -1,0 +1,24 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Docs/What Apps Should Import" />
+
+# What Apps Should Import
+
+App code should import:
+
+```ts
+import { DemoThemeProvider } from '@demo-ds/mantine-theme';
+import '@demo-ds/mantine-theme/styles.css';
+import { Button, Card, PageHeader } from '@demo-ds/components';
+import { cssVar } from '@demo-ds/tokens';
+```
+
+App code should not import:
+
+```ts
+import { Button } from '@mantine/core';
+```
+
+Mantine is a rendering dependency behind the design-system API. Keeping it
+behind the package boundary makes the component contract portable if the
+implementation changes later.

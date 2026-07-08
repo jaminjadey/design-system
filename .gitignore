@@ -12,11 +12,14 @@ node_modules/
 !packages/tokens/dist/tokens.dark.css
 !packages/tokens/dist/metadata.json
 !packages/tokens/dist/token-docs.json
+!packages/tokens/dist/build-report.json
 build/
 coverage/
 .turbo/
 .tmp/
 .private/
+tokens/raw/
+tokens/imported/
 storybook-static/
 .env
 .env.*

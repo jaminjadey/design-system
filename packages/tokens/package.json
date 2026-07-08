@@ -5,6 +5,10 @@
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -19,10 +23,11 @@
     "./tokens.dark.css": "./dist/tokens.dark.css",
     "./canonical.json": "./dist/canonical.json",
     "./metadata.json": "./dist/metadata.json",
-    "./token-docs.json": "./dist/token-docs.json"
+    "./token-docs.json": "./dist/token-docs.json",
+    "./build-report.json": "./dist/build-report.json"
   },
   "scripts": {
-    "build": "pnpm --filter @demo-ds/token-pipeline build && node ../token-pipeline/dist/cli/buildCanonical.js ./fixtures/extracted ./dist",
+    "build": "pnpm --filter @demo-ds/token-pipeline build && node ../token-pipeline/dist/cli/buildCanonical.js ./fixtures/extracted ./dist ../../token-pipeline.config.json",
     "test": "node --test tests/*.test.mjs",
     "lint": "node -e \"console.log('tokens placeholder lint passed')\"",
     "typecheck": "tsc -p tsconfig.json --noEmit"

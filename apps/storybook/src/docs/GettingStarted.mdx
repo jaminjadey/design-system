@@ -1,0 +1,30 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Docs/Getting Started" />
+
+# Getting Started
+
+This demo shows the design-system pipeline end to end:
+
+```txt
+raw export -> normalised source tokens -> canonical tokens -> CSS/types -> theme -> components
+```
+
+Install and run the full local gate:
+
+```sh
+pnpm install --frozen-lockfile
+pnpm tokens:scan
+pnpm test
+pnpm build
+```
+
+Run Storybook locally:
+
+```sh
+pnpm storybook
+```
+
+The committed token fixtures are synthetic. Real brand exports belong in
+`.private/design-system/` or another ignored private path, never in committed
+fixtures.

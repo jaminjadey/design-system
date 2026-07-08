@@ -54,7 +54,7 @@ Responsibilities:
 Command:
 
 ```sh
-pnpm tokens:import:raw -- .private/design-system .private/normalised-token-output .private/design-system/import.config.json
+pnpm tokens:import -- --input .private/design-system --output .private/normalised-token-output --config .private/design-system/import.config.json
 ```
 
 Keep the output under `.private/` when it contains real brand values. In a
@@ -130,13 +130,30 @@ Responsibilities:
 Responsibilities:
 
 - Convert source paths to canonical paths.
-- Apply explicit mapping rules for known source categories.
+- Apply config-driven mapping rules for known source categories.
 - Apply generic slugification for leaf names.
 - Fix source naming issues, such as `Corder-radius` -> `radius`.
 
-Suggested implementation:
+Mapping config:
 
 ```txt
+token-pipeline.config.json
+```
+
+Configurable areas:
+
+- Primitive colour source files and ignored path segments.
+- Semantic colour source files, source mode names, and canonical light/dark modes.
+- Semantic category prefixes.
+- Spacing source file and size path index.
+- Radius source file and size path index.
+- Typography property names and style naming conventions.
+- Unsupported token handling.
+
+Implementation:
+
+```txt
+packages/token-pipeline/src/config/tokenPipelineConfig.ts
 packages/token-pipeline/src/mapping/sourceToCanonical.ts
 packages/token-pipeline/src/mapping/nameNormalisation.ts
 ```
@@ -185,9 +202,14 @@ packages/tokens/dist/token-names.js
 packages/tokens/dist/token-names.d.ts
 packages/tokens/dist/metadata.json
 packages/tokens/dist/token-docs.json
+packages/tokens/dist/build-report.json
 ```
 
 Do not manually edit generated files.
+
+`build-report.json` records source records read, tokens generated, mapped and
+skipped records, renamed canonical paths, missing semantic modes, generated
+files, and warnings.
 
 ## Stage 9: Package Build
 
@@ -218,6 +240,7 @@ At root:
 {
   "scripts": {
     "tokens:scan": "pnpm --filter @demo-ds/token-pipeline scan:fixtures",
+    "tokens:import": "pnpm --filter @demo-ds/token-pipeline import:raw",
     "tokens:build": "pnpm --filter @demo-ds/tokens build",
     "build": "turbo run build",
     "test": "turbo run test",

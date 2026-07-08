@@ -37,9 +37,25 @@ configure `import.config.json` to map raw files to the normalised source files
 used by the token package.
 
 ```sh
-pnpm tokens:import:raw -- .private/design-system .private/normalised-token-output .private/design-system/import.config.json
+pnpm tokens:import -- --input .private/design-system --output .private/normalised-token-output --config .private/design-system/import.config.json
 ```
 
 The importer strips source-tool metadata, rejects forbidden markers, resolves
 aliases, and writes an `import-report.json` with file/path findings. Keep real
 brand inputs and imported outputs under `.private/` in this public repo.
+
+## Mapping Config
+
+Canonical mapping rules live in `token-pipeline.config.json`.
+
+Use it to configure source files, primitive colour path rules, semantic category
+prefixes, mode names, spacing/radius indexes, typography properties, and the
+unsupported-token policy.
+
+## Reports
+
+The import step writes `import-report.json`.
+
+The token build writes `build-report.json` with source record counts, skipped
+records, renamed canonical paths, missing semantic modes, generated files, and
+warnings.

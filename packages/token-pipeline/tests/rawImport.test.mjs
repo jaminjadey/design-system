@@ -36,6 +36,8 @@ test("imports synthetic raw export into canonical colours, modes, dimensions, an
     fontWeight: 600
   });
   assert.equal(result.report.filesRead, 6);
+  assert.equal(result.report.tokensImported, 74);
+  assert.equal(result.report.tokensSkipped, 0);
   assert.ok(result.report.aliasesResolved > 0);
 });
 
@@ -196,6 +198,8 @@ test("can report unsupported raw token findings with useful file and path detail
   );
 
   assert.equal(result.records.length, 0);
+  assert.equal(result.report.tokensImported, 0);
+  assert.equal(result.report.tokensSkipped, 1);
   assert.deepEqual(result.report.warnings[0], {
     file: "unsupported.raw.json",
     path: "Effects.Card",

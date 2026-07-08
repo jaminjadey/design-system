@@ -1,6 +1,6 @@
 import { execFileSync } from "node:child_process";
 
-const forbiddenTrackedPrefixes = [".private/"];
+const forbiddenTrackedPrefixes = [".private/", "tokens/raw/", "tokens/imported/"];
 
 const trackedFiles = execFileSync("git", ["ls-files", "-z"], {
   encoding: "utf8",

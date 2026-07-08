@@ -1,0 +1,32 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Docs/Pipeline Output Contract" />
+
+# Pipeline Output Contract
+
+The token package build writes these artifacts:
+
+```txt
+canonical.json
+tokens.css
+tokens.light.css
+tokens.dark.css
+index.js
+index.d.ts
+token-names.js
+token-names.d.ts
+metadata.json
+token-docs.json
+build-report.json
+```
+
+`canonical.json` is the stable internal contract.
+
+`tokens.css` contains `--ds-*` custom properties and light/dark selectors.
+
+`index.js` and `token-names.js` provide runtime maps and typed token names.
+
+`token-docs.json` feeds Storybook documentation.
+
+`build-report.json` explains records read, records mapped, records skipped,
+path renames, missing semantic modes, generated files, and warnings.
