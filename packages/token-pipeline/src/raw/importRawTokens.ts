@@ -336,8 +336,12 @@ function normaliseRawTokenValue(
   seenReferences: ReadonlySet<string>
 ): RawTokenValue | undefined {
   if (isDesignTokenObject(value)) {
-    const explicitType = getCaseInsensitiveString(value, "$type") ?? getCaseInsensitiveString(value, "type");
-    const designType = explicitType === undefined ? undefined : supportedDesignTokenTypes.get(explicitType.toLowerCase());
+    const explicitType =
+      getCaseInsensitiveString(value, "$type") ?? getCaseInsensitiveString(value, "type");
+    const designType =
+      explicitType === undefined
+        ? undefined
+        : supportedDesignTokenTypes.get(explicitType.toLowerCase());
     if (designType === undefined) {
       return handleUnsupportedToken(
         context,
@@ -377,7 +381,13 @@ function normaliseRawTokenValue(
     const trimmed = value.trim();
     const referencePath = parseReferencePath(trimmed);
     if (referencePath !== undefined) {
-      const referenced = resolveReference(referencePath, document, rawPath, context, seenReferences);
+      const referenced = resolveReference(
+        referencePath,
+        document,
+        rawPath,
+        context,
+        seenReferences
+      );
       if (referenced === undefined) {
         return undefined;
       }
@@ -399,12 +409,7 @@ function normaliseRawTokenValue(
     }
 
     if (hint !== "unknown") {
-      return handleUnsupportedToken(
-        context,
-        document,
-        rawPath,
-        `Unsupported ${hint} token value`
-      );
+      return handleUnsupportedToken(context, document, rawPath, `Unsupported ${hint} token value`);
     }
 
     addWarning(context, document, rawPath, "Skipped unsupported string value");
@@ -432,7 +437,12 @@ function normaliseTypedRawValue(
 ): RawTokenValue | undefined {
   const normalised = normaliseRawTokenValue(value, document, rawPath, context, seenReferences);
   if (normalised === undefined) {
-    return handleUnsupportedToken(context, document, rawPath, `Unsupported ${expectedType} token value`);
+    return handleUnsupportedToken(
+      context,
+      document,
+      rawPath,
+      `Unsupported ${expectedType} token value`
+    );
   }
 
   if (normalised.type !== expectedType) {
@@ -452,24 +462,40 @@ function normaliseTypographyGroup(
   document: SanitisedRawDocument,
   rawPath: readonly string[],
   context: ImportContext
-): readonly (readonly ["FontSize" | "LineHeight" | "FontWeight", number])[] | undefined {
+): ReadonlyArray<readonly ["FontSize" | "LineHeight" | "FontWeight", number]> | undefined {
   if (!isObject(value) || !document.target.endsWith("typography/Default.tokens.json")) {
     return undefined;
   }
 
-  const parts: (readonly ["FontSize" | "LineHeight" | "FontWeight", number])[] = [];
+  const parts: Array<readonly ["FontSize" | "LineHeight" | "FontWeight", number]> = [];
   for (const [key, child] of Object.entries(value)) {
     const property = typographyProperties.get(key.toLowerCase());
     if (property === undefined) {
       continue;
     }
 
-    const normalised = normaliseRawTokenValue(child, document, [...rawPath, key], context, new Set());
+    const normalised = normaliseRawTokenValue(
+      child,
+      document,
+      [...rawPath, key],
+      context,
+      new Set()
+    );
     if (normalised === undefined) {
-      return handleTypographyFailure(context, document, [...rawPath, key], "Unsupported typography value");
+      return handleTypographyFailure(
+        context,
+        document,
+        [...rawPath, key],
+        "Unsupported typography value"
+      );
     }
     if (normalised.type !== "number") {
-      return handleTypographyFailure(context, document, [...rawPath, key], "Typography value must be numeric");
+      return handleTypographyFailure(
+        context,
+        document,
+        [...rawPath, key],
+        "Typography value must be numeric"
+      );
     }
 
     parts.push([property, normalised.value as number]);
@@ -538,7 +564,12 @@ function findReferencedNode(
   }
 
   if (document.stripPathPrefix !== undefined) {
-    addCandidates(candidates, context, [...document.stripPathPrefix, ...referencePath], document.index);
+    addCandidates(
+      candidates,
+      context,
+      [...document.stripPathPrefix, ...referencePath],
+      document.index
+    );
     if (candidates.length > 0) {
       return singleCandidate(referencePath, candidates);
     }
@@ -561,7 +592,9 @@ function findReferencedNode(
   const suffixCandidates = [...context.rawNodesByPath.values()]
     .flat()
     .filter((candidate) => pathEndsWith(candidate.path, referencePath));
-  return suffixCandidates.length === 0 ? undefined : singleCandidate(referencePath, suffixCandidates);
+  return suffixCandidates.length === 0
+    ? undefined
+    : singleCandidate(referencePath, suffixCandidates);
 }
 
 function addCandidates(
@@ -582,7 +615,12 @@ function singleCandidate(
   referencePath: readonly string[],
   candidates: readonly IndexedRawNode[]
 ): IndexedRawNode {
-  const unique = new Map(candidates.map((candidate) => [`${candidate.document.index}:${candidate.path.join("/")}`, candidate]));
+  const unique = new Map(
+    candidates.map((candidate) => [
+      `${candidate.document.index}:${candidate.path.join("/")}`,
+      candidate
+    ])
+  );
   if (unique.size > 1) {
     throw new Error(`Ambiguous raw token reference ${referencePath.join("/")}`);
   }
@@ -646,7 +684,9 @@ function recordsToNormalisedFiles(
   return files;
 }
 
-function indexRawNodes(documents: readonly SanitisedRawDocument[]): ReadonlyMap<string, readonly IndexedRawNode[]> {
+function indexRawNodes(
+  documents: readonly SanitisedRawDocument[]
+): ReadonlyMap<string, readonly IndexedRawNode[]> {
   const nodes = new Map<string, IndexedRawNode[]>();
   for (const document of documents) {
     indexRawNode(document.value, document, [], nodes);
@@ -782,7 +822,10 @@ function normaliseColorObject(value: Record<string, unknown>): Record<string, un
   return normalised;
 }
 
-function inferTokenHint(target: string, rawPath: readonly string[]): "color" | "number" | "unknown" {
+function inferTokenHint(
+  target: string,
+  rawPath: readonly string[]
+): "color" | "number" | "unknown" {
   if (target.startsWith("primitives/") || target.startsWith("tokens/")) {
     return "color";
   }
@@ -845,7 +888,8 @@ function isNumericTuple(value: readonly unknown[]): boolean {
   return (
     value.length >= 3 &&
     value.slice(0, 3).every((entry) => {
-      const numberValue = typeof entry === "number" ? entry : typeof entry === "string" ? Number(entry) : NaN;
+      const numberValue =
+        typeof entry === "number" ? entry : typeof entry === "string" ? Number(entry) : NaN;
       return Number.isFinite(numberValue);
     })
   );

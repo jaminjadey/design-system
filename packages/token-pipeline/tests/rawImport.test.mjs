@@ -113,9 +113,9 @@ test("strips raw metadata keys before emitting normalised source tokens", () => 
         value: {
           "Primitive colours": {
             Primary: {
-              "600": {
+              600: {
                 Hex: "#0284c7",
-                "$extensions": {
+                $extensions: {
                   "com.figma": {
                     VariableID: "synthetic-id"
                   }
@@ -141,7 +141,10 @@ test("strips raw metadata keys before emitting normalised source tokens", () => 
 
   const normalised = JSON.stringify(result.normalisedFiles.get("primitives/Default.tokens.json"));
   assert.equal(result.report.metadataKeysStripped, 3);
-  assert.doesNotMatch(normalised, /\$extensions|com\.figma|VariableID|VariableCollectionId|targetVariable/u);
+  assert.doesNotMatch(
+    normalised,
+    /\$extensions|com\.figma|VariableID|VariableCollectionId|targetVariable/u
+  );
   assert.deepEqual(result.records[0], {
     file: "primitives/Default.tokens.json",
     sourcePath: ["Primary", "600"],
@@ -163,7 +166,7 @@ test("rejects forbidden marker values in raw exports", () => {
             value: {
               "Primitive colours": {
                 Primary: {
-                  "600": {
+                  600: {
                     Hex: "#0284c7",
                     Name: "PRIVATE_COMPANY_NAME_PLACEHOLDER"
                   }

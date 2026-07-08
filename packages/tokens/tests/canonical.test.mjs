@@ -4,12 +4,20 @@ import { createHash } from "node:crypto";
 import { readdir, readFile } from "node:fs/promises";
 import test from "node:test";
 
-const canonical = JSON.parse(await readFile(new URL("../dist/canonical.json", import.meta.url), "utf8"));
+const canonical = JSON.parse(
+  await readFile(new URL("../dist/canonical.json", import.meta.url), "utf8")
+);
 const tokensCss = await readFile(new URL("../dist/tokens.css", import.meta.url), "utf8");
 const tokenNamesDts = await readFile(new URL("../dist/token-names.d.ts", import.meta.url), "utf8");
-const metadata = JSON.parse(await readFile(new URL("../dist/metadata.json", import.meta.url), "utf8"));
-const tokenDocs = JSON.parse(await readFile(new URL("../dist/token-docs.json", import.meta.url), "utf8"));
-const buildReport = JSON.parse(await readFile(new URL("../dist/build-report.json", import.meta.url), "utf8"));
+const metadata = JSON.parse(
+  await readFile(new URL("../dist/metadata.json", import.meta.url), "utf8")
+);
+const tokenDocs = JSON.parse(
+  await readFile(new URL("../dist/token-docs.json", import.meta.url), "utf8")
+);
+const buildReport = JSON.parse(
+  await readFile(new URL("../dist/build-report.json", import.meta.url), "utf8")
+);
 
 test("generated canonical JSON contains core token groups", () => {
   assert.ok(canonical.tokens.color.primitive);
@@ -53,7 +61,10 @@ test("generated CSS contains expected custom properties", () => {
 test("generated CSS contains light and dark Mantine colour-scheme selectors", () => {
   assert.match(tokensCss, /\[data-mantine-color-scheme='light'\]/u);
   assert.match(tokensCss, /\[data-mantine-color-scheme='dark'\]/u);
-  assert.match(tokensCss, /\[data-mantine-color-scheme='dark'\] \{\n(?:.*\n)*?  --ds-color-text-default: #FDFDFD;/u);
+  assert.match(
+    tokensCss,
+    /\[data-mantine-color-scheme='dark'\] \{\n(?:.*\n)*? {2}--ds-color-text-default: #FDFDFD;/u
+  );
 });
 
 test("generated TypeScript declarations include token-name union members", () => {

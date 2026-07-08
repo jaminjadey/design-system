@@ -16,9 +16,7 @@ import {
 } from "../dist/index.js";
 
 function renderWithTheme(element) {
-  return renderToStaticMarkup(
-    React.createElement(DemoThemeProvider, null, element)
-  );
+  return renderToStaticMarkup(React.createElement(DemoThemeProvider, null, element));
 }
 
 test("Button renders children and maps tone/emphasis attributes", () => {
@@ -32,9 +30,7 @@ test("Button renders children and maps tone/emphasis attributes", () => {
 });
 
 test("Button passes through native button type", () => {
-  const markup = renderWithTheme(
-    React.createElement(Button, { type: "submit" }, "Save")
-  );
+  const markup = renderWithTheme(React.createElement(Button, { type: "submit" }, "Save"));
 
   assert.match(markup, /type="submit"/u);
   assert.match(markup, /Save/u);
@@ -56,11 +52,7 @@ test("TextInput renders label and helper text", () => {
 
 test("AlertBanner uses alert role for danger tone", () => {
   const markup = renderWithTheme(
-    React.createElement(
-      AlertBanner,
-      { tone: "danger", title: "Problem" },
-      "The action failed."
-    )
+    React.createElement(AlertBanner, { tone: "danger", title: "Problem" }, "The action failed.")
   );
 
   assert.match(markup, /role="alert"/u);
@@ -69,9 +61,7 @@ test("AlertBanner uses alert role for danger tone", () => {
 });
 
 test("Card marks interactive cards as keyboard focusable buttons", () => {
-  const markup = renderWithTheme(
-    React.createElement(Card, { interactive: true }, "Open project")
-  );
+  const markup = renderWithTheme(React.createElement(Card, { interactive: true }, "Open project"));
 
   assert.match(markup, /role="button"/u);
   assert.match(markup, /tabindex="0"/u);
@@ -80,9 +70,7 @@ test("Card marks interactive cards as keyboard focusable buttons", () => {
 });
 
 test("StatusBadge exposes status role and tone attribute", () => {
-  const markup = renderWithTheme(
-    React.createElement(StatusBadge, { tone: "success" }, "Live")
-  );
+  const markup = renderWithTheme(React.createElement(StatusBadge, { tone: "success" }, "Live"));
 
   assert.match(markup, /role="status"/u);
   assert.match(markup, /data-tone="success"/u);

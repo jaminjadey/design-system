@@ -15,8 +15,8 @@ export function SpacingTokensPage() {
     <div className="docs-page">
       <h1>Spacing Tokens</h1>
       <p>
-        Spacing values come from generated dimension tokens. Mantine maps a small subset
-        to named spacing keys while the full scale remains available as CSS variables.
+        Spacing values come from generated dimension tokens. Mantine maps a small subset to named
+        spacing keys while the full scale remains available as CSS variables.
       </p>
       <TokenTable
         caption="Spacing scale"

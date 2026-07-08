@@ -38,17 +38,17 @@ packages/token-pipeline
 
 Test categories:
 
-| Test | Purpose |
-| --- | --- |
-| Safety scanner tests | Forbidden terms and metadata are detected. |
-| Source parser tests | Nested source JSON becomes source records. |
-| Name normalisation tests | Source labels map to canonical names. |
-| Colour conversion tests | Source colour objects become hex values. |
-| Mode merge tests | Light and dark semantic tokens merge correctly. |
-| Typography grouping tests | FontSize/LineHeight/FontWeight become one token. |
+| Test                       | Purpose                                                             |
+| -------------------------- | ------------------------------------------------------------------- |
+| Safety scanner tests       | Forbidden terms and metadata are detected.                          |
+| Source parser tests        | Nested source JSON becomes source records.                          |
+| Name normalisation tests   | Source labels map to canonical names.                               |
+| Colour conversion tests    | Source colour objects become hex values.                            |
+| Mode merge tests           | Light and dark semantic tokens merge correctly.                     |
+| Typography grouping tests  | FontSize/LineHeight/FontWeight become one token.                    |
 | Configurable mapping tests | Alternate source files, modes, and category prefixes map correctly. |
-| Import/build report tests | Reports include useful counts, warnings, and source paths. |
-| Canonical validation tests | Invalid canonical documents fail. |
+| Import/build report tests  | Reports include useful counts, warnings, and source paths.          |
+| Canonical validation tests | Invalid canonical documents fail.                                   |
 
 Example cases:
 
@@ -163,9 +163,10 @@ Use:
 
 - TypeScript strict mode.
 - ESLint.
+- Stylelint.
 - Prettier.
 - Package export checks.
-- Dependency boundary checks if desired.
+- Dependency boundary checks.
 
 ## Security and public-demo checks
 

@@ -53,20 +53,20 @@ Example CSS:
 
 ```css
 :root {
-  --ds-color-primitive-primary-10: #CFFAFE;
+  --ds-color-primitive-primary-10: #cffafe;
   --ds-space-md: 8px;
   --ds-radius-md: 8px;
 }
 
-[data-mantine-color-scheme='light'] {
+[data-mantine-color-scheme="light"] {
   --ds-color-text-default: #083344;
-  --ds-color-background-body: #F8FAFC;
+  --ds-color-background-body: #f8fafc;
   --ds-shadow-card: 0px 2px 8px 0px rgb(15 23 42 / 0.12);
 }
 
-[data-mantine-color-scheme='dark'] {
-  --ds-color-text-default: #FDFDFD;
-  --ds-color-background-body: #0F172A;
+[data-mantine-color-scheme="dark"] {
+  --ds-color-text-default: #fdfdfd;
+  --ds-color-background-body: #0f172a;
   --ds-shadow-card: 0px 2px 8px 0px rgb(15 23 42 / 0.12);
 }
 ```
@@ -83,10 +83,10 @@ export const tokens = {
     semantic: {
       text: {
         default: {
-          cssVariable: '--ds-color-text-default',
+          cssVariable: "--ds-color-text-default",
           value: {
-            light: '#083344',
-            dark: '#FDFDFD'
+            light: "#083344",
+            dark: "#FDFDFD"
           }
         }
       }
@@ -95,11 +95,11 @@ export const tokens = {
 } as const;
 
 export type TokenName =
-  | 'color.semantic.text.default'
-  | 'color.semantic.background.body'
-  | 'space.md'
-  | 'radius.md'
-  | 'shadow.card';
+  | "color.semantic.text.default"
+  | "color.semantic.background.body"
+  | "space.md"
+  | "radius.md"
+  | "shadow.card";
 ```
 
 Helper:

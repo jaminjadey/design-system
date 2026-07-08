@@ -80,10 +80,7 @@ export {
   type RawTokenImportConfig,
   type RawTokenImportFileRule
 } from "./raw/rawTokenImportConfig.js";
-export {
-  defaultForbiddenMarkers,
-  type ForbiddenMarker
-} from "./safety/forbiddenMarkers.js";
+export { defaultForbiddenMarkers, type ForbiddenMarker } from "./safety/forbiddenMarkers.js";
 export {
   formatSafetyFinding,
   scanFixtureDirectory,

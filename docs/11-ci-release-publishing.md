@@ -149,11 +149,7 @@ Example:
 
 ```json
 {
-  "files": [
-    "dist",
-    "README.md",
-    "package.json"
-  ]
+  "files": ["dist", "README.md", "package.json"]
 }
 ```
 
@@ -161,15 +157,15 @@ For `@demo-ds/tokens`, include generated output, not raw source fixtures, if pub
 
 ## Versioning guidelines
 
-| Change | Version impact |
-| --- | --- |
-| Add token | Minor |
-| Remove token | Major |
-| Rename token | Major |
-| Change token value | Patch or minor, depending on policy |
-| Add component | Minor |
-| Remove component prop | Major |
-| Fix component bug | Patch |
+| Change                | Version impact                      |
+| --------------------- | ----------------------------------- |
+| Add token             | Minor                               |
+| Remove token          | Major                               |
+| Rename token          | Major                               |
+| Change token value    | Patch or minor, depending on policy |
+| Add component         | Minor                               |
+| Remove component prop | Major                               |
+| Fix component bug     | Patch                               |
 
 For a demo repo, exact semver policy is less important than showing that the policy exists.
 

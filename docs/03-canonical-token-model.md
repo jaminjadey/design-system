@@ -56,14 +56,14 @@ generated files unless the value is controlled.
 
 Each token should have:
 
-| Field | Meaning |
-| --- | --- |
-| `path` | Array path, for example `['color', 'semantic', 'text', 'default']`. |
-| `name` | Dot path, for example `color.semantic.text.default`. |
-| `cssVariable` | CSS custom property name, for example `--ds-color-text-default`. |
-| `type` | Canonical type, for example `color`, `dimension`, `radius`, `shadow`, `typography`. |
-| `value` | Canonical value, or mode map for mode-aware tokens. |
-| `source` | Optional debug provenance pointing to the fixture file and source path. |
+| Field         | Meaning                                                                             |
+| ------------- | ----------------------------------------------------------------------------------- |
+| `path`        | Array path, for example `['color', 'semantic', 'text', 'default']`.                 |
+| `name`        | Dot path, for example `color.semantic.text.default`.                                |
+| `cssVariable` | CSS custom property name, for example `--ds-color-text-default`.                    |
+| `type`        | Canonical type, for example `color`, `dimension`, `radius`, `shadow`, `typography`. |
+| `value`       | Canonical value, or mode map for mode-aware tokens.                                 |
+| `source`      | Optional debug provenance pointing to the fixture file and source path.             |
 
 ## Naming Rules
 
@@ -82,16 +82,16 @@ Rules:
 
 Examples:
 
-| Source path | Canonical path |
-| --- | --- |
-| `Base colours.Black` | `color.primitive.base.black` |
-| `Primary.10` | `color.primitive.primary.10` |
-| `Font colours.Default text` | `color.semantic.text.default` |
-| `Background general colours.Body` | `color.semantic.background.body` |
-| `Space-2XL` | `space.2xl` |
-| `Corder-radius.Corner-Med` | `radius.md` |
-| `Drop shadows - cards.Position Y` | `shadow.card` |
-| `H1.FontSize` | `typography.heading.h1.font-size` |
+| Source path                       | Canonical path                    |
+| --------------------------------- | --------------------------------- |
+| `Base colours.Black`              | `color.primitive.base.black`      |
+| `Primary.10`                      | `color.primitive.primary.10`      |
+| `Font colours.Default text`       | `color.semantic.text.default`     |
+| `Background general colours.Body` | `color.semantic.background.body`  |
+| `Space-2XL`                       | `space.2xl`                       |
+| `Corder-radius.Corner-Med`        | `radius.md`                       |
+| `Drop shadows - cards.Position Y` | `shadow.card`                     |
+| `H1.FontSize`                     | `typography.heading.h1.font-size` |
 
 The source has a category spelling like `Corder-radius`. Do not preserve that
 typo in canonical output. Map it to `radius`.

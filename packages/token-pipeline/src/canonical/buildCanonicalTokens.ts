@@ -18,7 +18,10 @@ import type {
   CanonicalTypographyValue,
   TokenMode
 } from "./types.js";
-import { collectCanonicalTokens, validateCanonicalTokenDocument } from "./validateCanonicalTokens.js";
+import {
+  collectCanonicalTokens,
+  validateCanonicalTokenDocument
+} from "./validateCanonicalTokens.js";
 
 export interface BuildOptions {
   readonly fixtureDirectory: string;
@@ -56,12 +59,7 @@ export interface CanonicalBuildReport {
 }
 
 type SourceMappingCategory =
-  | "primitive-color"
-  | "semantic-color"
-  | "space"
-  | "radius"
-  | "shadow-part"
-  | "typography-part";
+  "primitive-color" | "semantic-color" | "space" | "radius" | "shadow-part" | "typography-part";
 
 export async function readSourceTokenRecords(
   fixtureDirectory: string,
@@ -84,9 +82,7 @@ export async function readSourceTokenRecords(
   return recordGroups.flat();
 }
 
-export async function buildCanonicalTokens(
-  options: BuildOptions
-): Promise<CanonicalTokenDocument> {
+export async function buildCanonicalTokens(options: BuildOptions): Promise<CanonicalTokenDocument> {
   const records = await readSourceTokenRecords(
     options.fixtureDirectory,
     options.config ?? defaultCanonicalMappingConfig
@@ -221,13 +217,17 @@ export function buildCanonicalTokensFromRecordsWithReport(
       (mode) => entry.value[mode] === undefined
     );
     if (missingModes.length > 0) {
-      throw new Error(`Semantic colour ${tokenName(entry.canonicalPath)} is missing light or dark value`);
+      throw new Error(
+        `Semantic colour ${tokenName(entry.canonicalPath)} is missing light or dark value`
+      );
     }
 
     const light = entry.value.light;
     const dark = entry.value.dark;
     if (light === undefined || dark === undefined) {
-      throw new Error(`Semantic colour ${tokenName(entry.canonicalPath)} is missing light or dark value`);
+      throw new Error(
+        `Semantic colour ${tokenName(entry.canonicalPath)} is missing light or dark value`
+      );
     }
 
     return makeColorToken(entry.canonicalPath, { light, dark }, entry.source);
@@ -242,11 +242,15 @@ export function buildCanonicalTokensFromRecordsWithReport(
       throw new Error(`Typography token ${name} is missing FontSize, LineHeight, or FontWeight`);
     }
 
-    return makeTypographyToken(name.split("."), {
-      fontSize: value.fontSize,
-      lineHeight: value.lineHeight,
-      fontWeight: value.fontWeight
-    }, value.source);
+    return makeTypographyToken(
+      name.split("."),
+      {
+        fontSize: value.fontSize,
+        lineHeight: value.lineHeight,
+        fontWeight: value.fontWeight
+      },
+      value.source
+    );
   });
 
   const shadowTokens = [...shadowParts.values()].map((entry) => makeShadowTokenFromParts(entry));
@@ -266,14 +270,12 @@ export function buildCanonicalTokensFromRecordsWithReport(
         primitive: nestTokens(sortTokens(primitiveColors), ["color", "primitive"]),
         semantic: nestTokens(sortTokens(semanticColorTokens), ["color", "semantic"])
       },
-      space: nestTokens(
-        sortTokens(dimensions.filter((token) => token.type === "dimension")),
-        ["space"]
-      ),
-      radius: nestTokens(
-        sortTokens(dimensions.filter((token) => token.type === "radius")),
-        ["radius"]
-      ),
+      space: nestTokens(sortTokens(dimensions.filter((token) => token.type === "dimension")), [
+        "space"
+      ]),
+      radius: nestTokens(sortTokens(dimensions.filter((token) => token.type === "radius")), [
+        "radius"
+      ]),
       shadow: nestTokens(sortTokens(shadowTokens), ["shadow"]),
       typography: nestTokens(sortTokens(typographyTokens), ["typography"])
     }
@@ -317,9 +319,13 @@ function applyShadowPart(
 }
 
 function makeShadowTokenFromParts(entry: MutableShadowValue): CanonicalShadowToken {
-  const missingModes = (["light", "dark"] as const).filter((mode) => entry.value[mode] === undefined);
+  const missingModes = (["light", "dark"] as const).filter(
+    (mode) => entry.value[mode] === undefined
+  );
   if (missingModes.length > 0) {
-    throw new Error(`Shadow token ${tokenName(entry.canonicalPath)} is missing light or dark value`);
+    throw new Error(
+      `Shadow token ${tokenName(entry.canonicalPath)} is missing light or dark value`
+    );
   }
 
   const light = completeShadowMode(entry.canonicalPath, "light", entry.value.light);
@@ -418,7 +424,10 @@ function makeTypographyToken(
   };
 }
 
-function sourceFromRecord(record: SourceTokenRecord): { readonly file: string; readonly path: string } {
+function sourceFromRecord(record: SourceTokenRecord): {
+  readonly file: string;
+  readonly path: string;
+} {
   return {
     file: record.file,
     path: record.sourcePath.join(".")
@@ -458,11 +467,15 @@ function resolveSourceValue(
   const referencedKey = `${record.file}:${referencedPath.join(".")}`;
   const referencedRecord = records.get(referencedKey);
   if (referencedRecord === undefined) {
-    throw new Error(`Unresolved token reference ${record.value} at ${record.file}:${record.sourcePath.join(".")}`);
+    throw new Error(
+      `Unresolved token reference ${record.value} at ${record.file}:${record.sourcePath.join(".")}`
+    );
   }
 
   if (seen.has(referencedKey)) {
-    throw new Error(`Circular token reference ${record.value} at ${record.file}:${record.sourcePath.join(".")}`);
+    throw new Error(
+      `Circular token reference ${record.value} at ${record.file}:${record.sourcePath.join(".")}`
+    );
   }
 
   return resolveSourceValue(referencedRecord, records, new Set([...seen, referencedKey]));
@@ -498,7 +511,10 @@ function collectMissingSemanticModes(
     .sort((left, right) => left.tokenName.localeCompare(right.tokenName));
 }
 
-function nestTokens(tokens: readonly CanonicalToken[], prefix: readonly string[]): Record<string, unknown> {
+function nestTokens(
+  tokens: readonly CanonicalToken[],
+  prefix: readonly string[]
+): Record<string, unknown> {
   const root: Record<string, unknown> = {};
 
   for (const token of tokens) {

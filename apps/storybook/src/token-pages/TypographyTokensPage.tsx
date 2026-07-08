@@ -17,8 +17,8 @@ export function TypographyTokensPage() {
     <div className="docs-page">
       <h1>Typography Tokens</h1>
       <p>
-        Typography docs render generated token data. The theme package maps heading
-        styles into Mantine headings with a generic system font stack.
+        Typography docs render generated token data. The theme package maps heading styles into
+        Mantine headings with a generic system font stack.
       </p>
       <table className="token-table">
         <caption>Typography styles</caption>

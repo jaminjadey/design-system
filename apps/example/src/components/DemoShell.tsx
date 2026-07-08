@@ -10,13 +10,7 @@ interface DemoShellProps {
   readonly children: ReactNode;
 }
 
-export function DemoShell({
-  pages,
-  activePage,
-  onPageChange,
-  utility,
-  children
-}: DemoShellProps) {
+export function DemoShell({ pages, activePage, onPageChange, utility, children }: DemoShellProps) {
   return (
     <div className="app-shell">
       <aside className="app-sidebar" aria-label="Primary navigation">

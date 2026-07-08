@@ -33,8 +33,7 @@ export interface CanonicalTypographyValue {
   readonly fontWeight: number;
 }
 
-export interface CanonicalTypographyToken
-  extends CanonicalTokenBase<CanonicalTypographyValue> {
+export interface CanonicalTypographyToken extends CanonicalTokenBase<CanonicalTypographyValue> {
   readonly type: "typography";
 }
 
@@ -52,10 +51,7 @@ export interface CanonicalShadowToken extends CanonicalTokenBase<ModeValue<Canon
 }
 
 export type CanonicalToken =
-  | CanonicalColorToken
-  | CanonicalDimensionToken
-  | CanonicalShadowToken
-  | CanonicalTypographyToken;
+  CanonicalColorToken | CanonicalDimensionToken | CanonicalShadowToken | CanonicalTypographyToken;
 
 export interface CanonicalTokenDocument {
   readonly $schema: string;

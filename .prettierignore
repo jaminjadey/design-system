@@ -1,0 +1,10 @@
+.git
+.private
+.turbo
+node_modules
+dist
+storybook-static
+apps/example/dist
+apps/storybook/storybook-static
+packages/*/dist
+pnpm-lock.yaml

@@ -6,7 +6,7 @@
   "scripts": {
     "build": "storybook build",
     "test": "pnpm run build && node --test tests/*.test.mjs",
-    "lint": "node -e \"console.log('storybook placeholder lint passed')\"",
+    "lint": "eslint .storybook src tests --max-warnings=0",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "storybook": "storybook dev -p 6006"
   },

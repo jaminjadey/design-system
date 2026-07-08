@@ -22,9 +22,7 @@ export const defaultMetadataKeysToStrip: readonly string[] = [
   "scopes"
 ];
 
-export function defineRawTokenImportConfig(
-  config: RawTokenImportConfig
-): RawTokenImportConfig {
+export function defineRawTokenImportConfig(config: RawTokenImportConfig): RawTokenImportConfig {
   return config;
 }
 

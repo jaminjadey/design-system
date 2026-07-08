@@ -60,7 +60,10 @@ Public surface:
 
 ```ts
 export function buildCanonicalTokens(options: BuildOptions): CanonicalTokenDocument;
-export function generateTokenOutputs(document: CanonicalTokenDocument, options: OutputOptions): void;
+export function generateTokenOutputs(
+  document: CanonicalTokenDocument,
+  options: OutputOptions
+): void;
 ```
 
 This package can remain private because consumers should use generated packages,
@@ -106,8 +109,8 @@ Responsibilities:
 Suggested exports:
 
 ```ts
-export { DemoThemeProvider } from './DemoThemeProvider';
-export { demoThemeSummary } from './themeSummary';
+export { DemoThemeProvider } from "./DemoThemeProvider";
+export { demoThemeSummary } from "./themeSummary";
 ```
 
 ### `packages/components`

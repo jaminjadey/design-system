@@ -24,9 +24,9 @@ export function ColorTokensPage() {
     <div className="docs-page">
       <h1>Colour Tokens</h1>
       <p>
-        Colour documentation is rendered from generated token docs data. Primitive palettes
-        feed the internal theme adapter; semantic colours are exposed as CSS variables with
-        light and dark values.
+        Colour documentation is rendered from generated token docs data. Primitive palettes feed the
+        internal theme adapter; semantic colours are exposed as CSS variables with light and dark
+        values.
       </p>
       <TokenTable
         caption="Primitive colour tokens"

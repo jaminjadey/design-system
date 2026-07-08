@@ -26,8 +26,8 @@ packages/mantine-theme/
 The package consumes generated outputs from `@demo-ds/tokens`:
 
 ```ts
-import '@demo-ds/tokens/css';
-import { tokens } from '@demo-ds/tokens';
+import "@demo-ds/tokens/css";
+import { tokens } from "@demo-ds/tokens";
 ```
 
 It should not read raw fixture files.
@@ -37,8 +37,8 @@ It should not read raw fixture files.
 The app-facing package export is:
 
 ```ts
-export { DemoThemeProvider } from './DemoThemeProvider';
-export { demoThemeSummary } from './themeSummary';
+export { DemoThemeProvider } from "./DemoThemeProvider";
+export { demoThemeSummary } from "./themeSummary";
 ```
 
 Mantine-specific theme objects can exist inside the package for tests and adapter implementation, but application code should not depend on them.
@@ -53,19 +53,19 @@ Example:
 
 ```ts
 export const demoTheme = createTheme({
-  primaryColor: 'primary',
+  primaryColor: "primary",
   colors: {
     primary: [
-      '#ECFEFF',
-      '#CFFAFE',
-      '#A5F3FC',
-      '#67E8F9',
-      '#22D3EE',
-      '#06B6D4',
-      '#0891B2',
-      '#0E7490',
-      '#155E75',
-      '#164E63'
+      "#ECFEFF",
+      "#CFFAFE",
+      "#A5F3FC",
+      "#67E8F9",
+      "#22D3EE",
+      "#06B6D4",
+      "#0891B2",
+      "#0E7490",
+      "#155E75",
+      "#164E63"
     ]
   }
 });
@@ -142,14 +142,14 @@ Recommended generic font stack:
 
 ```ts
 const defaultFontFamily = [
-  'Inter',
-  'ui-sans-serif',
-  'system-ui',
-  '-apple-system',
-  'BlinkMacSystemFont',
-  'Segoe UI',
-  'sans-serif'
-].join(', ');
+  "Inter",
+  "ui-sans-serif",
+  "system-ui",
+  "-apple-system",
+  "BlinkMacSystemFont",
+  "Segoe UI",
+  "sans-serif"
+].join(", ");
 ```
 
 ## DemoThemeProvider
@@ -159,16 +159,19 @@ Create a provider that wraps children in `MantineProvider`, and expose a design-
 Example:
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
-import { demoTheme } from './theme';
-import { demoCssVariablesResolver } from './cssVariablesResolver';
+import { MantineProvider } from "@mantine/core";
+import { demoTheme } from "./theme";
+import { demoCssVariablesResolver } from "./cssVariablesResolver";
 
 export interface DemoThemeProviderProps {
   children: React.ReactNode;
-  defaultColorScheme?: 'light' | 'dark' | 'auto';
+  defaultColorScheme?: "light" | "dark" | "auto";
 }
 
-export function DemoThemeProvider({ children, defaultColorScheme = 'light' }: DemoThemeProviderProps) {
+export function DemoThemeProvider({
+  children,
+  defaultColorScheme = "light"
+}: DemoThemeProviderProps) {
   return (
     <MantineProvider
       theme={demoTheme}
@@ -187,13 +190,13 @@ Use Mantine's CSS variables resolver only for values that should be attached to 
 
 Recommended split:
 
-| Output | Use |
-| --- | --- |
-| `@demo-ds/mantine-theme/styles.css` | App-facing stylesheet import. |
-| `@demo-ds/tokens/tokens.css` | Internal full design-system token variables. |
-| `demoTheme` | Internal Mantine-supported theme keys. |
-| `demoCssVariablesResolver` | Internal variables that should move with Mantine mode. |
-| `demoThemeSummary` | App-safe documentation summary. |
+| Output                              | Use                                                    |
+| ----------------------------------- | ------------------------------------------------------ |
+| `@demo-ds/mantine-theme/styles.css` | App-facing stylesheet import.                          |
+| `@demo-ds/tokens/tokens.css`        | Internal full design-system token variables.           |
+| `demoTheme`                         | Internal Mantine-supported theme keys.                 |
+| `demoCssVariablesResolver`          | Internal variables that should move with Mantine mode. |
+| `demoThemeSummary`                  | App-safe documentation summary.                        |
 
 ## Component defaults
 
@@ -205,9 +208,9 @@ Example:
 components: {
   Button: Button.extend({
     defaultProps: {
-      radius: 'md'
+      radius: "md"
     }
-  })
+  });
 }
 ```
 
@@ -218,11 +221,11 @@ Do not overload the theme with every component-specific decision. Keep complex c
 Use Mantine's colour scheme support. The token CSS should target the same attribute Mantine uses:
 
 ```css
-[data-mantine-color-scheme='light'] {
+[data-mantine-color-scheme="light"] {
   --ds-color-text-default: #083344;
 }
 
-[data-mantine-color-scheme='dark'] {
+[data-mantine-color-scheme="dark"] {
   --ds-color-text-default: #fdfdfd;
 }
 ```

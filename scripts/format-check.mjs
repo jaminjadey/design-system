@@ -10,16 +10,7 @@ const ignoredDirectories = new Set([
   "dist",
   "storybook-static"
 ]);
-const checkedExtensions = new Set([
-  ".json",
-  ".js",
-  ".mjs",
-  ".ts",
-  ".tsx",
-  ".md",
-  ".yaml",
-  ".yml"
-]);
+const checkedExtensions = new Set([".json", ".js", ".mjs", ".ts", ".tsx", ".md", ".yaml", ".yml"]);
 
 async function collectFiles(directory) {
   const entries = await readdir(directory, { withFileTypes: true });

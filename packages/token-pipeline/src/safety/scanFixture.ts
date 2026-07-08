@@ -172,7 +172,10 @@ function visitJsonKeys(
   }
 }
 
-function getLineColumn(text: string, index: number): { readonly line: number; readonly column: number } {
+function getLineColumn(
+  text: string,
+  index: number
+): { readonly line: number; readonly column: number } {
   const prefix = text.slice(0, index);
   const lines = prefix.split(/\r?\n/u);
   return {

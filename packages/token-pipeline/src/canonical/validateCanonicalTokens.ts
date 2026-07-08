@@ -68,7 +68,11 @@ function visit(value: unknown, tokens: CanonicalToken[]): void {
     return;
   }
 
-  if (typeof value.name === "string" && typeof value.type === "string" && Array.isArray(value.path)) {
+  if (
+    typeof value.name === "string" &&
+    typeof value.type === "string" &&
+    Array.isArray(value.path)
+  ) {
     tokens.push(value as unknown as CanonicalToken);
     return;
   }

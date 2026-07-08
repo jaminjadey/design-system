@@ -241,7 +241,7 @@ input {
   font-weight: var(--ds-font-weight-heading-h3);
 }
 
-@media (max-width: 760px) {
+@media (width <= 760px) {
   .app-shell {
     grid-template-columns: 1fr;
   }

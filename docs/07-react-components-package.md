@@ -59,12 +59,12 @@ Suggested props:
 ```ts
 export interface ButtonProps {
   children: React.ReactNode;
-  tone?: 'primary' | 'neutral' | 'danger' | 'success';
-  emphasis?: 'high' | 'medium' | 'low';
-  size?: 'sm' | 'md' | 'lg';
+  tone?: "primary" | "neutral" | "danger" | "success";
+  emphasis?: "high" | "medium" | "low";
+  size?: "sm" | "md" | "lg";
   loading?: boolean;
   disabled?: boolean;
-  type?: 'button' | 'submit' | 'reset';
+  type?: "button" | "submit" | "reset";
 }
 ```
 
@@ -100,7 +100,7 @@ Suggested props:
 
 ```ts
 export interface AlertBannerProps {
-  tone?: 'info' | 'success' | 'warning' | 'danger';
+  tone?: "info" | "success" | "warning" | "danger";
   title?: React.ReactNode;
   children: React.ReactNode;
 }
@@ -133,8 +133,8 @@ Suggested props:
 
 ```ts
 export interface StatusBadgeProps {
-  tone: 'neutral' | 'success' | 'warning' | 'danger' | 'info';
-  emphasis?: 'soft' | 'solid' | 'outline';
+  tone: "neutral" | "success" | "warning" | "danger" | "info";
+  emphasis?: "soft" | "solid" | "outline";
   children: React.ReactNode;
 }
 ```
@@ -198,10 +198,10 @@ The package root should export only public components and design-system-owned
 types:
 
 ```ts
-export { Button } from './Button';
-export type { ButtonProps } from './Button';
-export { AlertBanner } from './AlertBanner';
-export type { AlertBannerProps } from './AlertBanner';
+export { Button } from "./Button";
+export type { ButtonProps } from "./Button";
+export { AlertBanner } from "./AlertBanner";
+export type { AlertBannerProps } from "./AlertBanner";
 ```
 
 Do not export Mantine components, Mantine prop types, or internal utilities.
@@ -243,11 +243,11 @@ content rather than importing Mantine directly.
 
 Use maturity labels in docs:
 
-| Label | Meaning |
-| --- | --- |
-| Experimental | API may change. |
-| Stable | Safe for demo app usage. |
-| Deprecated | Kept only for compatibility. |
+| Label        | Meaning                      |
+| ------------ | ---------------------------- |
+| Experimental | API may change.              |
+| Stable       | Safe for demo app usage.     |
+| Deprecated   | Kept only for compatibility. |
 
 For the initial repo, most components can be experimental except the provider
 and token outputs.

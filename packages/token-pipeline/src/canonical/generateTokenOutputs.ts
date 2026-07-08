@@ -36,7 +36,7 @@ export async function generateTokenOutputs(
     "tokens.light.css": generateModeCss(tokens, "light"),
     "tokens.dark.css": generateModeCss(tokens, "dark"),
     "index.js": generateIndexJs(document, tokens),
-    "index.d.ts": generateIndexDts(tokens),
+    "index.d.ts": generateIndexDts(),
     "token-names.js": generateTokenNamesJs(tokens),
     "token-names.d.ts": generateTokenNamesDts(tokens),
     "metadata.json": `${JSON.stringify(generateMetadata(document, tokens), null, 2)}\n`,
@@ -85,8 +85,12 @@ function generateModeCss(tokens: readonly CanonicalToken[], mode: "light" | "dar
 function rootDeclarations(tokens: readonly CanonicalToken[]): string[] {
   return [
     ...tokens.filter(isPrimitiveColorToken).map((token) => cssDeclaration(token, token.value)),
-    ...tokens.filter(isDimensionToken).map((token) => cssDeclaration(token, formatDimensionValue(token))),
-    ...tokens.filter(isStaticShadowToken).map((token) => cssDeclaration(token, formatShadowValue(token.value))),
+    ...tokens
+      .filter(isDimensionToken)
+      .map((token) => cssDeclaration(token, formatDimensionValue(token))),
+    ...tokens
+      .filter(isStaticShadowToken)
+      .map((token) => cssDeclaration(token, formatShadowValue(token.value))),
     ...tokens.flatMap((token) => typographyDeclarations(token))
   ].sort();
 }
@@ -115,7 +119,10 @@ function shadowDeclarations(tokens: readonly CanonicalToken[], mode: "light" | "
     .sort();
 }
 
-function generateIndexJs(document: CanonicalTokenDocument, tokens: readonly CanonicalToken[]): string {
+function generateIndexJs(
+  document: CanonicalTokenDocument,
+  tokens: readonly CanonicalToken[]
+): string {
   return [
     jsHeader(),
     `export const tokens = ${json(tokensToPublicMap(tokens))};`,
@@ -134,7 +141,7 @@ function generateIndexJs(document: CanonicalTokenDocument, tokens: readonly Cano
   ].join("\n");
 }
 
-function generateIndexDts(tokens: readonly CanonicalToken[]): string {
+function generateIndexDts(): string {
   return [
     tsHeader(),
     "import type { TokenName } from './token-names.js';",
@@ -294,9 +301,10 @@ function formatShadowValue(value: CanonicalShadowValue): string {
 }
 
 function formatShadowColor(value: CanonicalShadowValue): string {
-  const match = /^#(?<red>[0-9A-F]{2})(?<green>[0-9A-F]{2})(?<blue>[0-9A-F]{2})(?<alpha>[0-9A-F]{2})?$/u.exec(
-    value.color
-  );
+  const match =
+    /^#(?<red>[0-9A-F]{2})(?<green>[0-9A-F]{2})(?<blue>[0-9A-F]{2})(?<alpha>[0-9A-F]{2})?$/u.exec(
+      value.color
+    );
   if (match?.groups === undefined) {
     throw new Error(`Invalid shadow colour: ${value.color}`);
   }
@@ -327,13 +335,15 @@ function isDimensionToken(token: CanonicalToken): boolean {
   return token.type === "dimension" || token.type === "radius";
 }
 
-function isStaticShadowToken(token: CanonicalToken): token is CanonicalToken & { value: CanonicalShadowValue } {
+function isStaticShadowToken(
+  token: CanonicalToken
+): token is CanonicalToken & { value: CanonicalShadowValue } {
   return token.type === "shadow" && !("light" in token.value);
 }
 
-function isModeAwareShadowToken(
-  token: CanonicalToken
-): token is CanonicalToken & { value: { light: CanonicalShadowValue; dark: CanonicalShadowValue } } {
+function isModeAwareShadowToken(token: CanonicalToken): token is CanonicalToken & {
+  value: { light: CanonicalShadowValue; dark: CanonicalShadowValue };
+} {
   return token.type === "shadow" && "light" in token.value && "dark" in token.value;
 }
 

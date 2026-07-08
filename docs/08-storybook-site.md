@@ -59,12 +59,9 @@ If stories are colocated in packages:
 
 ```ts
 const config = {
-  stories: [
-    '../../../packages/components/src/**/*.stories.@(ts|tsx|mdx)',
-    '../src/**/*.mdx'
-  ],
+  stories: ["../../../packages/components/src/**/*.stories.@(ts|tsx|mdx)", "../src/**/*.mdx"],
   framework: {
-    name: '@storybook/react-vite',
+    name: "@storybook/react-vite",
     options: {}
   }
 };
@@ -136,7 +133,7 @@ For each component:
 Do not duplicate token values manually in MDX. Import generated data:
 
 ```tsx
-import tokenDocs from '@demo-ds/tokens/token-docs.json';
+import tokenDocs from "@demo-ds/tokens/token-docs.json";
 ```
 
 Use reusable token-table components:
@@ -228,6 +225,7 @@ Published URL:
 ```txt
 https://jaminjadey.github.io/design-system/
 ```
+
 ```
 
 ## Avoid these mistakes
@@ -237,3 +235,4 @@ https://jaminjadey.github.io/design-system/
 - Do not bypass `DemoThemeProvider`.
 - Do not import Mantine directly in stories or docs examples.
 - Do not make Storybook the only consumer; keep the example app as a separate validation point.
+```

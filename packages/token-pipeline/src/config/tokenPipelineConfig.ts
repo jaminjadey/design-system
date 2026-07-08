@@ -2,7 +2,10 @@ import { readFile } from "node:fs/promises";
 
 import { parseJsonText } from "../json/parseJsonText.js";
 import type { TokenMode } from "../mapping/sourceToCanonical.js";
-import { parseRawTokenImportConfig, type RawTokenImportConfig } from "../raw/rawTokenImportConfig.js";
+import {
+  parseRawTokenImportConfig,
+  type RawTokenImportConfig
+} from "../raw/rawTokenImportConfig.js";
 
 export type UnsupportedTokenPolicy = "skip" | "fail";
 
@@ -156,7 +159,8 @@ export function parseTokenPipelineConfig(value: unknown): TokenPipelineConfig {
   }
 
   return {
-    rawImport: value.rawImport === undefined ? undefined : parseRawTokenImportConfig(value.rawImport),
+    rawImport:
+      value.rawImport === undefined ? undefined : parseRawTokenImportConfig(value.rawImport),
     canonical:
       value.canonical === undefined
         ? defaultCanonicalMappingConfig
@@ -220,12 +224,18 @@ function parseCanonicalMappingConfig(value: unknown): CanonicalMappingConfig {
     },
     typography: {
       properties: parseTypographyProperties(typography.properties),
-      headingPattern: requiredString(typography.headingPattern, "canonical.typography.headingPattern"),
+      headingPattern: requiredString(
+        typography.headingPattern,
+        "canonical.typography.headingPattern"
+      ),
       bodyPrefix: requiredString(typography.bodyPrefix, "canonical.typography.bodyPrefix"),
       displayPrefix: requiredString(typography.displayPrefix, "canonical.typography.displayPrefix")
     },
     shadows: {
-      categoryPaths: parseStringRecordArray(shadows.categoryPaths, "canonical.shadows.categoryPaths"),
+      categoryPaths: parseStringRecordArray(
+        shadows.categoryPaths,
+        "canonical.shadows.categoryPaths"
+      ),
       properties: parseShadowProperties(shadows.properties),
       defaultColor: requiredString(shadows.defaultColor, "canonical.shadows.defaultColor"),
       defaultOpacity: requiredFraction(shadows.defaultOpacity, "canonical.shadows.defaultOpacity")
@@ -251,18 +261,29 @@ function parseSemanticColorFiles(value: unknown): readonly SemanticColorFileMapp
 
     return {
       file: requiredString(entry.file, `canonical.files.semanticColors[${index}].file`),
-      sourceMode: requiredString(entry.sourceMode, `canonical.files.semanticColors[${index}].sourceMode`),
+      sourceMode: requiredString(
+        entry.sourceMode,
+        `canonical.files.semanticColors[${index}].sourceMode`
+      ),
       mode
     };
   });
 }
 
-function parseTypographyProperties(value: unknown): CanonicalMappingConfig["typography"]["properties"] {
+function parseTypographyProperties(
+  value: unknown
+): CanonicalMappingConfig["typography"]["properties"] {
   const properties = requiredObject(value, "canonical.typography.properties");
   return {
     fontSize: parseStringArray(properties.fontSize, "canonical.typography.properties.fontSize"),
-    lineHeight: parseStringArray(properties.lineHeight, "canonical.typography.properties.lineHeight"),
-    fontWeight: parseStringArray(properties.fontWeight, "canonical.typography.properties.fontWeight")
+    lineHeight: parseStringArray(
+      properties.lineHeight,
+      "canonical.typography.properties.lineHeight"
+    ),
+    fontWeight: parseStringArray(
+      properties.fontWeight,
+      "canonical.typography.properties.fontWeight"
+    )
   };
 }
 
@@ -278,7 +299,10 @@ function parseShadowProperties(value: unknown): CanonicalMappingConfig["shadows"
   };
 }
 
-function parseStringRecordArray(value: unknown, label: string): Readonly<Record<string, readonly string[]>> {
+function parseStringRecordArray(
+  value: unknown,
+  label: string
+): Readonly<Record<string, readonly string[]>> {
   if (!isObject(value)) {
     throw new Error(`${label} must be an object`);
   }

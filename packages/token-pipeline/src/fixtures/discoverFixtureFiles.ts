@@ -21,7 +21,9 @@ export const textFixtureExtensions = new Set([
   ".yml"
 ]);
 
-export async function discoverFixtureFiles(rootDirectory: string): Promise<DiscoveredFixtureFile[]> {
+export async function discoverFixtureFiles(
+  rootDirectory: string
+): Promise<DiscoveredFixtureFile[]> {
   const rootStats = await stat(rootDirectory);
   if (!rootStats.isDirectory()) {
     throw new Error(`Fixture path is not a directory: ${rootDirectory}`);

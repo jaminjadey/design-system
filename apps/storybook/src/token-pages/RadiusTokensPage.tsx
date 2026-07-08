@@ -21,8 +21,8 @@ export function RadiusTokensPage() {
     <div className="docs-page">
       <h1>Radius Tokens</h1>
       <p>
-        Radius tokens are generated from canonical radius values and mapped into Mantine
-        radius keys for component defaults.
+        Radius tokens are generated from canonical radius values and mapped into Mantine radius keys
+        for component defaults.
       </p>
       <TokenTable
         caption="Radius scale"

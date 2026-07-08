@@ -149,7 +149,9 @@ test("maps radius source typo and corner size names", () => {
   const document = buildCanonicalTokensFromRecords([
     numberRecord("corners/Mode 1.tokens.json", ["Corder-radius", "Corner-Med"], 8)
   ]);
-  const token = collectCanonicalTokens(document).find((candidate) => candidate.name === "radius.md");
+  const token = collectCanonicalTokens(document).find(
+    (candidate) => candidate.name === "radius.md"
+  );
 
   assert.equal(token?.type, "radius");
   assert.equal(token?.value, 8);
@@ -184,7 +186,9 @@ test("groups shadow geometry into mode-aware shadow tokens", () => {
     numberRecord("tokens/Dark.tokens.json", ["Drop shadows - cards", "Blur"], 12),
     numberRecord("tokens/Dark.tokens.json", ["Drop shadows - cards", "Spread"], 1)
   ]);
-  const token = collectCanonicalTokens(document).find((candidate) => candidate.name === "shadow.card");
+  const token = collectCanonicalTokens(document).find(
+    (candidate) => candidate.name === "shadow.card"
+  );
 
   assert.equal(token?.type, "shadow");
   assert.equal(token?.cssVariable, "--ds-shadow-card");
@@ -223,7 +227,9 @@ test("groups optional shadow colour and opacity when present", () => {
     colorRecord("tokens/Dark.tokens.json", ["Drop shadows - cards", "Colour"], "#020617"),
     numberRecord("tokens/Dark.tokens.json", ["Drop shadows - cards", "Opacity"], 0.4)
   ]);
-  const token = collectCanonicalTokens(document).find((candidate) => candidate.name === "shadow.card");
+  const token = collectCanonicalTokens(document).find(
+    (candidate) => candidate.name === "shadow.card"
+  );
 
   assert.equal(token?.value.light.color, "#334155");
   assert.equal(token?.value.light.opacity, 0.2);

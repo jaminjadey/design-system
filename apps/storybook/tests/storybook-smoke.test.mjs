@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { createServer } from "node:http";
-import { readFile, stat } from "node:fs/promises";
+import { stat } from "node:fs/promises";
 import { createReadStream } from "node:fs";
 import { extname, join, normalize, relative, resolve, sep } from "node:path";
 import test from "node:test";
@@ -19,9 +19,24 @@ test("built Storybook renders key docs and component pages in light and dark mod
 
   try {
     const baseUrl = `http://127.0.0.1:${server.port}`;
-    await assertStorybookPage(page, `${baseUrl}/iframe.html?id=docs-getting-started--docs&viewMode=docs&globals=colorScheme:light`, "Getting Started", "light");
-    await assertStorybookPage(page, `${baseUrl}/iframe.html?id=docs-token-pipeline--docs&viewMode=docs&globals=colorScheme:dark`, "Token Pipeline", "dark");
-    await assertStorybookPage(page, `${baseUrl}/iframe.html?id=components-button--default&viewMode=story&globals=colorScheme:dark`, "Save changes", "dark");
+    await assertStorybookPage(
+      page,
+      `${baseUrl}/iframe.html?id=docs-getting-started--docs&viewMode=docs&globals=colorScheme:light`,
+      "Getting Started",
+      "light"
+    );
+    await assertStorybookPage(
+      page,
+      `${baseUrl}/iframe.html?id=docs-token-pipeline--docs&viewMode=docs&globals=colorScheme:dark`,
+      "Token Pipeline",
+      "dark"
+    );
+    await assertStorybookPage(
+      page,
+      `${baseUrl}/iframe.html?id=components-button--default&viewMode=story&globals=colorScheme:dark`,
+      "Save changes",
+      "dark"
+    );
   } finally {
     await page.close();
     await browser.close();
@@ -41,7 +56,9 @@ async function assertBuiltStorybookExists() {
   try {
     await stat(join(staticDirectory, "iframe.html"));
   } catch {
-    throw new Error("Storybook smoke test requires apps/storybook/storybook-static. Run pnpm --filter @demo-ds/storybook build first.");
+    throw new Error(
+      "Storybook smoke test requires apps/storybook/storybook-static. Run pnpm --filter @demo-ds/storybook build first."
+    );
   }
 }
 

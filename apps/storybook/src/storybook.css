@@ -70,10 +70,6 @@ body,
   background: var(--ds-color-background-body) !important;
 }
 
-.token-table tbody tr:nth-child(even) td {
-  background: var(--ds-color-background-card) !important;
-}
-
 .token-table caption {
   color: var(--ds-color-text-default);
   font-weight: var(--ds-font-weight-heading-h6);
@@ -98,7 +94,11 @@ body,
   color: var(--ds-color-text-light) !important;
 }
 
-.token-table code {
+.token-table tbody tr:nth-child(even) td {
+  background: var(--ds-color-background-card) !important;
+}
+
+.sbdocs-content .token-table code {
   background: transparent !important;
   border: 0 !important;
   color: var(--ds-color-text-default) !important;

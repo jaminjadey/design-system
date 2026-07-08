@@ -14,18 +14,25 @@ import {
 
 const fixtureDirectory = resolve(process.cwd(), process.argv[2] ?? "./fixtures/extracted");
 const outputDirectory = resolve(process.cwd(), process.argv[3] ?? "./dist");
-const configPath = process.argv[4] === undefined ? undefined : resolve(process.cwd(), process.argv[4]);
+const configPath =
+  process.argv[4] === undefined ? undefined : resolve(process.cwd(), process.argv[4]);
 
 try {
   const config =
-    configPath === undefined ? defaultTokenPipelineConfig : await loadTokenPipelineConfig(configPath);
+    configPath === undefined
+      ? defaultTokenPipelineConfig
+      : await loadTokenPipelineConfig(configPath);
   const { document, report } = await buildCanonicalTokensWithReport({
     fixtureDirectory,
     config: config.canonical
   });
   const outputReport = await generateTokenOutputs(document, { outputDirectory });
   const buildReport = withGeneratedFiles(report, [...outputReport.files, "build-report.json"]);
-  await writeFile(join(outputDirectory, "build-report.json"), `${JSON.stringify(buildReport, null, 2)}\n`, "utf8");
+  await writeFile(
+    join(outputDirectory, "build-report.json"),
+    `${JSON.stringify(buildReport, null, 2)}\n`,
+    "utf8"
+  );
   console.log(`Generated canonical tokens: ${outputDirectory}/canonical.json`);
   console.log(`Generated build report: ${outputDirectory}/build-report.json`);
 } catch (error) {

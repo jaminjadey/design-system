@@ -1,6 +1,14 @@
-import { Meta, Source } from '@storybook/addon-docs/blocks';
-import { Button, AlertBanner, Card, PageHeader, StatusBadge, TextInput, ThemeToggle } from '@demo-ds/components';
-import { appSetupUsage, componentUsage } from './componentUsageSnippets';
+import { Meta, Source } from "@storybook/addon-docs/blocks";
+import {
+  Button,
+  AlertBanner,
+  Card,
+  PageHeader,
+  StatusBadge,
+  TextInput,
+  ThemeToggle
+} from "@demo-ds/components";
+import { appSetupUsage, componentUsage } from "./componentUsageSnippets";
 
 <Meta title="Docs/Components" />
 
@@ -32,9 +40,15 @@ underlying rendering library.
     actions={<Button>New item</Button>}
   />
   <Card>
-    <TextInput label="Project name" helperText="Use a generic demo value." defaultValue="Demo project" />
+    <TextInput
+      label="Project name"
+      helperText="Use a generic demo value."
+      defaultValue="Demo project"
+    />
   </Card>
-  <AlertBanner tone="success" title="Saved">The demo configuration was saved.</AlertBanner>
+  <AlertBanner tone="success" title="Saved">
+    The demo configuration was saved.
+  </AlertBanner>
   <div className="component-demo-row">
     <StatusBadge tone="neutral">Draft</StatusBadge>
     <StatusBadge tone="success">Live</StatusBadge>

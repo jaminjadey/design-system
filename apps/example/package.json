@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.json && vite build",
     "test": "pnpm run build && node --test tests/*.test.mjs",
-    "lint": "node -e \"console.log('example placeholder lint passed')\"",
+    "lint": "eslint src tests vite.config.ts --max-warnings=0",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "dev": "vite --host 127.0.0.1 --port 5173"
   },

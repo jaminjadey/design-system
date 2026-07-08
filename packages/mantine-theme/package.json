@@ -20,7 +20,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "pnpm run build && node --test tests/*.test.mjs",
-    "lint": "node -e \"console.log('mantine-theme placeholder lint passed')\"",
+    "lint": "eslint src tests --max-warnings=0",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {

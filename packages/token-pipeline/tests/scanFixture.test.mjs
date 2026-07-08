@@ -48,7 +48,7 @@ test("passes synthetic safe fixture text", () => {
 test("fails synthetic unsafe raw marker text with useful file and line details", () => {
   const findings = scanFixtureText({
     filePath: "tokens/Dark.tokens.json",
-    text: "{\n  \"value\": \"PRIVATE_COMPANY_NAME_PLACEHOLDER\"\n}\n"
+    text: '{\n  "value": "PRIVATE_COMPANY_NAME_PLACEHOLDER"\n}\n'
   });
 
   assert.equal(findings.length, 1);
@@ -63,7 +63,7 @@ test("fails synthetic unsafe JSON key metadata", () => {
     filePath: "primitives/Default.tokens.json",
     text: JSON.stringify({
       color: {
-        "$extensions": {
+        $extensions: {
           "com.figma": {
             VariableID: "unsafe"
           }

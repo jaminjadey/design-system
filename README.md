@@ -148,9 +148,9 @@ paths, typography fields, or unsupported-token policy differ from the demo.
 Wrap an app with the demo theme provider:
 
 ```tsx
-import { DemoThemeProvider } from '@demo-ds/mantine-theme';
-import { Button, Card, PageHeader } from '@demo-ds/components';
-import '@demo-ds/mantine-theme/styles.css';
+import { DemoThemeProvider } from "@demo-ds/mantine-theme";
+import { Button, Card, PageHeader } from "@demo-ds/components";
+import "@demo-ds/mantine-theme/styles.css";
 
 export function App() {
   return (
@@ -177,9 +177,9 @@ Use token CSS variables in component CSS when a value belongs to the design syst
 Use TypeScript token names when code needs a token reference:
 
 ```ts
-import { cssVar } from '@demo-ds/tokens';
+import { cssVar } from "@demo-ds/tokens";
 
-const background = cssVar('color.semantic.background.body');
+const background = cssVar("color.semantic.background.body");
 ```
 
 ## Development Workflow
@@ -214,21 +214,21 @@ git diff -- packages/tokens/dist
 
 ## Documentation Map
 
-| File | Purpose |
-| --- | --- |
-| `docs/00-product-vision.md` | What the demo proves and who it is for. |
-| `docs/01-target-repo-structure.md` | Monorepo layout and dependency direction. |
-| `docs/02-token-source-and-demo-fixtures.md` | Demo token source shape and scanner expectations. |
-| `docs/03-canonical-token-model.md` | Canonical token contract and naming rules. |
-| `docs/04-token-build-pipeline.md` | Build stages from source JSON to package outputs. |
-| `docs/05-generated-token-outputs.md` | CSS, TypeScript, JSON, and docs data outputs. |
-| `docs/06-mantine-theme-generation.md` | Mapping generated tokens into the internal Mantine adapter. |
-| `docs/07-react-components-package.md` | Component package architecture. |
-| `docs/08-storybook-site.md` | Storybook documentation app. |
-| `docs/09-example-react-app.md` | Example app package-consumption pattern. |
-| `docs/10-tests-and-quality-gates.md` | Test strategy and quality gates. |
-| `docs/11-ci-release-publishing.md` | CI, versioning, and release approach. |
-| `docs/13-acceptance-criteria.md` | MVP and full-demo criteria. |
+| File                                        | Purpose                                                     |
+| ------------------------------------------- | ----------------------------------------------------------- |
+| `docs/00-product-vision.md`                 | What the demo proves and who it is for.                     |
+| `docs/01-target-repo-structure.md`          | Monorepo layout and dependency direction.                   |
+| `docs/02-token-source-and-demo-fixtures.md` | Demo token source shape and scanner expectations.           |
+| `docs/03-canonical-token-model.md`          | Canonical token contract and naming rules.                  |
+| `docs/04-token-build-pipeline.md`           | Build stages from source JSON to package outputs.           |
+| `docs/05-generated-token-outputs.md`        | CSS, TypeScript, JSON, and docs data outputs.               |
+| `docs/06-mantine-theme-generation.md`       | Mapping generated tokens into the internal Mantine adapter. |
+| `docs/07-react-components-package.md`       | Component package architecture.                             |
+| `docs/08-storybook-site.md`                 | Storybook documentation app.                                |
+| `docs/09-example-react-app.md`              | Example app package-consumption pattern.                    |
+| `docs/10-tests-and-quality-gates.md`        | Test strategy and quality gates.                            |
+| `docs/11-ci-release-publishing.md`          | CI, versioning, and release approach.                       |
+| `docs/13-acceptance-criteria.md`            | MVP and full-demo criteria.                                 |
 
 ## CI
 

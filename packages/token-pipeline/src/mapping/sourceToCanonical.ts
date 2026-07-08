@@ -10,12 +10,7 @@ export type TokenMode = "light" | "dark";
 export interface SourceMapping {
   readonly canonicalPath: readonly string[];
   readonly category:
-    | "primitive-color"
-    | "semantic-color"
-    | "space"
-    | "radius"
-    | "shadow-part"
-    | "typography-part";
+    "primitive-color" | "semantic-color" | "space" | "radius" | "shadow-part" | "typography-part";
   readonly mode?: TokenMode;
   readonly shadowProperty?: "x" | "y" | "blur" | "spread" | "color" | "opacity";
   readonly typographyProperty?: "fontSize" | "lineHeight" | "fontWeight";
@@ -57,7 +52,10 @@ export function sourcePathToCanonicalPath(
   if (record.file === config.files.spacing) {
     return {
       category: "space",
-      canonicalPath: ["space", normaliseSizeName(record.sourcePath[config.spacing.sizePathIndex] ?? "")]
+      canonicalPath: [
+        "space",
+        normaliseSizeName(record.sourcePath[config.spacing.sizePathIndex] ?? "")
+      ]
     };
   }
 
@@ -184,11 +182,7 @@ function trimSemanticLeaf(
 function mapTypographyProperty(
   sourceProperty: string | undefined,
   config: CanonicalMappingConfig
-):
-  | "fontSize"
-  | "lineHeight"
-  | "fontWeight"
-  | undefined {
+): "fontSize" | "lineHeight" | "fontWeight" | undefined {
   if (sourceProperty === undefined) {
     return undefined;
   }
@@ -216,7 +210,10 @@ function mapTypographyStyle(sourceStyle: string, config: CanonicalMappingConfig)
 
   const bodyPrefix = normaliseNameSegment(config.typography.bodyPrefix);
   if (slug.startsWith(`${bodyPrefix}-`)) {
-    return ["body", ...slug.replace(new RegExp(`^${escapeRegExp(bodyPrefix)}-`, "u"), "").split("-")];
+    return [
+      "body",
+      ...slug.replace(new RegExp(`^${escapeRegExp(bodyPrefix)}-`, "u"), "").split("-")
+    ];
   }
 
   const displayPrefix = normaliseNameSegment(config.typography.displayPrefix);

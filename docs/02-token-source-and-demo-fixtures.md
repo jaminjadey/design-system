@@ -32,14 +32,14 @@ cannot be committed accidentally.
 
 ## Fixture Coverage
 
-| Area | Purpose |
-| --- | --- |
-| Primitive colours | Palette values used to derive Mantine colour arrays and CSS variables. |
-| Light semantic tokens | Mode-specific semantic colours for light UI. |
-| Dark semantic tokens | Mode-specific semantic colours for dark UI. |
-| Spacing | Numeric scale mapped to dimension tokens. |
-| Corners | Numeric radius scale mapped to radius tokens. |
-| Typography | Font size, line height, and weight groups. |
+| Area                  | Purpose                                                                |
+| --------------------- | ---------------------------------------------------------------------- |
+| Primitive colours     | Palette values used to derive Mantine colour arrays and CSS variables. |
+| Light semantic tokens | Mode-specific semantic colours for light UI.                           |
+| Dark semantic tokens  | Mode-specific semantic colours for dark UI.                            |
+| Spacing               | Numeric scale mapped to dimension tokens.                              |
+| Corners               | Numeric radius scale mapped to radius tokens.                          |
+| Typography            | Font size, line height, and weight groups.                             |
 
 ## Source Scan
 

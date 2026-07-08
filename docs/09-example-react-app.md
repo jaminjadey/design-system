@@ -45,13 +45,13 @@ Pin exact versions during implementation after install. Avoid leaving floating `
 `main.tsx` should wrap the app once:
 
 ```tsx
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { DemoThemeProvider } from '@demo-ds/mantine-theme';
-import '@demo-ds/mantine-theme/styles.css';
-import { App } from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { DemoThemeProvider } from "@demo-ds/mantine-theme";
+import "@demo-ds/mantine-theme/styles.css";
+import { App } from "./App";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <DemoThemeProvider defaultColorScheme="light">
       <App />

@@ -16,7 +16,7 @@
     "import:raw": "pnpm run build && node dist/cli/importRawTokens.js",
     "scan:fixtures": "pnpm run build && node dist/cli/scanFixtures.js ../tokens/fixtures/extracted",
     "test": "pnpm run build && node --test tests/*.test.mjs",
-    "lint": "node -e \"console.log('token-pipeline placeholder lint passed')\"",
+    "lint": "eslint src tests --max-warnings=0",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   }
 }
