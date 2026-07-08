@@ -1,4 +1,5 @@
 import type { StorybookConfig } from "@storybook/react-vite";
+import { mergeConfig, type UserConfig } from "vite";
 
 const config: StorybookConfig = {
   stories: [
@@ -12,6 +13,19 @@ const config: StorybookConfig = {
   },
   docs: {
     defaultName: "Docs"
+  },
+  async viteFinal(config) {
+    return mergeConfig(config, {
+      build: {
+        // Storybook includes the docs runtime and axe in the preview bundle.
+        chunkSizeWarningLimit: 2200,
+        rolldownOptions: {
+          checks: {
+            pluginTimings: false
+          }
+        }
+      }
+    } satisfies UserConfig);
   }
 };
 
