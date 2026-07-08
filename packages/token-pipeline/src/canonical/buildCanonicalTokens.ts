@@ -10,6 +10,8 @@ import { normaliseColorValue } from "./color.js";
 import type {
   CanonicalColorToken,
   CanonicalDimensionToken,
+  CanonicalShadowToken,
+  CanonicalShadowValue,
   CanonicalToken,
   CanonicalTokenDocument,
   CanonicalTypographyToken,
@@ -58,6 +60,7 @@ type SourceMappingCategory =
   | "semantic-color"
   | "space"
   | "radius"
+  | "shadow-part"
   | "typography-part";
 
 export async function readSourceTokenRecords(
@@ -115,6 +118,7 @@ export function buildCanonicalTokensFromRecordsWithReport(
   const primitiveColors: CanonicalColorToken[] = [];
   const semanticColors = new Map<string, MutableSemanticColor>();
   const dimensions: CanonicalDimensionToken[] = [];
+  const shadowParts = new Map<string, MutableShadowValue>();
   const typographyParts = new Map<string, MutableTypographyValue>();
   const renamedPaths: CanonicalPathMappingReport[] = [];
   const unsupportedRecords: CanonicalBuildFinding[] = [];
@@ -182,6 +186,27 @@ export function buildCanonicalTokensFromRecordsWithReport(
       continue;
     }
 
+    if (mapping.category === "shadow-part") {
+      const name = tokenName(mapping.canonicalPath);
+      const existing = shadowParts.get(name) ?? {
+        canonicalPath: mapping.canonicalPath,
+        value: {},
+        source: record
+      };
+      const mode = mapping.mode ?? "light";
+      const modeValue =
+        existing.value[mode] ??
+        ({
+          color: config.shadows.defaultColor,
+          opacity: config.shadows.defaultOpacity
+        } satisfies MutableShadowModeValue);
+
+      applyShadowPart(modeValue, mapping.shadowProperty ?? "x", record, sourceRecordLookup);
+      existing.value[mode] = modeValue;
+      shadowParts.set(name, existing);
+      continue;
+    }
+
     if (mapping.category === "typography-part") {
       assertSourceType(record, "number");
       const name = tokenName(mapping.canonicalPath);
@@ -224,6 +249,8 @@ export function buildCanonicalTokensFromRecordsWithReport(
     }, value.source);
   });
 
+  const shadowTokens = [...shadowParts.values()].map((entry) => makeShadowTokenFromParts(entry));
+
   const document: CanonicalTokenDocument = {
     $schema: "https://example.local/schemas/canonical-tokens.schema.json",
     meta: {
@@ -247,6 +274,7 @@ export function buildCanonicalTokensFromRecordsWithReport(
         sortTokens(dimensions.filter((token) => token.type === "radius")),
         ["radius"]
       ),
+      shadow: nestTokens(sortTokens(shadowTokens), ["shadow"]),
       typography: nestTokens(sortTokens(typographyTokens), ["typography"])
     }
   };
@@ -269,6 +297,69 @@ export function buildCanonicalTokensFromRecordsWithReport(
       generatedFiles: [],
       warnings
     }
+  };
+}
+
+function applyShadowPart(
+  value: MutableShadowModeValue,
+  property: "x" | "y" | "blur" | "spread" | "color" | "opacity",
+  record: SourceTokenRecord,
+  sourceRecordLookup: ReadonlyMap<string, SourceTokenRecord>
+): void {
+  if (property === "color") {
+    assertSourceType(record, "color");
+    value.color = normaliseColorValue(resolveSourceValue(record, sourceRecordLookup));
+    return;
+  }
+
+  assertSourceType(record, "number");
+  value[property] = numberValue(record);
+}
+
+function makeShadowTokenFromParts(entry: MutableShadowValue): CanonicalShadowToken {
+  const missingModes = (["light", "dark"] as const).filter((mode) => entry.value[mode] === undefined);
+  if (missingModes.length > 0) {
+    throw new Error(`Shadow token ${tokenName(entry.canonicalPath)} is missing light or dark value`);
+  }
+
+  const light = completeShadowMode(entry.canonicalPath, "light", entry.value.light);
+  const dark = completeShadowMode(entry.canonicalPath, "dark", entry.value.dark);
+  return {
+    name: tokenName(entry.canonicalPath),
+    path: entry.canonicalPath,
+    type: "shadow",
+    value: { light, dark },
+    cssVariable: cssVariableName(entry.canonicalPath),
+    source: sourceFromRecord(entry.source)
+  };
+}
+
+function completeShadowMode(
+  path: readonly string[],
+  mode: TokenMode,
+  value: Partial<CanonicalShadowValue> | undefined
+): CanonicalShadowValue {
+  if (
+    value === undefined ||
+    value.x === undefined ||
+    value.y === undefined ||
+    value.blur === undefined ||
+    value.spread === undefined ||
+    value.color === undefined ||
+    value.opacity === undefined
+  ) {
+    throw new Error(
+      `Shadow token ${tokenName(path)} is missing x, y, blur, spread, color, or opacity for ${mode} mode`
+    );
+  }
+
+  return {
+    x: value.x,
+    y: value.y,
+    blur: value.blur,
+    spread: value.spread,
+    color: value.color,
+    opacity: value.opacity
   };
 }
 
@@ -438,4 +529,19 @@ interface MutableTypographyValue {
   lineHeight?: number;
   fontWeight?: number;
   source: SourceTokenRecord;
+}
+
+interface MutableShadowValue {
+  readonly canonicalPath: readonly string[];
+  readonly value: Partial<Record<TokenMode, MutableShadowModeValue>>;
+  readonly source: SourceTokenRecord;
+}
+
+interface MutableShadowModeValue {
+  x?: number;
+  y?: number;
+  blur?: number;
+  spread?: number;
+  color?: string;
+  opacity?: number;
 }

@@ -1405,6 +1405,34 @@
       ]
     },
     {
+      "name": "shadow.card",
+      "tokens": [
+        {
+          "name": "shadow.card",
+          "type": "shadow",
+          "cssVariable": "--ds-shadow-card",
+          "value": {
+            "light": {
+              "x": 0,
+              "y": 2,
+              "blur": 8,
+              "spread": 0,
+              "color": "#0F172A",
+              "opacity": 0.12
+            },
+            "dark": {
+              "x": 0,
+              "y": 2,
+              "blur": 8,
+              "spread": 0,
+              "color": "#0F172A",
+              "opacity": 0.12
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "space.10xl",
       "tokens": [
         {

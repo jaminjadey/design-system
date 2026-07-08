@@ -35,7 +35,6 @@
         "form-input-backgrounds": ["form", "background"],
         "date-picker-backgrounds": ["date-picker", "background"],
         "navigation": ["navigation"],
-        "drop-shadows-cards": ["shadow", "card"],
         "lozenge": ["lozenge"],
         "marks": ["mark"]
       },
@@ -57,6 +56,21 @@
       "headingPattern": "^h[1-6]$",
       "bodyPrefix": "bdy-",
       "displayPrefix": "display-"
+    },
+    "shadows": {
+      "categoryPaths": {
+        "drop-shadows-cards": ["card"]
+      },
+      "properties": {
+        "x": ["Position X", "X"],
+        "y": ["Position Y", "Y"],
+        "blur": ["Blur"],
+        "spread": ["Spread"],
+        "color": ["Color", "Colour"],
+        "opacity": ["Opacity"]
+      },
+      "defaultColor": "#0F172A",
+      "defaultOpacity": 0.12
     },
     "unsupportedTokenPolicy": "skip"
   }

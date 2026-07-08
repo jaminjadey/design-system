@@ -43,6 +43,7 @@ Recommended structure:
     "color": {},
     "space": {},
     "radius": {},
+    "shadow": {},
     "typography": {}
   }
 }
@@ -60,7 +61,7 @@ Each token should have:
 | `path` | Array path, for example `['color', 'semantic', 'text', 'default']`. |
 | `name` | Dot path, for example `color.semantic.text.default`. |
 | `cssVariable` | CSS custom property name, for example `--ds-color-text-default`. |
-| `type` | Canonical type, for example `color`, `dimension`, `radius`, `typography`. |
+| `type` | Canonical type, for example `color`, `dimension`, `radius`, `shadow`, `typography`. |
 | `value` | Canonical value, or mode map for mode-aware tokens. |
 | `source` | Optional debug provenance pointing to the fixture file and source path. |
 
@@ -89,6 +90,7 @@ Examples:
 | `Background general colours.Body` | `color.semantic.background.body` |
 | `Space-2XL` | `space.2xl` |
 | `Corder-radius.Corner-Med` | `radius.md` |
+| `Drop shadows - cards.Position Y` | `shadow.card` |
 | `H1.FontSize` | `typography.heading.h1.font-size` |
 
 The source has a category spelling like `Corder-radius`. Do not preserve that
@@ -167,6 +169,37 @@ Typography source values are grouped into coherent text styles:
 }
 ```
 
+Shadow source values are grouped into coherent elevation tokens. Geometry is
+read from numeric parts such as `Position X`, `Position Y`, `Blur`, and
+`Spread`; colour and opacity are used when present, otherwise configured
+defaults are applied:
+
+```json
+{
+  "name": "shadow.card",
+  "type": "shadow",
+  "value": {
+    "light": {
+      "x": 0,
+      "y": 2,
+      "blur": 8,
+      "spread": 0,
+      "color": "#0F172A",
+      "opacity": 0.12
+    },
+    "dark": {
+      "x": 0,
+      "y": 2,
+      "blur": 8,
+      "spread": 0,
+      "color": "#0F172A",
+      "opacity": 0.12
+    }
+  },
+  "cssVariable": "--ds-shadow-card"
+}
+```
+
 ## Validation
 
 Validate:
@@ -176,6 +209,7 @@ Validate:
 - Valid hex colours.
 - Positive or zero numeric scales.
 - Matching mode keys for mode-aware semantic tokens.
+- Complete shadow geometry for each mode.
 - Unique canonical token names.
 - Unique CSS variable names.
 - No source-tool metadata keys.

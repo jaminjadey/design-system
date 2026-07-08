@@ -170,6 +170,7 @@ export type TokenName =
   | "radius.sm"
   | "radius.xl"
   | "radius.xs"
+  | "shadow.card"
   | "space.10xl"
   | "space.11xl"
   | "space.12xl"

@@ -14,6 +14,8 @@ Public React component API for the demo design system.
 
 Components encode design-system decisions and use semantic token names. Mantine
 is an internal rendering layer and should not be imported directly by app code.
+For example, `Card` consumes semantic surface, border, radius, and shadow tokens
+instead of hardcoded visual values.
 
 ## Peer Dependencies
 

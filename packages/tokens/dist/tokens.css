@@ -293,6 +293,7 @@
   --ds-color-text-success: #15803D;
   --ds-color-text-warning: #B45309;
   --ds-color-tooltip-tooltip: #083344;
+  --ds-shadow-card: 0px 2px 8px 0px rgb(15 23 42 / 0.12);
 }
 
 [data-mantine-color-scheme='dark'] {
@@ -363,4 +364,5 @@
   --ds-color-text-success: #BBF7D0;
   --ds-color-text-warning: #FBBF24;
   --ds-color-tooltip-tooltip: #FDFDFD;
+  --ds-shadow-card: 0px 2px 8px 0px rgb(15 23 42 / 0.12);
 }

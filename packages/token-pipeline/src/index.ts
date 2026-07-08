@@ -25,6 +25,8 @@ export {
 export type {
   CanonicalColorToken,
   CanonicalDimensionToken,
+  CanonicalShadowToken,
+  CanonicalShadowValue,
   CanonicalToken,
   CanonicalTokenBase,
   CanonicalTokenDocument,

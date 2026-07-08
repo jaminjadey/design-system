@@ -116,6 +116,33 @@ function validateToken(token: CanonicalToken): void {
     ) {
       throw new Error(`Typography token ${token.name} is malformed`);
     }
+    return;
+  }
+
+  if (token.type === "shadow") {
+    const value = token.value;
+    if (!isObject(value) || Object.keys(value).sort().join(",") !== "dark,light") {
+      throw new Error(`Mode-aware shadow ${token.name} must contain exactly light and dark values`);
+    }
+    validateShadowValue(token.name, "light", value.light);
+    validateShadowValue(token.name, "dark", value.dark);
+  }
+}
+
+function validateShadowValue(name: string, mode: "light" | "dark", value: unknown): void {
+  if (!isObject(value)) {
+    throw new Error(`Shadow token ${name} ${mode} value is malformed`);
+  }
+
+  for (const property of ["x", "y", "blur", "spread"] as const) {
+    if (typeof value[property] !== "number" || !Number.isFinite(value[property])) {
+      throw new Error(`Shadow token ${name} ${mode}.${property} must be a finite number`);
+    }
+  }
+
+  validateHex(value.color, name);
+  if (typeof value.opacity !== "number" || value.opacity < 0 || value.opacity > 1) {
+    throw new Error(`Shadow token ${name} ${mode}.opacity must be between 0 and 1`);
   }
 }
 

@@ -1,7 +1,12 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
-import type { CanonicalColorToken, CanonicalToken, CanonicalTokenDocument } from "./types.js";
+import type {
+  CanonicalColorToken,
+  CanonicalShadowValue,
+  CanonicalToken,
+  CanonicalTokenDocument
+} from "./types.js";
 import { collectCanonicalTokens } from "./validateCanonicalTokens.js";
 
 const generatedHeader = [
@@ -57,11 +62,11 @@ function generateCombinedCss(tokens: readonly CanonicalToken[]): string {
     "}",
     "",
     "[data-mantine-color-scheme='light'] {",
-    ...indent(semanticColorDeclarations(tokens, "light")),
+    ...indent(modeDeclarations(tokens, "light")),
     "}",
     "",
     "[data-mantine-color-scheme='dark'] {",
-    ...indent(semanticColorDeclarations(tokens, "dark")),
+    ...indent(modeDeclarations(tokens, "dark")),
     "}",
     ""
   ].join("\n");
@@ -71,7 +76,7 @@ function generateModeCss(tokens: readonly CanonicalToken[], mode: "light" | "dar
   return [
     cssHeader(),
     ":root {",
-    ...indent([...rootDeclarations(tokens), ...semanticColorDeclarations(tokens, mode)].sort()),
+    ...indent([...rootDeclarations(tokens), ...modeDeclarations(tokens, mode)].sort()),
     "}",
     ""
   ].join("\n");
@@ -81,8 +86,13 @@ function rootDeclarations(tokens: readonly CanonicalToken[]): string[] {
   return [
     ...tokens.filter(isPrimitiveColorToken).map((token) => cssDeclaration(token, token.value)),
     ...tokens.filter(isDimensionToken).map((token) => cssDeclaration(token, formatDimensionValue(token))),
+    ...tokens.filter(isStaticShadowToken).map((token) => cssDeclaration(token, formatShadowValue(token.value))),
     ...tokens.flatMap((token) => typographyDeclarations(token))
   ].sort();
+}
+
+function modeDeclarations(tokens: readonly CanonicalToken[], mode: "light" | "dark"): string[] {
+  return [...semanticColorDeclarations(tokens, mode), ...shadowDeclarations(tokens, mode)].sort();
 }
 
 function semanticColorDeclarations(
@@ -95,6 +105,13 @@ function semanticColorDeclarations(
       const value = token.value;
       return cssDeclaration(token, typeof value === "string" ? value : value[mode]);
     })
+    .sort();
+}
+
+function shadowDeclarations(tokens: readonly CanonicalToken[], mode: "light" | "dark"): string[] {
+  return tokens
+    .filter(isModeAwareShadowToken)
+    .map((token) => cssDeclaration(token, formatShadowValue(token.value[mode])))
     .sort();
 }
 
@@ -272,6 +289,32 @@ function formatDimensionValue(token: CanonicalToken): string {
   return `${token.value}${token.unit}`;
 }
 
+function formatShadowValue(value: CanonicalShadowValue): string {
+  return `${value.x}px ${value.y}px ${value.blur}px ${value.spread}px ${formatShadowColor(value)}`;
+}
+
+function formatShadowColor(value: CanonicalShadowValue): string {
+  const match = /^#(?<red>[0-9A-F]{2})(?<green>[0-9A-F]{2})(?<blue>[0-9A-F]{2})(?<alpha>[0-9A-F]{2})?$/u.exec(
+    value.color
+  );
+  if (match?.groups === undefined) {
+    throw new Error(`Invalid shadow colour: ${value.color}`);
+  }
+
+  const alpha =
+    match.groups.alpha === undefined
+      ? value.opacity
+      : (Number.parseInt(match.groups.alpha, 16) / 255) * value.opacity;
+  return `rgb(${Number.parseInt(match.groups.red, 16)} ${Number.parseInt(
+    match.groups.green,
+    16
+  )} ${Number.parseInt(match.groups.blue, 16)} / ${formatOpacity(alpha)})`;
+}
+
+function formatOpacity(value: number): string {
+  return Number.parseFloat(value.toFixed(3)).toString();
+}
+
 function isPrimitiveColorToken(token: CanonicalToken): token is CanonicalColorToken {
   return token.type === "color" && token.path[0] === "color" && token.path[1] === "primitive";
 }
@@ -282,6 +325,16 @@ function isSemanticColorToken(token: CanonicalToken): token is CanonicalColorTok
 
 function isDimensionToken(token: CanonicalToken): boolean {
   return token.type === "dimension" || token.type === "radius";
+}
+
+function isStaticShadowToken(token: CanonicalToken): token is CanonicalToken & { value: CanonicalShadowValue } {
+  return token.type === "shadow" && !("light" in token.value);
+}
+
+function isModeAwareShadowToken(
+  token: CanonicalToken
+): token is CanonicalToken & { value: { light: CanonicalShadowValue; dark: CanonicalShadowValue } } {
+  return token.type === "shadow" && "light" in token.value && "dark" in token.value;
 }
 
 function cssHeader(): string {

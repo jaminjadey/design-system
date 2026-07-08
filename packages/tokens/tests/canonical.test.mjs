@@ -16,6 +16,7 @@ test("generated canonical JSON contains core token groups", () => {
   assert.ok(canonical.tokens.color.semantic);
   assert.ok(canonical.tokens.space);
   assert.ok(canonical.tokens.radius);
+  assert.ok(canonical.tokens.shadow);
   assert.ok(canonical.tokens.typography);
 });
 
@@ -45,6 +46,7 @@ test("generated CSS contains expected custom properties", () => {
   assert.match(tokensCss, /--ds-color-text-default: #083344;/u);
   assert.match(tokensCss, /--ds-space-md: 8px;/u);
   assert.match(tokensCss, /--ds-radius-md: 8px;/u);
+  assert.match(tokensCss, /--ds-shadow-card: 0px 2px 8px 0px rgb\(15 23 42 \/ 0\.12\);/u);
   assert.match(tokensCss, /--ds-font-size-heading-h1: 32px;/u);
 });
 
@@ -59,6 +61,7 @@ test("generated TypeScript declarations include token-name union members", () =>
   assert.match(tokenNamesDts, /"color\.semantic\.text\.default"/u);
   assert.match(tokenNamesDts, /"space\.md"/u);
   assert.match(tokenNamesDts, /"radius\.md"/u);
+  assert.match(tokenNamesDts, /"shadow\.card"/u);
   assert.match(tokenNamesDts, /"typography\.heading\.h1"/u);
 });
 
@@ -67,8 +70,8 @@ test("generated metadata contains deterministic package summary", () => {
   assert.equal(metadata.source, "demo-design-token-fixtures");
   assert.equal(metadata.meta.generatedBy, "@demo-ds/token-pipeline");
   assert.deepEqual(metadata.modes, ["light", "dark"]);
-  assert.deepEqual(metadata.categories, ["color", "radius", "space", "typography"]);
-  assert.equal(metadata.tokenCount, 222);
+  assert.deepEqual(metadata.categories, ["color", "radius", "shadow", "space", "typography"]);
+  assert.equal(metadata.tokenCount, 223);
 });
 
 test("generated build report explains pipeline output", () => {
@@ -76,7 +79,7 @@ test("generated build report explains pipeline output", () => {
   assert.equal(buildReport.tokensGenerated, metadata.tokenCount);
   assert.deepEqual(buildReport.semanticTokensMissingModes, []);
   assert.ok(buildReport.recordsMapped > 0);
-  assert.ok(buildReport.recordsSkipped > 0);
+  assert.equal(buildReport.recordsSkipped, 0);
   assert.ok(buildReport.generatedFiles.includes("canonical.json"));
   assert.ok(buildReport.generatedFiles.includes("build-report.json"));
   assert.ok(buildReport.generatedFiles.includes("tokens.css"));
@@ -99,6 +102,17 @@ test("generated token docs are consumable without scraping CSS", () => {
         token.cssVariable === "--ds-color-text-default" &&
         token.value.light === "#083344" &&
         token.value.dark === "#FDFDFD"
+    )
+  );
+  const shadowGroup = tokenDocs.groups.find((group) => group.name === "shadow.card");
+  assert.ok(shadowGroup);
+  assert.ok(
+    shadowGroup.tokens.some(
+      (token) =>
+        token.name === "shadow.card" &&
+        token.cssVariable === "--ds-shadow-card" &&
+        token.value.light.blur === 8 &&
+        token.value.dark.blur === 8
     )
   );
 });

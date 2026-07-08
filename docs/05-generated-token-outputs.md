@@ -43,6 +43,7 @@ Recommended naming:
 --ds-color-background-body
 --ds-space-md
 --ds-radius-md
+--ds-shadow-card
 --ds-font-size-heading-h1
 --ds-line-height-heading-h1
 --ds-font-weight-heading-h1
@@ -60,11 +61,13 @@ Example CSS:
 [data-mantine-color-scheme='light'] {
   --ds-color-text-default: #083344;
   --ds-color-background-body: #F8FAFC;
+  --ds-shadow-card: 0px 2px 8px 0px rgb(15 23 42 / 0.12);
 }
 
 [data-mantine-color-scheme='dark'] {
   --ds-color-text-default: #FDFDFD;
   --ds-color-background-body: #0F172A;
+  --ds-shadow-card: 0px 2px 8px 0px rgb(15 23 42 / 0.12);
 }
 ```
 
@@ -95,7 +98,8 @@ export type TokenName =
   | 'color.semantic.text.default'
   | 'color.semantic.background.body'
   | 'space.md'
-  | 'radius.md';
+  | 'radius.md'
+  | 'shadow.card';
 ```
 
 Helper:
@@ -116,7 +120,7 @@ Generate metadata that Storybook and CI can read:
   "source": "demo-design-token-fixtures",
   "tokenCount": 479,
   "modes": ["light", "dark"],
-  "categories": ["color", "space", "radius", "typography"]
+  "categories": ["color", "radius", "shadow", "space", "typography"]
 }
 ```
 

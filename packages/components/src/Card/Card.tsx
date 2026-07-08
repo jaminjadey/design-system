@@ -54,6 +54,7 @@ export function Card({
         background: "var(--ds-color-background-card)",
         color: "var(--ds-color-text-default)",
         borderColor: "var(--ds-color-border-light)",
+        boxShadow: "var(--ds-shadow-card)",
         cursor: isInteractive ? "pointer" : undefined,
         ...style
       }}

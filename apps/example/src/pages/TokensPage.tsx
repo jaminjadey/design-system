@@ -11,6 +11,7 @@ const showcasedTokens: TokenName[] = [
   "space.xl",
   "radius.md",
   "radius.xl",
+  "shadow.card",
   "typography.heading.h1"
 ];
 
@@ -18,6 +19,7 @@ function TokenPreview({ tokenName }: { readonly tokenName: TokenName }) {
   const isColor = tokenName.startsWith("color.");
   const isSpace = tokenName.startsWith("space.");
   const isRadius = tokenName.startsWith("radius.");
+  const isShadow = tokenName.startsWith("shadow.");
 
   if (isColor) {
     return <span className="token-chip" style={{ background: cssVar(tokenName) }} />;
@@ -29,6 +31,10 @@ function TokenPreview({ tokenName }: { readonly tokenName: TokenName }) {
 
   if (isRadius) {
     return <span className="radius-chip" style={{ borderRadius: cssVar(tokenName) }} />;
+  }
+
+  if (isShadow) {
+    return <span className="shadow-chip" style={{ boxShadow: cssVar(tokenName) }} />;
   }
 
   return <span className="type-token-preview">Aa</span>;

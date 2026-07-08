@@ -1,8 +1,8 @@
 {
   "sourceRecordsRead": 479,
-  "tokensGenerated": 222,
-  "recordsMapped": 471,
-  "recordsSkipped": 8,
+  "tokensGenerated": 223,
+  "recordsMapped": 479,
+  "recordsSkipped": 0,
   "renamedPaths": [
     {
       "file": "corners/Mode 1.tokens.json",
@@ -930,6 +930,30 @@
     },
     {
       "file": "tokens/Dark.tokens.json",
+      "sourcePath": "Drop shadows - cards.Blur",
+      "canonicalPath": "shadow.card",
+      "category": "shadow-part"
+    },
+    {
+      "file": "tokens/Dark.tokens.json",
+      "sourcePath": "Drop shadows - cards.Position X",
+      "canonicalPath": "shadow.card",
+      "category": "shadow-part"
+    },
+    {
+      "file": "tokens/Dark.tokens.json",
+      "sourcePath": "Drop shadows - cards.Position Y",
+      "canonicalPath": "shadow.card",
+      "category": "shadow-part"
+    },
+    {
+      "file": "tokens/Dark.tokens.json",
+      "sourcePath": "Drop shadows - cards.Spread",
+      "canonicalPath": "shadow.card",
+      "category": "shadow-part"
+    },
+    {
+      "file": "tokens/Dark.tokens.json",
       "sourcePath": "Font colours.Alert text",
       "canonicalPath": "color.semantic.text.alert",
       "category": "semantic-color"
@@ -1677,6 +1701,30 @@
       "sourcePath": "Date picker backgrounds.Today date background",
       "canonicalPath": "color.semantic.date-picker.background.today.date",
       "category": "semantic-color"
+    },
+    {
+      "file": "tokens/Light.tokens.json",
+      "sourcePath": "Drop shadows - cards.Blur",
+      "canonicalPath": "shadow.card",
+      "category": "shadow-part"
+    },
+    {
+      "file": "tokens/Light.tokens.json",
+      "sourcePath": "Drop shadows - cards.Position X",
+      "canonicalPath": "shadow.card",
+      "category": "shadow-part"
+    },
+    {
+      "file": "tokens/Light.tokens.json",
+      "sourcePath": "Drop shadows - cards.Position Y",
+      "canonicalPath": "shadow.card",
+      "category": "shadow-part"
+    },
+    {
+      "file": "tokens/Light.tokens.json",
+      "sourcePath": "Drop shadows - cards.Spread",
+      "canonicalPath": "shadow.card",
+      "category": "shadow-part"
     },
     {
       "file": "tokens/Light.tokens.json",
@@ -2831,48 +2879,7 @@
       "category": "typography-part"
     }
   ],
-  "unsupportedRecords": [
-    {
-      "file": "tokens/Dark.tokens.json",
-      "path": "Drop shadows - cards.Position X",
-      "message": "No canonical mapping for number source record"
-    },
-    {
-      "file": "tokens/Dark.tokens.json",
-      "path": "Drop shadows - cards.Position Y",
-      "message": "No canonical mapping for number source record"
-    },
-    {
-      "file": "tokens/Dark.tokens.json",
-      "path": "Drop shadows - cards.Blur",
-      "message": "No canonical mapping for number source record"
-    },
-    {
-      "file": "tokens/Dark.tokens.json",
-      "path": "Drop shadows - cards.Spread",
-      "message": "No canonical mapping for number source record"
-    },
-    {
-      "file": "tokens/Light.tokens.json",
-      "path": "Drop shadows - cards.Position X",
-      "message": "No canonical mapping for number source record"
-    },
-    {
-      "file": "tokens/Light.tokens.json",
-      "path": "Drop shadows - cards.Position Y",
-      "message": "No canonical mapping for number source record"
-    },
-    {
-      "file": "tokens/Light.tokens.json",
-      "path": "Drop shadows - cards.Blur",
-      "message": "No canonical mapping for number source record"
-    },
-    {
-      "file": "tokens/Light.tokens.json",
-      "path": "Drop shadows - cards.Spread",
-      "message": "No canonical mapping for number source record"
-    }
-  ],
+  "unsupportedRecords": [],
   "semanticTokensMissingModes": [],
   "generatedFiles": [
     "build-report.json",
@@ -2887,46 +2894,5 @@
     "tokens.dark.css",
     "tokens.light.css"
   ],
-  "warnings": [
-    {
-      "file": "tokens/Dark.tokens.json",
-      "path": "Drop shadows - cards.Position X",
-      "message": "No canonical mapping for number source record"
-    },
-    {
-      "file": "tokens/Dark.tokens.json",
-      "path": "Drop shadows - cards.Position Y",
-      "message": "No canonical mapping for number source record"
-    },
-    {
-      "file": "tokens/Dark.tokens.json",
-      "path": "Drop shadows - cards.Blur",
-      "message": "No canonical mapping for number source record"
-    },
-    {
-      "file": "tokens/Dark.tokens.json",
-      "path": "Drop shadows - cards.Spread",
-      "message": "No canonical mapping for number source record"
-    },
-    {
-      "file": "tokens/Light.tokens.json",
-      "path": "Drop shadows - cards.Position X",
-      "message": "No canonical mapping for number source record"
-    },
-    {
-      "file": "tokens/Light.tokens.json",
-      "path": "Drop shadows - cards.Position Y",
-      "message": "No canonical mapping for number source record"
-    },
-    {
-      "file": "tokens/Light.tokens.json",
-      "path": "Drop shadows - cards.Blur",
-      "message": "No canonical mapping for number source record"
-    },
-    {
-      "file": "tokens/Light.tokens.json",
-      "path": "Drop shadows - cards.Spread",
-      "message": "No canonical mapping for number source record"
-    }
-  ]
+  "warnings": []
 }

@@ -1,6 +1,6 @@
 export type TokenMode = "light" | "dark";
 
-export type TokenType = "color" | "dimension" | "radius" | "typography";
+export type TokenType = "color" | "dimension" | "radius" | "shadow" | "typography";
 
 export interface CanonicalTokenSource {
   readonly file: string;
@@ -38,9 +38,23 @@ export interface CanonicalTypographyToken
   readonly type: "typography";
 }
 
+export interface CanonicalShadowValue {
+  readonly x: number;
+  readonly y: number;
+  readonly blur: number;
+  readonly spread: number;
+  readonly color: string;
+  readonly opacity: number;
+}
+
+export interface CanonicalShadowToken extends CanonicalTokenBase<ModeValue<CanonicalShadowValue>> {
+  readonly type: "shadow";
+}
+
 export type CanonicalToken =
   | CanonicalColorToken
   | CanonicalDimensionToken
+  | CanonicalShadowToken
   | CanonicalTypographyToken;
 
 export interface CanonicalTokenDocument {
@@ -60,6 +74,7 @@ export interface CanonicalTokenDocument {
     };
     readonly space: Record<string, unknown>;
     readonly radius: Record<string, unknown>;
+    readonly shadow: Record<string, unknown>;
     readonly typography: Record<string, unknown>;
   };
 }

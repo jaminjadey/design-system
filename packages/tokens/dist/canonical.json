@@ -3839,6 +3839,39 @@
         }
       }
     },
+    "shadow": {
+      "card": {
+        "name": "shadow.card",
+        "path": [
+          "shadow",
+          "card"
+        ],
+        "type": "shadow",
+        "value": {
+          "light": {
+            "x": 0,
+            "y": 2,
+            "blur": 8,
+            "spread": 0,
+            "color": "#0F172A",
+            "opacity": 0.12
+          },
+          "dark": {
+            "x": 0,
+            "y": 2,
+            "blur": 8,
+            "spread": 0,
+            "color": "#0F172A",
+            "opacity": 0.12
+          }
+        },
+        "cssVariable": "--ds-shadow-card",
+        "source": {
+          "file": "tokens/Dark.tokens.json",
+          "path": "Drop shadows - cards.Position X"
+        }
+      }
+    },
     "typography": {
       "body": {
         "ex": {

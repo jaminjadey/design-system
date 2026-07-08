@@ -203,7 +203,8 @@ input {
 
 .token-chip,
 .space-chip,
-.radius-chip {
+.radius-chip,
+.shadow-chip {
   border: 1px solid var(--ds-color-border-light);
   display: inline-block;
 }
@@ -223,6 +224,13 @@ input {
 
 .radius-chip {
   background: var(--ds-color-background-card);
+  height: var(--ds-space-3xl);
+  width: var(--ds-space-5xl);
+}
+
+.shadow-chip {
+  background: var(--ds-color-background-card);
+  border-radius: var(--ds-radius-md);
   height: var(--ds-space-3xl);
   width: var(--ds-space-5xl);
 }

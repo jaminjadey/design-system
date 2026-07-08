@@ -6,7 +6,7 @@
   },
   "name": "demo-design-system-tokens",
   "source": "demo-design-token-fixtures",
-  "tokenCount": 222,
+  "tokenCount": 223,
   "modes": [
     "light",
     "dark"
@@ -14,6 +14,7 @@
   "categories": [
     "color",
     "radius",
+    "shadow",
     "space",
     "typography"
   ]

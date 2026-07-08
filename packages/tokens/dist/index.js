@@ -2414,6 +2414,35 @@ export const tokens = {
       "unit": "px"
     }
   },
+  "shadow": {
+    "card": {
+      "name": "shadow.card",
+      "path": [
+        "shadow",
+        "card"
+      ],
+      "type": "shadow",
+      "value": {
+        "light": {
+          "x": 0,
+          "y": 2,
+          "blur": 8,
+          "spread": 0,
+          "color": "#0F172A",
+          "opacity": 0.12
+        },
+        "dark": {
+          "x": 0,
+          "y": 2,
+          "blur": 8,
+          "spread": 0,
+          "color": "#0F172A",
+          "opacity": 0.12
+        }
+      },
+      "cssVariable": "--ds-shadow-card"
+    }
+  },
   "space": {
     "10xl": {
       "name": "space.10xl",
@@ -3339,6 +3368,7 @@ export const tokenNames = [
   "radius.sm",
   "radius.xl",
   "radius.xs",
+  "shadow.card",
   "space.10xl",
   "space.11xl",
   "space.12xl",
@@ -3563,6 +3593,7 @@ export const tokenNameToCssVariable = {
   "radius.sm": "--ds-radius-sm",
   "radius.xl": "--ds-radius-xl",
   "radius.xs": "--ds-radius-xs",
+  "shadow.card": "--ds-shadow-card",
   "space.10xl": "--ds-space-10xl",
   "space.11xl": "--ds-space-11xl",
   "space.12xl": "--ds-space-12xl",
@@ -3593,7 +3624,7 @@ export const metadata = {
   },
   "name": "demo-design-system-tokens",
   "source": "demo-design-token-fixtures",
-  "tokenCount": 222,
+  "tokenCount": 223,
   "modes": [
     "light",
     "dark"
@@ -3601,6 +3632,7 @@ export const metadata = {
   "categories": [
     "color",
     "radius",
+    "shadow",
     "space",
     "typography"
   ]

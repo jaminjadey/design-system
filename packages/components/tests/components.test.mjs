@@ -75,6 +75,7 @@ test("Card marks interactive cards as keyboard focusable buttons", () => {
 
   assert.match(markup, /role="button"/u);
   assert.match(markup, /tabindex="0"/u);
+  assert.match(markup, /--ds-shadow-card/u);
   assert.match(markup, /Open project/u);
 });
 

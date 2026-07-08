@@ -9,8 +9,15 @@ export type TokenMode = "light" | "dark";
 
 export interface SourceMapping {
   readonly canonicalPath: readonly string[];
-  readonly category: "primitive-color" | "semantic-color" | "space" | "radius" | "typography-part";
+  readonly category:
+    | "primitive-color"
+    | "semantic-color"
+    | "space"
+    | "radius"
+    | "shadow-part"
+    | "typography-part";
   readonly mode?: TokenMode;
+  readonly shadowProperty?: "x" | "y" | "blur" | "spread" | "color" | "opacity";
   readonly typographyProperty?: "fontSize" | "lineHeight" | "fontWeight";
 }
 
@@ -31,6 +38,11 @@ export function sourcePathToCanonicalPath(
 
   const semanticFile = config.files.semanticColors.find((entry) => entry.file === record.file);
   if (semanticFile !== undefined) {
+    const shadowMapping = mapShadowPart(record, semanticFile.mode, config);
+    if (shadowMapping !== undefined) {
+      return shadowMapping;
+    }
+
     if (record.type !== "color") {
       return undefined;
     }
@@ -74,6 +86,62 @@ export function sourcePathToCanonicalPath(
       canonicalPath: ["typography", ...mapTypographyStyle(record.sourcePath[0] ?? "", config)],
       typographyProperty: property
     };
+  }
+
+  return undefined;
+}
+
+function mapShadowPart(
+  record: SourceTokenRecord,
+  mode: TokenMode,
+  config: CanonicalMappingConfig
+): SourceMapping | undefined {
+  const [category, property] = record.sourcePath;
+  if (category === undefined || property === undefined) {
+    return undefined;
+  }
+
+  const categoryPath = config.shadows.categoryPaths[normaliseNameSegment(category)];
+  if (categoryPath === undefined) {
+    return undefined;
+  }
+
+  const shadowProperty = mapShadowProperty(property, config);
+  if (shadowProperty === undefined) {
+    return undefined;
+  }
+
+  return {
+    category: "shadow-part",
+    canonicalPath: ["shadow", ...categoryPath],
+    mode,
+    shadowProperty
+  };
+}
+
+function mapShadowProperty(
+  sourceProperty: string,
+  config: CanonicalMappingConfig
+): "x" | "y" | "blur" | "spread" | "color" | "opacity" | undefined {
+  const propertySlug = normaliseNameSegment(sourceProperty);
+
+  if (matchesConfiguredName(propertySlug, config.shadows.properties.x)) {
+    return "x";
+  }
+  if (matchesConfiguredName(propertySlug, config.shadows.properties.y)) {
+    return "y";
+  }
+  if (matchesConfiguredName(propertySlug, config.shadows.properties.blur)) {
+    return "blur";
+  }
+  if (matchesConfiguredName(propertySlug, config.shadows.properties.spread)) {
+    return "spread";
+  }
+  if (matchesConfiguredName(propertySlug, config.shadows.properties.color)) {
+    return "color";
+  }
+  if (matchesConfiguredName(propertySlug, config.shadows.properties.opacity)) {
+    return "opacity";
   }
 
   return undefined;

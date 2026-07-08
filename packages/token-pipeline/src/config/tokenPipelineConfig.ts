@@ -44,6 +44,19 @@ export interface CanonicalMappingConfig {
     readonly bodyPrefix: string;
     readonly displayPrefix: string;
   };
+  readonly shadows: {
+    readonly categoryPaths: Readonly<Record<string, readonly string[]>>;
+    readonly properties: {
+      readonly x: readonly string[];
+      readonly y: readonly string[];
+      readonly blur: readonly string[];
+      readonly spread: readonly string[];
+      readonly color: readonly string[];
+      readonly opacity: readonly string[];
+    };
+    readonly defaultColor: string;
+    readonly defaultOpacity: number;
+  };
   readonly unsupportedTokenPolicy: UnsupportedTokenPolicy;
 }
 
@@ -88,7 +101,6 @@ export const defaultCanonicalMappingConfig: CanonicalMappingConfig = {
       "form-input-backgrounds": ["form", "background"],
       "date-picker-backgrounds": ["date-picker", "background"],
       navigation: ["navigation"],
-      "drop-shadows-cards": ["shadow", "card"],
       lozenge: ["lozenge"],
       marks: ["mark"]
     },
@@ -110,6 +122,21 @@ export const defaultCanonicalMappingConfig: CanonicalMappingConfig = {
     headingPattern: "^h[1-6]$",
     bodyPrefix: "bdy-",
     displayPrefix: "display-"
+  },
+  shadows: {
+    categoryPaths: {
+      "drop-shadows-cards": ["card"]
+    },
+    properties: {
+      x: ["Position X", "X"],
+      y: ["Position Y", "Y"],
+      blur: ["Blur"],
+      spread: ["Spread"],
+      color: ["Color", "Colour"],
+      opacity: ["Opacity"]
+    },
+    defaultColor: "#0F172A",
+    defaultOpacity: 0.12
   },
   unsupportedTokenPolicy: "skip"
 };
@@ -148,6 +175,10 @@ function parseCanonicalMappingConfig(value: unknown): CanonicalMappingConfig {
   const spacing = requiredObject(value.spacing, "canonical.spacing");
   const radius = requiredObject(value.radius, "canonical.radius");
   const typography = requiredObject(value.typography, "canonical.typography");
+  const shadows =
+    value.shadows === undefined
+      ? defaultCanonicalMappingConfig.shadows
+      : requiredObject(value.shadows, "canonical.shadows");
 
   if (value.unsupportedTokenPolicy !== "skip" && value.unsupportedTokenPolicy !== "fail") {
     throw new Error("canonical.unsupportedTokenPolicy must be skip or fail");
@@ -193,6 +224,12 @@ function parseCanonicalMappingConfig(value: unknown): CanonicalMappingConfig {
       bodyPrefix: requiredString(typography.bodyPrefix, "canonical.typography.bodyPrefix"),
       displayPrefix: requiredString(typography.displayPrefix, "canonical.typography.displayPrefix")
     },
+    shadows: {
+      categoryPaths: parseStringRecordArray(shadows.categoryPaths, "canonical.shadows.categoryPaths"),
+      properties: parseShadowProperties(shadows.properties),
+      defaultColor: requiredString(shadows.defaultColor, "canonical.shadows.defaultColor"),
+      defaultOpacity: requiredFraction(shadows.defaultOpacity, "canonical.shadows.defaultOpacity")
+    },
     unsupportedTokenPolicy: value.unsupportedTokenPolicy
   };
 }
@@ -226,6 +263,18 @@ function parseTypographyProperties(value: unknown): CanonicalMappingConfig["typo
     fontSize: parseStringArray(properties.fontSize, "canonical.typography.properties.fontSize"),
     lineHeight: parseStringArray(properties.lineHeight, "canonical.typography.properties.lineHeight"),
     fontWeight: parseStringArray(properties.fontWeight, "canonical.typography.properties.fontWeight")
+  };
+}
+
+function parseShadowProperties(value: unknown): CanonicalMappingConfig["shadows"]["properties"] {
+  const properties = requiredObject(value, "canonical.shadows.properties");
+  return {
+    x: parseStringArray(properties.x, "canonical.shadows.properties.x"),
+    y: parseStringArray(properties.y, "canonical.shadows.properties.y"),
+    blur: parseStringArray(properties.blur, "canonical.shadows.properties.blur"),
+    spread: parseStringArray(properties.spread, "canonical.shadows.properties.spread"),
+    color: parseStringArray(properties.color, "canonical.shadows.properties.color"),
+    opacity: parseStringArray(properties.opacity, "canonical.shadows.properties.opacity")
   };
 }
 
@@ -265,6 +314,13 @@ function requiredString(value: unknown, label: string): string {
 function requiredNumber(value: unknown, label: string): number {
   if (typeof value !== "number" || !Number.isInteger(value) || value < 0) {
     throw new Error(`${label} must be a non-negative integer`);
+  }
+  return value;
+}
+
+function requiredFraction(value: unknown, label: string): number {
+  if (typeof value !== "number" || !Number.isFinite(value) || value < 0 || value > 1) {
+    throw new Error(`${label} must be a number between 0 and 1`);
   }
   return value;
 }
