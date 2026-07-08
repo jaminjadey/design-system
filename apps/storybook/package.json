@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "storybook build",
-    "test": "pnpm run build && node --test tests/*.test.mjs",
+    "test": "pnpm run build && pnpm run test:qa",
+    "test:qa": "node --test tests/*.test.mjs",
     "lint": "eslint .storybook src tests --max-warnings=0",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "storybook": "storybook dev -p 6006"
@@ -27,6 +28,7 @@
     "@playwright/test": "^1.61.1",
     "@storybook/addon-a11y": "^10.4.6",
     "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3"
+    "@types/react-dom": "^19.2.3",
+    "axe-core": "^4.12.1"
   }
 }

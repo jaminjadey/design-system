@@ -36,6 +36,23 @@ body,
   color: var(--ds-color-text-link-default);
 }
 
+.storybook-theme-root .toc-link,
+.storybook-theme-root .toc-link:visited {
+  color: var(--ds-color-text-light) !important;
+}
+
+.storybook-theme-root .toc-link.is-active-link,
+.storybook-theme-root .toc-link:hover {
+  color: var(--ds-color-text-link-default) !important;
+}
+
+.storybook-theme-root .sbdocs-preview-actions button,
+.storybook-theme-root .sbdocs-preview [role="toolbar"] button {
+  background: var(--ds-color-background-card) !important;
+  border-color: var(--ds-color-border-light) !important;
+  color: var(--ds-color-text-default) !important;
+}
+
 .sbdocs-content :not(pre) > code {
   background: var(--ds-color-background-card) !important;
   border: 1px solid var(--ds-color-border-lightest) !important;
@@ -91,6 +108,23 @@ body,
 }
 
 .token-table td {
+  color: var(--ds-color-text-light) !important;
+}
+
+.storybook-theme-root .docblock-argstable,
+.storybook-theme-root .docblock-argstable th,
+.storybook-theme-root .docblock-argstable td {
+  background: var(--ds-color-background-body) !important;
+  border-color: var(--ds-color-border-light) !important;
+}
+
+.storybook-theme-root .docblock-argstable th,
+.storybook-theme-root .docblock-argstable th span {
+  color: var(--ds-color-text-default) !important;
+}
+
+.storybook-theme-root .docblock-argstable td,
+.storybook-theme-root .docblock-argstable td span {
   color: var(--ds-color-text-light) !important;
 }
 

@@ -91,7 +91,14 @@ const preview: Preview = {
   ],
   parameters: {
     a11y: {
-      test: "todo"
+      context: ".storybook-theme-root",
+      test: "error",
+      options: {
+        runOnly: {
+          type: "tag",
+          values: ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"]
+        }
+      }
     },
     controls: { expanded: true },
     docs: {

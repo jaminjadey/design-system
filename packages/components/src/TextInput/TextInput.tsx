@@ -37,6 +37,9 @@ export function TextInput({ helperText, description, ...props }: TextInputProps)
         },
         description: {
           color: "var(--ds-color-text-light)"
+        },
+        error: {
+          color: "var(--ds-color-text-alert)"
         }
       }}
       {...props}

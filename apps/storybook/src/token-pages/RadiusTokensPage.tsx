@@ -11,6 +11,7 @@ function preview(token: TokenDoc) {
     <span
       className="radius-preview"
       style={{ borderRadius: `${token.value}px` }}
+      role="img"
       aria-label={`${token.name} radius preview`}
     />
   );

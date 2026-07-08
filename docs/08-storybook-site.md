@@ -162,8 +162,21 @@ selected mode.
 
 ## Accessibility checks
 
-Storybook uses `@storybook/addon-a11y` and a Playwright smoke test against the
-built static site. At minimum:
+Storybook is a failing QA surface, not only a showcase. It uses
+`@storybook/addon-a11y` with violations configured as errors, plus a Playwright
+test against the built static site.
+
+The Storybook test discovers entries from the built `index.json` and checks docs
+and component stories in light and dark modes. It fails on:
+
+- Story render errors.
+- Browser console errors.
+- Page runtime errors.
+- Failed static asset responses.
+- Axe accessibility violations.
+- Missing Storybook theme provider or colour-scheme state.
+
+At minimum:
 
 - Document expected keyboard behaviour.
 - Use semantic HTML in stories.

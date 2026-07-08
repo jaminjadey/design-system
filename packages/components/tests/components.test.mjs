@@ -50,6 +50,19 @@ test("TextInput renders label and helper text", () => {
   assert.match(markup, /Demo/u);
 });
 
+test("TextInput error state uses a semantic alert text token", () => {
+  const markup = renderWithTheme(
+    React.createElement(TextInput, {
+      label: "Email",
+      defaultValue: "demo",
+      error: "Enter a valid email address"
+    })
+  );
+
+  assert.match(markup, /Enter a valid email address/u);
+  assert.match(markup, /--ds-color-text-alert/u);
+});
+
 test("AlertBanner uses alert role for danger tone", () => {
   const markup = renderWithTheme(
     React.createElement(AlertBanner, { tone: "danger", title: "Problem" }, "The action failed.")

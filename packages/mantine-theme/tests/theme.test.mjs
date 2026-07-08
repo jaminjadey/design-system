@@ -11,6 +11,7 @@ import { defaultFontFamily, demoTheme } from "../dist/theme.js";
 
 test("theme maps primary primitive palette to Mantine colors", () => {
   assert.equal(demoTheme.primaryColor, "primary");
+  assert.deepEqual(demoTheme.primaryShade, { light: 8, dark: 7 });
   assert.equal(demoTheme.colors.primary.length, 10);
   assert.deepEqual(demoTheme.colors.primary, [
     tokens.color.primitive.primary["5"].value,

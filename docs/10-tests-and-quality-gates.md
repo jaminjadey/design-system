@@ -129,9 +129,10 @@ pnpm --filter @demo-ds/storybook test
 
 Current:
 
-- Accessibility addon.
-- Playwright smoke tests against built Storybook.
-- Light/dark smoke checks for key docs and component pages.
+- Accessibility addon configured to fail on violations.
+- Playwright QA tests against built Storybook.
+- Light/dark checks for every built docs and story entry.
+- Browser console, runtime error, failed response, and axe checks.
 
 Optional later:
 
