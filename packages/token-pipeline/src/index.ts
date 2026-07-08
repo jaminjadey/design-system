@@ -58,6 +58,7 @@ export {
   normaliseTokenPath,
   tokenName
 } from "./mapping/nameNormalisation.js";
+export { parseJsonText, stripLeadingByteOrderMark } from "./json/parseJsonText.js";
 export { sourcePathToCanonicalPath, type SourceMapping } from "./mapping/sourceToCanonical.js";
 export {
   importRawTokenDirectory,

@@ -1,5 +1,6 @@
 import { readFile } from "node:fs/promises";
 
+import { parseJsonText } from "../json/parseJsonText.js";
 import type { TokenMode } from "../mapping/sourceToCanonical.js";
 import { parseRawTokenImportConfig, type RawTokenImportConfig } from "../raw/rawTokenImportConfig.js";
 
@@ -119,7 +120,7 @@ export const defaultTokenPipelineConfig: TokenPipelineConfig = {
 
 export async function loadTokenPipelineConfig(filePath: string): Promise<TokenPipelineConfig> {
   const text = await readFile(filePath, "utf8");
-  return parseTokenPipelineConfig(JSON.parse(text));
+  return parseTokenPipelineConfig(parseJsonText(text, filePath));
 }
 
 export function parseTokenPipelineConfig(value: unknown): TokenPipelineConfig {

@@ -1,5 +1,7 @@
 import { readFile } from "node:fs/promises";
 
+import { parseJsonText } from "../json/parseJsonText.js";
+
 export interface SourceTokenRecord {
   readonly file: string;
   readonly sourcePath: readonly string[];
@@ -17,14 +19,7 @@ export async function parseSourceTokenFile(
   relativeFilePath: string
 ): Promise<SourceTokenRecord[]> {
   const text = await readFile(filePath, "utf8");
-  let parsed: unknown;
-
-  try {
-    parsed = JSON.parse(text);
-  } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
-    throw new Error(`Invalid JSON in ${relativeFilePath}: ${message}`);
-  }
+  const parsed = parseJsonText(text, relativeFilePath);
 
   return flattenSourceTokens(parsed, relativeFilePath);
 }

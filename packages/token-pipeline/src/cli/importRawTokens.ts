@@ -2,6 +2,7 @@
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
+import { parseJsonText } from "../json/parseJsonText.js";
 import { writeRawTokenImportOutput } from "../raw/importRawTokens.js";
 import { parseRawTokenImportConfig } from "../raw/rawTokenImportConfig.js";
 
@@ -20,7 +21,9 @@ try {
       : resolve(invocationDirectory, cliOptions.config);
 
   const configText = await readFile(configPath, "utf8");
-  const config = parseRawTokenImportConfig(JSON.parse(configText));
+  const config = parseRawTokenImportConfig(
+    parseJsonText(configText, `raw token import config ${configPath}`)
+  );
   const report = await writeRawTokenImportOutput(inputDirectory, outputDirectory, config);
 
   console.log(`Imported raw tokens into ${outputDirectory}`);

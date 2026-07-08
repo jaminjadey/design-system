@@ -1,6 +1,7 @@
 import { readFile } from "node:fs/promises";
 
 import { discoverFixtureFiles } from "../fixtures/discoverFixtureFiles.js";
+import { parseJsonText } from "../json/parseJsonText.js";
 import { defaultForbiddenMarkers, type ForbiddenMarker } from "./forbiddenMarkers.js";
 
 export type SafetyFindingKind = "forbidden-marker" | "unsupported-file";
@@ -128,7 +129,7 @@ function scanJsonKeys(
 ): SafetyFinding[] {
   let parsed: unknown;
   try {
-    parsed = JSON.parse(text);
+    parsed = parseJsonText(text, filePath);
   } catch {
     return [];
   }

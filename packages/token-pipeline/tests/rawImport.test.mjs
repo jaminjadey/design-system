@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { mkdtemp, readFile } from "node:fs/promises";
+import { mkdir, mkdtemp, readFile, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -10,6 +10,7 @@ import {
   collectCanonicalTokens,
   importRawTokenDirectory,
   importRawTokenDocuments,
+  parseJsonText,
   parseRawTokenImportConfig,
   writeRawTokenImportOutput
 } from "../dist/index.js";
@@ -55,6 +56,51 @@ test("writes normalised source files and import report deterministically", async
   assert.match(primitiveText, /"\$type": "color"/u);
   assert.match(primitiveText, /"#e0f2fe"/u);
   assert.equal(report.recordsEmitted, JSON.parse(reportText).recordsEmitted);
+});
+
+test("imports raw token files written with a UTF-8 byte order mark", async () => {
+  const outputDirectory = await mkdtemp(join(tmpdir(), "demo-ds-raw-import-output-"));
+  const inputDirectory = await mkdtemp(join(tmpdir(), "demo-ds-raw-import-input-"));
+  const sourcePath = join(inputDirectory, "primitives", "Default.tokens.json");
+
+  await mkdir(dirname(sourcePath), { recursive: true });
+  await writeFile(
+    sourcePath,
+    `\uFEFF${JSON.stringify({
+      Colour: {
+        Primary: {
+          $type: "color",
+          $value: "#0284c7"
+        }
+      }
+    })}`,
+    "utf8"
+  );
+
+  const report = await writeRawTokenImportOutput(inputDirectory, outputDirectory, {
+    files: [
+      {
+        source: "primitives/Default.tokens.json",
+        target: "primitives/Default.tokens.json",
+        stripPathPrefix: ["Colour"]
+      }
+    ]
+  });
+
+  assert.equal(report.tokensImported, 1);
+  assert.equal(report.recordsEmitted, 1);
+});
+
+test("parses private import config files written with a UTF-8 byte order mark", () => {
+  const config = parseRawTokenImportConfig(
+    parseJsonText(
+      '\uFEFF{"files":[{"source":"source.tokens.json","target":"target.tokens.json"}]}',
+      "raw token import config"
+    )
+  );
+
+  assert.equal(config.files[0].source, "source.tokens.json");
+  assert.equal(config.files[0].target, "target.tokens.json");
 });
 
 test("strips raw metadata keys before emitting normalised source tokens", () => {

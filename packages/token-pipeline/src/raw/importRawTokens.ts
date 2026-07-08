@@ -1,6 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, isAbsolute, relative, resolve, sep } from "node:path";
 
+import { parseJsonText } from "../json/parseJsonText.js";
 import { defaultForbiddenMarkers } from "../safety/forbiddenMarkers.js";
 import type { SourceTokenRecord } from "../source/sourceRecords.js";
 import {
@@ -142,14 +143,7 @@ export async function importRawTokenDirectory(
     config.files.map(async (rule) => {
       const absolutePath = resolveInside(inputRoot, rule.source, "input file");
       const text = await readFile(absolutePath, "utf8");
-      let parsed: unknown;
-
-      try {
-        parsed = JSON.parse(text);
-      } catch (error) {
-        const message = error instanceof Error ? error.message : String(error);
-        throw new Error(`Invalid raw token JSON in ${rule.source}: ${message}`);
-      }
+      const parsed = parseJsonText(text, `raw token file ${rule.source}`);
 
       return {
         source: toPosix(rule.source),
