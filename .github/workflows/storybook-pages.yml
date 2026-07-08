@@ -51,6 +51,9 @@ jobs:
       - name: Check token quality report
         run: pnpm tokens:quality:check
 
+      - name: Check architecture boundaries
+        run: pnpm architecture:check
+
       - name: Configure Pages
         uses: actions/configure-pages@v6.0.0
 

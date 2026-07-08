@@ -22,3 +22,6 @@ import { Button } from "@mantine/core";
 Mantine is a rendering dependency behind the design-system API. Keeping it
 behind the package boundary makes the component contract portable if the
 implementation changes later.
+
+CI enforces this with `pnpm architecture:check`, which validates dependency
+direction, public package subpaths, app imports, and public declaration files.

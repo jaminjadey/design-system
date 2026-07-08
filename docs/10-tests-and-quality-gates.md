@@ -24,6 +24,7 @@ pnpm test
 pnpm build
 pnpm tokens:scan
 pnpm tokens:quality:check
+pnpm architecture:check
 git diff --exit-code
 ```
 
@@ -170,6 +171,16 @@ Use:
 - Prettier.
 - Package export checks.
 - Dependency boundary checks.
+
+The dependency boundary check is:
+
+```sh
+pnpm architecture:check
+```
+
+It validates the workspace graph from `docs/01-target-repo-structure.md`, rejects
+cross-package relative imports, blocks app source from importing Mantine
+directly, and checks public declaration files do not expose Mantine types.
 
 ## Security and public-demo checks
 

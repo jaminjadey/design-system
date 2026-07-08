@@ -177,6 +177,16 @@ flowchart TD
 Avoid reverse dependencies. For example, `@demo-ds/tokens` must not import
 `@demo-ds/mantine-theme`, and packages must not import from apps.
 
+The repo enforces this graph with:
+
+```sh
+pnpm architecture:check
+```
+
+That check validates workspace dependency direction, public `@demo-ds/*`
+subpath imports, app-level Mantine import boundaries, cross-package relative
+imports, and public declaration files.
+
 ## Workspace Naming
 
 Use a neutral package scope:
