@@ -14,5 +14,7 @@ It includes canonical colour, spacing, radius, shadow, and typography tokens.
 - `@demo-ds/tokens/metadata.json`: package summary.
 - `@demo-ds/tokens/token-docs.json`: Storybook-friendly docs data.
 - `@demo-ds/tokens/build-report.json`: generation report.
+- `@demo-ds/tokens/token-quality.json`: machine-readable token quality report.
+- `@demo-ds/tokens/token-quality.md`: review-friendly token quality report.
 
 Do not edit files under `dist` directly. Run `pnpm tokens:build`.

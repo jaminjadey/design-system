@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "generatedBy": "@demo-ds/token-pipeline",
+    "doNotEdit": true,
+    "source": "demo-design-token-fixtures"
+  },
+  "status": "pass",
+  "summary": {
+    "tokenCount": 223,
+    "sourceRecordsRead": 479,
+    "recordsMapped": 479,
+    "recordsSkipped": 0,
+    "unsupportedRecordCount": 0,
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "categories": {
+    "color": 153,
+    "radius": 15,
+    "shadow": 1,
+    "space": 21,
+    "typography": 33
+  },
+  "tokenTypes": {
+    "color": 153,
+    "dimension": 21,
+    "radius": 15,
+    "shadow": 1,
+    "typography": 33
+  },
+  "css": {
+    "tokensWithCssOutput": 223,
+    "tokenCount": 223,
+    "coveragePercent": 100,
+    "directCssVariables": 190,
+    "typographyGeneratedVariables": 99,
+    "duplicateCssVariables": [],
+    "invalidCssVariables": [],
+    "tokensWithoutCssOutput": []
+  },
+  "modes": {
+    "expected": [
+      "light",
+      "dark"
+    ],
+    "semanticColors": {
+      "total": 67,
+      "complete": 67,
+      "missing": []
+    },
+    "shadows": {
+      "total": 1,
+      "complete": 1,
+      "missing": []
+    }
+  },
+  "naming": {
+    "invalidTokenNames": [],
+    "duplicateTokenNames": []
+  },
+  "source": {
+    "renamedPathCount": 479,
+    "generatedFiles": [
+      "build-report.json",
+      "canonical.json",
+      "index.d.ts",
+      "index.js",
+      "metadata.json",
+      "token-docs.json",
+      "token-names.d.ts",
+      "token-names.js",
+      "token-quality.json",
+      "token-quality.md",
+      "tokens.css",
+      "tokens.dark.css",
+      "tokens.light.css"
+    ],
+    "files": [
+      {
+        "file": "corners/Mode 1.tokens.json",
+        "mappedRecords": 15,
+        "generatedTokens": 15,
+        "tokenTypes": [
+          "radius"
+        ]
+      },
+      {
+        "file": "primitives/Default.tokens.json",
+        "mappedRecords": 86,
+        "generatedTokens": 86,
+        "tokenTypes": [
+          "color"
+        ]
+      },
+      {
+        "file": "spacing/Mode 1.tokens.json",
+        "mappedRecords": 21,
+        "generatedTokens": 21,
+        "tokenTypes": [
+          "dimension"
+        ]
+      },
+      {
+        "file": "tokens/Dark.tokens.json",
+        "mappedRecords": 129,
+        "generatedTokens": 68,
+        "tokenTypes": [
+          "color",
+          "shadow"
+        ]
+      },
+      {
+        "file": "tokens/Light.tokens.json",
+        "mappedRecords": 129,
+        "generatedTokens": 0,
+        "tokenTypes": []
+      },
+      {
+        "file": "typography/Default.tokens.json",
+        "mappedRecords": 99,
+        "generatedTokens": 33,
+        "tokenTypes": [
+          "typography"
+        ]
+      }
+    ]
+  },
+  "findings": []
+}

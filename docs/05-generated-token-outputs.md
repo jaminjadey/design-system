@@ -28,6 +28,9 @@ packages/tokens/dist/
   tokens.dark.css
   metadata.json
   token-docs.json
+  build-report.json
+  token-quality.json
+  token-quality.md
 ```
 
 ## CSS Variable Output
@@ -172,6 +175,27 @@ Suggested shape:
   ]
 }
 ```
+
+## Quality Reports
+
+Generate machine-readable and review-friendly quality reports:
+
+```txt
+packages/tokens/dist/token-quality.json
+packages/tokens/dist/token-quality.md
+```
+
+The reports should cover:
+
+- Token counts by category and type.
+- CSS output coverage.
+- Light/dark mode coverage for semantic colours and shadows.
+- Naming and CSS-variable validity.
+- Source file coverage for mapped records and generated tokens.
+- Warnings or errors from source mapping.
+
+These reports are public demo artifacts and must be deterministic. They should
+not read private raw exports or include absolute local paths.
 
 ## Generated File Headers
 

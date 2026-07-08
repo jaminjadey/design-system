@@ -13,6 +13,8 @@ node_modules/
 !packages/tokens/dist/metadata.json
 !packages/tokens/dist/token-docs.json
 !packages/tokens/dist/build-report.json
+!packages/tokens/dist/token-quality.json
+!packages/tokens/dist/token-quality.md
 build/
 coverage/
 .turbo/

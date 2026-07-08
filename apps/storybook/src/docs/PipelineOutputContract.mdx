@@ -18,6 +18,8 @@ token-names.d.ts
 metadata.json
 token-docs.json
 build-report.json
+token-quality.json
+token-quality.md
 ```
 
 `canonical.json` is the stable internal contract.
@@ -30,3 +32,7 @@ build-report.json
 
 `build-report.json` explains records read, records mapped, records skipped,
 path renames, missing semantic modes, generated files, and warnings.
+
+`token-quality.json` and `token-quality.md` turn the generated contract into a
+reviewable quality report covering token counts, CSS output coverage, light/dark
+mode coverage, source file coverage, generated files, and findings.

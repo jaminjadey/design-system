@@ -51,6 +51,9 @@ jobs:
       - name: Build workspace
         run: pnpm build
 
+      - name: Check token quality report
+        run: pnpm tokens:quality:check
+
       - name: Build Storybook
         run: pnpm --filter @demo-ds/storybook build
 

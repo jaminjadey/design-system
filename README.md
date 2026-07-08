@@ -26,7 +26,7 @@ flowchart LR
   C --> D[Token source scan]
   E[Figma-style demo token JSON] --> D
   D --> F[Config-driven canonical builder]
-  F --> G[canonical.json + build-report.json]
+  F --> G[canonical.json + build and quality reports]
   G --> H[CSS variables]
   G --> I[TypeScript exports]
   H --> J[Internal Mantine adapter]
@@ -58,6 +58,7 @@ apps/example              Vite app proving package consumption
 - `token-names.js` and `token-names.d.ts`: type-safe token names.
 - `metadata.json` and `token-docs.json`: data for documentation and CI checks.
 - `build-report.json`: source record counts, skipped records, path renames, generated files, and warnings.
+- `token-quality.json` and `token-quality.md`: machine-readable and review-friendly token quality reports.
 
 ## Run Locally
 
@@ -71,6 +72,7 @@ Run the full quality gate:
 
 ```sh
 pnpm tokens:scan
+pnpm tokens:quality
 pnpm repo:scan
 pnpm lint
 pnpm typecheck
@@ -189,6 +191,7 @@ When token source files or mapping rules change:
 ```sh
 pnpm tokens:scan
 pnpm tokens:build
+pnpm tokens:quality:check
 pnpm --filter @demo-ds/tokens test
 ```
 
@@ -239,6 +242,7 @@ GitHub Actions verifies the repo from a fresh checkout:
 - lint, typecheck, test, and build
 - build Storybook and the example app
 - run a Playwright smoke test against built Storybook
+- verify the token quality report
 - deploy Storybook to GitHub Pages after the Pages workflow succeeds
 - verify package exports
 - scan the repo for forbidden markers and secret-like patterns

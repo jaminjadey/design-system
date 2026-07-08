@@ -7,6 +7,7 @@ import type {
   CanonicalToken,
   CanonicalTokenDocument
 } from "./types.js";
+import type { CanonicalBuildFinding, CanonicalBuildReport } from "./buildCanonicalTokens.js";
 import { collectCanonicalTokens } from "./validateCanonicalTokens.js";
 
 const generatedHeader = [
@@ -17,10 +18,20 @@ const generatedHeader = [
 
 export interface OutputOptions {
   readonly outputDirectory: string;
+  readonly buildReport?: CanonicalBuildReport;
 }
 
 export interface GeneratedTokenOutputReport {
   readonly files: readonly string[];
+}
+
+interface TokenQualityFinding {
+  readonly severity: "error" | "warning";
+  readonly code: string;
+  readonly message: string;
+  readonly tokenName?: string;
+  readonly file?: string;
+  readonly path?: string;
 }
 
 export async function generateTokenOutputs(
@@ -30,7 +41,7 @@ export async function generateTokenOutputs(
   await mkdir(options.outputDirectory, { recursive: true });
   const tokens = collectCanonicalTokens(document);
 
-  const outputs: Record<string, string> = {
+  const baseOutputs: Record<string, string> = {
     "canonical.json": `${JSON.stringify(document, null, 2)}\n`,
     "tokens.css": generateCombinedCss(tokens),
     "tokens.light.css": generateModeCss(tokens, "light"),
@@ -41,6 +52,25 @@ export async function generateTokenOutputs(
     "token-names.d.ts": generateTokenNamesDts(tokens),
     "metadata.json": `${JSON.stringify(generateMetadata(document, tokens), null, 2)}\n`,
     "token-docs.json": `${JSON.stringify(generateTokenDocs(document, tokens), null, 2)}\n`
+  };
+  const generatedFiles = [
+    ...Object.keys(baseOutputs),
+    "build-report.json",
+    "token-quality.json",
+    "token-quality.md"
+  ].sort();
+  const buildReport =
+    options.buildReport === undefined
+      ? undefined
+      : {
+          ...options.buildReport,
+          generatedFiles
+        };
+  const qualityReport = generateTokenQualityReport(document, tokens, buildReport);
+  const outputs: Record<string, string> = {
+    ...baseOutputs,
+    "token-quality.json": `${JSON.stringify(qualityReport, null, 2)}\n`,
+    "token-quality.md": generateTokenQualityMarkdown(qualityReport)
   };
 
   for (const [fileName, contents] of Object.entries(outputs).sort(([left], [right]) =>
@@ -235,6 +265,151 @@ function generateTokenDocs(document: CanonicalTokenDocument, tokens: readonly Ca
   };
 }
 
+function generateTokenQualityReport(
+  document: CanonicalTokenDocument,
+  tokens: readonly CanonicalToken[],
+  buildReport: CanonicalBuildReport | undefined
+) {
+  const tokenNames = tokens.map((token) => token.name);
+  const cssVariableTokens = tokens.filter(hasCssVariable);
+  const typographyTokens = tokens.filter((token) => token.type === "typography");
+  const tokensWithoutCssOutput = tokens.filter(
+    (token) => !hasCssVariable(token) && token.type !== "typography"
+  );
+  const duplicateTokenNames = duplicateValues(tokenNames);
+  const duplicateCssVariables = duplicateValues(
+    cssVariableTokens.map((token) => token.cssVariable)
+  );
+  const invalidTokenNames = tokens.filter((token) => !isValidTokenName(token.name));
+  const invalidCssVariables = cssVariableTokens.filter(
+    (token) => !isValidCssVariableName(token.cssVariable)
+  );
+  const modeCoverage = modeCoverageReport(document, tokens);
+  const findings = qualityFindings({
+    invalidTokenNames,
+    duplicateTokenNames,
+    invalidCssVariables,
+    duplicateCssVariables,
+    tokensWithoutCssOutput,
+    missingModeTokens: [...modeCoverage.semanticColors.missing, ...modeCoverage.shadows.missing],
+    buildReport
+  });
+  const directCssVariables = cssVariableTokens.length;
+  const typographyGeneratedVariables = typographyTokens.length * 3;
+  const tokensWithCssOutput = directCssVariables + typographyTokens.length;
+
+  return {
+    meta: {
+      generatedBy: "@demo-ds/token-pipeline",
+      doNotEdit: true,
+      source: document.meta.source
+    },
+    status: qualityStatus(findings),
+    summary: {
+      tokenCount: tokens.length,
+      sourceRecordsRead: buildReport?.sourceRecordsRead ?? null,
+      recordsMapped: buildReport?.recordsMapped ?? null,
+      recordsSkipped: buildReport?.recordsSkipped ?? null,
+      unsupportedRecordCount: buildReport?.unsupportedRecords.length ?? null,
+      warningCount: findings.filter((finding) => finding.severity === "warning").length,
+      errorCount: findings.filter((finding) => finding.severity === "error").length
+    },
+    categories: countBy(tokens, (token) => token.path[0]),
+    tokenTypes: countBy(tokens, (token) => token.type),
+    css: {
+      tokensWithCssOutput,
+      tokenCount: tokens.length,
+      coveragePercent: percentage(tokensWithCssOutput, tokens.length),
+      directCssVariables,
+      typographyGeneratedVariables,
+      duplicateCssVariables,
+      invalidCssVariables: invalidCssVariables.map((token) => ({
+        tokenName: token.name,
+        cssVariable: token.cssVariable
+      })),
+      tokensWithoutCssOutput: tokensWithoutCssOutput.map((token) => token.name).sort()
+    },
+    modes: {
+      expected: document.modes,
+      semanticColors: modeCoverage.semanticColors,
+      shadows: modeCoverage.shadows
+    },
+    naming: {
+      invalidTokenNames: invalidTokenNames.map((token) => token.name).sort(),
+      duplicateTokenNames
+    },
+    source: {
+      renamedPathCount: buildReport?.renamedPaths.length ?? null,
+      generatedFiles: buildReport?.generatedFiles ?? [],
+      files: sourceFileCoverage(tokens, buildReport)
+    },
+    findings
+  };
+}
+
+function generateTokenQualityMarkdown(
+  report: ReturnType<typeof generateTokenQualityReport>
+): string {
+  return [
+    markdownHeader(),
+    "# Token Quality Report",
+    "",
+    `Status: **${report.status}**`,
+    "",
+    "## Summary",
+    "",
+    "| Metric | Value |",
+    "| --- | ---: |",
+    `| Tokens | ${report.summary.tokenCount} |`,
+    `| Source records read | ${formatNullable(report.summary.sourceRecordsRead)} |`,
+    `| Records mapped | ${formatNullable(report.summary.recordsMapped)} |`,
+    `| Records skipped | ${formatNullable(report.summary.recordsSkipped)} |`,
+    `| Unsupported records | ${formatNullable(report.summary.unsupportedRecordCount)} |`,
+    `| Warnings | ${report.summary.warningCount} |`,
+    `| Errors | ${report.summary.errorCount} |`,
+    "",
+    "## Category Coverage",
+    "",
+    markdownCountTable(report.categories, "Category"),
+    "",
+    "## Token Type Coverage",
+    "",
+    markdownCountTable(report.tokenTypes, "Type"),
+    "",
+    "## CSS Output",
+    "",
+    "| Metric | Value |",
+    "| --- | ---: |",
+    `| Tokens with CSS output | ${report.css.tokensWithCssOutput} |`,
+    `| CSS output coverage | ${report.css.coveragePercent}% |`,
+    `| Direct CSS variables | ${report.css.directCssVariables} |`,
+    `| Typography generated variables | ${report.css.typographyGeneratedVariables} |`,
+    `| Duplicate CSS variables | ${report.css.duplicateCssVariables.length} |`,
+    `| Tokens without CSS output | ${report.css.tokensWithoutCssOutput.length} |`,
+    "",
+    "## Mode Coverage",
+    "",
+    "| Group | Total | Complete | Missing |",
+    "| --- | ---: | ---: | ---: |",
+    `| Semantic colours | ${report.modes.semanticColors.total} | ${report.modes.semanticColors.complete} | ${report.modes.semanticColors.missing.length} |`,
+    `| Shadows | ${report.modes.shadows.total} | ${report.modes.shadows.complete} | ${report.modes.shadows.missing.length} |`,
+    "",
+    "## Source Files",
+    "",
+    "| File | Mapped records | Generated tokens | Token types |",
+    "| --- | ---: | ---: | --- |",
+    ...report.source.files.map(
+      (file) =>
+        `| ${mdCell(file.file)} | ${file.mappedRecords} | ${file.generatedTokens} | ${mdCell(formatList(file.tokenTypes))} |`
+    ),
+    "",
+    "## Findings",
+    "",
+    ...markdownFindings(report.findings),
+    ""
+  ].join("\n");
+}
+
 function tokensToPublicMap(tokens: readonly CanonicalToken[]): Record<string, unknown> {
   const root: Record<string, unknown> = {};
 
@@ -347,8 +522,273 @@ function isModeAwareShadowToken(token: CanonicalToken): token is CanonicalToken 
   return token.type === "shadow" && "light" in token.value && "dark" in token.value;
 }
 
+function hasCssVariable(token: CanonicalToken): token is CanonicalToken & { cssVariable: string } {
+  return typeof token.cssVariable === "string";
+}
+
+function countBy<TValue>(
+  values: readonly TValue[],
+  key: (value: TValue) => string
+): Record<string, number> {
+  const counts = new Map<string, number>();
+
+  for (const value of values) {
+    const name = key(value);
+    counts.set(name, (counts.get(name) ?? 0) + 1);
+  }
+
+  return Object.fromEntries(
+    [...counts.entries()].sort(([left], [right]) => left.localeCompare(right))
+  );
+}
+
+function duplicateValues(values: readonly string[]): string[] {
+  const counts = countBy(values, (value) => value);
+  return Object.entries(counts)
+    .filter(([, count]) => count > 1)
+    .map(([value]) => value)
+    .sort();
+}
+
+function percentage(part: number, total: number): number {
+  if (total === 0) {
+    return 100;
+  }
+
+  return Number.parseFloat(((part / total) * 100).toFixed(2));
+}
+
+function isValidTokenName(value: string): boolean {
+  return /^[a-z0-9]+(?:-[a-z0-9]+)*(?:\.[a-z0-9]+(?:-[a-z0-9]+)*)*$/u.test(value);
+}
+
+function isValidCssVariableName(value: string): boolean {
+  return /^--ds-[a-z0-9]+(?:-[a-z0-9]+)*$/u.test(value);
+}
+
+function modeCoverageReport(document: CanonicalTokenDocument, tokens: readonly CanonicalToken[]) {
+  const semanticColors = tokens.filter(isSemanticColorToken);
+  const shadows = tokens.filter((token) => token.type === "shadow");
+
+  return {
+    semanticColors: modeCoverageForTokens(document, semanticColors),
+    shadows: modeCoverageForTokens(document, shadows)
+  };
+}
+
+function modeCoverageForTokens(
+  document: CanonicalTokenDocument,
+  tokens: readonly CanonicalToken[]
+) {
+  const missing = tokens
+    .map((token) => ({
+      tokenName: token.name,
+      missingModes: missingModes(document, token)
+    }))
+    .filter((entry) => entry.missingModes.length > 0)
+    .sort((left, right) => left.tokenName.localeCompare(right.tokenName));
+
+  return {
+    total: tokens.length,
+    complete: tokens.length - missing.length,
+    missing
+  };
+}
+
+function missingModes(document: CanonicalTokenDocument, token: CanonicalToken): readonly string[] {
+  if (token.type !== "color" && token.type !== "shadow") {
+    return [];
+  }
+
+  const value = token.value;
+  if (!isRecord(value)) {
+    return [];
+  }
+
+  return document.modes.filter((mode) => !(mode in value));
+}
+
+function sourceFileCoverage(
+  tokens: readonly CanonicalToken[],
+  buildReport: CanonicalBuildReport | undefined
+) {
+  const files = new Map<
+    string,
+    { generatedTokens: number; mappedRecords: number; tokenTypes: Set<string> }
+  >();
+
+  for (const path of buildReport?.renamedPaths ?? []) {
+    const existing = files.get(path.file) ?? {
+      generatedTokens: 0,
+      mappedRecords: 0,
+      tokenTypes: new Set<string>()
+    };
+    existing.mappedRecords += 1;
+    files.set(path.file, existing);
+  }
+
+  for (const token of tokens) {
+    const sourceFile = token.source?.file ?? "(unknown)";
+    const existing = files.get(sourceFile) ?? {
+      generatedTokens: 0,
+      mappedRecords: 0,
+      tokenTypes: new Set<string>()
+    };
+    existing.generatedTokens += 1;
+    existing.tokenTypes.add(token.type);
+    files.set(sourceFile, existing);
+  }
+
+  return [...files.entries()]
+    .sort(([left], [right]) => left.localeCompare(right))
+    .map(([file, coverage]) => ({
+      file,
+      mappedRecords: coverage.mappedRecords,
+      generatedTokens: coverage.generatedTokens,
+      tokenTypes: [...coverage.tokenTypes].sort()
+    }));
+}
+
+function qualityFindings({
+  invalidTokenNames,
+  duplicateTokenNames,
+  invalidCssVariables,
+  duplicateCssVariables,
+  tokensWithoutCssOutput,
+  missingModeTokens,
+  buildReport
+}: {
+  readonly invalidTokenNames: readonly CanonicalToken[];
+  readonly duplicateTokenNames: readonly string[];
+  readonly invalidCssVariables: ReadonlyArray<CanonicalToken & { cssVariable: string }>;
+  readonly duplicateCssVariables: readonly string[];
+  readonly tokensWithoutCssOutput: readonly CanonicalToken[];
+  readonly missingModeTokens: ReadonlyArray<{
+    readonly tokenName: string;
+    readonly missingModes: readonly string[];
+  }>;
+  readonly buildReport: CanonicalBuildReport | undefined;
+}): readonly TokenQualityFinding[] {
+  const findings: TokenQualityFinding[] = [
+    ...invalidTokenNames.map((token) => ({
+      severity: "error" as const,
+      code: "naming.invalid-token-name",
+      message: "Token name does not follow canonical kebab-case segment rules.",
+      tokenName: token.name
+    })),
+    ...duplicateTokenNames.map((tokenName) => ({
+      severity: "error" as const,
+      code: "naming.duplicate-token-name",
+      message: "Token name appears more than once.",
+      tokenName
+    })),
+    ...invalidCssVariables.map((token) => ({
+      severity: "error" as const,
+      code: "css.invalid-variable-name",
+      message: "CSS variable does not follow --ds-* kebab-case rules.",
+      tokenName: token.name
+    })),
+    ...duplicateCssVariables.map((cssVariable) => ({
+      severity: "error" as const,
+      code: "css.duplicate-variable",
+      message: `CSS variable appears more than once: ${cssVariable}`
+    })),
+    ...tokensWithoutCssOutput.map((token) => ({
+      severity: "error" as const,
+      code: "css.missing-output",
+      message: "Token has no direct CSS variable or generated typography CSS output.",
+      tokenName: token.name
+    })),
+    ...missingModeTokens.map((entry) => ({
+      severity: "error" as const,
+      code: "modes.missing-values",
+      message: `Mode-aware token is missing values for: ${entry.missingModes.join(", ")}`,
+      tokenName: entry.tokenName
+    })),
+    ...(buildReport?.recordsSkipped === undefined || buildReport.recordsSkipped === 0
+      ? []
+      : [
+          {
+            severity: "warning" as const,
+            code: "source.records-skipped",
+            message: `${buildReport.recordsSkipped} source records were skipped.`
+          }
+        ]),
+    ...(buildReport?.warnings.map((warning) => qualityWarning(warning)) ?? [])
+  ];
+
+  return findings.sort((left, right) =>
+    `${left.severity}:${left.code}:${left.tokenName ?? ""}:${left.file ?? ""}:${left.path ?? ""}`.localeCompare(
+      `${right.severity}:${right.code}:${right.tokenName ?? ""}:${right.file ?? ""}:${right.path ?? ""}`
+    )
+  );
+}
+
+function qualityWarning(warning: CanonicalBuildFinding): TokenQualityFinding {
+  return {
+    severity: "warning",
+    code: "source.warning",
+    message: warning.message,
+    file: warning.file,
+    path: warning.path
+  };
+}
+
+function qualityStatus(findings: readonly TokenQualityFinding[]): "pass" | "warn" | "fail" {
+  if (findings.some((finding) => finding.severity === "error")) {
+    return "fail";
+  }
+
+  if (findings.length > 0) {
+    return "warn";
+  }
+
+  return "pass";
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return value !== null && typeof value === "object" && !Array.isArray(value);
+}
+
+function markdownCountTable(counts: Record<string, number>, label: string): string {
+  return [
+    `| ${label} | Tokens |`,
+    "| --- | ---: |",
+    ...Object.entries(counts)
+      .sort(([left], [right]) => left.localeCompare(right))
+      .map(([name, count]) => `| ${mdCell(name)} | ${count} |`)
+  ].join("\n");
+}
+
+function markdownFindings(findings: readonly TokenQualityFinding[]): string[] {
+  if (findings.length === 0) {
+    return ["No findings."];
+  }
+
+  return findings.map(
+    (finding) =>
+      `- **${finding.severity}** ${finding.code}: ${finding.message}${finding.tokenName === undefined ? "" : ` (${finding.tokenName})`}`
+  );
+}
+
+function mdCell(value: string): string {
+  return value.replace(/\|/gu, "\\|");
+}
+
+function formatNullable(value: number | null): string {
+  return value === null ? "-" : String(value);
+}
+
+function formatList(values: readonly string[]): string {
+  return values.length === 0 ? "-" : values.join(", ");
+}
+
 function cssHeader(): string {
   return generatedHeader.map((line) => `/* ${line} */`).join("\n");
+}
+
+function markdownHeader(): string {
+  return generatedHeader.map((line) => `<!-- ${line} -->`).join("\n");
 }
 
 function jsHeader(): string {

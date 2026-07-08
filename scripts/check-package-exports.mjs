@@ -19,7 +19,9 @@ const requiredTokenExports = [
   "./canonical.json",
   "./metadata.json",
   "./token-docs.json",
-  "./build-report.json"
+  "./build-report.json",
+  "./token-quality.json",
+  "./token-quality.md"
 ];
 const requiredRuntimePeers = ["react", "react-dom", "@mantine/core", "@mantine/hooks"];
 

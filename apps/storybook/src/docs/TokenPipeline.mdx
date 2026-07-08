@@ -26,6 +26,9 @@ contains `{metadata.categories.join(', ')}` categories.
 - `token-names.js`
 - `metadata.json`
 - `token-docs.json`
+- `build-report.json`
+- `token-quality.json`
+- `token-quality.md`
 
 Storybook token pages import `token-docs.json`; they do not scrape CSS and do
 not read source token files.
@@ -59,3 +62,9 @@ The import step writes `import-report.json`.
 The token build writes `build-report.json` with source record counts, skipped
 records, renamed canonical paths, missing semantic modes, generated files, and
 warnings.
+
+It also writes `token-quality.json` and `token-quality.md`. These reports
+summarise token counts, CSS variable coverage, semantic mode coverage, source
+file coverage, generated files, and findings. Run `pnpm tokens:quality` locally
+to regenerate the token package and fail if the quality report status is
+`fail`.

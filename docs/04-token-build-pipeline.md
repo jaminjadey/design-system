@@ -203,6 +203,8 @@ packages/tokens/dist/token-names.d.ts
 packages/tokens/dist/metadata.json
 packages/tokens/dist/token-docs.json
 packages/tokens/dist/build-report.json
+packages/tokens/dist/token-quality.json
+packages/tokens/dist/token-quality.md
 ```
 
 Do not manually edit generated files.
@@ -210,6 +212,10 @@ Do not manually edit generated files.
 `build-report.json` records source records read, tokens generated, mapped and
 skipped records, renamed canonical paths, missing semantic modes, generated
 files, and warnings.
+
+`token-quality.json` and `token-quality.md` turn that build data into a quality
+summary: token coverage by category and type, CSS output coverage, light/dark
+mode completeness, naming validity, source-file coverage, and findings.
 
 ## Stage 9: Package Build
 
@@ -242,6 +248,8 @@ At root:
     "tokens:scan": "pnpm --filter @demo-ds/token-pipeline scan:fixtures",
     "tokens:import": "pnpm --filter @demo-ds/token-pipeline import:raw",
     "tokens:build": "pnpm --filter @demo-ds/tokens build",
+    "tokens:quality": "pnpm tokens:build && pnpm tokens:quality:check",
+    "tokens:quality:check": "node scripts/check-token-quality.mjs",
     "build": "turbo run build",
     "test": "turbo run test",
     "lint": "turbo run lint",

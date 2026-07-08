@@ -2890,6 +2890,8 @@
     "token-docs.json",
     "token-names.d.ts",
     "token-names.js",
+    "token-quality.json",
+    "token-quality.md",
     "tokens.css",
     "tokens.dark.css",
     "tokens.light.css"

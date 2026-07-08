@@ -24,7 +24,9 @@
     "./canonical.json": "./dist/canonical.json",
     "./metadata.json": "./dist/metadata.json",
     "./token-docs.json": "./dist/token-docs.json",
-    "./build-report.json": "./dist/build-report.json"
+    "./build-report.json": "./dist/build-report.json",
+    "./token-quality.json": "./dist/token-quality.json",
+    "./token-quality.md": "./dist/token-quality.md"
   },
   "scripts": {
     "build": "pnpm --filter @demo-ds/token-pipeline build && node ../token-pipeline/dist/cli/buildCanonical.js ./fixtures/extracted ./dist ../../token-pipeline.config.json",

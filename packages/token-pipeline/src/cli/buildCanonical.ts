@@ -26,7 +26,10 @@ try {
     fixtureDirectory,
     config: config.canonical
   });
-  const outputReport = await generateTokenOutputs(document, { outputDirectory });
+  const outputReport = await generateTokenOutputs(document, {
+    outputDirectory,
+    buildReport: report
+  });
   const buildReport = withGeneratedFiles(report, [...outputReport.files, "build-report.json"]);
   await writeFile(
     join(outputDirectory, "build-report.json"),

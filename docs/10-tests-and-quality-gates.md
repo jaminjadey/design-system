@@ -23,6 +23,7 @@ pnpm typecheck
 pnpm test
 pnpm build
 pnpm tokens:scan
+pnpm tokens:quality:check
 git diff --exit-code
 ```
 
@@ -73,6 +74,7 @@ Test categories:
 - Generated CSS contains light and dark selectors.
 - Generated TypeScript exports expected token names.
 - Generated build report explains source records, skipped records, and generated files.
+- Generated token quality reports explain token counts, CSS coverage, mode coverage, and findings.
 - No forbidden markers appear in generated outputs.
 - Running generation twice produces the same output.
 

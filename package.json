@@ -14,6 +14,8 @@
     "format": "prettier . --write",
     "private:check": "node scripts/check-private-paths.mjs",
     "tokens:build": "pnpm --filter @demo-ds/tokens build",
+    "tokens:quality": "pnpm tokens:build && pnpm tokens:quality:check",
+    "tokens:quality:check": "node scripts/check-token-quality.mjs",
     "tokens:import": "pnpm --filter @demo-ds/token-pipeline import:raw",
     "tokens:import:raw": "pnpm --filter @demo-ds/token-pipeline import:raw",
     "tokens:scan": "pnpm --filter @demo-ds/token-pipeline scan:fixtures",
