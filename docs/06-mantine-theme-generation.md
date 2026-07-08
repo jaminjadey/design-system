@@ -4,7 +4,11 @@
 
 The Mantine theme package is an adapter that bridges canonical design tokens into Mantine's theming system. It should keep Mantine-specific choices outside the canonical token model and outside app-facing component APIs.
 
-Mantine's theme object is where the adapter stores colours, fonts, spacing, radius, and related design tokens. App code should use `DemoThemeProvider`, not `MantineProvider` directly.
+Mantine's theme object is where the adapter stores colours, fonts, spacing,
+radius, and related design tokens. App code should use `DemoThemeProvider`, not
+`MantineProvider` directly. The package owns Mantine as an implementation
+dependency; React remains a peer dependency because the consuming app owns the
+React runtime.
 
 ## Package location
 

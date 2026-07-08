@@ -22,17 +22,15 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@demo-ds/mantine-theme": "workspace:*"
+    "@demo-ds/mantine-theme": "workspace:*",
+    "@mantine/core": "^9.4.1",
+    "@mantine/hooks": "^9.4.1"
   },
   "peerDependencies": {
-    "@mantine/core": "^9.4.1",
-    "@mantine/hooks": "^9.4.1",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
   },
   "devDependencies": {
-    "@mantine/core": "^9.4.1",
-    "@mantine/hooks": "^9.4.1",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "@types/react": "^19.2.17",

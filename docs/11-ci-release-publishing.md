@@ -138,6 +138,7 @@ Before publishing packages:
 - Verify generated outputs.
 - Verify package exports.
 - Verify package tarball contents.
+- Verify release dependency policy.
 - Verify no forbidden markers.
 - Verify package tarballs do not contain fixture zip unless intended.
 - Verify Storybook still builds.
@@ -146,6 +147,10 @@ Command:
 
 ```sh
 pnpm pack:check
+```
+
+```sh
+pnpm release:check
 ```
 
 ## Package contents
@@ -165,6 +170,10 @@ For `@demo-ds/tokens`, include generated output, not raw source fixtures, if pub
 The repo enforces package contents with `pnpm pack:check`. It runs
 `npm pack --dry-run --json` for the package-style workspaces and fails if source
 files, tests, fixtures, private paths, or Storybook output would be included.
+
+The repo enforces release manifest policy with `pnpm release:check`. It keeps
+the package-style workspaces aligned on versions and workspace ranges, verifies
+their public package metadata, and guards the runtime dependency boundary.
 
 ## Versioning guidelines
 
@@ -223,4 +232,8 @@ For this demo, `@demo-ds/mantine-theme` and `@demo-ds/components` own the Mantin
 }
 ```
 
-If these packages are published later, decide deliberately whether React stays a peer dependency. Mantine should remain hidden from app-level imports unless the design-system API explicitly changes.
+React and React DOM are peer dependencies because an app should own the React
+runtime. Mantine is a normal package dependency because it is an implementation
+detail of the design-system adapter and components. Apps should not list
+`@mantine/core` or `@mantine/hooks` directly unless the design-system API
+explicitly changes.

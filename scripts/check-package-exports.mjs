@@ -23,7 +23,8 @@ const requiredTokenExports = [
   "./token-quality.json",
   "./token-quality.md"
 ];
-const requiredRuntimePeers = ["react", "react-dom", "@mantine/core", "@mantine/hooks"];
+const requiredReactPeers = ["react", "react-dom"];
+const requiredMantineDependencies = ["@mantine/core", "@mantine/hooks"];
 
 const failures = [];
 
@@ -113,9 +114,21 @@ async function checkPackageReadiness(packageDirectory, packageJson) {
   }
 
   if (packageJson.name === "@demo-ds/mantine-theme" || packageJson.name === "@demo-ds/components") {
-    for (const dependencyName of requiredRuntimePeers) {
+    for (const dependencyName of requiredReactPeers) {
       if (packageJson.peerDependencies?.[dependencyName] === undefined) {
         failures.push(`${packageJson.name}: missing peer dependency ${dependencyName}`);
+      }
+    }
+
+    for (const dependencyName of requiredMantineDependencies) {
+      if (packageJson.dependencies?.[dependencyName] === undefined) {
+        failures.push(`${packageJson.name}: missing implementation dependency ${dependencyName}`);
+      }
+
+      if (packageJson.peerDependencies?.[dependencyName] !== undefined) {
+        failures.push(
+          `${packageJson.name}: ${dependencyName} must be an implementation dependency, not a peer dependency`
+        );
       }
     }
   }

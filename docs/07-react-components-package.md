@@ -43,6 +43,8 @@ Use the component package as an API firewall:
 - Public props do not extend Mantine prop types.
 - Mantine imports stay inside implementation files.
 - Stories and examples should demonstrate design-system components, not direct Mantine usage.
+- React is a peer dependency; Mantine is an implementation dependency owned by
+  the design-system packages.
 
 ## Initial Component Set
 

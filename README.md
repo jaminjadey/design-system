@@ -80,6 +80,7 @@ pnpm test
 pnpm build
 pnpm package:check
 pnpm pack:check
+pnpm release:check
 pnpm architecture:check
 pnpm format:check
 ```
@@ -248,6 +249,7 @@ GitHub Actions verifies the repo from a fresh checkout:
 - deploy Storybook to GitHub Pages after the Pages workflow succeeds
 - verify package exports
 - verify package tarball contents
+- verify release dependency policy
 - verify dependency direction and public API boundaries
 - scan the repo for forbidden markers and secret-like patterns
 - check formatting

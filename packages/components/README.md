@@ -17,7 +17,8 @@ is an internal rendering layer and should not be imported directly by app code.
 For example, `Card` consumes semantic surface, border, radius, and shadow tokens
 instead of hardcoded visual values.
 
-## Peer Dependencies
+## Runtime Dependencies
 
-React, React DOM, Mantine core, and Mantine hooks are peer dependencies so the
-theme provider and components share one runtime context.
+React and React DOM are peer dependencies so the app owns the React runtime.
+Mantine core and hooks are package dependencies owned by the design-system
+packages, so app code does not depend on Mantine directly.

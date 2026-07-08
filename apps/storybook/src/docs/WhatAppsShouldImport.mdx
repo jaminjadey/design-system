@@ -23,5 +23,8 @@ Mantine is a rendering dependency behind the design-system API. Keeping it
 behind the package boundary makes the component contract portable if the
 implementation changes later.
 
-CI enforces this with `pnpm architecture:check`, which validates dependency
-direction, public package subpaths, app imports, and public declaration files.
+Apps own React and React DOM. The design-system packages own Mantine.
+
+CI enforces this with `pnpm architecture:check` and `pnpm release:check`, which
+validate dependency direction, public package subpaths, app imports, public
+declaration files, and package manifest policy.

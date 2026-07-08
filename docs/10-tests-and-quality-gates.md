@@ -25,6 +25,7 @@ pnpm build
 pnpm tokens:scan
 pnpm tokens:quality:check
 pnpm pack:check
+pnpm release:check
 pnpm architecture:check
 git diff --exit-code
 ```
@@ -172,6 +173,7 @@ Use:
 - Prettier.
 - Package export checks.
 - Package tarball content checks.
+- Release readiness checks.
 - Dependency boundary checks.
 
 The package tarball check is:
@@ -183,6 +185,17 @@ pnpm pack:check
 It dry-runs package packing for `@demo-ds/tokens`,
 `@demo-ds/mantine-theme`, and `@demo-ds/components`, then verifies the tarballs
 contain only intended public artifacts.
+
+The release readiness check is:
+
+```sh
+pnpm release:check
+```
+
+It verifies release package manifests, workspace dependency ranges, package
+version alignment, package READMEs, and the runtime dependency policy: React is
+a peer dependency, while Mantine remains an implementation dependency hidden
+behind the design-system packages.
 
 The dependency boundary check is:
 
