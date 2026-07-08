@@ -137,9 +137,16 @@ Before publishing packages:
 - Run all tests.
 - Verify generated outputs.
 - Verify package exports.
+- Verify package tarball contents.
 - Verify no forbidden markers.
 - Verify package tarballs do not contain fixture zip unless intended.
 - Verify Storybook still builds.
+
+Command:
+
+```sh
+pnpm pack:check
+```
 
 ## Package contents
 
@@ -154,6 +161,10 @@ Example:
 ```
 
 For `@demo-ds/tokens`, include generated output, not raw source fixtures, if publishing externally.
+
+The repo enforces package contents with `pnpm pack:check`. It runs
+`npm pack --dry-run --json` for the package-style workspaces and fails if source
+files, tests, fixtures, private paths, or Storybook output would be included.
 
 ## Versioning guidelines
 

@@ -24,6 +24,7 @@ pnpm test
 pnpm build
 pnpm tokens:scan
 pnpm tokens:quality:check
+pnpm pack:check
 pnpm architecture:check
 git diff --exit-code
 ```
@@ -170,7 +171,18 @@ Use:
 - Stylelint.
 - Prettier.
 - Package export checks.
+- Package tarball content checks.
 - Dependency boundary checks.
+
+The package tarball check is:
+
+```sh
+pnpm pack:check
+```
+
+It dry-runs package packing for `@demo-ds/tokens`,
+`@demo-ds/mantine-theme`, and `@demo-ds/components`, then verifies the tarballs
+contain only intended public artifacts.
 
 The dependency boundary check is:
 

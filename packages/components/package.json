@@ -16,8 +16,8 @@
     }
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "test": "pnpm run build && node --test tests/*.test.mjs",
+    "build": "node ../../scripts/clean-dist.mjs dist && tsc -p tsconfig.build.json",
+    "test": "node ../../scripts/ensure-built.mjs dist/index.js && node --test tests/*.test.mjs",
     "lint": "eslint src tests --max-warnings=0",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
