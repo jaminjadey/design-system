@@ -47,6 +47,8 @@ Recommended naming:
 --ds-space-md
 --ds-radius-md
 --ds-shadow-card
+--ds-component-button-primary-high-background
+--ds-component-button-height-md
 --ds-font-size-heading-h1
 --ds-line-height-heading-h1
 --ds-font-weight-heading-h1
@@ -57,6 +59,7 @@ Example CSS:
 ```css
 :root {
   --ds-color-primitive-primary-10: #cffafe;
+  --ds-component-button-height-md: 36px;
   --ds-space-md: 8px;
   --ds-radius-md: 8px;
 }
@@ -64,12 +67,14 @@ Example CSS:
 [data-mantine-color-scheme="light"] {
   --ds-color-text-default: #083344;
   --ds-color-background-body: #f8fafc;
+  --ds-component-button-primary-high-background: #155e75;
   --ds-shadow-card: 0px 2px 8px 0px rgb(15 23 42 / 0.12);
 }
 
 [data-mantine-color-scheme="dark"] {
   --ds-color-text-default: #fdfdfd;
   --ds-color-background-body: #0f172a;
+  --ds-component-button-primary-high-background: #0e7490;
   --ds-shadow-card: 0px 2px 8px 0px rgb(15 23 42 / 0.12);
 }
 ```
@@ -100,6 +105,7 @@ export const tokens = {
 export type TokenName =
   | "color.semantic.text.default"
   | "color.semantic.background.body"
+  | "component.button.primary.high.background"
   | "space.md"
   | "radius.md"
   | "shadow.card";
@@ -121,9 +127,9 @@ Generate metadata that Storybook and CI can read:
 {
   "name": "demo-design-system-tokens",
   "source": "demo-design-token-fixtures",
-  "tokenCount": 479,
+  "tokenCount": 347,
   "modes": ["light", "dark"],
-  "categories": ["color", "radius", "shadow", "space", "typography"]
+  "categories": ["color", "component", "radius", "shadow", "space", "typography"]
 }
 ```
 
@@ -189,7 +195,7 @@ The reports should cover:
 
 - Token counts by category and type.
 - CSS output coverage.
-- Light/dark mode coverage for semantic colours and shadows.
+- Light/dark mode coverage for semantic colours, component colours, and shadows.
 - Naming and CSS-variable validity.
 - Source file coverage for mapped records and generated tokens.
 - Warnings or errors from source mapping.

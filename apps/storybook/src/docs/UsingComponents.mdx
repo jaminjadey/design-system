@@ -25,3 +25,7 @@ export function App() {
 
 Mantine stays behind the design-system package boundary. Application code should
 not import Mantine components directly.
+
+The wrappers consume generated `--ds-component-*` variables for component
+variants and states. Apps consume the wrapper API; they should not recreate the
+Button, Badge, Alert, Card, or TextInput token mapping themselves.

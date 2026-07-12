@@ -6,9 +6,9 @@
   },
   "status": "pass",
   "summary": {
-    "tokenCount": 223,
-    "sourceRecordsRead": 479,
-    "recordsMapped": 479,
+    "tokenCount": 347,
+    "sourceRecordsRead": 713,
+    "recordsMapped": 713,
     "recordsSkipped": 0,
     "unsupportedRecordCount": 0,
     "warningCount": 0,
@@ -16,6 +16,7 @@
   },
   "categories": {
     "color": 153,
+    "component": 124,
     "radius": 15,
     "shadow": 1,
     "space": 21,
@@ -23,16 +24,17 @@
   },
   "tokenTypes": {
     "color": 153,
+    "component": 124,
     "dimension": 21,
     "radius": 15,
     "shadow": 1,
     "typography": 33
   },
   "css": {
-    "tokensWithCssOutput": 223,
-    "tokenCount": 223,
+    "tokensWithCssOutput": 347,
+    "tokenCount": 347,
     "coveragePercent": 100,
-    "directCssVariables": 190,
+    "directCssVariables": 314,
     "typographyGeneratedVariables": 99,
     "duplicateCssVariables": [],
     "invalidCssVariables": [],
@@ -48,6 +50,11 @@
       "complete": 67,
       "missing": []
     },
+    "componentColors": {
+      "total": 110,
+      "complete": 110,
+      "missing": []
+    },
     "shadows": {
       "total": 1,
       "complete": 1,
@@ -59,7 +66,7 @@
     "duplicateTokenNames": []
   },
   "source": {
-    "renamedPathCount": 479,
+    "renamedPathCount": 713,
     "generatedFiles": [
       "build-report.json",
       "canonical.json",
@@ -76,6 +83,28 @@
       "tokens.light.css"
     ],
     "files": [
+      {
+        "file": "components/Dark.tokens.json",
+        "mappedRecords": 110,
+        "generatedTokens": 110,
+        "tokenTypes": [
+          "component"
+        ]
+      },
+      {
+        "file": "components/Dimensions.tokens.json",
+        "mappedRecords": 14,
+        "generatedTokens": 14,
+        "tokenTypes": [
+          "component"
+        ]
+      },
+      {
+        "file": "components/Light.tokens.json",
+        "mappedRecords": 110,
+        "generatedTokens": 0,
+        "tokenTypes": []
+      },
       {
         "file": "corners/Mode 1.tokens.json",
         "mappedRecords": 15,

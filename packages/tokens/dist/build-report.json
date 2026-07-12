@@ -1,9 +1,1413 @@
 {
-  "sourceRecordsRead": 479,
-  "tokensGenerated": 223,
-  "recordsMapped": 479,
+  "sourceRecordsRead": 713,
+  "tokensGenerated": 347,
+  "recordsMapped": 713,
   "recordsSkipped": 0,
   "renamedPaths": [
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Alert banner.Danger.Background",
+      "canonicalPath": "component.alert-banner.danger.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Alert banner.Danger.Border",
+      "canonicalPath": "component.alert-banner.danger.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Alert banner.Danger.Text",
+      "canonicalPath": "component.alert-banner.danger.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Alert banner.Info.Background",
+      "canonicalPath": "component.alert-banner.info.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Alert banner.Info.Border",
+      "canonicalPath": "component.alert-banner.info.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Alert banner.Info.Text",
+      "canonicalPath": "component.alert-banner.info.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Alert banner.Success.Background",
+      "canonicalPath": "component.alert-banner.success.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Alert banner.Success.Border",
+      "canonicalPath": "component.alert-banner.success.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Alert banner.Success.Text",
+      "canonicalPath": "component.alert-banner.success.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Alert banner.Warning.Background",
+      "canonicalPath": "component.alert-banner.warning.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Alert banner.Warning.Border",
+      "canonicalPath": "component.alert-banner.warning.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Alert banner.Warning.Text",
+      "canonicalPath": "component.alert-banner.warning.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Danger.High.Background",
+      "canonicalPath": "component.button.danger.high.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Danger.High.Border",
+      "canonicalPath": "component.button.danger.high.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Danger.High.Text",
+      "canonicalPath": "component.button.danger.high.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Danger.Low.Background",
+      "canonicalPath": "component.button.danger.low.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Danger.Low.Border",
+      "canonicalPath": "component.button.danger.low.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Danger.Low.Text",
+      "canonicalPath": "component.button.danger.low.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Danger.Medium.Background",
+      "canonicalPath": "component.button.danger.medium.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Danger.Medium.Border",
+      "canonicalPath": "component.button.danger.medium.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Danger.Medium.Text",
+      "canonicalPath": "component.button.danger.medium.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Disabled.Background",
+      "canonicalPath": "component.button.disabled.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Disabled.Border",
+      "canonicalPath": "component.button.disabled.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Disabled.Text",
+      "canonicalPath": "component.button.disabled.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Neutral.High.Background",
+      "canonicalPath": "component.button.neutral.high.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Neutral.High.Border",
+      "canonicalPath": "component.button.neutral.high.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Neutral.High.Text",
+      "canonicalPath": "component.button.neutral.high.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Neutral.Low.Background",
+      "canonicalPath": "component.button.neutral.low.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Neutral.Low.Border",
+      "canonicalPath": "component.button.neutral.low.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Neutral.Low.Text",
+      "canonicalPath": "component.button.neutral.low.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Neutral.Medium.Background",
+      "canonicalPath": "component.button.neutral.medium.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Neutral.Medium.Border",
+      "canonicalPath": "component.button.neutral.medium.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Neutral.Medium.Text",
+      "canonicalPath": "component.button.neutral.medium.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Primary.High.Background",
+      "canonicalPath": "component.button.primary.high.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Primary.High.Border",
+      "canonicalPath": "component.button.primary.high.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Primary.High.Text",
+      "canonicalPath": "component.button.primary.high.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Primary.Low.Background",
+      "canonicalPath": "component.button.primary.low.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Primary.Low.Border",
+      "canonicalPath": "component.button.primary.low.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Primary.Low.Text",
+      "canonicalPath": "component.button.primary.low.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Primary.Medium.Background",
+      "canonicalPath": "component.button.primary.medium.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Primary.Medium.Border",
+      "canonicalPath": "component.button.primary.medium.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Primary.Medium.Text",
+      "canonicalPath": "component.button.primary.medium.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Success.High.Background",
+      "canonicalPath": "component.button.success.high.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Success.High.Border",
+      "canonicalPath": "component.button.success.high.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Success.High.Text",
+      "canonicalPath": "component.button.success.high.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Success.Low.Background",
+      "canonicalPath": "component.button.success.low.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Success.Low.Border",
+      "canonicalPath": "component.button.success.low.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Success.Low.Text",
+      "canonicalPath": "component.button.success.low.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Success.Medium.Background",
+      "canonicalPath": "component.button.success.medium.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Success.Medium.Border",
+      "canonicalPath": "component.button.success.medium.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Button.Success.Medium.Text",
+      "canonicalPath": "component.button.success.medium.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Card.Surface.Background",
+      "canonicalPath": "component.card.surface.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Card.Surface.Border",
+      "canonicalPath": "component.card.surface.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Card.Surface.Text",
+      "canonicalPath": "component.card.surface.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Danger.Outline.Background",
+      "canonicalPath": "component.status-badge.danger.outline.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Danger.Outline.Border",
+      "canonicalPath": "component.status-badge.danger.outline.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Danger.Outline.Text",
+      "canonicalPath": "component.status-badge.danger.outline.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Danger.Soft.Background",
+      "canonicalPath": "component.status-badge.danger.soft.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Danger.Soft.Border",
+      "canonicalPath": "component.status-badge.danger.soft.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Danger.Soft.Text",
+      "canonicalPath": "component.status-badge.danger.soft.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Danger.Solid.Background",
+      "canonicalPath": "component.status-badge.danger.solid.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Danger.Solid.Border",
+      "canonicalPath": "component.status-badge.danger.solid.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Danger.Solid.Text",
+      "canonicalPath": "component.status-badge.danger.solid.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Info.Outline.Background",
+      "canonicalPath": "component.status-badge.info.outline.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Info.Outline.Border",
+      "canonicalPath": "component.status-badge.info.outline.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Info.Outline.Text",
+      "canonicalPath": "component.status-badge.info.outline.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Info.Soft.Background",
+      "canonicalPath": "component.status-badge.info.soft.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Info.Soft.Border",
+      "canonicalPath": "component.status-badge.info.soft.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Info.Soft.Text",
+      "canonicalPath": "component.status-badge.info.soft.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Info.Solid.Background",
+      "canonicalPath": "component.status-badge.info.solid.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Info.Solid.Border",
+      "canonicalPath": "component.status-badge.info.solid.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Info.Solid.Text",
+      "canonicalPath": "component.status-badge.info.solid.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Neutral.Outline.Background",
+      "canonicalPath": "component.status-badge.neutral.outline.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Neutral.Outline.Border",
+      "canonicalPath": "component.status-badge.neutral.outline.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Neutral.Outline.Text",
+      "canonicalPath": "component.status-badge.neutral.outline.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Neutral.Soft.Background",
+      "canonicalPath": "component.status-badge.neutral.soft.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Neutral.Soft.Border",
+      "canonicalPath": "component.status-badge.neutral.soft.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Neutral.Soft.Text",
+      "canonicalPath": "component.status-badge.neutral.soft.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Neutral.Solid.Background",
+      "canonicalPath": "component.status-badge.neutral.solid.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Neutral.Solid.Border",
+      "canonicalPath": "component.status-badge.neutral.solid.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Neutral.Solid.Text",
+      "canonicalPath": "component.status-badge.neutral.solid.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Success.Outline.Background",
+      "canonicalPath": "component.status-badge.success.outline.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Success.Outline.Border",
+      "canonicalPath": "component.status-badge.success.outline.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Success.Outline.Text",
+      "canonicalPath": "component.status-badge.success.outline.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Success.Soft.Background",
+      "canonicalPath": "component.status-badge.success.soft.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Success.Soft.Border",
+      "canonicalPath": "component.status-badge.success.soft.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Success.Soft.Text",
+      "canonicalPath": "component.status-badge.success.soft.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Success.Solid.Background",
+      "canonicalPath": "component.status-badge.success.solid.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Success.Solid.Border",
+      "canonicalPath": "component.status-badge.success.solid.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Success.Solid.Text",
+      "canonicalPath": "component.status-badge.success.solid.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Warning.Outline.Background",
+      "canonicalPath": "component.status-badge.warning.outline.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Warning.Outline.Border",
+      "canonicalPath": "component.status-badge.warning.outline.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Warning.Outline.Text",
+      "canonicalPath": "component.status-badge.warning.outline.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Warning.Soft.Background",
+      "canonicalPath": "component.status-badge.warning.soft.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Warning.Soft.Border",
+      "canonicalPath": "component.status-badge.warning.soft.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Warning.Soft.Text",
+      "canonicalPath": "component.status-badge.warning.soft.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Warning.Solid.Background",
+      "canonicalPath": "component.status-badge.warning.solid.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Warning.Solid.Border",
+      "canonicalPath": "component.status-badge.warning.solid.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Status badge.Warning.Solid.Text",
+      "canonicalPath": "component.status-badge.warning.solid.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Text input.Background.Default",
+      "canonicalPath": "component.text-input.background.default",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Text input.Background.Disabled",
+      "canonicalPath": "component.text-input.background.disabled",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Text input.Border.Default",
+      "canonicalPath": "component.text-input.border.default",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Text input.Border.Disabled",
+      "canonicalPath": "component.text-input.border.disabled",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Text input.Border.Error",
+      "canonicalPath": "component.text-input.border.error",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Text input.Border.Focus",
+      "canonicalPath": "component.text-input.border.focus",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Text input.Text.Default",
+      "canonicalPath": "component.text-input.text.default",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Text input.Text.Disabled",
+      "canonicalPath": "component.text-input.text.disabled",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Text input.Text.Error",
+      "canonicalPath": "component.text-input.text.error",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Text input.Text.Helper",
+      "canonicalPath": "component.text-input.text.helper",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Text input.Text.Placeholder",
+      "canonicalPath": "component.text-input.text.placeholder",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Alert banner.Padding x",
+      "canonicalPath": "component.alert-banner.padding.x",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Alert banner.Padding y",
+      "canonicalPath": "component.alert-banner.padding.y",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Button.Gap",
+      "canonicalPath": "component.button.gap",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Button.Height.Lg",
+      "canonicalPath": "component.button.height.lg",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Button.Height.Md",
+      "canonicalPath": "component.button.height.md",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Button.Height.Sm",
+      "canonicalPath": "component.button.height.sm",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Button.Padding x.Lg",
+      "canonicalPath": "component.button.padding.x.lg",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Button.Padding x.Md",
+      "canonicalPath": "component.button.padding.x.md",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Button.Padding x.Sm",
+      "canonicalPath": "component.button.padding.x.sm",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Card.Padding",
+      "canonicalPath": "component.card.padding",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Status badge.Height",
+      "canonicalPath": "component.status-badge.height",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Status badge.Padding x",
+      "canonicalPath": "component.status-badge.padding.x",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Text input.Height",
+      "canonicalPath": "component.text-input.height",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Text input.Padding x",
+      "canonicalPath": "component.text-input.padding.x",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Alert banner.Danger.Background",
+      "canonicalPath": "component.alert-banner.danger.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Alert banner.Danger.Border",
+      "canonicalPath": "component.alert-banner.danger.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Alert banner.Danger.Text",
+      "canonicalPath": "component.alert-banner.danger.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Alert banner.Info.Background",
+      "canonicalPath": "component.alert-banner.info.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Alert banner.Info.Border",
+      "canonicalPath": "component.alert-banner.info.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Alert banner.Info.Text",
+      "canonicalPath": "component.alert-banner.info.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Alert banner.Success.Background",
+      "canonicalPath": "component.alert-banner.success.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Alert banner.Success.Border",
+      "canonicalPath": "component.alert-banner.success.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Alert banner.Success.Text",
+      "canonicalPath": "component.alert-banner.success.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Alert banner.Warning.Background",
+      "canonicalPath": "component.alert-banner.warning.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Alert banner.Warning.Border",
+      "canonicalPath": "component.alert-banner.warning.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Alert banner.Warning.Text",
+      "canonicalPath": "component.alert-banner.warning.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Danger.High.Background",
+      "canonicalPath": "component.button.danger.high.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Danger.High.Border",
+      "canonicalPath": "component.button.danger.high.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Danger.High.Text",
+      "canonicalPath": "component.button.danger.high.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Danger.Low.Background",
+      "canonicalPath": "component.button.danger.low.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Danger.Low.Border",
+      "canonicalPath": "component.button.danger.low.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Danger.Low.Text",
+      "canonicalPath": "component.button.danger.low.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Danger.Medium.Background",
+      "canonicalPath": "component.button.danger.medium.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Danger.Medium.Border",
+      "canonicalPath": "component.button.danger.medium.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Danger.Medium.Text",
+      "canonicalPath": "component.button.danger.medium.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Disabled.Background",
+      "canonicalPath": "component.button.disabled.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Disabled.Border",
+      "canonicalPath": "component.button.disabled.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Disabled.Text",
+      "canonicalPath": "component.button.disabled.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Neutral.High.Background",
+      "canonicalPath": "component.button.neutral.high.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Neutral.High.Border",
+      "canonicalPath": "component.button.neutral.high.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Neutral.High.Text",
+      "canonicalPath": "component.button.neutral.high.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Neutral.Low.Background",
+      "canonicalPath": "component.button.neutral.low.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Neutral.Low.Border",
+      "canonicalPath": "component.button.neutral.low.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Neutral.Low.Text",
+      "canonicalPath": "component.button.neutral.low.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Neutral.Medium.Background",
+      "canonicalPath": "component.button.neutral.medium.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Neutral.Medium.Border",
+      "canonicalPath": "component.button.neutral.medium.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Neutral.Medium.Text",
+      "canonicalPath": "component.button.neutral.medium.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Primary.High.Background",
+      "canonicalPath": "component.button.primary.high.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Primary.High.Border",
+      "canonicalPath": "component.button.primary.high.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Primary.High.Text",
+      "canonicalPath": "component.button.primary.high.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Primary.Low.Background",
+      "canonicalPath": "component.button.primary.low.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Primary.Low.Border",
+      "canonicalPath": "component.button.primary.low.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Primary.Low.Text",
+      "canonicalPath": "component.button.primary.low.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Primary.Medium.Background",
+      "canonicalPath": "component.button.primary.medium.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Primary.Medium.Border",
+      "canonicalPath": "component.button.primary.medium.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Primary.Medium.Text",
+      "canonicalPath": "component.button.primary.medium.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Success.High.Background",
+      "canonicalPath": "component.button.success.high.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Success.High.Border",
+      "canonicalPath": "component.button.success.high.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Success.High.Text",
+      "canonicalPath": "component.button.success.high.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Success.Low.Background",
+      "canonicalPath": "component.button.success.low.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Success.Low.Border",
+      "canonicalPath": "component.button.success.low.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Success.Low.Text",
+      "canonicalPath": "component.button.success.low.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Success.Medium.Background",
+      "canonicalPath": "component.button.success.medium.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Success.Medium.Border",
+      "canonicalPath": "component.button.success.medium.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Button.Success.Medium.Text",
+      "canonicalPath": "component.button.success.medium.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Card.Surface.Background",
+      "canonicalPath": "component.card.surface.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Card.Surface.Border",
+      "canonicalPath": "component.card.surface.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Card.Surface.Text",
+      "canonicalPath": "component.card.surface.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Danger.Outline.Background",
+      "canonicalPath": "component.status-badge.danger.outline.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Danger.Outline.Border",
+      "canonicalPath": "component.status-badge.danger.outline.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Danger.Outline.Text",
+      "canonicalPath": "component.status-badge.danger.outline.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Danger.Soft.Background",
+      "canonicalPath": "component.status-badge.danger.soft.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Danger.Soft.Border",
+      "canonicalPath": "component.status-badge.danger.soft.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Danger.Soft.Text",
+      "canonicalPath": "component.status-badge.danger.soft.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Danger.Solid.Background",
+      "canonicalPath": "component.status-badge.danger.solid.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Danger.Solid.Border",
+      "canonicalPath": "component.status-badge.danger.solid.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Danger.Solid.Text",
+      "canonicalPath": "component.status-badge.danger.solid.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Info.Outline.Background",
+      "canonicalPath": "component.status-badge.info.outline.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Info.Outline.Border",
+      "canonicalPath": "component.status-badge.info.outline.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Info.Outline.Text",
+      "canonicalPath": "component.status-badge.info.outline.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Info.Soft.Background",
+      "canonicalPath": "component.status-badge.info.soft.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Info.Soft.Border",
+      "canonicalPath": "component.status-badge.info.soft.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Info.Soft.Text",
+      "canonicalPath": "component.status-badge.info.soft.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Info.Solid.Background",
+      "canonicalPath": "component.status-badge.info.solid.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Info.Solid.Border",
+      "canonicalPath": "component.status-badge.info.solid.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Info.Solid.Text",
+      "canonicalPath": "component.status-badge.info.solid.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Neutral.Outline.Background",
+      "canonicalPath": "component.status-badge.neutral.outline.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Neutral.Outline.Border",
+      "canonicalPath": "component.status-badge.neutral.outline.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Neutral.Outline.Text",
+      "canonicalPath": "component.status-badge.neutral.outline.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Neutral.Soft.Background",
+      "canonicalPath": "component.status-badge.neutral.soft.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Neutral.Soft.Border",
+      "canonicalPath": "component.status-badge.neutral.soft.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Neutral.Soft.Text",
+      "canonicalPath": "component.status-badge.neutral.soft.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Neutral.Solid.Background",
+      "canonicalPath": "component.status-badge.neutral.solid.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Neutral.Solid.Border",
+      "canonicalPath": "component.status-badge.neutral.solid.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Neutral.Solid.Text",
+      "canonicalPath": "component.status-badge.neutral.solid.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Success.Outline.Background",
+      "canonicalPath": "component.status-badge.success.outline.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Success.Outline.Border",
+      "canonicalPath": "component.status-badge.success.outline.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Success.Outline.Text",
+      "canonicalPath": "component.status-badge.success.outline.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Success.Soft.Background",
+      "canonicalPath": "component.status-badge.success.soft.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Success.Soft.Border",
+      "canonicalPath": "component.status-badge.success.soft.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Success.Soft.Text",
+      "canonicalPath": "component.status-badge.success.soft.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Success.Solid.Background",
+      "canonicalPath": "component.status-badge.success.solid.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Success.Solid.Border",
+      "canonicalPath": "component.status-badge.success.solid.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Success.Solid.Text",
+      "canonicalPath": "component.status-badge.success.solid.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Warning.Outline.Background",
+      "canonicalPath": "component.status-badge.warning.outline.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Warning.Outline.Border",
+      "canonicalPath": "component.status-badge.warning.outline.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Warning.Outline.Text",
+      "canonicalPath": "component.status-badge.warning.outline.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Warning.Soft.Background",
+      "canonicalPath": "component.status-badge.warning.soft.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Warning.Soft.Border",
+      "canonicalPath": "component.status-badge.warning.soft.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Warning.Soft.Text",
+      "canonicalPath": "component.status-badge.warning.soft.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Warning.Solid.Background",
+      "canonicalPath": "component.status-badge.warning.solid.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Warning.Solid.Border",
+      "canonicalPath": "component.status-badge.warning.solid.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Status badge.Warning.Solid.Text",
+      "canonicalPath": "component.status-badge.warning.solid.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Text input.Background.Default",
+      "canonicalPath": "component.text-input.background.default",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Text input.Background.Disabled",
+      "canonicalPath": "component.text-input.background.disabled",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Text input.Border.Default",
+      "canonicalPath": "component.text-input.border.default",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Text input.Border.Disabled",
+      "canonicalPath": "component.text-input.border.disabled",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Text input.Border.Error",
+      "canonicalPath": "component.text-input.border.error",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Text input.Border.Focus",
+      "canonicalPath": "component.text-input.border.focus",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Text input.Text.Default",
+      "canonicalPath": "component.text-input.text.default",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Text input.Text.Disabled",
+      "canonicalPath": "component.text-input.text.disabled",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Text input.Text.Error",
+      "canonicalPath": "component.text-input.text.error",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Text input.Text.Helper",
+      "canonicalPath": "component.text-input.text.helper",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Text input.Text.Placeholder",
+      "canonicalPath": "component.text-input.text.placeholder",
+      "category": "component-color"
+    },
     {
       "file": "corners/Mode 1.tokens.json",
       "sourcePath": "Corder-radius.Corner-10XL",
@@ -2881,6 +4285,7 @@
   ],
   "unsupportedRecords": [],
   "semanticTokensMissingModes": [],
+  "componentTokensMissingModes": [],
   "generatedFiles": [
     "build-report.json",
     "canonical.json",

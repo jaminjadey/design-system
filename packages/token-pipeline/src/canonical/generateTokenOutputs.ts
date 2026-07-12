@@ -3,6 +3,7 @@ import { join } from "node:path";
 
 import type {
   CanonicalColorToken,
+  CanonicalComponentToken,
   CanonicalShadowValue,
   CanonicalToken,
   CanonicalTokenDocument
@@ -119,6 +120,9 @@ function rootDeclarations(tokens: readonly CanonicalToken[]): string[] {
       .filter(isDimensionToken)
       .map((token) => cssDeclaration(token, formatDimensionValue(token))),
     ...tokens
+      .filter(isComponentDimensionToken)
+      .map((token) => cssDeclaration(token, `${token.value}${token.unit}`)),
+    ...tokens
       .filter(isStaticShadowToken)
       .map((token) => cssDeclaration(token, formatShadowValue(token.value))),
     ...tokens.flatMap((token) => typographyDeclarations(token))
@@ -126,7 +130,11 @@ function rootDeclarations(tokens: readonly CanonicalToken[]): string[] {
 }
 
 function modeDeclarations(tokens: readonly CanonicalToken[], mode: "light" | "dark"): string[] {
-  return [...semanticColorDeclarations(tokens, mode), ...shadowDeclarations(tokens, mode)].sort();
+  return [
+    ...semanticColorDeclarations(tokens, mode),
+    ...componentColorDeclarations(tokens, mode),
+    ...shadowDeclarations(tokens, mode)
+  ].sort();
 }
 
 function semanticColorDeclarations(
@@ -139,6 +147,16 @@ function semanticColorDeclarations(
       const value = token.value;
       return cssDeclaration(token, typeof value === "string" ? value : value[mode]);
     })
+    .sort();
+}
+
+function componentColorDeclarations(
+  tokens: readonly CanonicalToken[],
+  mode: "light" | "dark"
+): string[] {
+  return tokens
+    .filter(isComponentColorToken)
+    .map((token) => cssDeclaration(token, token.value[mode]))
     .sort();
 }
 
@@ -257,6 +275,7 @@ function generateTokenDocs(document: CanonicalTokenDocument, tokens: readonly Ca
           .map((token) => ({
             name: token.name,
             type: token.type,
+            valueType: token.type === "component" ? token.valueType : undefined,
             cssVariable: token.cssVariable,
             value: token.value,
             unit: "unit" in token ? token.unit : undefined
@@ -291,7 +310,11 @@ function generateTokenQualityReport(
     invalidCssVariables,
     duplicateCssVariables,
     tokensWithoutCssOutput,
-    missingModeTokens: [...modeCoverage.semanticColors.missing, ...modeCoverage.shadows.missing],
+    missingModeTokens: [
+      ...modeCoverage.semanticColors.missing,
+      ...modeCoverage.componentColors.missing,
+      ...modeCoverage.shadows.missing
+    ],
     buildReport
   });
   const directCssVariables = cssVariableTokens.length;
@@ -332,6 +355,7 @@ function generateTokenQualityReport(
     modes: {
       expected: document.modes,
       semanticColors: modeCoverage.semanticColors,
+      componentColors: modeCoverage.componentColors,
       shadows: modeCoverage.shadows
     },
     naming: {
@@ -392,6 +416,7 @@ function generateTokenQualityMarkdown(
     "| Group | Total | Complete | Missing |",
     "| --- | ---: | ---: | ---: |",
     `| Semantic colours | ${report.modes.semanticColors.total} | ${report.modes.semanticColors.complete} | ${report.modes.semanticColors.missing.length} |`,
+    `| Component colours | ${report.modes.componentColors.total} | ${report.modes.componentColors.complete} | ${report.modes.componentColors.missing.length} |`,
     `| Shadows | ${report.modes.shadows.total} | ${report.modes.shadows.complete} | ${report.modes.shadows.missing.length} |`,
     "",
     "## Source Files",
@@ -424,6 +449,7 @@ function tokensToPublicMap(tokens: readonly CanonicalToken[]): Record<string, un
       name: token.name,
       path: token.path,
       type: token.type,
+      valueType: token.type === "component" ? token.valueType : undefined,
       value: token.value,
       cssVariable: token.cssVariable,
       unit: "unit" in token ? token.unit : undefined
@@ -506,6 +532,25 @@ function isSemanticColorToken(token: CanonicalToken): token is CanonicalColorTok
   return token.type === "color" && token.path[0] === "color" && token.path[1] === "semantic";
 }
 
+function isComponentColorToken(token: CanonicalToken): token is CanonicalComponentToken & {
+  value: { light: string; dark: string };
+} {
+  return (
+    token.type === "component" &&
+    token.valueType === "color" &&
+    isRecord(token.value) &&
+    typeof token.value.light === "string" &&
+    typeof token.value.dark === "string"
+  );
+}
+
+function isComponentDimensionToken(token: CanonicalToken): token is CanonicalComponentToken & {
+  value: number;
+  unit: "px";
+} {
+  return token.type === "component" && token.valueType === "dimension";
+}
+
 function isDimensionToken(token: CanonicalToken): boolean {
   return token.type === "dimension" || token.type === "radius";
 }
@@ -568,10 +613,12 @@ function isValidCssVariableName(value: string): boolean {
 
 function modeCoverageReport(document: CanonicalTokenDocument, tokens: readonly CanonicalToken[]) {
   const semanticColors = tokens.filter(isSemanticColorToken);
+  const componentColors = tokens.filter(isComponentColorToken);
   const shadows = tokens.filter((token) => token.type === "shadow");
 
   return {
     semanticColors: modeCoverageForTokens(document, semanticColors),
+    componentColors: modeCoverageForTokens(document, componentColors),
     shadows: modeCoverageForTokens(document, shadows)
   };
 }
@@ -596,7 +643,7 @@ function modeCoverageForTokens(
 }
 
 function missingModes(document: CanonicalTokenDocument, token: CanonicalToken): readonly string[] {
-  if (token.type !== "color" && token.type !== "shadow") {
+  if (token.type !== "color" && token.type !== "component" && token.type !== "shadow") {
     return [];
   }
 

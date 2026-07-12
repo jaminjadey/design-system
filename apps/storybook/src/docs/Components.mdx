@@ -21,6 +21,10 @@ Apps consume `@demo-ds/components`, not Mantine components or Mantine prop
 types. That keeps the public API tied to design-system decisions instead of the
 underlying rendering library.
 
+Component-specific values such as Button tone/emphasis colours, StatusBadge
+states, AlertBanner tones, Card surface values, and TextInput states come from
+generated `component.*` tokens exposed as `--ds-component-*` variables.
+
 ## Initial Components
 
 - `Button`: token-backed tone and emphasis mapping.

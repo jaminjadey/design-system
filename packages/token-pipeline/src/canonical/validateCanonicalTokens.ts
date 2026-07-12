@@ -105,10 +105,42 @@ function validateToken(token: CanonicalToken): void {
     if (typeof token.value !== "number" || token.value < 0) {
       throw new Error(`Dimension token ${token.name} must contain a positive or zero number`);
     }
-    if (token.unit !== "px") {
+    const unit = (token as { readonly unit?: unknown }).unit;
+    if (unit !== "px") {
       throw new Error(`Dimension token ${token.name} must use px unit`);
     }
     return;
+  }
+
+  if (token.type === "component") {
+    if (token.path[0] !== "component") {
+      throw new Error(`Component token ${token.name} must live under component.*`);
+    }
+
+    if (token.valueType === "color") {
+      if (!isObject(token.value) || Object.keys(token.value).sort().join(",") !== "dark,light") {
+        throw new Error(
+          `Mode-aware component token ${token.name} must contain light and dark values`
+        );
+      }
+      validateHex(token.value.light, token.name);
+      validateHex(token.value.dark, token.name);
+      return;
+    }
+
+    if (token.valueType === "dimension") {
+      if (typeof token.value !== "number" || token.value < 0) {
+        throw new Error(
+          `Component dimension token ${token.name} must contain a positive or zero number`
+        );
+      }
+      if (token.unit !== "px") {
+        throw new Error(`Component dimension token ${token.name} must use px unit`);
+      }
+      return;
+    }
+
+    throw new Error(`Component token ${token.name} has unsupported valueType`);
   }
 
   if (token.type === "typography") {

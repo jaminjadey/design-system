@@ -24,6 +24,8 @@ export {
 } from "./canonical/validateCanonicalTokens.js";
 export type {
   CanonicalColorToken,
+  CanonicalComponentToken,
+  CanonicalComponentValueType,
   CanonicalDimensionToken,
   CanonicalShadowToken,
   CanonicalShadowValue,

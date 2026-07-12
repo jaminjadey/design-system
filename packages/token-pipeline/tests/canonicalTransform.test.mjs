@@ -67,6 +67,106 @@ test("maps configured shadow parts to canonical shadow tokens", () => {
   assert.equal(mapping?.mode, "light");
 });
 
+test("maps component colour source paths to component token paths", () => {
+  const mapping = sourcePathToCanonicalPath({
+    file: "components/Light.tokens.json",
+    sourcePath: ["Button", "Primary", "High", "Background"],
+    type: "color",
+    value: "#155e75"
+  });
+
+  assert.equal(mapping?.category, "component-color");
+  assert.deepEqual(mapping?.canonicalPath, [
+    "component",
+    "button",
+    "primary",
+    "high",
+    "background"
+  ]);
+  assert.equal(mapping?.mode, "light");
+});
+
+test("maps component dimensions to px component tokens", () => {
+  const document = buildCanonicalTokensFromRecords([
+    numberRecord("components/Dimensions.tokens.json", ["Button", "Padding x", "Md"], 16)
+  ]);
+  const token = collectCanonicalTokens(document).find(
+    (candidate) => candidate.name === "component.button.padding.x.md"
+  );
+
+  assert.equal(token?.type, "component");
+  assert.equal(token?.valueType, "dimension");
+  assert.equal(token?.value, 16);
+  assert.equal(token?.unit, "px");
+  assert.equal(token?.cssVariable, "--ds-component-button-padding-x-md");
+});
+
+test("merges light and dark component colour values", () => {
+  const document = buildCanonicalTokensFromRecords([
+    colorRecord(
+      "components/Light.tokens.json",
+      ["Button", "Primary", "High", "Background"],
+      "#155e75"
+    ),
+    colorRecord(
+      "components/Dark.tokens.json",
+      ["Button", "Primary", "High", "Background"],
+      "#0e7490"
+    )
+  ]);
+  const token = collectCanonicalTokens(document).find(
+    (candidate) => candidate.name === "component.button.primary.high.background"
+  );
+
+  assert.equal(token?.type, "component");
+  assert.equal(token?.valueType, "color");
+  assert.deepEqual(token?.value, {
+    light: "#155E75",
+    dark: "#0E7490"
+  });
+  assert.equal(token?.cssVariable, "--ds-component-button-primary-high-background");
+});
+
+test("can map configured component categories from semantic mode files", () => {
+  const config = {
+    ...defaultCanonicalMappingConfig,
+    files: {
+      ...defaultCanonicalMappingConfig.files,
+      componentColors: [
+        {
+          file: "tokens/Light.tokens.json",
+          sourceMode: "Light",
+          mode: "light"
+        },
+        {
+          file: "tokens/Dark.tokens.json",
+          sourceMode: "Dark",
+          mode: "dark"
+        }
+      ]
+    },
+    components: {
+      ...defaultCanonicalMappingConfig.components,
+      categoryPrefixes: {
+        ...defaultCanonicalMappingConfig.components.categoryPrefixes,
+        "button-colours": ["button"]
+      }
+    }
+  };
+  const mapping = sourcePathToCanonicalPath(
+    {
+      file: "tokens/Light.tokens.json",
+      sourcePath: ["Button colours", "Button secondary border"],
+      type: "color",
+      value: "#155e75"
+    },
+    config
+  );
+
+  assert.equal(mapping?.category, "component-color");
+  assert.deepEqual(mapping?.canonicalPath, ["component", "button", "secondary", "border"]);
+});
+
 test("defaults shadow config when older pipeline configs omit it", () => {
   const configWithoutShadows = JSON.parse(JSON.stringify(defaultCanonicalMappingConfig));
   delete configWithoutShadows.shadows;

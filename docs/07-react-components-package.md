@@ -45,6 +45,8 @@ Use the component package as an API firewall:
 - Stories and examples should demonstrate design-system components, not direct Mantine usage.
 - React is a peer dependency; Mantine is an implementation dependency owned by
   the design-system packages.
+- Component-specific visual decisions should use generated `component.*` tokens
+  and `--ds-component-*` CSS variables when source tokens exist.
 
 ## Initial Component Set
 
@@ -168,7 +170,8 @@ the public API.
 
 ## Styling Rules
 
-- Use semantic CSS variables for colour decisions.
+- Use semantic CSS variables for broad app surfaces and component CSS variables
+  for component-specific API variants.
 - Avoid hardcoded hex values.
 - Avoid reaching into generated token internals.
 - Use `var(--ds-...)` for design-system variables.
@@ -182,6 +185,16 @@ Example CSS:
   color: var(--ds-color-text-default);
   border: 1px solid var(--ds-color-border-default);
   border-radius: var(--ds-radius-md);
+}
+```
+
+Example component-specific styling:
+
+```css
+.button {
+  background: var(--ds-component-button-primary-high-background);
+  color: var(--ds-component-button-primary-high-text);
+  min-height: var(--ds-component-button-height-md);
 }
 ```
 

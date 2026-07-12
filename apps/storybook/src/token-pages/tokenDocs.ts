@@ -2,7 +2,8 @@ import tokenDocsJson from "@demo-ds/tokens/token-docs.json";
 
 export interface TokenDoc {
   readonly name: string;
-  readonly type: "color" | "dimension" | "radius" | "typography";
+  readonly type: "color" | "component" | "dimension" | "radius" | "shadow" | "typography";
+  readonly valueType?: "color" | "dimension";
   readonly cssVariable?: string;
   readonly value:
     | string
@@ -10,6 +11,12 @@ export interface TokenDoc {
     | {
         readonly light?: string;
         readonly dark?: string;
+        readonly x?: number;
+        readonly y?: number;
+        readonly blur?: number;
+        readonly spread?: number;
+        readonly color?: string;
+        readonly opacity?: number;
         readonly fontSize?: number;
         readonly lineHeight?: number;
         readonly fontWeight?: number;
@@ -43,7 +50,7 @@ export function tokenValueText(token: TokenDoc): string {
   }
 
   if ("light" in token.value || "dark" in token.value) {
-    return `light ${token.value.light ?? "-"} / dark ${token.value.dark ?? "-"}`;
+    return `light ${modeValueText(token.value.light)} / dark ${modeValueText(token.value.dark)}`;
   }
 
   return [
@@ -51,4 +58,16 @@ export function tokenValueText(token: TokenDoc): string {
     `${token.value.lineHeight ?? "-"}px`,
     `${token.value.fontWeight ?? "-"}`
   ].join(" / ");
+}
+
+function modeValueText(value: unknown): string {
+  if (typeof value === "string") {
+    return value;
+  }
+
+  if (typeof value === "object" && value !== null && "blur" in value) {
+    return "shadow";
+  }
+
+  return "-";
 }

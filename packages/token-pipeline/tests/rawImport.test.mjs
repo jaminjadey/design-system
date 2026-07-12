@@ -91,6 +91,64 @@ test("imports raw token files written with a UTF-8 byte order mark", async () =>
   assert.equal(report.recordsEmitted, 1);
 });
 
+test("imports synthetic raw component tokens into component source files", () => {
+  const result = importRawTokenDocuments(
+    [
+      {
+        source: "components-light.raw.json",
+        target: "components/Light.tokens.json",
+        value: {
+          Button: {
+            Primary: {
+              High: {
+                Background: "#155e75"
+              }
+            }
+          }
+        }
+      },
+      {
+        source: "components-dimensions.raw.json",
+        target: "components/Dimensions.tokens.json",
+        value: {
+          Button: {
+            Height: {
+              Md: "36"
+            }
+          }
+        }
+      }
+    ],
+    {
+      files: [
+        {
+          source: "components-light.raw.json",
+          target: "components/Light.tokens.json"
+        },
+        {
+          source: "components-dimensions.raw.json",
+          target: "components/Dimensions.tokens.json"
+        }
+      ]
+    }
+  );
+
+  assert.deepEqual(result.records, [
+    {
+      file: "components/Dimensions.tokens.json",
+      sourcePath: ["Button", "Height", "Md"],
+      type: "number",
+      value: 36
+    },
+    {
+      file: "components/Light.tokens.json",
+      sourcePath: ["Button", "Primary", "High", "Background"],
+      type: "color",
+      value: "#155e75"
+    }
+  ]);
+});
+
 test("parses private import config files written with a UTF-8 byte order mark", () => {
   const config = parseRawTokenImportConfig(
     parseJsonText(

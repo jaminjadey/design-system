@@ -1,6 +1,6 @@
 export type TokenMode = "light" | "dark";
 
-export type TokenType = "color" | "dimension" | "radius" | "shadow" | "typography";
+export type TokenType = "color" | "component" | "dimension" | "radius" | "shadow" | "typography";
 
 export interface CanonicalTokenSource {
   readonly file: string;
@@ -50,8 +50,20 @@ export interface CanonicalShadowToken extends CanonicalTokenBase<ModeValue<Canon
   readonly type: "shadow";
 }
 
+export type CanonicalComponentValueType = "color" | "dimension";
+
+export interface CanonicalComponentToken extends CanonicalTokenBase<ModeValue<string> | number> {
+  readonly type: "component";
+  readonly valueType: CanonicalComponentValueType;
+  readonly unit?: "px";
+}
+
 export type CanonicalToken =
-  CanonicalColorToken | CanonicalDimensionToken | CanonicalShadowToken | CanonicalTypographyToken;
+  | CanonicalColorToken
+  | CanonicalComponentToken
+  | CanonicalDimensionToken
+  | CanonicalShadowToken
+  | CanonicalTypographyToken;
 
 export interface CanonicalTokenDocument {
   readonly $schema: string;
@@ -64,6 +76,7 @@ export interface CanonicalTokenDocument {
   };
   readonly modes: readonly TokenMode[];
   readonly tokens: {
+    readonly component: Record<string, unknown>;
     readonly color: {
       readonly primitive: Record<string, unknown>;
       readonly semantic: Record<string, unknown>;

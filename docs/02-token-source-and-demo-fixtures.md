@@ -9,6 +9,9 @@ packages/tokens/fixtures/extracted/
   primitives/Default.tokens.json
   tokens/Light.tokens.json
   tokens/Dark.tokens.json
+  components/Light.tokens.json
+  components/Dark.tokens.json
+  components/Dimensions.tokens.json
   spacing/Mode 1.tokens.json
   corners/Mode 1.tokens.json
   typography/Default.tokens.json
@@ -37,6 +40,7 @@ cannot be committed accidentally.
 | Primitive colours     | Palette values used to derive Mantine colour arrays and CSS variables. |
 | Light semantic tokens | Mode-specific semantic colours for light UI.                           |
 | Dark semantic tokens  | Mode-specific semantic colours for dark UI.                            |
+| Component tokens      | Synthetic component-level values for wrappers and variants.            |
 | Spacing               | Numeric scale mapped to dimension tokens.                              |
 | Corners               | Numeric radius scale mapped to radius tokens.                          |
 | Typography            | Font size, line height, and weight groups.                             |
@@ -93,8 +97,8 @@ packages/token-pipeline/tests/fixtures/raw-figma-export/
 
 It is a synthetic raw export with invented values. It exercises nested colour
 objects, slash aliases, brace aliases, light/dark modes, spacing, radius,
-typography, metadata stripping, unsupported-token reporting, and deterministic
-normalised output.
+typography, component token targets, metadata stripping, unsupported-token
+reporting, and deterministic normalised output.
 
 The importer is config-driven. A file rule maps one raw input file to one
 normalised token-source output:
@@ -126,3 +130,8 @@ Canonical source-to-token mapping rules live in `token-pipeline.config.json`.
 The token package build writes `build-report.json` so reviewers can see source
 record counts, skipped records, path renames, missing modes, generated files,
 and warnings.
+
+Component source files are mapped separately from broad semantic colour files.
+That lets a private work repo point configured component categories at either
+dedicated component export files or the same light/dark mode files used for
+semantic colours.

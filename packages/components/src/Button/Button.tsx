@@ -23,19 +23,6 @@ export interface ButtonProps {
   readonly "aria-label"?: string;
 }
 
-const toneColor: Record<ButtonTone, string> = {
-  primary: "primary",
-  neutral: "neutral",
-  danger: "danger",
-  success: "success"
-};
-
-const emphasisVariant: Record<ButtonEmphasis, "filled" | "light" | "subtle"> = {
-  high: "filled",
-  medium: "light",
-  low: "subtle"
-};
-
 export function Button({
   tone = "primary",
   emphasis = "high",
@@ -53,12 +40,21 @@ export function Button({
   onClick,
   "aria-label": ariaLabel
 }: ButtonProps) {
+  const background = disabled
+    ? componentVar("button-disabled-background")
+    : componentVar(`button-${tone}-${emphasis}-background`);
+  const borderColor = disabled
+    ? componentVar("button-disabled-border")
+    : componentVar(`button-${tone}-${emphasis}-border`);
+  const color = disabled
+    ? componentVar("button-disabled-text")
+    : componentVar(`button-${tone}-${emphasis}-text`);
+
   return (
     <MantineButton
       id={id}
       type={type}
-      color={toneColor[tone]}
-      variant={emphasisVariant[emphasis]}
+      variant="default"
       radius="md"
       size={size}
       loading={loading}
@@ -67,7 +63,15 @@ export function Button({
       leftSection={leftSection}
       rightSection={rightSection}
       className={className}
-      style={style}
+      style={{
+        background,
+        borderColor,
+        color,
+        gap: componentVar("button-gap"),
+        minHeight: componentVar(`button-height-${size}`),
+        paddingInline: componentVar(`button-padding-x-${size}`),
+        ...style
+      }}
       onClick={onClick}
       aria-label={ariaLabel}
       data-tone={tone}
@@ -76,4 +80,8 @@ export function Button({
       {children}
     </MantineButton>
   );
+}
+
+function componentVar(path: string): string {
+  return `var(--ds-component-${path})`;
 }

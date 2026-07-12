@@ -13,20 +13,6 @@ export interface StatusBadgeProps {
   readonly style?: CSSProperties;
 }
 
-const toneColor: Record<StatusBadgeTone, string> = {
-  neutral: "neutral",
-  success: "success",
-  warning: "warning",
-  danger: "danger",
-  info: "primary"
-};
-
-const emphasisVariant: Record<StatusBadgeEmphasis, "light" | "filled" | "outline"> = {
-  soft: "light",
-  solid: "filled",
-  outline: "outline"
-};
-
 export function StatusBadge({
   tone,
   emphasis = "soft",
@@ -39,14 +25,24 @@ export function StatusBadge({
     <Badge
       id={id}
       className={className}
-      style={style}
+      style={{
+        background: componentVar(`status-badge-${tone}-${emphasis}-background`),
+        borderColor: componentVar(`status-badge-${tone}-${emphasis}-border`),
+        color: componentVar(`status-badge-${tone}-${emphasis}-text`),
+        height: componentVar("status-badge-height"),
+        paddingInline: componentVar("status-badge-padding-x"),
+        ...style
+      }}
       role="status"
-      color={toneColor[tone]}
-      variant={emphasisVariant[emphasis]}
+      variant="outline"
       data-tone={tone}
       data-emphasis={emphasis}
     >
       {children}
     </Badge>
   );
+}
+
+function componentVar(path: string): string {
+  return `var(--ds-component-${path})`;
 }

@@ -19,6 +19,8 @@ export interface CanonicalMappingConfig {
   readonly files: {
     readonly primitiveColors: readonly string[];
     readonly semanticColors: readonly SemanticColorFileMapping[];
+    readonly componentColors: readonly SemanticColorFileMapping[];
+    readonly componentDimensions: string;
     readonly spacing: string;
     readonly radius: string;
     readonly typography: string;
@@ -27,6 +29,10 @@ export interface CanonicalMappingConfig {
     readonly ignoredPathSegments: readonly string[];
   };
   readonly semanticColors: {
+    readonly categoryPrefixes: Readonly<Record<string, readonly string[]>>;
+    readonly leafSuffixes: readonly string[];
+  };
+  readonly components: {
     readonly categoryPrefixes: Readonly<Record<string, readonly string[]>>;
     readonly leafSuffixes: readonly string[];
   };
@@ -83,6 +89,19 @@ export const defaultCanonicalMappingConfig: CanonicalMappingConfig = {
         mode: "dark"
       }
     ],
+    componentColors: [
+      {
+        file: "components/Light.tokens.json",
+        sourceMode: "Light",
+        mode: "light"
+      },
+      {
+        file: "components/Dark.tokens.json",
+        sourceMode: "Dark",
+        mode: "dark"
+      }
+    ],
+    componentDimensions: "components/Dimensions.tokens.json",
     spacing: "spacing/Mode 1.tokens.json",
     radius: "corners/Mode 1.tokens.json",
     typography: "typography/Default.tokens.json"
@@ -108,6 +127,16 @@ export const defaultCanonicalMappingConfig: CanonicalMappingConfig = {
       marks: ["mark"]
     },
     leafSuffixes: ["text", "background", "border", "colour", "color"]
+  },
+  components: {
+    categoryPrefixes: {
+      "alert-banner": ["alert-banner"],
+      button: ["button"],
+      card: ["card"],
+      "status-badge": ["status-badge"],
+      "text-input": ["text-input"]
+    },
+    leafSuffixes: ["colour", "color", "colours", "colors"]
   },
   spacing: {
     sizePathIndex: 0
@@ -176,6 +205,10 @@ function parseCanonicalMappingConfig(value: unknown): CanonicalMappingConfig {
   const files = requiredObject(value.files, "canonical.files");
   const primitiveColors = requiredObject(value.primitiveColors, "canonical.primitiveColors");
   const semanticColors = requiredObject(value.semanticColors, "canonical.semanticColors");
+  const components =
+    value.components === undefined
+      ? defaultCanonicalMappingConfig.components
+      : requiredObject(value.components, "canonical.components");
   const spacing = requiredObject(value.spacing, "canonical.spacing");
   const radius = requiredObject(value.radius, "canonical.radius");
   const typography = requiredObject(value.typography, "canonical.typography");
@@ -192,6 +225,14 @@ function parseCanonicalMappingConfig(value: unknown): CanonicalMappingConfig {
     files: {
       primitiveColors: parseStringArray(files.primitiveColors, "canonical.files.primitiveColors"),
       semanticColors: parseSemanticColorFiles(files.semanticColors),
+      componentColors:
+        files.componentColors === undefined
+          ? defaultCanonicalMappingConfig.files.componentColors
+          : parseSemanticColorFiles(files.componentColors),
+      componentDimensions:
+        files.componentDimensions === undefined
+          ? defaultCanonicalMappingConfig.files.componentDimensions
+          : requiredString(files.componentDimensions, "canonical.files.componentDimensions"),
       spacing: requiredString(files.spacing, "canonical.files.spacing"),
       radius: requiredString(files.radius, "canonical.files.radius"),
       typography: requiredString(files.typography, "canonical.files.typography")
@@ -211,6 +252,19 @@ function parseCanonicalMappingConfig(value: unknown): CanonicalMappingConfig {
         semanticColors.leafSuffixes,
         "canonical.semanticColors.leafSuffixes"
       )
+    },
+    components: {
+      categoryPrefixes:
+        value.components === undefined
+          ? defaultCanonicalMappingConfig.components.categoryPrefixes
+          : parseStringRecordArray(
+              components.categoryPrefixes,
+              "canonical.components.categoryPrefixes"
+            ),
+      leafSuffixes:
+        value.components === undefined
+          ? defaultCanonicalMappingConfig.components.leafSuffixes
+          : parseStringArray(components.leafSuffixes, "canonical.components.leafSuffixes")
     },
     spacing: {
       sizePathIndex: requiredNumber(spacing.sizePathIndex, "canonical.spacing.sizePathIndex")

@@ -69,6 +69,9 @@ Inputs:
 packages/tokens/fixtures/extracted/primitives/Default.tokens.json
 packages/tokens/fixtures/extracted/tokens/Light.tokens.json
 packages/tokens/fixtures/extracted/tokens/Dark.tokens.json
+packages/tokens/fixtures/extracted/components/Light.tokens.json
+packages/tokens/fixtures/extracted/components/Dark.tokens.json
+packages/tokens/fixtures/extracted/components/Dimensions.tokens.json
 packages/tokens/fixtures/extracted/spacing/Mode 1.tokens.json
 packages/tokens/fixtures/extracted/corners/Mode 1.tokens.json
 packages/tokens/fixtures/extracted/typography/Default.tokens.json
@@ -145,6 +148,7 @@ Configurable areas:
 - Primitive colour source files and ignored path segments.
 - Semantic colour source files, source mode names, and canonical light/dark modes.
 - Semantic category prefixes.
+- Component colour files, component dimension file, and component category prefixes.
 - Spacing source file and size path index.
 - Radius source file and size path index.
 - Typography property names and style naming conventions.
@@ -166,8 +170,10 @@ Responsibilities:
 
 - Convert source records into canonical token objects.
 - Merge light and dark semantic colour files.
+- Merge light and dark component colour files.
 - Convert colour objects to hex strings.
 - Convert spacing and radius numbers to dimension tokens with `px` unit.
+- Convert component dimensions to `component.*` px tokens.
 - Group typography attributes into coherent typography tokens.
 - Attach source provenance for debugging.
 
@@ -210,12 +216,13 @@ packages/tokens/dist/token-quality.md
 Do not manually edit generated files.
 
 `build-report.json` records source records read, tokens generated, mapped and
-skipped records, renamed canonical paths, missing semantic modes, generated
-files, and warnings.
+skipped records, renamed canonical paths, missing semantic/component modes,
+generated files, and warnings.
 
 `token-quality.json` and `token-quality.md` turn that build data into a quality
 summary: token coverage by category and type, CSS output coverage, light/dark
-mode completeness, naming validity, source-file coverage, and findings.
+mode completeness for semantic/component colours and shadows, naming validity,
+source-file coverage, and findings.
 
 ## Stage 9: Package Build
 

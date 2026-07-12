@@ -9,13 +9,6 @@ export interface AlertBannerProps {
   readonly children: ReactNode;
 }
 
-const toneColor: Record<AlertBannerTone, string> = {
-  info: "primary",
-  success: "success",
-  warning: "warning",
-  danger: "danger"
-};
-
 const toneIcon: Record<AlertBannerTone, string> = {
   info: "i",
   success: "ok",
@@ -27,25 +20,30 @@ export function AlertBanner({ tone = "info", title, children }: AlertBannerProps
   return (
     <Alert
       role={tone === "danger" ? "alert" : "status"}
-      color={toneColor[tone]}
       title={title}
       icon={<span aria-hidden="true">{toneIcon[tone]}</span>}
       data-tone={tone}
       styles={{
         root: {
-          background: "var(--ds-color-background-card)",
-          color: "var(--ds-color-text-default)",
-          borderColor: "var(--ds-color-border-light)"
+          background: componentVar(`alert-banner-${tone}-background`),
+          borderColor: componentVar(`alert-banner-${tone}-border`),
+          color: componentVar(`alert-banner-${tone}-text`),
+          paddingInline: componentVar("alert-banner-padding-x"),
+          paddingBlock: componentVar("alert-banner-padding-y")
         },
         title: {
-          color: "var(--ds-color-text-default)"
+          color: componentVar(`alert-banner-${tone}-text`)
         },
         message: {
-          color: "var(--ds-color-text-light)"
+          color: componentVar(`alert-banner-${tone}-text`)
         }
       }}
     >
       {children}
     </Alert>
   );
+}
+
+function componentVar(path: string): string {
+  return `var(--ds-component-${path})`;
 }

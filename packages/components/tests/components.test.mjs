@@ -27,6 +27,8 @@ test("Button renders children and maps tone/emphasis attributes", () => {
   assert.match(markup, /Delete/u);
   assert.match(markup, /data-tone="danger"/u);
   assert.match(markup, /data-emphasis="medium"/u);
+  assert.match(markup, /--ds-component-button-danger-medium-background/u);
+  assert.match(markup, /--ds-component-button-danger-medium-text/u);
 });
 
 test("Button passes through native button type", () => {
@@ -50,7 +52,7 @@ test("TextInput renders label and helper text", () => {
   assert.match(markup, /Demo/u);
 });
 
-test("TextInput error state uses a semantic alert text token", () => {
+test("TextInput error state uses component error tokens", () => {
   const markup = renderWithTheme(
     React.createElement(TextInput, {
       label: "Email",
@@ -60,7 +62,8 @@ test("TextInput error state uses a semantic alert text token", () => {
   );
 
   assert.match(markup, /Enter a valid email address/u);
-  assert.match(markup, /--ds-color-text-alert/u);
+  assert.match(markup, /--ds-component-text-input-border-error/u);
+  assert.match(markup, /--ds-component-text-input-text-error/u);
 });
 
 test("AlertBanner uses alert role for danger tone", () => {
@@ -70,6 +73,7 @@ test("AlertBanner uses alert role for danger tone", () => {
 
   assert.match(markup, /role="alert"/u);
   assert.match(markup, /Problem/u);
+  assert.match(markup, /--ds-component-alert-banner-danger-background/u);
   assert.match(markup, /The action failed/u);
 });
 
@@ -78,6 +82,7 @@ test("Card marks interactive cards as keyboard focusable buttons", () => {
 
   assert.match(markup, /role="button"/u);
   assert.match(markup, /tabindex="0"/u);
+  assert.match(markup, /--ds-component-card-surface-background/u);
   assert.match(markup, /--ds-shadow-card/u);
   assert.match(markup, /Open project/u);
 });
@@ -87,6 +92,7 @@ test("StatusBadge exposes status role and tone attribute", () => {
 
   assert.match(markup, /role="status"/u);
   assert.match(markup, /data-tone="success"/u);
+  assert.match(markup, /--ds-component-status-badge-success-soft-background/u);
   assert.match(markup, /Live/u);
 });
 

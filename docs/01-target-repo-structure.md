@@ -79,6 +79,7 @@ Responsibilities:
 - Expose generated canonical JSON.
 - Expose generated CSS variables.
 - Expose generated TypeScript token maps and types.
+- Include generated component-token variables for design-system wrappers.
 - Expose a build script that calls `@demo-ds/token-pipeline`.
 
 Suggested exports:
@@ -122,6 +123,7 @@ Responsibilities:
 - Export reusable design-system components.
 - Encode design-system variants, defaults, and accessibility patterns.
 - Use token variables for design-system values.
+- Use component-token variables for component-specific variants and states.
 - Keep implementation generic and reusable.
 - Do not expose Mantine components or Mantine prop types from package exports.
 

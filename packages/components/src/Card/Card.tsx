@@ -51,11 +51,13 @@ export function Card({
       onClick={onClick}
       onKeyDown={handleKeyDown}
       style={{
-        background: "var(--ds-color-background-card)",
-        color: "var(--ds-color-text-default)",
-        borderColor: "var(--ds-color-border-light)",
+        background: "var(--ds-component-card-surface-background)",
+        borderColor: "var(--ds-component-card-surface-border)",
+        borderRadius: "var(--ds-radius-md)",
         boxShadow: "var(--ds-shadow-card)",
+        color: "var(--ds-component-card-surface-text)",
         cursor: isInteractive ? "pointer" : undefined,
+        padding: "var(--ds-component-card-padding)",
         ...style
       }}
     >

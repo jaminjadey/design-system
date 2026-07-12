@@ -10,7 +10,14 @@ export type TokenMode = "light" | "dark";
 export interface SourceMapping {
   readonly canonicalPath: readonly string[];
   readonly category:
-    "primitive-color" | "semantic-color" | "space" | "radius" | "shadow-part" | "typography-part";
+    | "primitive-color"
+    | "semantic-color"
+    | "component-color"
+    | "component-dimension"
+    | "space"
+    | "radius"
+    | "shadow-part"
+    | "typography-part";
   readonly mode?: TokenMode;
   readonly shadowProperty?: "x" | "y" | "blur" | "spread" | "color" | "opacity";
   readonly typographyProperty?: "fontSize" | "lineHeight" | "fontWeight";
@@ -28,6 +35,27 @@ export function sourcePathToCanonicalPath(
     return {
       category: "primitive-color",
       canonicalPath: ["color", "primitive", ...normaliseSourcePath(record.sourcePath, config)]
+    };
+  }
+
+  const componentColorFile = config.files.componentColors.find(
+    (entry) => entry.file === record.file
+  );
+  if (componentColorFile !== undefined) {
+    const componentColorMapping = mapComponentColor(record, componentColorFile.mode, config);
+    if (componentColorMapping !== undefined) {
+      return componentColorMapping;
+    }
+  }
+
+  if (record.file === config.files.componentDimensions) {
+    if (record.type !== "number") {
+      return undefined;
+    }
+
+    return {
+      category: "component-dimension",
+      canonicalPath: ["component", ...mapComponentDimensionPath(record.sourcePath, config)]
     };
   }
 
@@ -87,6 +115,82 @@ export function sourcePathToCanonicalPath(
   }
 
   return undefined;
+}
+
+function mapComponentColor(
+  record: SourceTokenRecord,
+  mode: TokenMode,
+  config: CanonicalMappingConfig
+): SourceMapping | undefined {
+  if (record.type !== "color") {
+    return undefined;
+  }
+
+  const componentPath = mapConfiguredComponentPath(record.sourcePath, config);
+  if (componentPath === undefined) {
+    return undefined;
+  }
+
+  return {
+    category: "component-color",
+    canonicalPath: ["component", ...componentPath],
+    mode
+  };
+}
+
+function mapComponentDimensionPath(
+  sourcePath: readonly string[],
+  config: CanonicalMappingConfig
+): string[] {
+  return mapConfiguredComponentPath(sourcePath, config) ?? normaliseGenericSourcePath(sourcePath);
+}
+
+function mapConfiguredComponentPath(
+  sourcePath: readonly string[],
+  config: CanonicalMappingConfig
+): string[] | undefined {
+  const [category, ...leafPath] = sourcePath;
+  if (category === undefined) {
+    return undefined;
+  }
+
+  const prefix = config.components.categoryPrefixes[normaliseNameSegment(category)];
+  if (prefix === undefined) {
+    return undefined;
+  }
+
+  const leafParts = trimComponentLeafParts(normaliseGenericSourcePath(leafPath), prefix, config);
+  return [...prefix, ...(leafParts.length === 0 ? ["default"] : leafParts)];
+}
+
+function trimComponentLeafParts(
+  leafParts: readonly string[],
+  prefix: readonly string[],
+  config: CanonicalMappingConfig
+): string[] {
+  const prefixParts = prefix.flatMap((segment) => segment.split("-"));
+  let trimmed = removeLeadingPath(leafParts, prefixParts);
+
+  for (const suffix of config.components.leafSuffixes) {
+    const suffixSlug = normaliseNameSegment(suffix);
+    if (trimmed[trimmed.length - 1] === suffixSlug) {
+      trimmed = trimmed.slice(0, -1);
+    }
+  }
+
+  return trimmed;
+}
+
+function removeLeadingPath(path: readonly string[], prefix: readonly string[]): string[] {
+  if (
+    prefix.length === 0 ||
+    prefix.length > path.length ||
+    !prefix.every((segment, index) => path[index] === segment)
+  ) {
+    return [...path];
+  }
+
+  return path.slice(prefix.length);
 }
 
 function mapShadowPart(
@@ -153,6 +257,12 @@ function normaliseSourcePath(
   return sourcePath
     .flatMap((segment) => normaliseNameSegment(segment).split("-"))
     .filter((segment) => !ignoredSegments.has(segment));
+}
+
+function normaliseGenericSourcePath(sourcePath: readonly string[]): string[] {
+  return sourcePath
+    .flatMap((segment) => normaliseNameSegment(segment).split("-"))
+    .filter((segment) => segment.length > 0);
 }
 
 function mapSemanticPath(sourcePath: readonly string[], config: CanonicalMappingConfig): string[] {

@@ -9,6 +9,7 @@ import { parseSourceTokenFile, type SourceTokenRecord } from "../source/sourceRe
 import { normaliseColorValue } from "./color.js";
 import type {
   CanonicalColorToken,
+  CanonicalComponentToken,
   CanonicalDimensionToken,
   CanonicalShadowToken,
   CanonicalShadowValue,
@@ -54,12 +55,20 @@ export interface CanonicalBuildReport {
   readonly renamedPaths: readonly CanonicalPathMappingReport[];
   readonly unsupportedRecords: readonly CanonicalBuildFinding[];
   readonly semanticTokensMissingModes: readonly SemanticModeMissingReport[];
+  readonly componentTokensMissingModes: readonly SemanticModeMissingReport[];
   readonly generatedFiles: readonly string[];
   readonly warnings: readonly CanonicalBuildFinding[];
 }
 
 type SourceMappingCategory =
-  "primitive-color" | "semantic-color" | "space" | "radius" | "shadow-part" | "typography-part";
+  | "primitive-color"
+  | "semantic-color"
+  | "component-color"
+  | "component-dimension"
+  | "space"
+  | "radius"
+  | "shadow-part"
+  | "typography-part";
 
 export async function readSourceTokenRecords(
   fixtureDirectory: string,
@@ -113,6 +122,8 @@ export function buildCanonicalTokensFromRecordsWithReport(
   const sourceRecordLookup = new Map(records.map((record) => [sourceRecordKey(record), record]));
   const primitiveColors: CanonicalColorToken[] = [];
   const semanticColors = new Map<string, MutableSemanticColor>();
+  const componentColors = new Map<string, MutableComponentColor>();
+  const componentDimensions: CanonicalComponentToken[] = [];
   const dimensions: CanonicalDimensionToken[] = [];
   const shadowParts = new Map<string, MutableShadowValue>();
   const typographyParts = new Map<string, MutableTypographyValue>();
@@ -176,6 +187,29 @@ export function buildCanonicalTokensFromRecordsWithReport(
       continue;
     }
 
+    if (mapping.category === "component-color") {
+      assertSourceType(record, "color");
+      const name = tokenName(mapping.canonicalPath);
+      const existing =
+        componentColors.get(name) ??
+        ({
+          canonicalPath: mapping.canonicalPath,
+          value: {},
+          source: record
+        } satisfies MutableComponentColor);
+      existing.value[mapping.mode ?? "light"] = normaliseColorValue(
+        resolveSourceValue(record, sourceRecordLookup)
+      );
+      componentColors.set(name, existing);
+      continue;
+    }
+
+    if (mapping.category === "component-dimension") {
+      assertSourceType(record, "number");
+      componentDimensions.push(makeComponentDimensionToken(mapping.canonicalPath, record));
+      continue;
+    }
+
     if (mapping.category === "space" || mapping.category === "radius") {
       assertSourceType(record, "number");
       dimensions.push(makeDimensionToken(mapping.canonicalPath, mapping.category, record));
@@ -233,6 +267,27 @@ export function buildCanonicalTokensFromRecordsWithReport(
     return makeColorToken(entry.canonicalPath, { light, dark }, entry.source);
   });
 
+  const componentColorTokens = [...componentColors.values()].map((entry) => {
+    const missingModes = (["light", "dark"] as const).filter(
+      (mode) => entry.value[mode] === undefined
+    );
+    if (missingModes.length > 0) {
+      throw new Error(
+        `Component token ${tokenName(entry.canonicalPath)} is missing light or dark value`
+      );
+    }
+
+    const light = entry.value.light;
+    const dark = entry.value.dark;
+    if (light === undefined || dark === undefined) {
+      throw new Error(
+        `Component token ${tokenName(entry.canonicalPath)} is missing light or dark value`
+      );
+    }
+
+    return makeComponentColorToken(entry.canonicalPath, { light, dark }, entry.source);
+  });
+
   const typographyTokens = [...typographyParts.entries()].map(([name, value]) => {
     if (
       value.fontSize === undefined ||
@@ -266,6 +321,9 @@ export function buildCanonicalTokensFromRecordsWithReport(
     },
     modes: ["light", "dark"],
     tokens: {
+      component: nestTokens(sortTokens([...componentColorTokens, ...componentDimensions]), [
+        "component"
+      ]),
       color: {
         primitive: nestTokens(sortTokens(primitiveColors), ["color", "primitive"]),
         semantic: nestTokens(sortTokens(semanticColorTokens), ["color", "semantic"])
@@ -296,6 +354,7 @@ export function buildCanonicalTokensFromRecordsWithReport(
       ),
       unsupportedRecords,
       semanticTokensMissingModes: collectMissingSemanticModes(semanticColors),
+      componentTokensMissingModes: collectMissingComponentModes(componentColors),
       generatedFiles: [],
       warnings
     }
@@ -410,6 +469,38 @@ function makeDimensionToken(
   };
 }
 
+function makeComponentColorToken(
+  path: readonly string[],
+  value: { readonly light: string; readonly dark: string },
+  record: SourceTokenRecord
+): CanonicalComponentToken {
+  return {
+    name: tokenName(path),
+    path,
+    type: "component",
+    valueType: "color",
+    value,
+    cssVariable: cssVariableName(path),
+    source: sourceFromRecord(record)
+  };
+}
+
+function makeComponentDimensionToken(
+  path: readonly string[],
+  record: SourceTokenRecord
+): CanonicalComponentToken {
+  return {
+    name: tokenName(path),
+    path,
+    type: "component",
+    valueType: "dimension",
+    value: numberValue(record),
+    unit: "px",
+    cssVariable: cssVariableName(path),
+    source: sourceFromRecord(record)
+  };
+}
+
 function makeTypographyToken(
   path: readonly string[],
   value: CanonicalTypographyValue,
@@ -493,16 +584,30 @@ function expectedSourceFiles(config: CanonicalMappingConfig): string[] {
   return [
     ...config.files.primitiveColors,
     ...config.files.semanticColors.map((entry) => entry.file),
+    ...config.files.componentColors.map((entry) => entry.file),
+    config.files.componentDimensions,
     config.files.spacing,
     config.files.radius,
     config.files.typography
   ].sort();
 }
 
+function collectMissingComponentModes(
+  componentColors: ReadonlyMap<string, MutableComponentColor>
+): readonly SemanticModeMissingReport[] {
+  return collectMissingModeValues(componentColors);
+}
+
 function collectMissingSemanticModes(
   semanticColors: ReadonlyMap<string, MutableSemanticColor>
 ): readonly SemanticModeMissingReport[] {
-  return [...semanticColors.values()]
+  return collectMissingModeValues(semanticColors);
+}
+
+function collectMissingModeValues(
+  modeAwareTokens: ReadonlyMap<string, MutableModeAwareColor>
+): readonly SemanticModeMissingReport[] {
+  return [...modeAwareTokens.values()]
     .map((entry) => ({
       tokenName: tokenName(entry.canonicalPath),
       missingModes: (["light", "dark"] as const).filter((mode) => entry.value[mode] === undefined)
@@ -535,6 +640,14 @@ function nestTokens(
 }
 
 interface MutableSemanticColor {
+  readonly canonicalPath: readonly string[];
+  readonly value: Partial<Record<TokenMode, string>>;
+  readonly source: SourceTokenRecord;
+}
+
+type MutableComponentColor = MutableModeAwareColor;
+
+interface MutableModeAwareColor {
   readonly canonicalPath: readonly string[];
   readonly value: Partial<Record<TokenMode, string>>;
   readonly source: SourceTokenRecord;

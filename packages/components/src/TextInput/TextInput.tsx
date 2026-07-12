@@ -21,25 +21,45 @@ export interface TextInputProps {
   readonly onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 
-export function TextInput({ helperText, description, ...props }: TextInputProps) {
+export function TextInput({
+  helperText,
+  description,
+  disabled = false,
+  error,
+  ...props
+}: TextInputProps) {
+  const hasError = error !== undefined && error !== null && error !== false;
+
   return (
     <MantineTextInput
       radius="md"
+      disabled={disabled}
       description={description ?? helperText}
+      error={error}
       styles={{
         input: {
-          background: "var(--ds-color-background-card)",
-          color: "var(--ds-color-text-default)",
-          borderColor: "var(--ds-color-border-light)"
+          background: disabled
+            ? "var(--ds-component-text-input-background-disabled)"
+            : "var(--ds-component-text-input-background-default)",
+          borderColor: hasError
+            ? "var(--ds-component-text-input-border-error)"
+            : disabled
+              ? "var(--ds-component-text-input-border-disabled)"
+              : "var(--ds-component-text-input-border-default)",
+          color: disabled
+            ? "var(--ds-component-text-input-text-disabled)"
+            : "var(--ds-component-text-input-text-default)",
+          minHeight: "var(--ds-component-text-input-height)",
+          paddingInline: "var(--ds-component-text-input-padding-x)"
         },
         label: {
-          color: "var(--ds-color-text-default)"
+          color: "var(--ds-component-text-input-text-default)"
         },
         description: {
-          color: "var(--ds-color-text-light)"
+          color: "var(--ds-component-text-input-text-helper)"
         },
         error: {
-          color: "var(--ds-color-text-alert)"
+          color: "var(--ds-component-text-input-text-error)"
         }
       }}
       {...props}

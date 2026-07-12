@@ -10,9 +10,11 @@ Design systems become easier to maintain when tokens are treated as a build arti
 
 The important idea is separation of concerns:
 
-- Source token files model what a design tool exports.
+- Source token files model what a design tool exports, including primitive,
+  semantic, and component-level values.
 - `@demo-ds/token-pipeline` validates and converts that source shape.
-- `@demo-ds/tokens` exposes generated CSS, JSON, and TypeScript contracts.
+- `@demo-ds/tokens` exposes generated CSS, JSON, and TypeScript contracts,
+  including `component.*` tokens for wrapper variants and states.
 - `@demo-ds/mantine-theme` keeps Mantine setup behind `DemoThemeProvider`.
 - `@demo-ds/components` exposes the design-system component API; Mantine stays an internal rendering dependency.
 - Storybook and the example app consume the packages through public exports.
@@ -145,8 +147,9 @@ In this public repo, do not copy private importer output into
 can write to the token source directory that `@demo-ds/tokens` builds from.
 
 Canonical mapping rules live in `token-pipeline.config.json`. Configure that
-file when primitive groups, semantic groups, source mode names, spacing/radius
-paths, typography fields, or unsupported-token policy differ from the demo.
+file when primitive groups, semantic groups, component groups, source mode
+names, spacing/radius paths, typography fields, or unsupported-token policy
+differ from the demo.
 
 ## How To Use The Packages
 
@@ -176,6 +179,16 @@ Use token CSS variables in component CSS when a value belongs to the design syst
   background: var(--ds-color-background-card);
   border-radius: var(--ds-radius-md);
   padding: var(--ds-space-md);
+}
+```
+
+Use component variables inside design-system wrappers when the value represents
+a component decision from tokens:
+
+```css
+.button {
+  background: var(--ds-component-button-primary-high-background);
+  min-height: var(--ds-component-button-height-md);
 }
 ```
 

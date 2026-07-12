@@ -14,6 +14,19 @@
           "mode": "dark"
         }
       ],
+      "componentColors": [
+        {
+          "file": "components/Light.tokens.json",
+          "sourceMode": "Light",
+          "mode": "light"
+        },
+        {
+          "file": "components/Dark.tokens.json",
+          "sourceMode": "Dark",
+          "mode": "dark"
+        }
+      ],
+      "componentDimensions": "components/Dimensions.tokens.json",
       "spacing": "spacing/Mode 1.tokens.json",
       "radius": "corners/Mode 1.tokens.json",
       "typography": "typography/Default.tokens.json"
@@ -39,6 +52,16 @@
         "marks": ["mark"]
       },
       "leafSuffixes": ["text", "background", "border", "colour", "color"]
+    },
+    "components": {
+      "categoryPrefixes": {
+        "alert-banner": ["alert-banner"],
+        "button": ["button"],
+        "card": ["card"],
+        "status-badge": ["status-badge"],
+        "text-input": ["text-input"]
+      },
+      "leafSuffixes": ["colour", "color", "colours", "colors"]
     },
     "spacing": {
       "sizePathIndex": 0

@@ -41,6 +41,7 @@ Recommended structure:
   "modes": ["light", "dark"],
   "tokens": {
     "color": {},
+    "component": {},
     "space": {},
     "radius": {},
     "shadow": {},
@@ -56,14 +57,14 @@ generated files unless the value is controlled.
 
 Each token should have:
 
-| Field         | Meaning                                                                             |
-| ------------- | ----------------------------------------------------------------------------------- |
-| `path`        | Array path, for example `['color', 'semantic', 'text', 'default']`.                 |
-| `name`        | Dot path, for example `color.semantic.text.default`.                                |
-| `cssVariable` | CSS custom property name, for example `--ds-color-text-default`.                    |
-| `type`        | Canonical type, for example `color`, `dimension`, `radius`, `shadow`, `typography`. |
-| `value`       | Canonical value, or mode map for mode-aware tokens.                                 |
-| `source`      | Optional debug provenance pointing to the fixture file and source path.             |
+| Field         | Meaning                                                                                          |
+| ------------- | ------------------------------------------------------------------------------------------------ |
+| `path`        | Array path, for example `['color', 'semantic', 'text', 'default']`.                              |
+| `name`        | Dot path, for example `color.semantic.text.default`.                                             |
+| `cssVariable` | CSS custom property name, for example `--ds-color-text-default`.                                 |
+| `type`        | Canonical type, for example `color`, `component`, `dimension`, `radius`, `shadow`, `typography`. |
+| `value`       | Canonical value, or mode map for mode-aware tokens.                                              |
+| `source`      | Optional debug provenance pointing to the fixture file and source path.                          |
 
 ## Naming Rules
 
@@ -82,16 +83,17 @@ Rules:
 
 Examples:
 
-| Source path                       | Canonical path                    |
-| --------------------------------- | --------------------------------- |
-| `Base colours.Black`              | `color.primitive.base.black`      |
-| `Primary.10`                      | `color.primitive.primary.10`      |
-| `Font colours.Default text`       | `color.semantic.text.default`     |
-| `Background general colours.Body` | `color.semantic.background.body`  |
-| `Space-2XL`                       | `space.2xl`                       |
-| `Corder-radius.Corner-Med`        | `radius.md`                       |
-| `Drop shadows - cards.Position Y` | `shadow.card`                     |
-| `H1.FontSize`                     | `typography.heading.h1.font-size` |
+| Source path                       | Canonical path                             |
+| --------------------------------- | ------------------------------------------ |
+| `Base colours.Black`              | `color.primitive.base.black`               |
+| `Primary.10`                      | `color.primitive.primary.10`               |
+| `Font colours.Default text`       | `color.semantic.text.default`              |
+| `Background general colours.Body` | `color.semantic.background.body`           |
+| `Space-2XL`                       | `space.2xl`                                |
+| `Corder-radius.Corner-Med`        | `radius.md`                                |
+| `Drop shadows - cards.Position Y` | `shadow.card`                              |
+| `Button.Primary.High.Background`  | `component.button.primary.high.background` |
+| `H1.FontSize`                     | `typography.heading.h1.font-size`          |
 
 The source has a category spelling like `Corder-radius`. Do not preserve that
 typo in canonical output. Map it to `radius`.
@@ -169,6 +171,40 @@ Typography source values are grouped into coherent text styles:
 }
 ```
 
+## Component Tokens
+
+Component tokens live under `component.*`. They are generated from
+component-level source variables and are consumed by `@demo-ds/components`
+wrappers.
+
+Component colour tokens are mode-aware:
+
+```json
+{
+  "name": "component.button.primary.high.background",
+  "type": "component",
+  "valueType": "color",
+  "value": {
+    "light": "#155E75",
+    "dark": "#0E7490"
+  },
+  "cssVariable": "--ds-component-button-primary-high-background"
+}
+```
+
+Component dimension tokens are static px values:
+
+```json
+{
+  "name": "component.button.height.md",
+  "type": "component",
+  "valueType": "dimension",
+  "value": 36,
+  "unit": "px",
+  "cssVariable": "--ds-component-button-height-md"
+}
+```
+
 Shadow source values are grouped into coherent elevation tokens. Geometry is
 read from numeric parts such as `Position X`, `Position Y`, `Blur`, and
 `Spread`; colour and opacity are used when present, otherwise configured
@@ -210,6 +246,7 @@ Validate:
 - Positive or zero numeric scales.
 - Matching mode keys for mode-aware semantic tokens.
 - Complete shadow geometry for each mode.
+- Complete light/dark values for component colour tokens.
 - Unique canonical token names.
 - Unique CSS variable names.
 - No source-tool metadata keys.

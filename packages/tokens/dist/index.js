@@ -2247,6 +2247,2156 @@ export const tokens = {
       }
     }
   },
+  "component": {
+    "alert-banner": {
+      "danger": {
+        "background": {
+          "name": "component.alert-banner.danger.background",
+          "path": [
+            "component",
+            "alert-banner",
+            "danger",
+            "background"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#FEF2F2",
+            "dark": "#7F1D1D"
+          },
+          "cssVariable": "--ds-component-alert-banner-danger-background"
+        },
+        "border": {
+          "name": "component.alert-banner.danger.border",
+          "path": [
+            "component",
+            "alert-banner",
+            "danger",
+            "border"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#FECACA",
+            "dark": "#991B1B"
+          },
+          "cssVariable": "--ds-component-alert-banner-danger-border"
+        },
+        "text": {
+          "name": "component.alert-banner.danger.text",
+          "path": [
+            "component",
+            "alert-banner",
+            "danger",
+            "text"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#991B1B",
+            "dark": "#FECACA"
+          },
+          "cssVariable": "--ds-component-alert-banner-danger-text"
+        }
+      },
+      "info": {
+        "background": {
+          "name": "component.alert-banner.info.background",
+          "path": [
+            "component",
+            "alert-banner",
+            "info",
+            "background"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#ECFEFF",
+            "dark": "#164E63"
+          },
+          "cssVariable": "--ds-component-alert-banner-info-background"
+        },
+        "border": {
+          "name": "component.alert-banner.info.border",
+          "path": [
+            "component",
+            "alert-banner",
+            "info",
+            "border"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#A5F3FC",
+            "dark": "#0E7490"
+          },
+          "cssVariable": "--ds-component-alert-banner-info-border"
+        },
+        "text": {
+          "name": "component.alert-banner.info.text",
+          "path": [
+            "component",
+            "alert-banner",
+            "info",
+            "text"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#155E75",
+            "dark": "#CFFAFE"
+          },
+          "cssVariable": "--ds-component-alert-banner-info-text"
+        }
+      },
+      "padding": {
+        "x": {
+          "name": "component.alert-banner.padding.x",
+          "path": [
+            "component",
+            "alert-banner",
+            "padding",
+            "x"
+          ],
+          "type": "component",
+          "valueType": "dimension",
+          "value": 16,
+          "cssVariable": "--ds-component-alert-banner-padding-x",
+          "unit": "px"
+        },
+        "y": {
+          "name": "component.alert-banner.padding.y",
+          "path": [
+            "component",
+            "alert-banner",
+            "padding",
+            "y"
+          ],
+          "type": "component",
+          "valueType": "dimension",
+          "value": 12,
+          "cssVariable": "--ds-component-alert-banner-padding-y",
+          "unit": "px"
+        }
+      },
+      "success": {
+        "background": {
+          "name": "component.alert-banner.success.background",
+          "path": [
+            "component",
+            "alert-banner",
+            "success",
+            "background"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#F0FDF4",
+            "dark": "#14532D"
+          },
+          "cssVariable": "--ds-component-alert-banner-success-background"
+        },
+        "border": {
+          "name": "component.alert-banner.success.border",
+          "path": [
+            "component",
+            "alert-banner",
+            "success",
+            "border"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#BBF7D0",
+            "dark": "#166534"
+          },
+          "cssVariable": "--ds-component-alert-banner-success-border"
+        },
+        "text": {
+          "name": "component.alert-banner.success.text",
+          "path": [
+            "component",
+            "alert-banner",
+            "success",
+            "text"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#166534",
+            "dark": "#BBF7D0"
+          },
+          "cssVariable": "--ds-component-alert-banner-success-text"
+        }
+      },
+      "warning": {
+        "background": {
+          "name": "component.alert-banner.warning.background",
+          "path": [
+            "component",
+            "alert-banner",
+            "warning",
+            "background"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#FFFBEB",
+            "dark": "#78350F"
+          },
+          "cssVariable": "--ds-component-alert-banner-warning-background"
+        },
+        "border": {
+          "name": "component.alert-banner.warning.border",
+          "path": [
+            "component",
+            "alert-banner",
+            "warning",
+            "border"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#FDE68A",
+            "dark": "#92400E"
+          },
+          "cssVariable": "--ds-component-alert-banner-warning-border"
+        },
+        "text": {
+          "name": "component.alert-banner.warning.text",
+          "path": [
+            "component",
+            "alert-banner",
+            "warning",
+            "text"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#92400E",
+            "dark": "#FDE68A"
+          },
+          "cssVariable": "--ds-component-alert-banner-warning-text"
+        }
+      }
+    },
+    "button": {
+      "danger": {
+        "high": {
+          "background": {
+            "name": "component.button.danger.high.background",
+            "path": [
+              "component",
+              "button",
+              "danger",
+              "high",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#DC2626",
+              "dark": "#B91C1C"
+            },
+            "cssVariable": "--ds-component-button-danger-high-background"
+          },
+          "border": {
+            "name": "component.button.danger.high.border",
+            "path": [
+              "component",
+              "button",
+              "danger",
+              "high",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#DC2626",
+              "dark": "#EF4444"
+            },
+            "cssVariable": "--ds-component-button-danger-high-border"
+          },
+          "text": {
+            "name": "component.button.danger.high.text",
+            "path": [
+              "component",
+              "button",
+              "danger",
+              "high",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FFFFFF",
+              "dark": "#FFFFFF"
+            },
+            "cssVariable": "--ds-component-button-danger-high-text"
+          }
+        },
+        "low": {
+          "background": {
+            "name": "component.button.danger.low.background",
+            "path": [
+              "component",
+              "button",
+              "danger",
+              "low",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FEF2F2",
+              "dark": "#450A0A"
+            },
+            "cssVariable": "--ds-component-button-danger-low-background"
+          },
+          "border": {
+            "name": "component.button.danger.low.border",
+            "path": [
+              "component",
+              "button",
+              "danger",
+              "low",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FEF2F2",
+              "dark": "#450A0A"
+            },
+            "cssVariable": "--ds-component-button-danger-low-border"
+          },
+          "text": {
+            "name": "component.button.danger.low.text",
+            "path": [
+              "component",
+              "button",
+              "danger",
+              "low",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#B91C1C",
+              "dark": "#FCA5A5"
+            },
+            "cssVariable": "--ds-component-button-danger-low-text"
+          }
+        },
+        "medium": {
+          "background": {
+            "name": "component.button.danger.medium.background",
+            "path": [
+              "component",
+              "button",
+              "danger",
+              "medium",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FEE2E2",
+              "dark": "#7F1D1D"
+            },
+            "cssVariable": "--ds-component-button-danger-medium-background"
+          },
+          "border": {
+            "name": "component.button.danger.medium.border",
+            "path": [
+              "component",
+              "button",
+              "danger",
+              "medium",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FCA5A5",
+              "dark": "#991B1B"
+            },
+            "cssVariable": "--ds-component-button-danger-medium-border"
+          },
+          "text": {
+            "name": "component.button.danger.medium.text",
+            "path": [
+              "component",
+              "button",
+              "danger",
+              "medium",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#B91C1C",
+              "dark": "#FECACA"
+            },
+            "cssVariable": "--ds-component-button-danger-medium-text"
+          }
+        }
+      },
+      "disabled": {
+        "background": {
+          "name": "component.button.disabled.background",
+          "path": [
+            "component",
+            "button",
+            "disabled",
+            "background"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#E2E8F0",
+            "dark": "#1E293B"
+          },
+          "cssVariable": "--ds-component-button-disabled-background"
+        },
+        "border": {
+          "name": "component.button.disabled.border",
+          "path": [
+            "component",
+            "button",
+            "disabled",
+            "border"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#E2E8F0",
+            "dark": "#334155"
+          },
+          "cssVariable": "--ds-component-button-disabled-border"
+        },
+        "text": {
+          "name": "component.button.disabled.text",
+          "path": [
+            "component",
+            "button",
+            "disabled",
+            "text"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#64748B",
+            "dark": "#64748B"
+          },
+          "cssVariable": "--ds-component-button-disabled-text"
+        }
+      },
+      "gap": {
+        "name": "component.button.gap",
+        "path": [
+          "component",
+          "button",
+          "gap"
+        ],
+        "type": "component",
+        "valueType": "dimension",
+        "value": 8,
+        "cssVariable": "--ds-component-button-gap",
+        "unit": "px"
+      },
+      "height": {
+        "lg": {
+          "name": "component.button.height.lg",
+          "path": [
+            "component",
+            "button",
+            "height",
+            "lg"
+          ],
+          "type": "component",
+          "valueType": "dimension",
+          "value": 44,
+          "cssVariable": "--ds-component-button-height-lg",
+          "unit": "px"
+        },
+        "md": {
+          "name": "component.button.height.md",
+          "path": [
+            "component",
+            "button",
+            "height",
+            "md"
+          ],
+          "type": "component",
+          "valueType": "dimension",
+          "value": 36,
+          "cssVariable": "--ds-component-button-height-md",
+          "unit": "px"
+        },
+        "sm": {
+          "name": "component.button.height.sm",
+          "path": [
+            "component",
+            "button",
+            "height",
+            "sm"
+          ],
+          "type": "component",
+          "valueType": "dimension",
+          "value": 32,
+          "cssVariable": "--ds-component-button-height-sm",
+          "unit": "px"
+        }
+      },
+      "neutral": {
+        "high": {
+          "background": {
+            "name": "component.button.neutral.high.background",
+            "path": [
+              "component",
+              "button",
+              "neutral",
+              "high",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#334155",
+              "dark": "#CBD5E1"
+            },
+            "cssVariable": "--ds-component-button-neutral-high-background"
+          },
+          "border": {
+            "name": "component.button.neutral.high.border",
+            "path": [
+              "component",
+              "button",
+              "neutral",
+              "high",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#334155",
+              "dark": "#CBD5E1"
+            },
+            "cssVariable": "--ds-component-button-neutral-high-border"
+          },
+          "text": {
+            "name": "component.button.neutral.high.text",
+            "path": [
+              "component",
+              "button",
+              "neutral",
+              "high",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FFFFFF",
+              "dark": "#0F172A"
+            },
+            "cssVariable": "--ds-component-button-neutral-high-text"
+          }
+        },
+        "low": {
+          "background": {
+            "name": "component.button.neutral.low.background",
+            "path": [
+              "component",
+              "button",
+              "neutral",
+              "low",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#F8FAFC",
+              "dark": "#0F172A"
+            },
+            "cssVariable": "--ds-component-button-neutral-low-background"
+          },
+          "border": {
+            "name": "component.button.neutral.low.border",
+            "path": [
+              "component",
+              "button",
+              "neutral",
+              "low",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#F8FAFC",
+              "dark": "#0F172A"
+            },
+            "cssVariable": "--ds-component-button-neutral-low-border"
+          },
+          "text": {
+            "name": "component.button.neutral.low.text",
+            "path": [
+              "component",
+              "button",
+              "neutral",
+              "low",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#334155",
+              "dark": "#CBD5E1"
+            },
+            "cssVariable": "--ds-component-button-neutral-low-text"
+          }
+        },
+        "medium": {
+          "background": {
+            "name": "component.button.neutral.medium.background",
+            "path": [
+              "component",
+              "button",
+              "neutral",
+              "medium",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#F1F5F9",
+              "dark": "#1E293B"
+            },
+            "cssVariable": "--ds-component-button-neutral-medium-background"
+          },
+          "border": {
+            "name": "component.button.neutral.medium.border",
+            "path": [
+              "component",
+              "button",
+              "neutral",
+              "medium",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#CBD5E1",
+              "dark": "#475569"
+            },
+            "cssVariable": "--ds-component-button-neutral-medium-border"
+          },
+          "text": {
+            "name": "component.button.neutral.medium.text",
+            "path": [
+              "component",
+              "button",
+              "neutral",
+              "medium",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#334155",
+              "dark": "#E2E8F0"
+            },
+            "cssVariable": "--ds-component-button-neutral-medium-text"
+          }
+        }
+      },
+      "padding": {
+        "x": {
+          "lg": {
+            "name": "component.button.padding.x.lg",
+            "path": [
+              "component",
+              "button",
+              "padding",
+              "x",
+              "lg"
+            ],
+            "type": "component",
+            "valueType": "dimension",
+            "value": 20,
+            "cssVariable": "--ds-component-button-padding-x-lg",
+            "unit": "px"
+          },
+          "md": {
+            "name": "component.button.padding.x.md",
+            "path": [
+              "component",
+              "button",
+              "padding",
+              "x",
+              "md"
+            ],
+            "type": "component",
+            "valueType": "dimension",
+            "value": 16,
+            "cssVariable": "--ds-component-button-padding-x-md",
+            "unit": "px"
+          },
+          "sm": {
+            "name": "component.button.padding.x.sm",
+            "path": [
+              "component",
+              "button",
+              "padding",
+              "x",
+              "sm"
+            ],
+            "type": "component",
+            "valueType": "dimension",
+            "value": 12,
+            "cssVariable": "--ds-component-button-padding-x-sm",
+            "unit": "px"
+          }
+        }
+      },
+      "primary": {
+        "high": {
+          "background": {
+            "name": "component.button.primary.high.background",
+            "path": [
+              "component",
+              "button",
+              "primary",
+              "high",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#155E75",
+              "dark": "#0E7490"
+            },
+            "cssVariable": "--ds-component-button-primary-high-background"
+          },
+          "border": {
+            "name": "component.button.primary.high.border",
+            "path": [
+              "component",
+              "button",
+              "primary",
+              "high",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#155E75",
+              "dark": "#22D3EE"
+            },
+            "cssVariable": "--ds-component-button-primary-high-border"
+          },
+          "text": {
+            "name": "component.button.primary.high.text",
+            "path": [
+              "component",
+              "button",
+              "primary",
+              "high",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FFFFFF",
+              "dark": "#FFFFFF"
+            },
+            "cssVariable": "--ds-component-button-primary-high-text"
+          }
+        },
+        "low": {
+          "background": {
+            "name": "component.button.primary.low.background",
+            "path": [
+              "component",
+              "button",
+              "primary",
+              "low",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#ECFEFF",
+              "dark": "#083344"
+            },
+            "cssVariable": "--ds-component-button-primary-low-background"
+          },
+          "border": {
+            "name": "component.button.primary.low.border",
+            "path": [
+              "component",
+              "button",
+              "primary",
+              "low",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#ECFEFF",
+              "dark": "#083344"
+            },
+            "cssVariable": "--ds-component-button-primary-low-border"
+          },
+          "text": {
+            "name": "component.button.primary.low.text",
+            "path": [
+              "component",
+              "button",
+              "primary",
+              "low",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#155E75",
+              "dark": "#A5F3FC"
+            },
+            "cssVariable": "--ds-component-button-primary-low-text"
+          }
+        },
+        "medium": {
+          "background": {
+            "name": "component.button.primary.medium.background",
+            "path": [
+              "component",
+              "button",
+              "primary",
+              "medium",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#CFFAFE",
+              "dark": "#164E63"
+            },
+            "cssVariable": "--ds-component-button-primary-medium-background"
+          },
+          "border": {
+            "name": "component.button.primary.medium.border",
+            "path": [
+              "component",
+              "button",
+              "primary",
+              "medium",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#67E8F9",
+              "dark": "#0E7490"
+            },
+            "cssVariable": "--ds-component-button-primary-medium-border"
+          },
+          "text": {
+            "name": "component.button.primary.medium.text",
+            "path": [
+              "component",
+              "button",
+              "primary",
+              "medium",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#155E75",
+              "dark": "#CFFAFE"
+            },
+            "cssVariable": "--ds-component-button-primary-medium-text"
+          }
+        }
+      },
+      "success": {
+        "high": {
+          "background": {
+            "name": "component.button.success.high.background",
+            "path": [
+              "component",
+              "button",
+              "success",
+              "high",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#15803D",
+              "dark": "#166534"
+            },
+            "cssVariable": "--ds-component-button-success-high-background"
+          },
+          "border": {
+            "name": "component.button.success.high.border",
+            "path": [
+              "component",
+              "button",
+              "success",
+              "high",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#15803D",
+              "dark": "#22C55E"
+            },
+            "cssVariable": "--ds-component-button-success-high-border"
+          },
+          "text": {
+            "name": "component.button.success.high.text",
+            "path": [
+              "component",
+              "button",
+              "success",
+              "high",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FFFFFF",
+              "dark": "#FFFFFF"
+            },
+            "cssVariable": "--ds-component-button-success-high-text"
+          }
+        },
+        "low": {
+          "background": {
+            "name": "component.button.success.low.background",
+            "path": [
+              "component",
+              "button",
+              "success",
+              "low",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#F0FDF4",
+              "dark": "#052E16"
+            },
+            "cssVariable": "--ds-component-button-success-low-background"
+          },
+          "border": {
+            "name": "component.button.success.low.border",
+            "path": [
+              "component",
+              "button",
+              "success",
+              "low",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#F0FDF4",
+              "dark": "#052E16"
+            },
+            "cssVariable": "--ds-component-button-success-low-border"
+          },
+          "text": {
+            "name": "component.button.success.low.text",
+            "path": [
+              "component",
+              "button",
+              "success",
+              "low",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#166534",
+              "dark": "#86EFAC"
+            },
+            "cssVariable": "--ds-component-button-success-low-text"
+          }
+        },
+        "medium": {
+          "background": {
+            "name": "component.button.success.medium.background",
+            "path": [
+              "component",
+              "button",
+              "success",
+              "medium",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#DCFCE7",
+              "dark": "#14532D"
+            },
+            "cssVariable": "--ds-component-button-success-medium-background"
+          },
+          "border": {
+            "name": "component.button.success.medium.border",
+            "path": [
+              "component",
+              "button",
+              "success",
+              "medium",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#86EFAC",
+              "dark": "#166534"
+            },
+            "cssVariable": "--ds-component-button-success-medium-border"
+          },
+          "text": {
+            "name": "component.button.success.medium.text",
+            "path": [
+              "component",
+              "button",
+              "success",
+              "medium",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#166534",
+              "dark": "#BBF7D0"
+            },
+            "cssVariable": "--ds-component-button-success-medium-text"
+          }
+        }
+      }
+    },
+    "card": {
+      "padding": {
+        "name": "component.card.padding",
+        "path": [
+          "component",
+          "card",
+          "padding"
+        ],
+        "type": "component",
+        "valueType": "dimension",
+        "value": 16,
+        "cssVariable": "--ds-component-card-padding",
+        "unit": "px"
+      },
+      "surface": {
+        "background": {
+          "name": "component.card.surface.background",
+          "path": [
+            "component",
+            "card",
+            "surface",
+            "background"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#FFFFFF",
+            "dark": "#1E293B"
+          },
+          "cssVariable": "--ds-component-card-surface-background"
+        },
+        "border": {
+          "name": "component.card.surface.border",
+          "path": [
+            "component",
+            "card",
+            "surface",
+            "border"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#E2E8F0",
+            "dark": "#334155"
+          },
+          "cssVariable": "--ds-component-card-surface-border"
+        },
+        "text": {
+          "name": "component.card.surface.text",
+          "path": [
+            "component",
+            "card",
+            "surface",
+            "text"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#0F172A",
+            "dark": "#F8FAFC"
+          },
+          "cssVariable": "--ds-component-card-surface-text"
+        }
+      }
+    },
+    "status-badge": {
+      "danger": {
+        "outline": {
+          "background": {
+            "name": "component.status-badge.danger.outline.background",
+            "path": [
+              "component",
+              "status-badge",
+              "danger",
+              "outline",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FFFFFF",
+              "dark": "#0F172A"
+            },
+            "cssVariable": "--ds-component-status-badge-danger-outline-background"
+          },
+          "border": {
+            "name": "component.status-badge.danger.outline.border",
+            "path": [
+              "component",
+              "status-badge",
+              "danger",
+              "outline",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FCA5A5",
+              "dark": "#991B1B"
+            },
+            "cssVariable": "--ds-component-status-badge-danger-outline-border"
+          },
+          "text": {
+            "name": "component.status-badge.danger.outline.text",
+            "path": [
+              "component",
+              "status-badge",
+              "danger",
+              "outline",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#B91C1C",
+              "dark": "#FCA5A5"
+            },
+            "cssVariable": "--ds-component-status-badge-danger-outline-text"
+          }
+        },
+        "soft": {
+          "background": {
+            "name": "component.status-badge.danger.soft.background",
+            "path": [
+              "component",
+              "status-badge",
+              "danger",
+              "soft",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FEF2F2",
+              "dark": "#450A0A"
+            },
+            "cssVariable": "--ds-component-status-badge-danger-soft-background"
+          },
+          "border": {
+            "name": "component.status-badge.danger.soft.border",
+            "path": [
+              "component",
+              "status-badge",
+              "danger",
+              "soft",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FECACA",
+              "dark": "#7F1D1D"
+            },
+            "cssVariable": "--ds-component-status-badge-danger-soft-border"
+          },
+          "text": {
+            "name": "component.status-badge.danger.soft.text",
+            "path": [
+              "component",
+              "status-badge",
+              "danger",
+              "soft",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#B91C1C",
+              "dark": "#FCA5A5"
+            },
+            "cssVariable": "--ds-component-status-badge-danger-soft-text"
+          }
+        },
+        "solid": {
+          "background": {
+            "name": "component.status-badge.danger.solid.background",
+            "path": [
+              "component",
+              "status-badge",
+              "danger",
+              "solid",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#DC2626",
+              "dark": "#B91C1C"
+            },
+            "cssVariable": "--ds-component-status-badge-danger-solid-background"
+          },
+          "border": {
+            "name": "component.status-badge.danger.solid.border",
+            "path": [
+              "component",
+              "status-badge",
+              "danger",
+              "solid",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#DC2626",
+              "dark": "#EF4444"
+            },
+            "cssVariable": "--ds-component-status-badge-danger-solid-border"
+          },
+          "text": {
+            "name": "component.status-badge.danger.solid.text",
+            "path": [
+              "component",
+              "status-badge",
+              "danger",
+              "solid",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FFFFFF",
+              "dark": "#FFFFFF"
+            },
+            "cssVariable": "--ds-component-status-badge-danger-solid-text"
+          }
+        }
+      },
+      "height": {
+        "name": "component.status-badge.height",
+        "path": [
+          "component",
+          "status-badge",
+          "height"
+        ],
+        "type": "component",
+        "valueType": "dimension",
+        "value": 24,
+        "cssVariable": "--ds-component-status-badge-height",
+        "unit": "px"
+      },
+      "info": {
+        "outline": {
+          "background": {
+            "name": "component.status-badge.info.outline.background",
+            "path": [
+              "component",
+              "status-badge",
+              "info",
+              "outline",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FFFFFF",
+              "dark": "#0F172A"
+            },
+            "cssVariable": "--ds-component-status-badge-info-outline-background"
+          },
+          "border": {
+            "name": "component.status-badge.info.outline.border",
+            "path": [
+              "component",
+              "status-badge",
+              "info",
+              "outline",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#67E8F9",
+              "dark": "#0E7490"
+            },
+            "cssVariable": "--ds-component-status-badge-info-outline-border"
+          },
+          "text": {
+            "name": "component.status-badge.info.outline.text",
+            "path": [
+              "component",
+              "status-badge",
+              "info",
+              "outline",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#155E75",
+              "dark": "#A5F3FC"
+            },
+            "cssVariable": "--ds-component-status-badge-info-outline-text"
+          }
+        },
+        "soft": {
+          "background": {
+            "name": "component.status-badge.info.soft.background",
+            "path": [
+              "component",
+              "status-badge",
+              "info",
+              "soft",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#ECFEFF",
+              "dark": "#083344"
+            },
+            "cssVariable": "--ds-component-status-badge-info-soft-background"
+          },
+          "border": {
+            "name": "component.status-badge.info.soft.border",
+            "path": [
+              "component",
+              "status-badge",
+              "info",
+              "soft",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#A5F3FC",
+              "dark": "#164E63"
+            },
+            "cssVariable": "--ds-component-status-badge-info-soft-border"
+          },
+          "text": {
+            "name": "component.status-badge.info.soft.text",
+            "path": [
+              "component",
+              "status-badge",
+              "info",
+              "soft",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#155E75",
+              "dark": "#A5F3FC"
+            },
+            "cssVariable": "--ds-component-status-badge-info-soft-text"
+          }
+        },
+        "solid": {
+          "background": {
+            "name": "component.status-badge.info.solid.background",
+            "path": [
+              "component",
+              "status-badge",
+              "info",
+              "solid",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#155E75",
+              "dark": "#0E7490"
+            },
+            "cssVariable": "--ds-component-status-badge-info-solid-background"
+          },
+          "border": {
+            "name": "component.status-badge.info.solid.border",
+            "path": [
+              "component",
+              "status-badge",
+              "info",
+              "solid",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#155E75",
+              "dark": "#22D3EE"
+            },
+            "cssVariable": "--ds-component-status-badge-info-solid-border"
+          },
+          "text": {
+            "name": "component.status-badge.info.solid.text",
+            "path": [
+              "component",
+              "status-badge",
+              "info",
+              "solid",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FFFFFF",
+              "dark": "#FFFFFF"
+            },
+            "cssVariable": "--ds-component-status-badge-info-solid-text"
+          }
+        }
+      },
+      "neutral": {
+        "outline": {
+          "background": {
+            "name": "component.status-badge.neutral.outline.background",
+            "path": [
+              "component",
+              "status-badge",
+              "neutral",
+              "outline",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FFFFFF",
+              "dark": "#0F172A"
+            },
+            "cssVariable": "--ds-component-status-badge-neutral-outline-background"
+          },
+          "border": {
+            "name": "component.status-badge.neutral.outline.border",
+            "path": [
+              "component",
+              "status-badge",
+              "neutral",
+              "outline",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#CBD5E1",
+              "dark": "#475569"
+            },
+            "cssVariable": "--ds-component-status-badge-neutral-outline-border"
+          },
+          "text": {
+            "name": "component.status-badge.neutral.outline.text",
+            "path": [
+              "component",
+              "status-badge",
+              "neutral",
+              "outline",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#334155",
+              "dark": "#CBD5E1"
+            },
+            "cssVariable": "--ds-component-status-badge-neutral-outline-text"
+          }
+        },
+        "soft": {
+          "background": {
+            "name": "component.status-badge.neutral.soft.background",
+            "path": [
+              "component",
+              "status-badge",
+              "neutral",
+              "soft",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#F8FAFC",
+              "dark": "#1E293B"
+            },
+            "cssVariable": "--ds-component-status-badge-neutral-soft-background"
+          },
+          "border": {
+            "name": "component.status-badge.neutral.soft.border",
+            "path": [
+              "component",
+              "status-badge",
+              "neutral",
+              "soft",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#E2E8F0",
+              "dark": "#334155"
+            },
+            "cssVariable": "--ds-component-status-badge-neutral-soft-border"
+          },
+          "text": {
+            "name": "component.status-badge.neutral.soft.text",
+            "path": [
+              "component",
+              "status-badge",
+              "neutral",
+              "soft",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#334155",
+              "dark": "#CBD5E1"
+            },
+            "cssVariable": "--ds-component-status-badge-neutral-soft-text"
+          }
+        },
+        "solid": {
+          "background": {
+            "name": "component.status-badge.neutral.solid.background",
+            "path": [
+              "component",
+              "status-badge",
+              "neutral",
+              "solid",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#334155",
+              "dark": "#CBD5E1"
+            },
+            "cssVariable": "--ds-component-status-badge-neutral-solid-background"
+          },
+          "border": {
+            "name": "component.status-badge.neutral.solid.border",
+            "path": [
+              "component",
+              "status-badge",
+              "neutral",
+              "solid",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#334155",
+              "dark": "#CBD5E1"
+            },
+            "cssVariable": "--ds-component-status-badge-neutral-solid-border"
+          },
+          "text": {
+            "name": "component.status-badge.neutral.solid.text",
+            "path": [
+              "component",
+              "status-badge",
+              "neutral",
+              "solid",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FFFFFF",
+              "dark": "#0F172A"
+            },
+            "cssVariable": "--ds-component-status-badge-neutral-solid-text"
+          }
+        }
+      },
+      "padding": {
+        "x": {
+          "name": "component.status-badge.padding.x",
+          "path": [
+            "component",
+            "status-badge",
+            "padding",
+            "x"
+          ],
+          "type": "component",
+          "valueType": "dimension",
+          "value": 8,
+          "cssVariable": "--ds-component-status-badge-padding-x",
+          "unit": "px"
+        }
+      },
+      "success": {
+        "outline": {
+          "background": {
+            "name": "component.status-badge.success.outline.background",
+            "path": [
+              "component",
+              "status-badge",
+              "success",
+              "outline",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FFFFFF",
+              "dark": "#0F172A"
+            },
+            "cssVariable": "--ds-component-status-badge-success-outline-background"
+          },
+          "border": {
+            "name": "component.status-badge.success.outline.border",
+            "path": [
+              "component",
+              "status-badge",
+              "success",
+              "outline",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#86EFAC",
+              "dark": "#166534"
+            },
+            "cssVariable": "--ds-component-status-badge-success-outline-border"
+          },
+          "text": {
+            "name": "component.status-badge.success.outline.text",
+            "path": [
+              "component",
+              "status-badge",
+              "success",
+              "outline",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#166534",
+              "dark": "#86EFAC"
+            },
+            "cssVariable": "--ds-component-status-badge-success-outline-text"
+          }
+        },
+        "soft": {
+          "background": {
+            "name": "component.status-badge.success.soft.background",
+            "path": [
+              "component",
+              "status-badge",
+              "success",
+              "soft",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#F0FDF4",
+              "dark": "#052E16"
+            },
+            "cssVariable": "--ds-component-status-badge-success-soft-background"
+          },
+          "border": {
+            "name": "component.status-badge.success.soft.border",
+            "path": [
+              "component",
+              "status-badge",
+              "success",
+              "soft",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#BBF7D0",
+              "dark": "#14532D"
+            },
+            "cssVariable": "--ds-component-status-badge-success-soft-border"
+          },
+          "text": {
+            "name": "component.status-badge.success.soft.text",
+            "path": [
+              "component",
+              "status-badge",
+              "success",
+              "soft",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#166534",
+              "dark": "#86EFAC"
+            },
+            "cssVariable": "--ds-component-status-badge-success-soft-text"
+          }
+        },
+        "solid": {
+          "background": {
+            "name": "component.status-badge.success.solid.background",
+            "path": [
+              "component",
+              "status-badge",
+              "success",
+              "solid",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#15803D",
+              "dark": "#166534"
+            },
+            "cssVariable": "--ds-component-status-badge-success-solid-background"
+          },
+          "border": {
+            "name": "component.status-badge.success.solid.border",
+            "path": [
+              "component",
+              "status-badge",
+              "success",
+              "solid",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#15803D",
+              "dark": "#22C55E"
+            },
+            "cssVariable": "--ds-component-status-badge-success-solid-border"
+          },
+          "text": {
+            "name": "component.status-badge.success.solid.text",
+            "path": [
+              "component",
+              "status-badge",
+              "success",
+              "solid",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FFFFFF",
+              "dark": "#FFFFFF"
+            },
+            "cssVariable": "--ds-component-status-badge-success-solid-text"
+          }
+        }
+      },
+      "warning": {
+        "outline": {
+          "background": {
+            "name": "component.status-badge.warning.outline.background",
+            "path": [
+              "component",
+              "status-badge",
+              "warning",
+              "outline",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FFFFFF",
+              "dark": "#0F172A"
+            },
+            "cssVariable": "--ds-component-status-badge-warning-outline-background"
+          },
+          "border": {
+            "name": "component.status-badge.warning.outline.border",
+            "path": [
+              "component",
+              "status-badge",
+              "warning",
+              "outline",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FDE68A",
+              "dark": "#92400E"
+            },
+            "cssVariable": "--ds-component-status-badge-warning-outline-border"
+          },
+          "text": {
+            "name": "component.status-badge.warning.outline.text",
+            "path": [
+              "component",
+              "status-badge",
+              "warning",
+              "outline",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#92400E",
+              "dark": "#FDE68A"
+            },
+            "cssVariable": "--ds-component-status-badge-warning-outline-text"
+          }
+        },
+        "soft": {
+          "background": {
+            "name": "component.status-badge.warning.soft.background",
+            "path": [
+              "component",
+              "status-badge",
+              "warning",
+              "soft",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FFFBEB",
+              "dark": "#451A03"
+            },
+            "cssVariable": "--ds-component-status-badge-warning-soft-background"
+          },
+          "border": {
+            "name": "component.status-badge.warning.soft.border",
+            "path": [
+              "component",
+              "status-badge",
+              "warning",
+              "soft",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FDE68A",
+              "dark": "#78350F"
+            },
+            "cssVariable": "--ds-component-status-badge-warning-soft-border"
+          },
+          "text": {
+            "name": "component.status-badge.warning.soft.text",
+            "path": [
+              "component",
+              "status-badge",
+              "warning",
+              "soft",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#92400E",
+              "dark": "#FDE68A"
+            },
+            "cssVariable": "--ds-component-status-badge-warning-soft-text"
+          }
+        },
+        "solid": {
+          "background": {
+            "name": "component.status-badge.warning.solid.background",
+            "path": [
+              "component",
+              "status-badge",
+              "warning",
+              "solid",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#B45309",
+              "dark": "#B45309"
+            },
+            "cssVariable": "--ds-component-status-badge-warning-solid-background"
+          },
+          "border": {
+            "name": "component.status-badge.warning.solid.border",
+            "path": [
+              "component",
+              "status-badge",
+              "warning",
+              "solid",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#B45309",
+              "dark": "#F59E0B"
+            },
+            "cssVariable": "--ds-component-status-badge-warning-solid-border"
+          },
+          "text": {
+            "name": "component.status-badge.warning.solid.text",
+            "path": [
+              "component",
+              "status-badge",
+              "warning",
+              "solid",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FFFFFF",
+              "dark": "#FFFFFF"
+            },
+            "cssVariable": "--ds-component-status-badge-warning-solid-text"
+          }
+        }
+      }
+    },
+    "text-input": {
+      "background": {
+        "default": {
+          "name": "component.text-input.background.default",
+          "path": [
+            "component",
+            "text-input",
+            "background",
+            "default"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#FFFFFF",
+            "dark": "#1E293B"
+          },
+          "cssVariable": "--ds-component-text-input-background-default"
+        },
+        "disabled": {
+          "name": "component.text-input.background.disabled",
+          "path": [
+            "component",
+            "text-input",
+            "background",
+            "disabled"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#F1F5F9",
+            "dark": "#0F172A"
+          },
+          "cssVariable": "--ds-component-text-input-background-disabled"
+        }
+      },
+      "border": {
+        "default": {
+          "name": "component.text-input.border.default",
+          "path": [
+            "component",
+            "text-input",
+            "border",
+            "default"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#CBD5E1",
+            "dark": "#475569"
+          },
+          "cssVariable": "--ds-component-text-input-border-default"
+        },
+        "disabled": {
+          "name": "component.text-input.border.disabled",
+          "path": [
+            "component",
+            "text-input",
+            "border",
+            "disabled"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#E2E8F0",
+            "dark": "#334155"
+          },
+          "cssVariable": "--ds-component-text-input-border-disabled"
+        },
+        "error": {
+          "name": "component.text-input.border.error",
+          "path": [
+            "component",
+            "text-input",
+            "border",
+            "error"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#DC2626",
+            "dark": "#F87171"
+          },
+          "cssVariable": "--ds-component-text-input-border-error"
+        },
+        "focus": {
+          "name": "component.text-input.border.focus",
+          "path": [
+            "component",
+            "text-input",
+            "border",
+            "focus"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#0891B2",
+            "dark": "#22D3EE"
+          },
+          "cssVariable": "--ds-component-text-input-border-focus"
+        }
+      },
+      "height": {
+        "name": "component.text-input.height",
+        "path": [
+          "component",
+          "text-input",
+          "height"
+        ],
+        "type": "component",
+        "valueType": "dimension",
+        "value": 40,
+        "cssVariable": "--ds-component-text-input-height",
+        "unit": "px"
+      },
+      "padding": {
+        "x": {
+          "name": "component.text-input.padding.x",
+          "path": [
+            "component",
+            "text-input",
+            "padding",
+            "x"
+          ],
+          "type": "component",
+          "valueType": "dimension",
+          "value": 12,
+          "cssVariable": "--ds-component-text-input-padding-x",
+          "unit": "px"
+        }
+      },
+      "text": {
+        "default": {
+          "name": "component.text-input.text.default",
+          "path": [
+            "component",
+            "text-input",
+            "text",
+            "default"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#0F172A",
+            "dark": "#F8FAFC"
+          },
+          "cssVariable": "--ds-component-text-input-text-default"
+        },
+        "disabled": {
+          "name": "component.text-input.text.disabled",
+          "path": [
+            "component",
+            "text-input",
+            "text",
+            "disabled"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#64748B",
+            "dark": "#64748B"
+          },
+          "cssVariable": "--ds-component-text-input-text-disabled"
+        },
+        "error": {
+          "name": "component.text-input.text.error",
+          "path": [
+            "component",
+            "text-input",
+            "text",
+            "error"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#DC2626",
+            "dark": "#FCA5A5"
+          },
+          "cssVariable": "--ds-component-text-input-text-error"
+        },
+        "helper": {
+          "name": "component.text-input.text.helper",
+          "path": [
+            "component",
+            "text-input",
+            "text",
+            "helper"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#475569",
+            "dark": "#CBD5E1"
+          },
+          "cssVariable": "--ds-component-text-input-text-helper"
+        },
+        "placeholder": {
+          "name": "component.text-input.text.placeholder",
+          "path": [
+            "component",
+            "text-input",
+            "text",
+            "placeholder"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#94A3B8",
+            "dark": "#94A3B8"
+          },
+          "cssVariable": "--ds-component-text-input-text-placeholder"
+        }
+      }
+    }
+  },
   "radius": {
     "10xl": {
       "name": "radius.10xl",
@@ -3353,6 +5503,130 @@ export const tokenNames = [
   "color.semantic.text.success",
   "color.semantic.text.warning",
   "color.semantic.tooltip.tooltip",
+  "component.alert-banner.danger.background",
+  "component.alert-banner.danger.border",
+  "component.alert-banner.danger.text",
+  "component.alert-banner.info.background",
+  "component.alert-banner.info.border",
+  "component.alert-banner.info.text",
+  "component.alert-banner.padding.x",
+  "component.alert-banner.padding.y",
+  "component.alert-banner.success.background",
+  "component.alert-banner.success.border",
+  "component.alert-banner.success.text",
+  "component.alert-banner.warning.background",
+  "component.alert-banner.warning.border",
+  "component.alert-banner.warning.text",
+  "component.button.danger.high.background",
+  "component.button.danger.high.border",
+  "component.button.danger.high.text",
+  "component.button.danger.low.background",
+  "component.button.danger.low.border",
+  "component.button.danger.low.text",
+  "component.button.danger.medium.background",
+  "component.button.danger.medium.border",
+  "component.button.danger.medium.text",
+  "component.button.disabled.background",
+  "component.button.disabled.border",
+  "component.button.disabled.text",
+  "component.button.gap",
+  "component.button.height.lg",
+  "component.button.height.md",
+  "component.button.height.sm",
+  "component.button.neutral.high.background",
+  "component.button.neutral.high.border",
+  "component.button.neutral.high.text",
+  "component.button.neutral.low.background",
+  "component.button.neutral.low.border",
+  "component.button.neutral.low.text",
+  "component.button.neutral.medium.background",
+  "component.button.neutral.medium.border",
+  "component.button.neutral.medium.text",
+  "component.button.padding.x.lg",
+  "component.button.padding.x.md",
+  "component.button.padding.x.sm",
+  "component.button.primary.high.background",
+  "component.button.primary.high.border",
+  "component.button.primary.high.text",
+  "component.button.primary.low.background",
+  "component.button.primary.low.border",
+  "component.button.primary.low.text",
+  "component.button.primary.medium.background",
+  "component.button.primary.medium.border",
+  "component.button.primary.medium.text",
+  "component.button.success.high.background",
+  "component.button.success.high.border",
+  "component.button.success.high.text",
+  "component.button.success.low.background",
+  "component.button.success.low.border",
+  "component.button.success.low.text",
+  "component.button.success.medium.background",
+  "component.button.success.medium.border",
+  "component.button.success.medium.text",
+  "component.card.padding",
+  "component.card.surface.background",
+  "component.card.surface.border",
+  "component.card.surface.text",
+  "component.status-badge.danger.outline.background",
+  "component.status-badge.danger.outline.border",
+  "component.status-badge.danger.outline.text",
+  "component.status-badge.danger.soft.background",
+  "component.status-badge.danger.soft.border",
+  "component.status-badge.danger.soft.text",
+  "component.status-badge.danger.solid.background",
+  "component.status-badge.danger.solid.border",
+  "component.status-badge.danger.solid.text",
+  "component.status-badge.height",
+  "component.status-badge.info.outline.background",
+  "component.status-badge.info.outline.border",
+  "component.status-badge.info.outline.text",
+  "component.status-badge.info.soft.background",
+  "component.status-badge.info.soft.border",
+  "component.status-badge.info.soft.text",
+  "component.status-badge.info.solid.background",
+  "component.status-badge.info.solid.border",
+  "component.status-badge.info.solid.text",
+  "component.status-badge.neutral.outline.background",
+  "component.status-badge.neutral.outline.border",
+  "component.status-badge.neutral.outline.text",
+  "component.status-badge.neutral.soft.background",
+  "component.status-badge.neutral.soft.border",
+  "component.status-badge.neutral.soft.text",
+  "component.status-badge.neutral.solid.background",
+  "component.status-badge.neutral.solid.border",
+  "component.status-badge.neutral.solid.text",
+  "component.status-badge.padding.x",
+  "component.status-badge.success.outline.background",
+  "component.status-badge.success.outline.border",
+  "component.status-badge.success.outline.text",
+  "component.status-badge.success.soft.background",
+  "component.status-badge.success.soft.border",
+  "component.status-badge.success.soft.text",
+  "component.status-badge.success.solid.background",
+  "component.status-badge.success.solid.border",
+  "component.status-badge.success.solid.text",
+  "component.status-badge.warning.outline.background",
+  "component.status-badge.warning.outline.border",
+  "component.status-badge.warning.outline.text",
+  "component.status-badge.warning.soft.background",
+  "component.status-badge.warning.soft.border",
+  "component.status-badge.warning.soft.text",
+  "component.status-badge.warning.solid.background",
+  "component.status-badge.warning.solid.border",
+  "component.status-badge.warning.solid.text",
+  "component.text-input.background.default",
+  "component.text-input.background.disabled",
+  "component.text-input.border.default",
+  "component.text-input.border.disabled",
+  "component.text-input.border.error",
+  "component.text-input.border.focus",
+  "component.text-input.height",
+  "component.text-input.padding.x",
+  "component.text-input.text.default",
+  "component.text-input.text.disabled",
+  "component.text-input.text.error",
+  "component.text-input.text.helper",
+  "component.text-input.text.placeholder",
   "radius.10xl",
   "radius.11xl",
   "radius.2xl",
@@ -3578,6 +5852,130 @@ export const tokenNameToCssVariable = {
   "color.semantic.text.success": "--ds-color-text-success",
   "color.semantic.text.warning": "--ds-color-text-warning",
   "color.semantic.tooltip.tooltip": "--ds-color-tooltip-tooltip",
+  "component.alert-banner.danger.background": "--ds-component-alert-banner-danger-background",
+  "component.alert-banner.danger.border": "--ds-component-alert-banner-danger-border",
+  "component.alert-banner.danger.text": "--ds-component-alert-banner-danger-text",
+  "component.alert-banner.info.background": "--ds-component-alert-banner-info-background",
+  "component.alert-banner.info.border": "--ds-component-alert-banner-info-border",
+  "component.alert-banner.info.text": "--ds-component-alert-banner-info-text",
+  "component.alert-banner.padding.x": "--ds-component-alert-banner-padding-x",
+  "component.alert-banner.padding.y": "--ds-component-alert-banner-padding-y",
+  "component.alert-banner.success.background": "--ds-component-alert-banner-success-background",
+  "component.alert-banner.success.border": "--ds-component-alert-banner-success-border",
+  "component.alert-banner.success.text": "--ds-component-alert-banner-success-text",
+  "component.alert-banner.warning.background": "--ds-component-alert-banner-warning-background",
+  "component.alert-banner.warning.border": "--ds-component-alert-banner-warning-border",
+  "component.alert-banner.warning.text": "--ds-component-alert-banner-warning-text",
+  "component.button.danger.high.background": "--ds-component-button-danger-high-background",
+  "component.button.danger.high.border": "--ds-component-button-danger-high-border",
+  "component.button.danger.high.text": "--ds-component-button-danger-high-text",
+  "component.button.danger.low.background": "--ds-component-button-danger-low-background",
+  "component.button.danger.low.border": "--ds-component-button-danger-low-border",
+  "component.button.danger.low.text": "--ds-component-button-danger-low-text",
+  "component.button.danger.medium.background": "--ds-component-button-danger-medium-background",
+  "component.button.danger.medium.border": "--ds-component-button-danger-medium-border",
+  "component.button.danger.medium.text": "--ds-component-button-danger-medium-text",
+  "component.button.disabled.background": "--ds-component-button-disabled-background",
+  "component.button.disabled.border": "--ds-component-button-disabled-border",
+  "component.button.disabled.text": "--ds-component-button-disabled-text",
+  "component.button.gap": "--ds-component-button-gap",
+  "component.button.height.lg": "--ds-component-button-height-lg",
+  "component.button.height.md": "--ds-component-button-height-md",
+  "component.button.height.sm": "--ds-component-button-height-sm",
+  "component.button.neutral.high.background": "--ds-component-button-neutral-high-background",
+  "component.button.neutral.high.border": "--ds-component-button-neutral-high-border",
+  "component.button.neutral.high.text": "--ds-component-button-neutral-high-text",
+  "component.button.neutral.low.background": "--ds-component-button-neutral-low-background",
+  "component.button.neutral.low.border": "--ds-component-button-neutral-low-border",
+  "component.button.neutral.low.text": "--ds-component-button-neutral-low-text",
+  "component.button.neutral.medium.background": "--ds-component-button-neutral-medium-background",
+  "component.button.neutral.medium.border": "--ds-component-button-neutral-medium-border",
+  "component.button.neutral.medium.text": "--ds-component-button-neutral-medium-text",
+  "component.button.padding.x.lg": "--ds-component-button-padding-x-lg",
+  "component.button.padding.x.md": "--ds-component-button-padding-x-md",
+  "component.button.padding.x.sm": "--ds-component-button-padding-x-sm",
+  "component.button.primary.high.background": "--ds-component-button-primary-high-background",
+  "component.button.primary.high.border": "--ds-component-button-primary-high-border",
+  "component.button.primary.high.text": "--ds-component-button-primary-high-text",
+  "component.button.primary.low.background": "--ds-component-button-primary-low-background",
+  "component.button.primary.low.border": "--ds-component-button-primary-low-border",
+  "component.button.primary.low.text": "--ds-component-button-primary-low-text",
+  "component.button.primary.medium.background": "--ds-component-button-primary-medium-background",
+  "component.button.primary.medium.border": "--ds-component-button-primary-medium-border",
+  "component.button.primary.medium.text": "--ds-component-button-primary-medium-text",
+  "component.button.success.high.background": "--ds-component-button-success-high-background",
+  "component.button.success.high.border": "--ds-component-button-success-high-border",
+  "component.button.success.high.text": "--ds-component-button-success-high-text",
+  "component.button.success.low.background": "--ds-component-button-success-low-background",
+  "component.button.success.low.border": "--ds-component-button-success-low-border",
+  "component.button.success.low.text": "--ds-component-button-success-low-text",
+  "component.button.success.medium.background": "--ds-component-button-success-medium-background",
+  "component.button.success.medium.border": "--ds-component-button-success-medium-border",
+  "component.button.success.medium.text": "--ds-component-button-success-medium-text",
+  "component.card.padding": "--ds-component-card-padding",
+  "component.card.surface.background": "--ds-component-card-surface-background",
+  "component.card.surface.border": "--ds-component-card-surface-border",
+  "component.card.surface.text": "--ds-component-card-surface-text",
+  "component.status-badge.danger.outline.background": "--ds-component-status-badge-danger-outline-background",
+  "component.status-badge.danger.outline.border": "--ds-component-status-badge-danger-outline-border",
+  "component.status-badge.danger.outline.text": "--ds-component-status-badge-danger-outline-text",
+  "component.status-badge.danger.soft.background": "--ds-component-status-badge-danger-soft-background",
+  "component.status-badge.danger.soft.border": "--ds-component-status-badge-danger-soft-border",
+  "component.status-badge.danger.soft.text": "--ds-component-status-badge-danger-soft-text",
+  "component.status-badge.danger.solid.background": "--ds-component-status-badge-danger-solid-background",
+  "component.status-badge.danger.solid.border": "--ds-component-status-badge-danger-solid-border",
+  "component.status-badge.danger.solid.text": "--ds-component-status-badge-danger-solid-text",
+  "component.status-badge.height": "--ds-component-status-badge-height",
+  "component.status-badge.info.outline.background": "--ds-component-status-badge-info-outline-background",
+  "component.status-badge.info.outline.border": "--ds-component-status-badge-info-outline-border",
+  "component.status-badge.info.outline.text": "--ds-component-status-badge-info-outline-text",
+  "component.status-badge.info.soft.background": "--ds-component-status-badge-info-soft-background",
+  "component.status-badge.info.soft.border": "--ds-component-status-badge-info-soft-border",
+  "component.status-badge.info.soft.text": "--ds-component-status-badge-info-soft-text",
+  "component.status-badge.info.solid.background": "--ds-component-status-badge-info-solid-background",
+  "component.status-badge.info.solid.border": "--ds-component-status-badge-info-solid-border",
+  "component.status-badge.info.solid.text": "--ds-component-status-badge-info-solid-text",
+  "component.status-badge.neutral.outline.background": "--ds-component-status-badge-neutral-outline-background",
+  "component.status-badge.neutral.outline.border": "--ds-component-status-badge-neutral-outline-border",
+  "component.status-badge.neutral.outline.text": "--ds-component-status-badge-neutral-outline-text",
+  "component.status-badge.neutral.soft.background": "--ds-component-status-badge-neutral-soft-background",
+  "component.status-badge.neutral.soft.border": "--ds-component-status-badge-neutral-soft-border",
+  "component.status-badge.neutral.soft.text": "--ds-component-status-badge-neutral-soft-text",
+  "component.status-badge.neutral.solid.background": "--ds-component-status-badge-neutral-solid-background",
+  "component.status-badge.neutral.solid.border": "--ds-component-status-badge-neutral-solid-border",
+  "component.status-badge.neutral.solid.text": "--ds-component-status-badge-neutral-solid-text",
+  "component.status-badge.padding.x": "--ds-component-status-badge-padding-x",
+  "component.status-badge.success.outline.background": "--ds-component-status-badge-success-outline-background",
+  "component.status-badge.success.outline.border": "--ds-component-status-badge-success-outline-border",
+  "component.status-badge.success.outline.text": "--ds-component-status-badge-success-outline-text",
+  "component.status-badge.success.soft.background": "--ds-component-status-badge-success-soft-background",
+  "component.status-badge.success.soft.border": "--ds-component-status-badge-success-soft-border",
+  "component.status-badge.success.soft.text": "--ds-component-status-badge-success-soft-text",
+  "component.status-badge.success.solid.background": "--ds-component-status-badge-success-solid-background",
+  "component.status-badge.success.solid.border": "--ds-component-status-badge-success-solid-border",
+  "component.status-badge.success.solid.text": "--ds-component-status-badge-success-solid-text",
+  "component.status-badge.warning.outline.background": "--ds-component-status-badge-warning-outline-background",
+  "component.status-badge.warning.outline.border": "--ds-component-status-badge-warning-outline-border",
+  "component.status-badge.warning.outline.text": "--ds-component-status-badge-warning-outline-text",
+  "component.status-badge.warning.soft.background": "--ds-component-status-badge-warning-soft-background",
+  "component.status-badge.warning.soft.border": "--ds-component-status-badge-warning-soft-border",
+  "component.status-badge.warning.soft.text": "--ds-component-status-badge-warning-soft-text",
+  "component.status-badge.warning.solid.background": "--ds-component-status-badge-warning-solid-background",
+  "component.status-badge.warning.solid.border": "--ds-component-status-badge-warning-solid-border",
+  "component.status-badge.warning.solid.text": "--ds-component-status-badge-warning-solid-text",
+  "component.text-input.background.default": "--ds-component-text-input-background-default",
+  "component.text-input.background.disabled": "--ds-component-text-input-background-disabled",
+  "component.text-input.border.default": "--ds-component-text-input-border-default",
+  "component.text-input.border.disabled": "--ds-component-text-input-border-disabled",
+  "component.text-input.border.error": "--ds-component-text-input-border-error",
+  "component.text-input.border.focus": "--ds-component-text-input-border-focus",
+  "component.text-input.height": "--ds-component-text-input-height",
+  "component.text-input.padding.x": "--ds-component-text-input-padding-x",
+  "component.text-input.text.default": "--ds-component-text-input-text-default",
+  "component.text-input.text.disabled": "--ds-component-text-input-text-disabled",
+  "component.text-input.text.error": "--ds-component-text-input-text-error",
+  "component.text-input.text.helper": "--ds-component-text-input-text-helper",
+  "component.text-input.text.placeholder": "--ds-component-text-input-text-placeholder",
   "radius.10xl": "--ds-radius-10xl",
   "radius.11xl": "--ds-radius-11xl",
   "radius.2xl": "--ds-radius-2xl",
@@ -3624,13 +6022,14 @@ export const metadata = {
   },
   "name": "demo-design-system-tokens",
   "source": "demo-design-token-fixtures",
-  "tokenCount": 223,
+  "tokenCount": 347,
   "modes": [
     "light",
     "dark"
   ],
   "categories": [
     "color",
+    "component",
     "radius",
     "shadow",
     "space",

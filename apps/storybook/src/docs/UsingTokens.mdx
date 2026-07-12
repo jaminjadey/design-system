@@ -26,4 +26,11 @@ import { cssVar } from "@demo-ds/tokens";
 const textColor = cssVar("color.semantic.text.default");
 ```
 
+Design-system wrappers use `component.*` tokens when a value belongs to a
+specific component variant or state:
+
+```ts
+const buttonBackground = cssVar("component.button.primary.high.background");
+```
+
 Token docs in this Storybook read `token-docs.json`; they do not scrape CSS.

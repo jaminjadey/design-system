@@ -23,6 +23,11 @@ Mantine is a rendering dependency behind the design-system API. Keeping it
 behind the package boundary makes the component contract portable if the
 implementation changes later.
 
+Apps generally use semantic token names for app-specific layout. Component
+tokens are owned by `@demo-ds/components`; app code should prefer component
+props such as `tone`, `emphasis`, and `size` instead of manually applying
+`--ds-component-*` variables.
+
 Apps own React and React DOM. The design-system packages own Mantine.
 
 CI enforces this with `pnpm architecture:check` and `pnpm release:check`, which

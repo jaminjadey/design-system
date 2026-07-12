@@ -1,0 +1,542 @@
+{
+  "Alert banner": {
+    "Danger": {
+      "Background": {
+        "$type": "color",
+        "$value": "#FEF2F2"
+      },
+      "Border": {
+        "$type": "color",
+        "$value": "#FECACA"
+      },
+      "Text": {
+        "$type": "color",
+        "$value": "#991B1B"
+      }
+    },
+    "Info": {
+      "Background": {
+        "$type": "color",
+        "$value": "#ECFEFF"
+      },
+      "Border": {
+        "$type": "color",
+        "$value": "#A5F3FC"
+      },
+      "Text": {
+        "$type": "color",
+        "$value": "#155E75"
+      }
+    },
+    "Success": {
+      "Background": {
+        "$type": "color",
+        "$value": "#F0FDF4"
+      },
+      "Border": {
+        "$type": "color",
+        "$value": "#BBF7D0"
+      },
+      "Text": {
+        "$type": "color",
+        "$value": "#166534"
+      }
+    },
+    "Warning": {
+      "Background": {
+        "$type": "color",
+        "$value": "#FFFBEB"
+      },
+      "Border": {
+        "$type": "color",
+        "$value": "#FDE68A"
+      },
+      "Text": {
+        "$type": "color",
+        "$value": "#92400E"
+      }
+    }
+  },
+  "Button": {
+    "Danger": {
+      "High": {
+        "Background": {
+          "$type": "color",
+          "$value": "#DC2626"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#DC2626"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#FFFFFF"
+        }
+      },
+      "Low": {
+        "Background": {
+          "$type": "color",
+          "$value": "#FEF2F2"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#FEF2F2"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#B91C1C"
+        }
+      },
+      "Medium": {
+        "Background": {
+          "$type": "color",
+          "$value": "#FEE2E2"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#FCA5A5"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#B91C1C"
+        }
+      }
+    },
+    "Disabled": {
+      "Background": {
+        "$type": "color",
+        "$value": "#E2E8F0"
+      },
+      "Border": {
+        "$type": "color",
+        "$value": "#E2E8F0"
+      },
+      "Text": {
+        "$type": "color",
+        "$value": "#64748B"
+      }
+    },
+    "Neutral": {
+      "High": {
+        "Background": {
+          "$type": "color",
+          "$value": "#334155"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#334155"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#FFFFFF"
+        }
+      },
+      "Low": {
+        "Background": {
+          "$type": "color",
+          "$value": "#F8FAFC"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#F8FAFC"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#334155"
+        }
+      },
+      "Medium": {
+        "Background": {
+          "$type": "color",
+          "$value": "#F1F5F9"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#CBD5E1"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#334155"
+        }
+      }
+    },
+    "Primary": {
+      "High": {
+        "Background": {
+          "$type": "color",
+          "$value": "#155E75"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#155E75"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#FFFFFF"
+        }
+      },
+      "Low": {
+        "Background": {
+          "$type": "color",
+          "$value": "#ECFEFF"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#ECFEFF"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#155E75"
+        }
+      },
+      "Medium": {
+        "Background": {
+          "$type": "color",
+          "$value": "#CFFAFE"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#67E8F9"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#155E75"
+        }
+      }
+    },
+    "Success": {
+      "High": {
+        "Background": {
+          "$type": "color",
+          "$value": "#15803D"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#15803D"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#FFFFFF"
+        }
+      },
+      "Low": {
+        "Background": {
+          "$type": "color",
+          "$value": "#F0FDF4"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#F0FDF4"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#166534"
+        }
+      },
+      "Medium": {
+        "Background": {
+          "$type": "color",
+          "$value": "#DCFCE7"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#86EFAC"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#166534"
+        }
+      }
+    }
+  },
+  "Card": {
+    "Surface": {
+      "Background": {
+        "$type": "color",
+        "$value": "#FFFFFF"
+      },
+      "Border": {
+        "$type": "color",
+        "$value": "#E2E8F0"
+      },
+      "Text": {
+        "$type": "color",
+        "$value": "#0F172A"
+      }
+    }
+  },
+  "Status badge": {
+    "Danger": {
+      "Outline": {
+        "Background": {
+          "$type": "color",
+          "$value": "#FFFFFF"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#FCA5A5"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#B91C1C"
+        }
+      },
+      "Soft": {
+        "Background": {
+          "$type": "color",
+          "$value": "#FEF2F2"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#FECACA"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#B91C1C"
+        }
+      },
+      "Solid": {
+        "Background": {
+          "$type": "color",
+          "$value": "#DC2626"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#DC2626"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#FFFFFF"
+        }
+      }
+    },
+    "Info": {
+      "Outline": {
+        "Background": {
+          "$type": "color",
+          "$value": "#FFFFFF"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#67E8F9"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#155E75"
+        }
+      },
+      "Soft": {
+        "Background": {
+          "$type": "color",
+          "$value": "#ECFEFF"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#A5F3FC"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#155E75"
+        }
+      },
+      "Solid": {
+        "Background": {
+          "$type": "color",
+          "$value": "#155E75"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#155E75"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#FFFFFF"
+        }
+      }
+    },
+    "Neutral": {
+      "Outline": {
+        "Background": {
+          "$type": "color",
+          "$value": "#FFFFFF"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#CBD5E1"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#334155"
+        }
+      },
+      "Soft": {
+        "Background": {
+          "$type": "color",
+          "$value": "#F8FAFC"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#E2E8F0"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#334155"
+        }
+      },
+      "Solid": {
+        "Background": {
+          "$type": "color",
+          "$value": "#334155"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#334155"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#FFFFFF"
+        }
+      }
+    },
+    "Success": {
+      "Outline": {
+        "Background": {
+          "$type": "color",
+          "$value": "#FFFFFF"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#86EFAC"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#166534"
+        }
+      },
+      "Soft": {
+        "Background": {
+          "$type": "color",
+          "$value": "#F0FDF4"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#BBF7D0"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#166534"
+        }
+      },
+      "Solid": {
+        "Background": {
+          "$type": "color",
+          "$value": "#15803D"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#15803D"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#FFFFFF"
+        }
+      }
+    },
+    "Warning": {
+      "Outline": {
+        "Background": {
+          "$type": "color",
+          "$value": "#FFFFFF"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#FDE68A"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#92400E"
+        }
+      },
+      "Soft": {
+        "Background": {
+          "$type": "color",
+          "$value": "#FFFBEB"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#FDE68A"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#92400E"
+        }
+      },
+      "Solid": {
+        "Background": {
+          "$type": "color",
+          "$value": "#B45309"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "#B45309"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#FFFFFF"
+        }
+      }
+    }
+  },
+  "Text input": {
+    "Background": {
+      "Default": {
+        "$type": "color",
+        "$value": "#FFFFFF"
+      },
+      "Disabled": {
+        "$type": "color",
+        "$value": "#F1F5F9"
+      }
+    },
+    "Border": {
+      "Default": {
+        "$type": "color",
+        "$value": "#CBD5E1"
+      },
+      "Disabled": {
+        "$type": "color",
+        "$value": "#E2E8F0"
+      },
+      "Error": {
+        "$type": "color",
+        "$value": "#DC2626"
+      },
+      "Focus": {
+        "$type": "color",
+        "$value": "#0891B2"
+      }
+    },
+    "Text": {
+      "Default": {
+        "$type": "color",
+        "$value": "#0F172A"
+      },
+      "Disabled": {
+        "$type": "color",
+        "$value": "#64748B"
+      },
+      "Error": {
+        "$type": "color",
+        "$value": "#DC2626"
+      },
+      "Helper": {
+        "$type": "color",
+        "$value": "#475569"
+      },
+      "Placeholder": {
+        "$type": "color",
+        "$value": "#94A3B8"
+      }
+    }
+  }
+}

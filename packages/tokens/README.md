@@ -1,7 +1,7 @@
 # @demo-ds/tokens
 
 Generated design-token package for the demo design system.
-It includes canonical colour, spacing, radius, shadow, and typography tokens.
+It includes canonical colour, component, spacing, radius, shadow, and typography tokens.
 
 ## Public Exports
 

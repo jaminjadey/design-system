@@ -830,6 +830,10 @@ function inferTokenHint(
     return "color";
   }
 
+  if (target.startsWith("components/")) {
+    return target.toLowerCase().includes("dimension") ? "number" : "color";
+  }
+
   if (target.startsWith("spacing/") || target.startsWith("corners/")) {
     return "number";
   }

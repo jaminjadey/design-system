@@ -1,0 +1,72 @@
+{
+  "Alert banner": {
+    "Padding x": {
+      "$type": "number",
+      "$value": 16
+    },
+    "Padding y": {
+      "$type": "number",
+      "$value": 12
+    }
+  },
+  "Button": {
+    "Gap": {
+      "$type": "number",
+      "$value": 8
+    },
+    "Height": {
+      "Lg": {
+        "$type": "number",
+        "$value": 44
+      },
+      "Md": {
+        "$type": "number",
+        "$value": 36
+      },
+      "Sm": {
+        "$type": "number",
+        "$value": 32
+      }
+    },
+    "Padding x": {
+      "Lg": {
+        "$type": "number",
+        "$value": 20
+      },
+      "Md": {
+        "$type": "number",
+        "$value": 16
+      },
+      "Sm": {
+        "$type": "number",
+        "$value": 12
+      }
+    }
+  },
+  "Card": {
+    "Padding": {
+      "$type": "number",
+      "$value": 16
+    }
+  },
+  "Status badge": {
+    "Height": {
+      "$type": "number",
+      "$value": 24
+    },
+    "Padding x": {
+      "$type": "number",
+      "$value": 8
+    }
+  },
+  "Text input": {
+    "Height": {
+      "$type": "number",
+      "$value": 40
+    },
+    "Padding x": {
+      "$type": "number",
+      "$value": 12
+    }
+  }
+}

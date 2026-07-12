@@ -25,14 +25,16 @@ token-quality.md
 `canonical.json` is the stable internal contract.
 
 `tokens.css` contains `--ds-*` custom properties and light/dark selectors.
+Component-level variables are emitted as `--ds-component-*`.
 
 `index.js` and `token-names.js` provide runtime maps and typed token names.
 
 `token-docs.json` feeds Storybook documentation.
 
 `build-report.json` explains records read, records mapped, records skipped,
-path renames, missing semantic modes, generated files, and warnings.
+path renames, missing semantic/component modes, generated files, and warnings.
 
 `token-quality.json` and `token-quality.md` turn the generated contract into a
 reviewable quality report covering token counts, CSS output coverage, light/dark
-mode coverage, source file coverage, generated files, and findings.
+mode coverage for semantic colours, component colours, and shadows, source file
+coverage, generated files, and findings.
