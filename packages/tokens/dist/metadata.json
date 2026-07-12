@@ -6,7 +6,7 @@
   },
   "name": "demo-design-system-tokens",
   "source": "demo-design-token-fixtures",
-  "tokenCount": 347,
+  "tokenCount": 401,
   "modes": [
     "light",
     "dark"

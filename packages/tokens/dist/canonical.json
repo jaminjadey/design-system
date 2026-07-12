@@ -1368,6 +1368,1028 @@
           }
         }
       },
+      "date-picker": {
+        "cell": {
+          "size": {
+            "name": "component.date-picker.cell.size",
+            "path": [
+              "component",
+              "date-picker",
+              "cell",
+              "size"
+            ],
+            "type": "component",
+            "valueType": "dimension",
+            "value": 36,
+            "unit": "px",
+            "cssVariable": "--ds-component-date-picker-cell-size",
+            "source": {
+              "file": "components/Dimensions.tokens.json",
+              "path": "Date picker.Cell size"
+            }
+          }
+        },
+        "disabled": {
+          "background": {
+            "name": "component.date-picker.disabled.background",
+            "path": [
+              "component",
+              "date-picker",
+              "disabled",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#F1F5F9",
+              "dark": "#0F172A"
+            },
+            "cssVariable": "--ds-component-date-picker-disabled-background",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Date picker.Disabled.Background"
+            }
+          },
+          "text": {
+            "name": "component.date-picker.disabled.text",
+            "path": [
+              "component",
+              "date-picker",
+              "disabled",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#94A3B8",
+              "dark": "#64748B"
+            },
+            "cssVariable": "--ds-component-date-picker-disabled-text",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Date picker.Disabled.Text"
+            }
+          }
+        },
+        "height": {
+          "name": "component.date-picker.height",
+          "path": [
+            "component",
+            "date-picker",
+            "height"
+          ],
+          "type": "component",
+          "valueType": "dimension",
+          "value": 40,
+          "unit": "px",
+          "cssVariable": "--ds-component-date-picker-height",
+          "source": {
+            "file": "components/Dimensions.tokens.json",
+            "path": "Date picker.Height"
+          }
+        },
+        "hover": {
+          "background": {
+            "name": "component.date-picker.hover.background",
+            "path": [
+              "component",
+              "date-picker",
+              "hover",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#E0F2FE",
+              "dark": "#164E63"
+            },
+            "cssVariable": "--ds-component-date-picker-hover-background",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Date picker.Hover.Background"
+            }
+          },
+          "text": {
+            "name": "component.date-picker.hover.text",
+            "path": [
+              "component",
+              "date-picker",
+              "hover",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#155E75",
+              "dark": "#CFFAFE"
+            },
+            "cssVariable": "--ds-component-date-picker-hover-text",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Date picker.Hover.Text"
+            }
+          }
+        },
+        "range": {
+          "background": {
+            "name": "component.date-picker.range.background",
+            "path": [
+              "component",
+              "date-picker",
+              "range",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#ECFEFF",
+              "dark": "#083344"
+            },
+            "cssVariable": "--ds-component-date-picker-range-background",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Date picker.Range.Background"
+            }
+          },
+          "text": {
+            "name": "component.date-picker.range.text",
+            "path": [
+              "component",
+              "date-picker",
+              "range",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#155E75",
+              "dark": "#A5F3FC"
+            },
+            "cssVariable": "--ds-component-date-picker-range-text",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Date picker.Range.Text"
+            }
+          }
+        },
+        "selected": {
+          "background": {
+            "name": "component.date-picker.selected.background",
+            "path": [
+              "component",
+              "date-picker",
+              "selected",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#0891B2",
+              "dark": "#0E7490"
+            },
+            "cssVariable": "--ds-component-date-picker-selected-background",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Date picker.Selected.Background"
+            }
+          },
+          "text": {
+            "name": "component.date-picker.selected.text",
+            "path": [
+              "component",
+              "date-picker",
+              "selected",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FFFFFF",
+              "dark": "#FFFFFF"
+            },
+            "cssVariable": "--ds-component-date-picker-selected-text",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Date picker.Selected.Text"
+            }
+          }
+        },
+        "today": {
+          "border": {
+            "name": "component.date-picker.today.border",
+            "path": [
+              "component",
+              "date-picker",
+              "today",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#0891B2",
+              "dark": "#22D3EE"
+            },
+            "cssVariable": "--ds-component-date-picker-today-border",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Date picker.Today.Border"
+            }
+          },
+          "text": {
+            "name": "component.date-picker.today.text",
+            "path": [
+              "component",
+              "date-picker",
+              "today",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#155E75",
+              "dark": "#A5F3FC"
+            },
+            "cssVariable": "--ds-component-date-picker-today-text",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Date picker.Today.Text"
+            }
+          }
+        }
+      },
+      "loading-spinner": {
+        "background": {
+          "name": "component.loading-spinner.background",
+          "path": [
+            "component",
+            "loading-spinner",
+            "background"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#CFFAFE",
+            "dark": "#164E63"
+          },
+          "cssVariable": "--ds-component-loading-spinner-background",
+          "source": {
+            "file": "components/Dark.tokens.json",
+            "path": "Loading spinner.Background"
+          }
+        },
+        "foreground": {
+          "name": "component.loading-spinner.foreground",
+          "path": [
+            "component",
+            "loading-spinner",
+            "foreground"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#0891B2",
+            "dark": "#22D3EE"
+          },
+          "cssVariable": "--ds-component-loading-spinner-foreground",
+          "source": {
+            "file": "components/Dark.tokens.json",
+            "path": "Loading spinner.Foreground"
+          }
+        },
+        "size": {
+          "lg": {
+            "name": "component.loading-spinner.size.lg",
+            "path": [
+              "component",
+              "loading-spinner",
+              "size",
+              "lg"
+            ],
+            "type": "component",
+            "valueType": "dimension",
+            "value": 28,
+            "unit": "px",
+            "cssVariable": "--ds-component-loading-spinner-size-lg",
+            "source": {
+              "file": "components/Dimensions.tokens.json",
+              "path": "Loading spinner.Size.Lg"
+            }
+          },
+          "md": {
+            "name": "component.loading-spinner.size.md",
+            "path": [
+              "component",
+              "loading-spinner",
+              "size",
+              "md"
+            ],
+            "type": "component",
+            "valueType": "dimension",
+            "value": 20,
+            "unit": "px",
+            "cssVariable": "--ds-component-loading-spinner-size-md",
+            "source": {
+              "file": "components/Dimensions.tokens.json",
+              "path": "Loading spinner.Size.Md"
+            }
+          },
+          "sm": {
+            "name": "component.loading-spinner.size.sm",
+            "path": [
+              "component",
+              "loading-spinner",
+              "size",
+              "sm"
+            ],
+            "type": "component",
+            "valueType": "dimension",
+            "value": 16,
+            "unit": "px",
+            "cssVariable": "--ds-component-loading-spinner-size-sm",
+            "source": {
+              "file": "components/Dimensions.tokens.json",
+              "path": "Loading spinner.Size.Sm"
+            }
+          }
+        }
+      },
+      "notification": {
+        "danger": {
+          "background": {
+            "name": "component.notification.danger.background",
+            "path": [
+              "component",
+              "notification",
+              "danger",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FEF2F2",
+              "dark": "#7F1D1D"
+            },
+            "cssVariable": "--ds-component-notification-danger-background",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Notification.Danger.Background"
+            }
+          },
+          "border": {
+            "name": "component.notification.danger.border",
+            "path": [
+              "component",
+              "notification",
+              "danger",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FECACA",
+              "dark": "#991B1B"
+            },
+            "cssVariable": "--ds-component-notification-danger-border",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Notification.Danger.Border"
+            }
+          },
+          "text": {
+            "name": "component.notification.danger.text",
+            "path": [
+              "component",
+              "notification",
+              "danger",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#991B1B",
+              "dark": "#FECACA"
+            },
+            "cssVariable": "--ds-component-notification-danger-text",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Notification.Danger.Text"
+            }
+          }
+        },
+        "default": {
+          "background": {
+            "name": "component.notification.default.background",
+            "path": [
+              "component",
+              "notification",
+              "default",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#F8FAFC",
+              "dark": "#1E293B"
+            },
+            "cssVariable": "--ds-component-notification-default-background",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Notification.Default.Background"
+            }
+          },
+          "border": {
+            "name": "component.notification.default.border",
+            "path": [
+              "component",
+              "notification",
+              "default",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#CBD5E1",
+              "dark": "#475569"
+            },
+            "cssVariable": "--ds-component-notification-default-border",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Notification.Default.Border"
+            }
+          },
+          "text": {
+            "name": "component.notification.default.text",
+            "path": [
+              "component",
+              "notification",
+              "default",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#334155",
+              "dark": "#CBD5E1"
+            },
+            "cssVariable": "--ds-component-notification-default-text",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Notification.Default.Text"
+            }
+          }
+        },
+        "info": {
+          "background": {
+            "name": "component.notification.info.background",
+            "path": [
+              "component",
+              "notification",
+              "info",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#ECFEFF",
+              "dark": "#164E63"
+            },
+            "cssVariable": "--ds-component-notification-info-background",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Notification.Info.Background"
+            }
+          },
+          "border": {
+            "name": "component.notification.info.border",
+            "path": [
+              "component",
+              "notification",
+              "info",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#A5F3FC",
+              "dark": "#0E7490"
+            },
+            "cssVariable": "--ds-component-notification-info-border",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Notification.Info.Border"
+            }
+          },
+          "text": {
+            "name": "component.notification.info.text",
+            "path": [
+              "component",
+              "notification",
+              "info",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#155E75",
+              "dark": "#CFFAFE"
+            },
+            "cssVariable": "--ds-component-notification-info-text",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Notification.Info.Text"
+            }
+          }
+        },
+        "padding": {
+          "x": {
+            "name": "component.notification.padding.x",
+            "path": [
+              "component",
+              "notification",
+              "padding",
+              "x"
+            ],
+            "type": "component",
+            "valueType": "dimension",
+            "value": 16,
+            "unit": "px",
+            "cssVariable": "--ds-component-notification-padding-x",
+            "source": {
+              "file": "components/Dimensions.tokens.json",
+              "path": "Notification.Padding x"
+            }
+          },
+          "y": {
+            "name": "component.notification.padding.y",
+            "path": [
+              "component",
+              "notification",
+              "padding",
+              "y"
+            ],
+            "type": "component",
+            "valueType": "dimension",
+            "value": 12,
+            "unit": "px",
+            "cssVariable": "--ds-component-notification-padding-y",
+            "source": {
+              "file": "components/Dimensions.tokens.json",
+              "path": "Notification.Padding y"
+            }
+          }
+        },
+        "success": {
+          "background": {
+            "name": "component.notification.success.background",
+            "path": [
+              "component",
+              "notification",
+              "success",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#F0FDF4",
+              "dark": "#14532D"
+            },
+            "cssVariable": "--ds-component-notification-success-background",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Notification.Success.Background"
+            }
+          },
+          "border": {
+            "name": "component.notification.success.border",
+            "path": [
+              "component",
+              "notification",
+              "success",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#BBF7D0",
+              "dark": "#166534"
+            },
+            "cssVariable": "--ds-component-notification-success-border",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Notification.Success.Border"
+            }
+          },
+          "text": {
+            "name": "component.notification.success.text",
+            "path": [
+              "component",
+              "notification",
+              "success",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#166534",
+              "dark": "#BBF7D0"
+            },
+            "cssVariable": "--ds-component-notification-success-text",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Notification.Success.Text"
+            }
+          }
+        },
+        "warning": {
+          "background": {
+            "name": "component.notification.warning.background",
+            "path": [
+              "component",
+              "notification",
+              "warning",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FFFBEB",
+              "dark": "#78350F"
+            },
+            "cssVariable": "--ds-component-notification-warning-background",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Notification.Warning.Background"
+            }
+          },
+          "border": {
+            "name": "component.notification.warning.border",
+            "path": [
+              "component",
+              "notification",
+              "warning",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FDE68A",
+              "dark": "#92400E"
+            },
+            "cssVariable": "--ds-component-notification-warning-border",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Notification.Warning.Border"
+            }
+          },
+          "text": {
+            "name": "component.notification.warning.text",
+            "path": [
+              "component",
+              "notification",
+              "warning",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#92400E",
+              "dark": "#FDE68A"
+            },
+            "cssVariable": "--ds-component-notification-warning-text",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Notification.Warning.Text"
+            }
+          }
+        }
+      },
+      "segmented-control": {
+        "active": {
+          "background": {
+            "name": "component.segmented-control.active.background",
+            "path": [
+              "component",
+              "segmented-control",
+              "active",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FFFFFF",
+              "dark": "#334155"
+            },
+            "cssVariable": "--ds-component-segmented-control-active-background",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Segmented control.Active.Background"
+            }
+          },
+          "text": {
+            "name": "component.segmented-control.active.text",
+            "path": [
+              "component",
+              "segmented-control",
+              "active",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#155E75",
+              "dark": "#F8FAFC"
+            },
+            "cssVariable": "--ds-component-segmented-control-active-text",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Segmented control.Active.Text"
+            }
+          }
+        },
+        "background": {
+          "name": "component.segmented-control.background",
+          "path": [
+            "component",
+            "segmented-control",
+            "background"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#F1F5F9",
+            "dark": "#0F172A"
+          },
+          "cssVariable": "--ds-component-segmented-control-background",
+          "source": {
+            "file": "components/Dark.tokens.json",
+            "path": "Segmented control.Background"
+          }
+        },
+        "border": {
+          "name": "component.segmented-control.border",
+          "path": [
+            "component",
+            "segmented-control",
+            "border"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#CBD5E1",
+            "dark": "#475569"
+          },
+          "cssVariable": "--ds-component-segmented-control-border",
+          "source": {
+            "file": "components/Dark.tokens.json",
+            "path": "Segmented control.Border"
+          }
+        },
+        "height": {
+          "name": "component.segmented-control.height",
+          "path": [
+            "component",
+            "segmented-control",
+            "height"
+          ],
+          "type": "component",
+          "valueType": "dimension",
+          "value": 36,
+          "unit": "px",
+          "cssVariable": "--ds-component-segmented-control-height",
+          "source": {
+            "file": "components/Dimensions.tokens.json",
+            "path": "Segmented control.Height"
+          }
+        },
+        "padding": {
+          "x": {
+            "name": "component.segmented-control.padding.x",
+            "path": [
+              "component",
+              "segmented-control",
+              "padding",
+              "x"
+            ],
+            "type": "component",
+            "valueType": "dimension",
+            "value": 12,
+            "unit": "px",
+            "cssVariable": "--ds-component-segmented-control-padding-x",
+            "source": {
+              "file": "components/Dimensions.tokens.json",
+              "path": "Segmented control.Padding x"
+            }
+          }
+        },
+        "text": {
+          "name": "component.segmented-control.text",
+          "path": [
+            "component",
+            "segmented-control",
+            "text"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#334155",
+            "dark": "#CBD5E1"
+          },
+          "cssVariable": "--ds-component-segmented-control-text",
+          "source": {
+            "file": "components/Dark.tokens.json",
+            "path": "Segmented control.Text"
+          }
+        }
+      },
+      "select": {
+        "dropdown": {
+          "background": {
+            "name": "component.select.dropdown.background",
+            "path": [
+              "component",
+              "select",
+              "dropdown",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FFFFFF",
+              "dark": "#1E293B"
+            },
+            "cssVariable": "--ds-component-select-dropdown-background",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Select.Dropdown.Background"
+            }
+          },
+          "border": {
+            "name": "component.select.dropdown.border",
+            "path": [
+              "component",
+              "select",
+              "dropdown",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#CBD5E1",
+              "dark": "#475569"
+            },
+            "cssVariable": "--ds-component-select-dropdown-border",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Select.Dropdown.Border"
+            }
+          }
+        },
+        "height": {
+          "name": "component.select.height",
+          "path": [
+            "component",
+            "select",
+            "height"
+          ],
+          "type": "component",
+          "valueType": "dimension",
+          "value": 40,
+          "unit": "px",
+          "cssVariable": "--ds-component-select-height",
+          "source": {
+            "file": "components/Dimensions.tokens.json",
+            "path": "Select.Height"
+          }
+        },
+        "input": {
+          "background": {
+            "name": "component.select.input.background",
+            "path": [
+              "component",
+              "select",
+              "input",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#FFFFFF",
+              "dark": "#1E293B"
+            },
+            "cssVariable": "--ds-component-select-input-background",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Select.Input.Background"
+            }
+          },
+          "border": {
+            "name": "component.select.input.border",
+            "path": [
+              "component",
+              "select",
+              "input",
+              "border"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#CBD5E1",
+              "dark": "#475569"
+            },
+            "cssVariable": "--ds-component-select-input-border",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Select.Input.Border"
+            }
+          },
+          "text": {
+            "name": "component.select.input.text",
+            "path": [
+              "component",
+              "select",
+              "input",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#0F172A",
+              "dark": "#F8FAFC"
+            },
+            "cssVariable": "--ds-component-select-input-text",
+            "source": {
+              "file": "components/Dark.tokens.json",
+              "path": "Select.Input.Text"
+            }
+          }
+        },
+        "option": {
+          "active": {
+            "background": {
+              "name": "component.select.option.active.background",
+              "path": [
+                "component",
+                "select",
+                "option",
+                "active",
+                "background"
+              ],
+              "type": "component",
+              "valueType": "color",
+              "value": {
+                "light": "#E0F2FE",
+                "dark": "#164E63"
+              },
+              "cssVariable": "--ds-component-select-option-active-background",
+              "source": {
+                "file": "components/Dark.tokens.json",
+                "path": "Select.Option.Active.Background"
+              }
+            },
+            "text": {
+              "name": "component.select.option.active.text",
+              "path": [
+                "component",
+                "select",
+                "option",
+                "active",
+                "text"
+              ],
+              "type": "component",
+              "valueType": "color",
+              "value": {
+                "light": "#155E75",
+                "dark": "#CFFAFE"
+              },
+              "cssVariable": "--ds-component-select-option-active-text",
+              "source": {
+                "file": "components/Dark.tokens.json",
+                "path": "Select.Option.Active.Text"
+              }
+            }
+          }
+        },
+        "padding": {
+          "x": {
+            "name": "component.select.padding.x",
+            "path": [
+              "component",
+              "select",
+              "padding",
+              "x"
+            ],
+            "type": "component",
+            "valueType": "dimension",
+            "value": 12,
+            "unit": "px",
+            "cssVariable": "--ds-component-select-padding-x",
+            "source": {
+              "file": "components/Dimensions.tokens.json",
+              "path": "Select.Padding x"
+            }
+          }
+        }
+      },
       "status-badge": {
         "danger": {
           "outline": {
@@ -2654,6 +3676,84 @@
               "file": "components/Dark.tokens.json",
               "path": "Text input.Text.Placeholder"
             }
+          }
+        }
+      },
+      "tooltip": {
+        "background": {
+          "name": "component.tooltip.background",
+          "path": [
+            "component",
+            "tooltip",
+            "background"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#0F172A",
+            "dark": "#E2E8F0"
+          },
+          "cssVariable": "--ds-component-tooltip-background",
+          "source": {
+            "file": "components/Dark.tokens.json",
+            "path": "Tooltip.Background"
+          }
+        },
+        "padding": {
+          "x": {
+            "name": "component.tooltip.padding.x",
+            "path": [
+              "component",
+              "tooltip",
+              "padding",
+              "x"
+            ],
+            "type": "component",
+            "valueType": "dimension",
+            "value": 10,
+            "unit": "px",
+            "cssVariable": "--ds-component-tooltip-padding-x",
+            "source": {
+              "file": "components/Dimensions.tokens.json",
+              "path": "Tooltip.Padding x"
+            }
+          },
+          "y": {
+            "name": "component.tooltip.padding.y",
+            "path": [
+              "component",
+              "tooltip",
+              "padding",
+              "y"
+            ],
+            "type": "component",
+            "valueType": "dimension",
+            "value": 6,
+            "unit": "px",
+            "cssVariable": "--ds-component-tooltip-padding-y",
+            "source": {
+              "file": "components/Dimensions.tokens.json",
+              "path": "Tooltip.Padding y"
+            }
+          }
+        },
+        "text": {
+          "name": "component.tooltip.text",
+          "path": [
+            "component",
+            "tooltip",
+            "text"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#FFFFFF",
+            "dark": "#0F172A"
+          },
+          "cssVariable": "--ds-component-tooltip-text",
+          "source": {
+            "file": "components/Dark.tokens.json",
+            "path": "Tooltip.Text"
           }
         }
       }

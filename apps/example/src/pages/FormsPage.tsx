@@ -1,5 +1,13 @@
 import { useState } from "react";
-import { AlertBanner, Button, Card, TextInput } from "@demo-ds/components";
+import {
+  AlertBanner,
+  Button,
+  Card,
+  DatePicker,
+  SegmentedControl,
+  Select,
+  TextInput
+} from "@demo-ds/components";
 
 export function FormsPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -31,6 +39,30 @@ export function FormsPage() {
             defaultValue="Demo user"
           />
           <TextInput label="Contact email" helperText="Used for demo notifications." />
+          <Select
+            label="Workflow status"
+            helperText="A generic controlled option list."
+            data={[
+              { value: "draft", label: "Draft" },
+              { value: "review", label: "In review" },
+              { value: "live", label: "Live" }
+            ]}
+            defaultValue="review"
+          />
+          <SegmentedControl
+            label="Review mode"
+            data={[
+              { value: "quick", label: "Quick" },
+              { value: "full", label: "Full" },
+              { value: "manual", label: "Manual" }
+            ]}
+            defaultValue="full"
+          />
+          <DatePicker
+            label="Target date"
+            helperText="Uses an ISO date value from app state."
+            defaultValue="2026-07-13"
+          />
           <TextInput
             label="Support topic"
             helperText="A short generic request category."

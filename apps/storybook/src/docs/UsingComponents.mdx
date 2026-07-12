@@ -8,7 +8,7 @@ Apps import design-system components from `@demo-ds/components`.
 
 ```tsx
 import { DemoThemeProvider } from "@demo-ds/mantine-theme";
-import { Button, Card, PageHeader } from "@demo-ds/components";
+import { Button, Card, PageHeader, Select } from "@demo-ds/components";
 import "@demo-ds/mantine-theme/styles.css";
 
 export function App() {
@@ -17,6 +17,13 @@ export function App() {
       <PageHeader title="Project overview" />
       <Card>
         <Button>Save changes</Button>
+        <Select
+          label="Status"
+          data={[
+            { value: "draft", label: "Draft" },
+            { value: "live", label: "Live" }
+          ]}
+        />
       </Card>
     </DemoThemeProvider>
   );
@@ -28,4 +35,5 @@ not import Mantine components directly.
 
 The wrappers consume generated `--ds-component-*` variables for component
 variants and states. Apps consume the wrapper API; they should not recreate the
-Button, Badge, Alert, Card, or TextInput token mapping themselves.
+Button, Badge, Alert, Card, TextInput, Select, SegmentedControl, DatePicker,
+Tooltip, NotificationBanner, or LoadingSpinner token mapping themselves.

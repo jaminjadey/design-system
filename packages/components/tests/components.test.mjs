@@ -9,10 +9,16 @@ import {
   AlertBanner,
   Button,
   Card,
+  DatePicker,
+  LoadingSpinner,
+  NotificationBanner,
   PageHeader,
+  SegmentedControl,
+  Select,
   StatusBadge,
   TextInput,
-  ThemeToggle
+  ThemeToggle,
+  Tooltip
 } from "../dist/index.js";
 
 function renderWithTheme(element) {
@@ -96,6 +102,96 @@ test("StatusBadge exposes status role and tone attribute", () => {
   assert.match(markup, /Live/u);
 });
 
+test("NotificationBanner uses component notification tokens", () => {
+  const markup = renderWithTheme(
+    React.createElement(
+      NotificationBanner,
+      { tone: "warning", title: "Needs review" },
+      "Check token mappings."
+    )
+  );
+
+  assert.match(markup, /role="status"/u);
+  assert.match(markup, /Needs review/u);
+  assert.match(markup, /--ds-component-notification-warning-background/u);
+  assert.match(markup, /Check token mappings/u);
+});
+
+test("Select renders a labelled input with select tokens", () => {
+  const markup = renderWithTheme(
+    React.createElement(Select, {
+      label: "Status",
+      data: [
+        { value: "draft", label: "Draft" },
+        { value: "live", label: "Live" }
+      ],
+      defaultValue: "draft"
+    })
+  );
+
+  assert.match(markup, /Status/u);
+  assert.match(markup, /--ds-component-select-input-background/u);
+  assert.match(markup, /--ds-component-select-height/u);
+});
+
+test("SegmentedControl renders labelled choices with segmented tokens", () => {
+  const markup = renderWithTheme(
+    React.createElement(SegmentedControl, {
+      label: "View",
+      data: [
+        { value: "overview", label: "Overview" },
+        { value: "activity", label: "Activity" }
+      ],
+      defaultValue: "overview"
+    })
+  );
+
+  assert.match(markup, /View/u);
+  assert.match(markup, /Overview/u);
+  assert.match(markup, /--ds-component-segmented-control-background/u);
+  assert.match(markup, /--ds-component-segmented-control-height/u);
+});
+
+test("Tooltip renders its child and maps tooltip overlay tokens", async () => {
+  const markup = renderWithTheme(
+    React.createElement(
+      Tooltip,
+      { label: "Create a generic item", opened: true },
+      React.createElement(Button, null, "New item")
+    )
+  );
+  const source = await readFile(new URL("../src/Tooltip/Tooltip.tsx", import.meta.url), "utf8");
+
+  assert.match(markup, /New item/u);
+  assert.match(source, /componentVar\("tooltip-background"\)/u);
+  assert.match(source, /componentVar\("tooltip-text"\)/u);
+});
+
+test("DatePicker renders a date input with date-picker tokens", () => {
+  const markup = renderWithTheme(
+    React.createElement(DatePicker, {
+      label: "Target date",
+      defaultValue: "2026-07-13"
+    })
+  );
+
+  assert.match(markup, /Target date/u);
+  assert.match(markup, /type="date"/u);
+  assert.match(markup, /--ds-component-date-picker-selected-background/u);
+  assert.match(markup, /--ds-component-date-picker-height/u);
+});
+
+test("LoadingSpinner exposes status text and spinner tokens", () => {
+  const markup = renderWithTheme(
+    React.createElement(LoadingSpinner, { label: "Loading report", size: "lg" })
+  );
+
+  assert.match(markup, /role="status"/u);
+  assert.match(markup, /Loading report/u);
+  assert.match(markup, /--ds-component-loading-spinner-foreground/u);
+  assert.match(markup, /--ds-component-loading-spinner-size-lg/u);
+});
+
 test("PageHeader renders title, description, and actions", () => {
   const markup = renderWithTheme(
     React.createElement(PageHeader, {
@@ -121,6 +217,7 @@ test("tone mappings use design-system palette names instead of Mantine built-ins
   for (const sourceFile of [
     "../src/Button/Button.tsx",
     "../src/AlertBanner/AlertBanner.tsx",
+    "../src/NotificationBanner/NotificationBanner.tsx",
     "../src/StatusBadge/StatusBadge.tsx"
   ]) {
     const source = await readFile(new URL(sourceFile, import.meta.url), "utf8");

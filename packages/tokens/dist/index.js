@@ -3347,6 +3347,828 @@ export const tokens = {
         }
       }
     },
+    "date-picker": {
+      "cell": {
+        "size": {
+          "name": "component.date-picker.cell.size",
+          "path": [
+            "component",
+            "date-picker",
+            "cell",
+            "size"
+          ],
+          "type": "component",
+          "valueType": "dimension",
+          "value": 36,
+          "cssVariable": "--ds-component-date-picker-cell-size",
+          "unit": "px"
+        }
+      },
+      "disabled": {
+        "background": {
+          "name": "component.date-picker.disabled.background",
+          "path": [
+            "component",
+            "date-picker",
+            "disabled",
+            "background"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#F1F5F9",
+            "dark": "#0F172A"
+          },
+          "cssVariable": "--ds-component-date-picker-disabled-background"
+        },
+        "text": {
+          "name": "component.date-picker.disabled.text",
+          "path": [
+            "component",
+            "date-picker",
+            "disabled",
+            "text"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#94A3B8",
+            "dark": "#64748B"
+          },
+          "cssVariable": "--ds-component-date-picker-disabled-text"
+        }
+      },
+      "height": {
+        "name": "component.date-picker.height",
+        "path": [
+          "component",
+          "date-picker",
+          "height"
+        ],
+        "type": "component",
+        "valueType": "dimension",
+        "value": 40,
+        "cssVariable": "--ds-component-date-picker-height",
+        "unit": "px"
+      },
+      "hover": {
+        "background": {
+          "name": "component.date-picker.hover.background",
+          "path": [
+            "component",
+            "date-picker",
+            "hover",
+            "background"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#E0F2FE",
+            "dark": "#164E63"
+          },
+          "cssVariable": "--ds-component-date-picker-hover-background"
+        },
+        "text": {
+          "name": "component.date-picker.hover.text",
+          "path": [
+            "component",
+            "date-picker",
+            "hover",
+            "text"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#155E75",
+            "dark": "#CFFAFE"
+          },
+          "cssVariable": "--ds-component-date-picker-hover-text"
+        }
+      },
+      "range": {
+        "background": {
+          "name": "component.date-picker.range.background",
+          "path": [
+            "component",
+            "date-picker",
+            "range",
+            "background"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#ECFEFF",
+            "dark": "#083344"
+          },
+          "cssVariable": "--ds-component-date-picker-range-background"
+        },
+        "text": {
+          "name": "component.date-picker.range.text",
+          "path": [
+            "component",
+            "date-picker",
+            "range",
+            "text"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#155E75",
+            "dark": "#A5F3FC"
+          },
+          "cssVariable": "--ds-component-date-picker-range-text"
+        }
+      },
+      "selected": {
+        "background": {
+          "name": "component.date-picker.selected.background",
+          "path": [
+            "component",
+            "date-picker",
+            "selected",
+            "background"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#0891B2",
+            "dark": "#0E7490"
+          },
+          "cssVariable": "--ds-component-date-picker-selected-background"
+        },
+        "text": {
+          "name": "component.date-picker.selected.text",
+          "path": [
+            "component",
+            "date-picker",
+            "selected",
+            "text"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#FFFFFF",
+            "dark": "#FFFFFF"
+          },
+          "cssVariable": "--ds-component-date-picker-selected-text"
+        }
+      },
+      "today": {
+        "border": {
+          "name": "component.date-picker.today.border",
+          "path": [
+            "component",
+            "date-picker",
+            "today",
+            "border"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#0891B2",
+            "dark": "#22D3EE"
+          },
+          "cssVariable": "--ds-component-date-picker-today-border"
+        },
+        "text": {
+          "name": "component.date-picker.today.text",
+          "path": [
+            "component",
+            "date-picker",
+            "today",
+            "text"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#155E75",
+            "dark": "#A5F3FC"
+          },
+          "cssVariable": "--ds-component-date-picker-today-text"
+        }
+      }
+    },
+    "loading-spinner": {
+      "background": {
+        "name": "component.loading-spinner.background",
+        "path": [
+          "component",
+          "loading-spinner",
+          "background"
+        ],
+        "type": "component",
+        "valueType": "color",
+        "value": {
+          "light": "#CFFAFE",
+          "dark": "#164E63"
+        },
+        "cssVariable": "--ds-component-loading-spinner-background"
+      },
+      "foreground": {
+        "name": "component.loading-spinner.foreground",
+        "path": [
+          "component",
+          "loading-spinner",
+          "foreground"
+        ],
+        "type": "component",
+        "valueType": "color",
+        "value": {
+          "light": "#0891B2",
+          "dark": "#22D3EE"
+        },
+        "cssVariable": "--ds-component-loading-spinner-foreground"
+      },
+      "size": {
+        "lg": {
+          "name": "component.loading-spinner.size.lg",
+          "path": [
+            "component",
+            "loading-spinner",
+            "size",
+            "lg"
+          ],
+          "type": "component",
+          "valueType": "dimension",
+          "value": 28,
+          "cssVariable": "--ds-component-loading-spinner-size-lg",
+          "unit": "px"
+        },
+        "md": {
+          "name": "component.loading-spinner.size.md",
+          "path": [
+            "component",
+            "loading-spinner",
+            "size",
+            "md"
+          ],
+          "type": "component",
+          "valueType": "dimension",
+          "value": 20,
+          "cssVariable": "--ds-component-loading-spinner-size-md",
+          "unit": "px"
+        },
+        "sm": {
+          "name": "component.loading-spinner.size.sm",
+          "path": [
+            "component",
+            "loading-spinner",
+            "size",
+            "sm"
+          ],
+          "type": "component",
+          "valueType": "dimension",
+          "value": 16,
+          "cssVariable": "--ds-component-loading-spinner-size-sm",
+          "unit": "px"
+        }
+      }
+    },
+    "notification": {
+      "danger": {
+        "background": {
+          "name": "component.notification.danger.background",
+          "path": [
+            "component",
+            "notification",
+            "danger",
+            "background"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#FEF2F2",
+            "dark": "#7F1D1D"
+          },
+          "cssVariable": "--ds-component-notification-danger-background"
+        },
+        "border": {
+          "name": "component.notification.danger.border",
+          "path": [
+            "component",
+            "notification",
+            "danger",
+            "border"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#FECACA",
+            "dark": "#991B1B"
+          },
+          "cssVariable": "--ds-component-notification-danger-border"
+        },
+        "text": {
+          "name": "component.notification.danger.text",
+          "path": [
+            "component",
+            "notification",
+            "danger",
+            "text"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#991B1B",
+            "dark": "#FECACA"
+          },
+          "cssVariable": "--ds-component-notification-danger-text"
+        }
+      },
+      "default": {
+        "background": {
+          "name": "component.notification.default.background",
+          "path": [
+            "component",
+            "notification",
+            "default",
+            "background"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#F8FAFC",
+            "dark": "#1E293B"
+          },
+          "cssVariable": "--ds-component-notification-default-background"
+        },
+        "border": {
+          "name": "component.notification.default.border",
+          "path": [
+            "component",
+            "notification",
+            "default",
+            "border"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#CBD5E1",
+            "dark": "#475569"
+          },
+          "cssVariable": "--ds-component-notification-default-border"
+        },
+        "text": {
+          "name": "component.notification.default.text",
+          "path": [
+            "component",
+            "notification",
+            "default",
+            "text"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#334155",
+            "dark": "#CBD5E1"
+          },
+          "cssVariable": "--ds-component-notification-default-text"
+        }
+      },
+      "info": {
+        "background": {
+          "name": "component.notification.info.background",
+          "path": [
+            "component",
+            "notification",
+            "info",
+            "background"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#ECFEFF",
+            "dark": "#164E63"
+          },
+          "cssVariable": "--ds-component-notification-info-background"
+        },
+        "border": {
+          "name": "component.notification.info.border",
+          "path": [
+            "component",
+            "notification",
+            "info",
+            "border"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#A5F3FC",
+            "dark": "#0E7490"
+          },
+          "cssVariable": "--ds-component-notification-info-border"
+        },
+        "text": {
+          "name": "component.notification.info.text",
+          "path": [
+            "component",
+            "notification",
+            "info",
+            "text"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#155E75",
+            "dark": "#CFFAFE"
+          },
+          "cssVariable": "--ds-component-notification-info-text"
+        }
+      },
+      "padding": {
+        "x": {
+          "name": "component.notification.padding.x",
+          "path": [
+            "component",
+            "notification",
+            "padding",
+            "x"
+          ],
+          "type": "component",
+          "valueType": "dimension",
+          "value": 16,
+          "cssVariable": "--ds-component-notification-padding-x",
+          "unit": "px"
+        },
+        "y": {
+          "name": "component.notification.padding.y",
+          "path": [
+            "component",
+            "notification",
+            "padding",
+            "y"
+          ],
+          "type": "component",
+          "valueType": "dimension",
+          "value": 12,
+          "cssVariable": "--ds-component-notification-padding-y",
+          "unit": "px"
+        }
+      },
+      "success": {
+        "background": {
+          "name": "component.notification.success.background",
+          "path": [
+            "component",
+            "notification",
+            "success",
+            "background"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#F0FDF4",
+            "dark": "#14532D"
+          },
+          "cssVariable": "--ds-component-notification-success-background"
+        },
+        "border": {
+          "name": "component.notification.success.border",
+          "path": [
+            "component",
+            "notification",
+            "success",
+            "border"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#BBF7D0",
+            "dark": "#166534"
+          },
+          "cssVariable": "--ds-component-notification-success-border"
+        },
+        "text": {
+          "name": "component.notification.success.text",
+          "path": [
+            "component",
+            "notification",
+            "success",
+            "text"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#166534",
+            "dark": "#BBF7D0"
+          },
+          "cssVariable": "--ds-component-notification-success-text"
+        }
+      },
+      "warning": {
+        "background": {
+          "name": "component.notification.warning.background",
+          "path": [
+            "component",
+            "notification",
+            "warning",
+            "background"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#FFFBEB",
+            "dark": "#78350F"
+          },
+          "cssVariable": "--ds-component-notification-warning-background"
+        },
+        "border": {
+          "name": "component.notification.warning.border",
+          "path": [
+            "component",
+            "notification",
+            "warning",
+            "border"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#FDE68A",
+            "dark": "#92400E"
+          },
+          "cssVariable": "--ds-component-notification-warning-border"
+        },
+        "text": {
+          "name": "component.notification.warning.text",
+          "path": [
+            "component",
+            "notification",
+            "warning",
+            "text"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#92400E",
+            "dark": "#FDE68A"
+          },
+          "cssVariable": "--ds-component-notification-warning-text"
+        }
+      }
+    },
+    "segmented-control": {
+      "active": {
+        "background": {
+          "name": "component.segmented-control.active.background",
+          "path": [
+            "component",
+            "segmented-control",
+            "active",
+            "background"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#FFFFFF",
+            "dark": "#334155"
+          },
+          "cssVariable": "--ds-component-segmented-control-active-background"
+        },
+        "text": {
+          "name": "component.segmented-control.active.text",
+          "path": [
+            "component",
+            "segmented-control",
+            "active",
+            "text"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#155E75",
+            "dark": "#F8FAFC"
+          },
+          "cssVariable": "--ds-component-segmented-control-active-text"
+        }
+      },
+      "background": {
+        "name": "component.segmented-control.background",
+        "path": [
+          "component",
+          "segmented-control",
+          "background"
+        ],
+        "type": "component",
+        "valueType": "color",
+        "value": {
+          "light": "#F1F5F9",
+          "dark": "#0F172A"
+        },
+        "cssVariable": "--ds-component-segmented-control-background"
+      },
+      "border": {
+        "name": "component.segmented-control.border",
+        "path": [
+          "component",
+          "segmented-control",
+          "border"
+        ],
+        "type": "component",
+        "valueType": "color",
+        "value": {
+          "light": "#CBD5E1",
+          "dark": "#475569"
+        },
+        "cssVariable": "--ds-component-segmented-control-border"
+      },
+      "height": {
+        "name": "component.segmented-control.height",
+        "path": [
+          "component",
+          "segmented-control",
+          "height"
+        ],
+        "type": "component",
+        "valueType": "dimension",
+        "value": 36,
+        "cssVariable": "--ds-component-segmented-control-height",
+        "unit": "px"
+      },
+      "padding": {
+        "x": {
+          "name": "component.segmented-control.padding.x",
+          "path": [
+            "component",
+            "segmented-control",
+            "padding",
+            "x"
+          ],
+          "type": "component",
+          "valueType": "dimension",
+          "value": 12,
+          "cssVariable": "--ds-component-segmented-control-padding-x",
+          "unit": "px"
+        }
+      },
+      "text": {
+        "name": "component.segmented-control.text",
+        "path": [
+          "component",
+          "segmented-control",
+          "text"
+        ],
+        "type": "component",
+        "valueType": "color",
+        "value": {
+          "light": "#334155",
+          "dark": "#CBD5E1"
+        },
+        "cssVariable": "--ds-component-segmented-control-text"
+      }
+    },
+    "select": {
+      "dropdown": {
+        "background": {
+          "name": "component.select.dropdown.background",
+          "path": [
+            "component",
+            "select",
+            "dropdown",
+            "background"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#FFFFFF",
+            "dark": "#1E293B"
+          },
+          "cssVariable": "--ds-component-select-dropdown-background"
+        },
+        "border": {
+          "name": "component.select.dropdown.border",
+          "path": [
+            "component",
+            "select",
+            "dropdown",
+            "border"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#CBD5E1",
+            "dark": "#475569"
+          },
+          "cssVariable": "--ds-component-select-dropdown-border"
+        }
+      },
+      "height": {
+        "name": "component.select.height",
+        "path": [
+          "component",
+          "select",
+          "height"
+        ],
+        "type": "component",
+        "valueType": "dimension",
+        "value": 40,
+        "cssVariable": "--ds-component-select-height",
+        "unit": "px"
+      },
+      "input": {
+        "background": {
+          "name": "component.select.input.background",
+          "path": [
+            "component",
+            "select",
+            "input",
+            "background"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#FFFFFF",
+            "dark": "#1E293B"
+          },
+          "cssVariable": "--ds-component-select-input-background"
+        },
+        "border": {
+          "name": "component.select.input.border",
+          "path": [
+            "component",
+            "select",
+            "input",
+            "border"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#CBD5E1",
+            "dark": "#475569"
+          },
+          "cssVariable": "--ds-component-select-input-border"
+        },
+        "text": {
+          "name": "component.select.input.text",
+          "path": [
+            "component",
+            "select",
+            "input",
+            "text"
+          ],
+          "type": "component",
+          "valueType": "color",
+          "value": {
+            "light": "#0F172A",
+            "dark": "#F8FAFC"
+          },
+          "cssVariable": "--ds-component-select-input-text"
+        }
+      },
+      "option": {
+        "active": {
+          "background": {
+            "name": "component.select.option.active.background",
+            "path": [
+              "component",
+              "select",
+              "option",
+              "active",
+              "background"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#E0F2FE",
+              "dark": "#164E63"
+            },
+            "cssVariable": "--ds-component-select-option-active-background"
+          },
+          "text": {
+            "name": "component.select.option.active.text",
+            "path": [
+              "component",
+              "select",
+              "option",
+              "active",
+              "text"
+            ],
+            "type": "component",
+            "valueType": "color",
+            "value": {
+              "light": "#155E75",
+              "dark": "#CFFAFE"
+            },
+            "cssVariable": "--ds-component-select-option-active-text"
+          }
+        }
+      },
+      "padding": {
+        "x": {
+          "name": "component.select.padding.x",
+          "path": [
+            "component",
+            "select",
+            "padding",
+            "x"
+          ],
+          "type": "component",
+          "valueType": "dimension",
+          "value": 12,
+          "cssVariable": "--ds-component-select-padding-x",
+          "unit": "px"
+        }
+      }
+    },
     "status-badge": {
       "danger": {
         "outline": {
@@ -4394,6 +5216,68 @@ export const tokens = {
           },
           "cssVariable": "--ds-component-text-input-text-placeholder"
         }
+      }
+    },
+    "tooltip": {
+      "background": {
+        "name": "component.tooltip.background",
+        "path": [
+          "component",
+          "tooltip",
+          "background"
+        ],
+        "type": "component",
+        "valueType": "color",
+        "value": {
+          "light": "#0F172A",
+          "dark": "#E2E8F0"
+        },
+        "cssVariable": "--ds-component-tooltip-background"
+      },
+      "padding": {
+        "x": {
+          "name": "component.tooltip.padding.x",
+          "path": [
+            "component",
+            "tooltip",
+            "padding",
+            "x"
+          ],
+          "type": "component",
+          "valueType": "dimension",
+          "value": 10,
+          "cssVariable": "--ds-component-tooltip-padding-x",
+          "unit": "px"
+        },
+        "y": {
+          "name": "component.tooltip.padding.y",
+          "path": [
+            "component",
+            "tooltip",
+            "padding",
+            "y"
+          ],
+          "type": "component",
+          "valueType": "dimension",
+          "value": 6,
+          "cssVariable": "--ds-component-tooltip-padding-y",
+          "unit": "px"
+        }
+      },
+      "text": {
+        "name": "component.tooltip.text",
+        "path": [
+          "component",
+          "tooltip",
+          "text"
+        ],
+        "type": "component",
+        "valueType": "color",
+        "value": {
+          "light": "#FFFFFF",
+          "dark": "#0F172A"
+        },
+        "cssVariable": "--ds-component-tooltip-text"
       }
     }
   },
@@ -5567,6 +6451,56 @@ export const tokenNames = [
   "component.card.surface.background",
   "component.card.surface.border",
   "component.card.surface.text",
+  "component.date-picker.cell.size",
+  "component.date-picker.disabled.background",
+  "component.date-picker.disabled.text",
+  "component.date-picker.height",
+  "component.date-picker.hover.background",
+  "component.date-picker.hover.text",
+  "component.date-picker.range.background",
+  "component.date-picker.range.text",
+  "component.date-picker.selected.background",
+  "component.date-picker.selected.text",
+  "component.date-picker.today.border",
+  "component.date-picker.today.text",
+  "component.loading-spinner.background",
+  "component.loading-spinner.foreground",
+  "component.loading-spinner.size.lg",
+  "component.loading-spinner.size.md",
+  "component.loading-spinner.size.sm",
+  "component.notification.danger.background",
+  "component.notification.danger.border",
+  "component.notification.danger.text",
+  "component.notification.default.background",
+  "component.notification.default.border",
+  "component.notification.default.text",
+  "component.notification.info.background",
+  "component.notification.info.border",
+  "component.notification.info.text",
+  "component.notification.padding.x",
+  "component.notification.padding.y",
+  "component.notification.success.background",
+  "component.notification.success.border",
+  "component.notification.success.text",
+  "component.notification.warning.background",
+  "component.notification.warning.border",
+  "component.notification.warning.text",
+  "component.segmented-control.active.background",
+  "component.segmented-control.active.text",
+  "component.segmented-control.background",
+  "component.segmented-control.border",
+  "component.segmented-control.height",
+  "component.segmented-control.padding.x",
+  "component.segmented-control.text",
+  "component.select.dropdown.background",
+  "component.select.dropdown.border",
+  "component.select.height",
+  "component.select.input.background",
+  "component.select.input.border",
+  "component.select.input.text",
+  "component.select.option.active.background",
+  "component.select.option.active.text",
+  "component.select.padding.x",
   "component.status-badge.danger.outline.background",
   "component.status-badge.danger.outline.border",
   "component.status-badge.danger.outline.text",
@@ -5627,6 +6561,10 @@ export const tokenNames = [
   "component.text-input.text.error",
   "component.text-input.text.helper",
   "component.text-input.text.placeholder",
+  "component.tooltip.background",
+  "component.tooltip.padding.x",
+  "component.tooltip.padding.y",
+  "component.tooltip.text",
   "radius.10xl",
   "radius.11xl",
   "radius.2xl",
@@ -5916,6 +6854,56 @@ export const tokenNameToCssVariable = {
   "component.card.surface.background": "--ds-component-card-surface-background",
   "component.card.surface.border": "--ds-component-card-surface-border",
   "component.card.surface.text": "--ds-component-card-surface-text",
+  "component.date-picker.cell.size": "--ds-component-date-picker-cell-size",
+  "component.date-picker.disabled.background": "--ds-component-date-picker-disabled-background",
+  "component.date-picker.disabled.text": "--ds-component-date-picker-disabled-text",
+  "component.date-picker.height": "--ds-component-date-picker-height",
+  "component.date-picker.hover.background": "--ds-component-date-picker-hover-background",
+  "component.date-picker.hover.text": "--ds-component-date-picker-hover-text",
+  "component.date-picker.range.background": "--ds-component-date-picker-range-background",
+  "component.date-picker.range.text": "--ds-component-date-picker-range-text",
+  "component.date-picker.selected.background": "--ds-component-date-picker-selected-background",
+  "component.date-picker.selected.text": "--ds-component-date-picker-selected-text",
+  "component.date-picker.today.border": "--ds-component-date-picker-today-border",
+  "component.date-picker.today.text": "--ds-component-date-picker-today-text",
+  "component.loading-spinner.background": "--ds-component-loading-spinner-background",
+  "component.loading-spinner.foreground": "--ds-component-loading-spinner-foreground",
+  "component.loading-spinner.size.lg": "--ds-component-loading-spinner-size-lg",
+  "component.loading-spinner.size.md": "--ds-component-loading-spinner-size-md",
+  "component.loading-spinner.size.sm": "--ds-component-loading-spinner-size-sm",
+  "component.notification.danger.background": "--ds-component-notification-danger-background",
+  "component.notification.danger.border": "--ds-component-notification-danger-border",
+  "component.notification.danger.text": "--ds-component-notification-danger-text",
+  "component.notification.default.background": "--ds-component-notification-default-background",
+  "component.notification.default.border": "--ds-component-notification-default-border",
+  "component.notification.default.text": "--ds-component-notification-default-text",
+  "component.notification.info.background": "--ds-component-notification-info-background",
+  "component.notification.info.border": "--ds-component-notification-info-border",
+  "component.notification.info.text": "--ds-component-notification-info-text",
+  "component.notification.padding.x": "--ds-component-notification-padding-x",
+  "component.notification.padding.y": "--ds-component-notification-padding-y",
+  "component.notification.success.background": "--ds-component-notification-success-background",
+  "component.notification.success.border": "--ds-component-notification-success-border",
+  "component.notification.success.text": "--ds-component-notification-success-text",
+  "component.notification.warning.background": "--ds-component-notification-warning-background",
+  "component.notification.warning.border": "--ds-component-notification-warning-border",
+  "component.notification.warning.text": "--ds-component-notification-warning-text",
+  "component.segmented-control.active.background": "--ds-component-segmented-control-active-background",
+  "component.segmented-control.active.text": "--ds-component-segmented-control-active-text",
+  "component.segmented-control.background": "--ds-component-segmented-control-background",
+  "component.segmented-control.border": "--ds-component-segmented-control-border",
+  "component.segmented-control.height": "--ds-component-segmented-control-height",
+  "component.segmented-control.padding.x": "--ds-component-segmented-control-padding-x",
+  "component.segmented-control.text": "--ds-component-segmented-control-text",
+  "component.select.dropdown.background": "--ds-component-select-dropdown-background",
+  "component.select.dropdown.border": "--ds-component-select-dropdown-border",
+  "component.select.height": "--ds-component-select-height",
+  "component.select.input.background": "--ds-component-select-input-background",
+  "component.select.input.border": "--ds-component-select-input-border",
+  "component.select.input.text": "--ds-component-select-input-text",
+  "component.select.option.active.background": "--ds-component-select-option-active-background",
+  "component.select.option.active.text": "--ds-component-select-option-active-text",
+  "component.select.padding.x": "--ds-component-select-padding-x",
   "component.status-badge.danger.outline.background": "--ds-component-status-badge-danger-outline-background",
   "component.status-badge.danger.outline.border": "--ds-component-status-badge-danger-outline-border",
   "component.status-badge.danger.outline.text": "--ds-component-status-badge-danger-outline-text",
@@ -5976,6 +6964,10 @@ export const tokenNameToCssVariable = {
   "component.text-input.text.error": "--ds-component-text-input-text-error",
   "component.text-input.text.helper": "--ds-component-text-input-text-helper",
   "component.text-input.text.placeholder": "--ds-component-text-input-text-placeholder",
+  "component.tooltip.background": "--ds-component-tooltip-background",
+  "component.tooltip.padding.x": "--ds-component-tooltip-padding-x",
+  "component.tooltip.padding.y": "--ds-component-tooltip-padding-y",
+  "component.tooltip.text": "--ds-component-tooltip-text",
   "radius.10xl": "--ds-radius-10xl",
   "radius.11xl": "--ds-radius-11xl",
   "radius.2xl": "--ds-radius-2xl",
@@ -6022,7 +7014,7 @@ export const metadata = {
   },
   "name": "demo-design-system-tokens",
   "source": "demo-design-token-fixtures",
-  "tokenCount": 347,
+  "tokenCount": 401,
   "modes": [
     "light",
     "dark"

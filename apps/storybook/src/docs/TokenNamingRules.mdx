@@ -10,6 +10,12 @@ Canonical token names use lowercase kebab-case path segments joined with dots.
 color.primitive.primary.50
 color.semantic.text.default
 component.button.primary.high.background
+component.notification.info.background
+component.segmented-control.active.background
+component.select.input.background
+component.date-picker.selected.background
+component.loading-spinner.foreground
+component.tooltip.background
 space.md
 radius.md
 typography.heading.h1
@@ -22,6 +28,11 @@ Semantic colours live under `color.semantic.*` and carry both `light` and
 
 Component tokens live under `component.*`. Component colour tokens carry both
 `light` and `dark` values; component dimension tokens use px values.
+
+Component mappings can be category-based, for example `Select.Input.Background`
+to `component.select.input.background`, or leaf-prefix based for mixed export
+groups, for example `Form input backgrounds.Segmented control active background`
+to `component.segmented-control.active.background`.
 
 Spacing lives under `space.*` and produces px dimensions.
 

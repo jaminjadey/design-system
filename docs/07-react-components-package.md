@@ -22,10 +22,16 @@ packages/components/
       index.ts
     AlertBanner/
     Card/
+    DatePicker/
+    LoadingSpinner/
+    NotificationBanner/
     PageHeader/
+    SegmentedControl/
+    Select/
     StatusBadge/
     TextInput/
     ThemeToggle/
+    Tooltip/
     index.ts
   package.json
 ```
@@ -47,6 +53,9 @@ Use the component package as an API firewall:
   the design-system packages.
 - Component-specific visual decisions should use generated `component.*` tokens
   and `--ds-component-*` CSS variables when source tokens exist.
+- Add wrappers for components when the design system owns decisions for their
+  tones, states, sizing, spacing, or interaction patterns. Generic Mantine
+  passthroughs should not become public API.
 
 ## Initial Component Set
 
@@ -143,6 +152,71 @@ export interface StatusBadgeProps {
 }
 ```
 
+### `NotificationBanner`
+
+Purpose:
+
+- Demonstrate notification-specific component tokens.
+- Provide a status/alert API that is separate from app-specific messaging.
+
+Suggested props:
+
+```ts
+export interface NotificationBannerProps {
+  tone?: "default" | "info" | "success" | "warning" | "danger";
+  title?: React.ReactNode;
+  children: React.ReactNode;
+}
+```
+
+### `Select`
+
+Purpose:
+
+- Demonstrate a controlled form component with token-backed input and dropdown
+  states.
+- Keep app code independent from rendering-library select props.
+
+Suggested props:
+
+```ts
+export interface SelectProps {
+  data: readonly { value: string; label: string }[];
+  label?: React.ReactNode;
+  value?: string | null;
+  defaultValue?: string | null;
+  error?: React.ReactNode;
+}
+```
+
+### `SegmentedControl`
+
+Purpose:
+
+- Demonstrate token-backed active and inactive segmented states.
+- Provide a narrow API for switching between a small set of modes.
+
+### `Tooltip`
+
+Purpose:
+
+- Demonstrate overlay tokens while keeping positioning options constrained.
+
+### `DatePicker`
+
+Purpose:
+
+- Demonstrate date-field styling and date-picker state tokens through a stable
+  design-system API.
+- In the demo package this uses a native date input; a work repo can replace the
+  internal implementation without changing app imports.
+
+### `LoadingSpinner`
+
+Purpose:
+
+- Demonstrate token-backed loading affordances and an accessible status label.
+
 ### `PageHeader`
 
 Purpose:
@@ -217,6 +291,8 @@ export { Button } from "./Button";
 export type { ButtonProps } from "./Button";
 export { AlertBanner } from "./AlertBanner";
 export type { AlertBannerProps } from "./AlertBanner";
+export { Select } from "./Select";
+export type { SelectProps } from "./Select";
 ```
 
 Do not export Mantine components, Mantine prop types, or internal utilities.

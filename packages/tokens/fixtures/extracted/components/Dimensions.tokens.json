@@ -49,6 +49,72 @@
       "$value": 16
     }
   },
+  "Date picker": {
+    "Cell size": {
+      "$type": "number",
+      "$value": 36
+    },
+    "Height": {
+      "$type": "number",
+      "$value": 40
+    }
+  },
+  "Loading spinner": {
+    "Size": {
+      "Lg": {
+        "$type": "number",
+        "$value": 28
+      },
+      "Md": {
+        "$type": "number",
+        "$value": 20
+      },
+      "Sm": {
+        "$type": "number",
+        "$value": 16
+      }
+    }
+  },
+  "Notification": {
+    "Padding x": {
+      "$type": "number",
+      "$value": 16
+    },
+    "Padding y": {
+      "$type": "number",
+      "$value": 12
+    }
+  },
+  "Segmented control": {
+    "Height": {
+      "$type": "number",
+      "$value": 36
+    },
+    "Padding x": {
+      "$type": "number",
+      "$value": 12
+    }
+  },
+  "Select": {
+    "Height": {
+      "$type": "number",
+      "$value": 40
+    },
+    "Padding x": {
+      "$type": "number",
+      "$value": 12
+    }
+  },
+  "Tooltip": {
+    "Padding x": {
+      "$type": "number",
+      "$value": 10
+    },
+    "Padding y": {
+      "$type": "number",
+      "$value": 6
+    }
+  },
   "Status badge": {
     "Height": {
       "$type": "number",

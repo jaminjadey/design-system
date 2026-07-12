@@ -63,6 +63,12 @@ test("generated CSS contains expected custom properties", () => {
   assert.match(tokensCss, /--ds-space-md: 8px;/u);
   assert.match(tokensCss, /--ds-component-button-height-md: 36px;/u);
   assert.match(tokensCss, /--ds-component-button-primary-high-background: #155E75;/u);
+  assert.match(tokensCss, /--ds-component-notification-info-background: #ECFEFF;/u);
+  assert.match(tokensCss, /--ds-component-segmented-control-active-background: #FFFFFF;/u);
+  assert.match(tokensCss, /--ds-component-select-input-background: #FFFFFF;/u);
+  assert.match(tokensCss, /--ds-component-date-picker-selected-background: #0891B2;/u);
+  assert.match(tokensCss, /--ds-component-loading-spinner-foreground: #0891B2;/u);
+  assert.match(tokensCss, /--ds-component-tooltip-background: #0F172A;/u);
   assert.match(tokensCss, /--ds-radius-md: 8px;/u);
   assert.match(tokensCss, /--ds-shadow-card: 0px 2px 8px 0px rgb\(15 23 42 \/ 0\.12\);/u);
   assert.match(tokensCss, /--ds-font-size-heading-h1: 32px;/u);
@@ -82,6 +88,12 @@ test("generated TypeScript declarations include token-name union members", () =>
   assert.match(tokenNamesDts, /"color\.semantic\.text\.default"/u);
   assert.match(tokenNamesDts, /"component\.button\.primary\.high\.background"/u);
   assert.match(tokenNamesDts, /"component\.button\.height\.md"/u);
+  assert.match(tokenNamesDts, /"component\.notification\.info\.background"/u);
+  assert.match(tokenNamesDts, /"component\.segmented-control\.active\.background"/u);
+  assert.match(tokenNamesDts, /"component\.select\.input\.background"/u);
+  assert.match(tokenNamesDts, /"component\.date-picker\.selected\.background"/u);
+  assert.match(tokenNamesDts, /"component\.loading-spinner\.foreground"/u);
+  assert.match(tokenNamesDts, /"component\.tooltip\.background"/u);
   assert.match(tokenNamesDts, /"space\.md"/u);
   assert.match(tokenNamesDts, /"radius\.md"/u);
   assert.match(tokenNamesDts, /"shadow\.card"/u);
@@ -101,11 +113,11 @@ test("generated metadata contains deterministic package summary", () => {
     "space",
     "typography"
   ]);
-  assert.equal(metadata.tokenCount, 347);
+  assert.equal(metadata.tokenCount, 401);
 });
 
 test("generated build report explains pipeline output", () => {
-  assert.equal(buildReport.sourceRecordsRead, 713);
+  assert.equal(buildReport.sourceRecordsRead, 808);
   assert.equal(buildReport.tokensGenerated, metadata.tokenCount);
   assert.deepEqual(buildReport.semanticTokensMissingModes, []);
   assert.deepEqual(buildReport.componentTokensMissingModes, []);

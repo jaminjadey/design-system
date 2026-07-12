@@ -1,2 +1,8 @@
 @import url("@mantine/core/styles.css");
 @import url("@demo-ds/tokens/tokens.css");
+
+@keyframes demo-ds-spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}

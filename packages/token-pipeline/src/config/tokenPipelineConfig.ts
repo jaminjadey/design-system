@@ -34,6 +34,7 @@ export interface CanonicalMappingConfig {
   };
   readonly components: {
     readonly categoryPrefixes: Readonly<Record<string, readonly string[]>>;
+    readonly leafPrefixes: Readonly<Record<string, readonly string[]>>;
     readonly leafSuffixes: readonly string[];
   };
   readonly spacing: {
@@ -132,9 +133,43 @@ export const defaultCanonicalMappingConfig: CanonicalMappingConfig = {
     categoryPrefixes: {
       "alert-banner": ["alert-banner"],
       button: ["button"],
+      "button-colours": ["button"],
       card: ["card"],
+      "date-picker": ["date-picker"],
+      "date-picker-backgrounds": ["date-picker"],
+      "form-input-backgrounds": ["form-input"],
+      "loading-spinner": ["loading-spinner"],
+      "loading-states": ["loading-spinner"],
+      notification: ["notification"],
+      notifications: ["notification"],
+      "segmented-control": ["segmented-control"],
+      select: ["select"],
       "status-badge": ["status-badge"],
-      "text-input": ["text-input"]
+      "text-input": ["text-input"],
+      tooltip: ["tooltip"],
+      tooltips: ["tooltip"]
+    },
+    leafPrefixes: {
+      "alert-notification": ["notification", "danger"],
+      "date-picker-range": ["date-picker", "range"],
+      "datepicker-range": ["date-picker", "range"],
+      "default-notification": ["notification", "default"],
+      "disabled-date": ["date-picker", "disabled"],
+      "hover-date": ["date-picker", "hover"],
+      "info-notification": ["notification", "info"],
+      "input-disabled-background": ["text-input", "background", "disabled"],
+      "segmented-control-active": ["segmented-control", "active"],
+      "segmented-control-background": ["segmented-control", "background"],
+      "selected-date": ["date-picker", "selected"],
+      "selection-input-active": ["select", "option", "active"],
+      "selection-input-background": ["select", "option", "active", "background"],
+      spinner: ["loading-spinner"],
+      "success-notification": ["notification", "success"],
+      "text-input-background": ["text-input", "background"],
+      "text-input-dropdown": ["select", "dropdown"],
+      today: ["date-picker", "today"],
+      "today-date": ["date-picker", "today"],
+      "warning-notification": ["notification", "warning"]
     },
     leafSuffixes: ["colour", "color", "colours", "colors"]
   },
@@ -261,6 +296,10 @@ function parseCanonicalMappingConfig(value: unknown): CanonicalMappingConfig {
               components.categoryPrefixes,
               "canonical.components.categoryPrefixes"
             ),
+      leafPrefixes:
+        value.components === undefined || components.leafPrefixes === undefined
+          ? defaultCanonicalMappingConfig.components.leafPrefixes
+          : parseStringRecordArray(components.leafPrefixes, "canonical.components.leafPrefixes"),
       leafSuffixes:
         value.components === undefined
           ? defaultCanonicalMappingConfig.components.leafSuffixes

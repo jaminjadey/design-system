@@ -3,10 +3,16 @@ import {
   Button,
   AlertBanner,
   Card,
+  DatePicker,
+  LoadingSpinner,
+  NotificationBanner,
   PageHeader,
+  SegmentedControl,
+  Select,
   StatusBadge,
   TextInput,
-  ThemeToggle
+  ThemeToggle,
+  Tooltip
 } from "@demo-ds/components";
 import { appSetupUsage, componentUsage } from "./componentUsageSnippets";
 
@@ -22,14 +28,22 @@ types. That keeps the public API tied to design-system decisions instead of the
 underlying rendering library.
 
 Component-specific values such as Button tone/emphasis colours, StatusBadge
-states, AlertBanner tones, Card surface values, and TextInput states come from
-generated `component.*` tokens exposed as `--ds-component-*` variables.
+states, NotificationBanner tones, Select input states, SegmentedControl states,
+DatePicker states, LoadingSpinner colours, Tooltip overlays, Card surface values,
+and TextInput states come from generated `component.*` tokens exposed as
+`--ds-component-*` variables.
 
 ## Initial Components
 
 - `Button`: token-backed tone and emphasis mapping.
 - `TextInput`: standard description and error behaviour.
 - `AlertBanner`: accessible status and alert messaging.
+- `NotificationBanner`: notification-specific tones and accessible roles.
+- `Select`: token-backed form select API.
+- `SegmentedControl`: token-backed active/inactive mode selection.
+- `Tooltip`: token-backed overlay styling.
+- `DatePicker`: date-field API with date-picker state tokens.
+- `LoadingSpinner`: token-backed accessible loading status.
 - `Card`: token-backed surface, radius, border, and shadow styling.
 - `StatusBadge`: compact semantic state display.
 - `PageHeader`: page-level title, description, and actions.
@@ -49,14 +63,43 @@ generated `component.*` tokens exposed as `--ds-component-*` variables.
       helperText="Use a generic demo value."
       defaultValue="Demo project"
     />
+    <div style={{ height: "var(--ds-space-md)" }} />
+    <Select
+      label="Status"
+      data={[
+        { value: "draft", label: "Draft" },
+        { value: "review", label: "In review" },
+        { value: "live", label: "Live" }
+      ]}
+      defaultValue="review"
+    />
   </Card>
   <AlertBanner tone="success" title="Saved">
     The demo configuration was saved.
   </AlertBanner>
+  <NotificationBanner tone="info" title="Import report">
+    Synthetic component tokens generated successfully.
+  </NotificationBanner>
+  <SegmentedControl
+    label="View"
+    data={[
+      { value: "overview", label: "Overview" },
+      { value: "activity", label: "Activity" },
+      { value: "settings", label: "Settings" }
+    ]}
+    defaultValue="overview"
+  />
+  <DatePicker label="Target date" defaultValue="2026-07-13" />
   <div className="component-demo-row">
     <StatusBadge tone="neutral">Draft</StatusBadge>
     <StatusBadge tone="success">Live</StatusBadge>
     <StatusBadge tone="warning">Needs review</StatusBadge>
+  </div>
+  <div className="component-demo-row">
+    <Tooltip label="Create a generic item" opened>
+      <Button>New item</Button>
+    </Tooltip>
+    <LoadingSpinner label="Loading report" />
   </div>
   <ThemeToggle />
 </div>

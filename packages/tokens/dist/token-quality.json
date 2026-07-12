@@ -6,9 +6,9 @@
   },
   "status": "pass",
   "summary": {
-    "tokenCount": 347,
-    "sourceRecordsRead": 713,
-    "recordsMapped": 713,
+    "tokenCount": 401,
+    "sourceRecordsRead": 808,
+    "recordsMapped": 808,
     "recordsSkipped": 0,
     "unsupportedRecordCount": 0,
     "warningCount": 0,
@@ -16,7 +16,7 @@
   },
   "categories": {
     "color": 153,
-    "component": 124,
+    "component": 178,
     "radius": 15,
     "shadow": 1,
     "space": 21,
@@ -24,17 +24,17 @@
   },
   "tokenTypes": {
     "color": 153,
-    "component": 124,
+    "component": 178,
     "dimension": 21,
     "radius": 15,
     "shadow": 1,
     "typography": 33
   },
   "css": {
-    "tokensWithCssOutput": 347,
-    "tokenCount": 347,
+    "tokensWithCssOutput": 401,
+    "tokenCount": 401,
     "coveragePercent": 100,
-    "directCssVariables": 314,
+    "directCssVariables": 368,
     "typographyGeneratedVariables": 99,
     "duplicateCssVariables": [],
     "invalidCssVariables": [],
@@ -51,8 +51,8 @@
       "missing": []
     },
     "componentColors": {
-      "total": 110,
-      "complete": 110,
+      "total": 151,
+      "complete": 151,
       "missing": []
     },
     "shadows": {
@@ -66,7 +66,7 @@
     "duplicateTokenNames": []
   },
   "source": {
-    "renamedPathCount": 713,
+    "renamedPathCount": 808,
     "generatedFiles": [
       "build-report.json",
       "canonical.json",
@@ -85,23 +85,23 @@
     "files": [
       {
         "file": "components/Dark.tokens.json",
-        "mappedRecords": 110,
-        "generatedTokens": 110,
+        "mappedRecords": 151,
+        "generatedTokens": 151,
         "tokenTypes": [
           "component"
         ]
       },
       {
         "file": "components/Dimensions.tokens.json",
-        "mappedRecords": 14,
-        "generatedTokens": 14,
+        "mappedRecords": 27,
+        "generatedTokens": 27,
         "tokenTypes": [
           "component"
         ]
       },
       {
         "file": "components/Light.tokens.json",
-        "mappedRecords": 110,
+        "mappedRecords": 151,
         "generatedTokens": 0,
         "tokenTypes": []
       },

@@ -1860,6 +1860,509 @@
       ]
     },
     {
+      "name": "component.date-picker",
+      "tokens": [
+        {
+          "name": "component.date-picker.cell.size",
+          "type": "component",
+          "valueType": "dimension",
+          "cssVariable": "--ds-component-date-picker-cell-size",
+          "value": 36,
+          "unit": "px"
+        },
+        {
+          "name": "component.date-picker.disabled.background",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-date-picker-disabled-background",
+          "value": {
+            "light": "#F1F5F9",
+            "dark": "#0F172A"
+          }
+        },
+        {
+          "name": "component.date-picker.disabled.text",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-date-picker-disabled-text",
+          "value": {
+            "light": "#94A3B8",
+            "dark": "#64748B"
+          }
+        },
+        {
+          "name": "component.date-picker.height",
+          "type": "component",
+          "valueType": "dimension",
+          "cssVariable": "--ds-component-date-picker-height",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "name": "component.date-picker.hover.background",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-date-picker-hover-background",
+          "value": {
+            "light": "#E0F2FE",
+            "dark": "#164E63"
+          }
+        },
+        {
+          "name": "component.date-picker.hover.text",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-date-picker-hover-text",
+          "value": {
+            "light": "#155E75",
+            "dark": "#CFFAFE"
+          }
+        },
+        {
+          "name": "component.date-picker.range.background",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-date-picker-range-background",
+          "value": {
+            "light": "#ECFEFF",
+            "dark": "#083344"
+          }
+        },
+        {
+          "name": "component.date-picker.range.text",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-date-picker-range-text",
+          "value": {
+            "light": "#155E75",
+            "dark": "#A5F3FC"
+          }
+        },
+        {
+          "name": "component.date-picker.selected.background",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-date-picker-selected-background",
+          "value": {
+            "light": "#0891B2",
+            "dark": "#0E7490"
+          }
+        },
+        {
+          "name": "component.date-picker.selected.text",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-date-picker-selected-text",
+          "value": {
+            "light": "#FFFFFF",
+            "dark": "#FFFFFF"
+          }
+        },
+        {
+          "name": "component.date-picker.today.border",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-date-picker-today-border",
+          "value": {
+            "light": "#0891B2",
+            "dark": "#22D3EE"
+          }
+        },
+        {
+          "name": "component.date-picker.today.text",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-date-picker-today-text",
+          "value": {
+            "light": "#155E75",
+            "dark": "#A5F3FC"
+          }
+        }
+      ]
+    },
+    {
+      "name": "component.loading-spinner",
+      "tokens": [
+        {
+          "name": "component.loading-spinner.background",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-loading-spinner-background",
+          "value": {
+            "light": "#CFFAFE",
+            "dark": "#164E63"
+          }
+        },
+        {
+          "name": "component.loading-spinner.foreground",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-loading-spinner-foreground",
+          "value": {
+            "light": "#0891B2",
+            "dark": "#22D3EE"
+          }
+        },
+        {
+          "name": "component.loading-spinner.size.lg",
+          "type": "component",
+          "valueType": "dimension",
+          "cssVariable": "--ds-component-loading-spinner-size-lg",
+          "value": 28,
+          "unit": "px"
+        },
+        {
+          "name": "component.loading-spinner.size.md",
+          "type": "component",
+          "valueType": "dimension",
+          "cssVariable": "--ds-component-loading-spinner-size-md",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "name": "component.loading-spinner.size.sm",
+          "type": "component",
+          "valueType": "dimension",
+          "cssVariable": "--ds-component-loading-spinner-size-sm",
+          "value": 16,
+          "unit": "px"
+        }
+      ]
+    },
+    {
+      "name": "component.notification",
+      "tokens": [
+        {
+          "name": "component.notification.danger.background",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-notification-danger-background",
+          "value": {
+            "light": "#FEF2F2",
+            "dark": "#7F1D1D"
+          }
+        },
+        {
+          "name": "component.notification.danger.border",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-notification-danger-border",
+          "value": {
+            "light": "#FECACA",
+            "dark": "#991B1B"
+          }
+        },
+        {
+          "name": "component.notification.danger.text",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-notification-danger-text",
+          "value": {
+            "light": "#991B1B",
+            "dark": "#FECACA"
+          }
+        },
+        {
+          "name": "component.notification.default.background",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-notification-default-background",
+          "value": {
+            "light": "#F8FAFC",
+            "dark": "#1E293B"
+          }
+        },
+        {
+          "name": "component.notification.default.border",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-notification-default-border",
+          "value": {
+            "light": "#CBD5E1",
+            "dark": "#475569"
+          }
+        },
+        {
+          "name": "component.notification.default.text",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-notification-default-text",
+          "value": {
+            "light": "#334155",
+            "dark": "#CBD5E1"
+          }
+        },
+        {
+          "name": "component.notification.info.background",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-notification-info-background",
+          "value": {
+            "light": "#ECFEFF",
+            "dark": "#164E63"
+          }
+        },
+        {
+          "name": "component.notification.info.border",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-notification-info-border",
+          "value": {
+            "light": "#A5F3FC",
+            "dark": "#0E7490"
+          }
+        },
+        {
+          "name": "component.notification.info.text",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-notification-info-text",
+          "value": {
+            "light": "#155E75",
+            "dark": "#CFFAFE"
+          }
+        },
+        {
+          "name": "component.notification.padding.x",
+          "type": "component",
+          "valueType": "dimension",
+          "cssVariable": "--ds-component-notification-padding-x",
+          "value": 16,
+          "unit": "px"
+        },
+        {
+          "name": "component.notification.padding.y",
+          "type": "component",
+          "valueType": "dimension",
+          "cssVariable": "--ds-component-notification-padding-y",
+          "value": 12,
+          "unit": "px"
+        },
+        {
+          "name": "component.notification.success.background",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-notification-success-background",
+          "value": {
+            "light": "#F0FDF4",
+            "dark": "#14532D"
+          }
+        },
+        {
+          "name": "component.notification.success.border",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-notification-success-border",
+          "value": {
+            "light": "#BBF7D0",
+            "dark": "#166534"
+          }
+        },
+        {
+          "name": "component.notification.success.text",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-notification-success-text",
+          "value": {
+            "light": "#166534",
+            "dark": "#BBF7D0"
+          }
+        },
+        {
+          "name": "component.notification.warning.background",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-notification-warning-background",
+          "value": {
+            "light": "#FFFBEB",
+            "dark": "#78350F"
+          }
+        },
+        {
+          "name": "component.notification.warning.border",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-notification-warning-border",
+          "value": {
+            "light": "#FDE68A",
+            "dark": "#92400E"
+          }
+        },
+        {
+          "name": "component.notification.warning.text",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-notification-warning-text",
+          "value": {
+            "light": "#92400E",
+            "dark": "#FDE68A"
+          }
+        }
+      ]
+    },
+    {
+      "name": "component.segmented-control",
+      "tokens": [
+        {
+          "name": "component.segmented-control.active.background",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-segmented-control-active-background",
+          "value": {
+            "light": "#FFFFFF",
+            "dark": "#334155"
+          }
+        },
+        {
+          "name": "component.segmented-control.active.text",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-segmented-control-active-text",
+          "value": {
+            "light": "#155E75",
+            "dark": "#F8FAFC"
+          }
+        },
+        {
+          "name": "component.segmented-control.background",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-segmented-control-background",
+          "value": {
+            "light": "#F1F5F9",
+            "dark": "#0F172A"
+          }
+        },
+        {
+          "name": "component.segmented-control.border",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-segmented-control-border",
+          "value": {
+            "light": "#CBD5E1",
+            "dark": "#475569"
+          }
+        },
+        {
+          "name": "component.segmented-control.height",
+          "type": "component",
+          "valueType": "dimension",
+          "cssVariable": "--ds-component-segmented-control-height",
+          "value": 36,
+          "unit": "px"
+        },
+        {
+          "name": "component.segmented-control.padding.x",
+          "type": "component",
+          "valueType": "dimension",
+          "cssVariable": "--ds-component-segmented-control-padding-x",
+          "value": 12,
+          "unit": "px"
+        },
+        {
+          "name": "component.segmented-control.text",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-segmented-control-text",
+          "value": {
+            "light": "#334155",
+            "dark": "#CBD5E1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "component.select",
+      "tokens": [
+        {
+          "name": "component.select.dropdown.background",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-select-dropdown-background",
+          "value": {
+            "light": "#FFFFFF",
+            "dark": "#1E293B"
+          }
+        },
+        {
+          "name": "component.select.dropdown.border",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-select-dropdown-border",
+          "value": {
+            "light": "#CBD5E1",
+            "dark": "#475569"
+          }
+        },
+        {
+          "name": "component.select.height",
+          "type": "component",
+          "valueType": "dimension",
+          "cssVariable": "--ds-component-select-height",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "name": "component.select.input.background",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-select-input-background",
+          "value": {
+            "light": "#FFFFFF",
+            "dark": "#1E293B"
+          }
+        },
+        {
+          "name": "component.select.input.border",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-select-input-border",
+          "value": {
+            "light": "#CBD5E1",
+            "dark": "#475569"
+          }
+        },
+        {
+          "name": "component.select.input.text",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-select-input-text",
+          "value": {
+            "light": "#0F172A",
+            "dark": "#F8FAFC"
+          }
+        },
+        {
+          "name": "component.select.option.active.background",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-select-option-active-background",
+          "value": {
+            "light": "#E0F2FE",
+            "dark": "#164E63"
+          }
+        },
+        {
+          "name": "component.select.option.active.text",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-select-option-active-text",
+          "value": {
+            "light": "#155E75",
+            "dark": "#CFFAFE"
+          }
+        },
+        {
+          "name": "component.select.padding.x",
+          "type": "component",
+          "valueType": "dimension",
+          "cssVariable": "--ds-component-select-padding-x",
+          "value": 12,
+          "unit": "px"
+        }
+      ]
+    },
+    {
       "name": "component.status-badge",
       "tokens": [
         {
@@ -2457,6 +2960,47 @@
           "value": {
             "light": "#94A3B8",
             "dark": "#94A3B8"
+          }
+        }
+      ]
+    },
+    {
+      "name": "component.tooltip",
+      "tokens": [
+        {
+          "name": "component.tooltip.background",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-tooltip-background",
+          "value": {
+            "light": "#0F172A",
+            "dark": "#E2E8F0"
+          }
+        },
+        {
+          "name": "component.tooltip.padding.x",
+          "type": "component",
+          "valueType": "dimension",
+          "cssVariable": "--ds-component-tooltip-padding-x",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "name": "component.tooltip.padding.y",
+          "type": "component",
+          "valueType": "dimension",
+          "cssVariable": "--ds-component-tooltip-padding-y",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "name": "component.tooltip.text",
+          "type": "component",
+          "valueType": "color",
+          "cssVariable": "--ds-component-tooltip-text",
+          "value": {
+            "light": "#FFFFFF",
+            "dark": "#0F172A"
           }
         }
       ]

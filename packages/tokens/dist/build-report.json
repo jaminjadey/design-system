@@ -1,7 +1,7 @@
 {
-  "sourceRecordsRead": 713,
-  "tokensGenerated": 347,
-  "recordsMapped": 713,
+  "sourceRecordsRead": 808,
+  "tokensGenerated": 401,
+  "recordsMapped": 808,
   "recordsSkipped": 0,
   "renamedPaths": [
     {
@@ -330,6 +330,240 @@
     },
     {
       "file": "components/Dark.tokens.json",
+      "sourcePath": "Date picker.Disabled.Background",
+      "canonicalPath": "component.date-picker.disabled.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Date picker.Disabled.Text",
+      "canonicalPath": "component.date-picker.disabled.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Date picker.Hover.Background",
+      "canonicalPath": "component.date-picker.hover.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Date picker.Hover.Text",
+      "canonicalPath": "component.date-picker.hover.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Date picker.Range.Background",
+      "canonicalPath": "component.date-picker.range.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Date picker.Range.Text",
+      "canonicalPath": "component.date-picker.range.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Date picker.Selected.Background",
+      "canonicalPath": "component.date-picker.selected.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Date picker.Selected.Text",
+      "canonicalPath": "component.date-picker.selected.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Date picker.Today.Border",
+      "canonicalPath": "component.date-picker.today.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Date picker.Today.Text",
+      "canonicalPath": "component.date-picker.today.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Loading spinner.Background",
+      "canonicalPath": "component.loading-spinner.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Loading spinner.Foreground",
+      "canonicalPath": "component.loading-spinner.foreground",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Notification.Danger.Background",
+      "canonicalPath": "component.notification.danger.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Notification.Danger.Border",
+      "canonicalPath": "component.notification.danger.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Notification.Danger.Text",
+      "canonicalPath": "component.notification.danger.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Notification.Default.Background",
+      "canonicalPath": "component.notification.default.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Notification.Default.Border",
+      "canonicalPath": "component.notification.default.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Notification.Default.Text",
+      "canonicalPath": "component.notification.default.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Notification.Info.Background",
+      "canonicalPath": "component.notification.info.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Notification.Info.Border",
+      "canonicalPath": "component.notification.info.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Notification.Info.Text",
+      "canonicalPath": "component.notification.info.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Notification.Success.Background",
+      "canonicalPath": "component.notification.success.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Notification.Success.Border",
+      "canonicalPath": "component.notification.success.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Notification.Success.Text",
+      "canonicalPath": "component.notification.success.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Notification.Warning.Background",
+      "canonicalPath": "component.notification.warning.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Notification.Warning.Border",
+      "canonicalPath": "component.notification.warning.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Notification.Warning.Text",
+      "canonicalPath": "component.notification.warning.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Segmented control.Active.Background",
+      "canonicalPath": "component.segmented-control.active.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Segmented control.Active.Text",
+      "canonicalPath": "component.segmented-control.active.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Segmented control.Background",
+      "canonicalPath": "component.segmented-control.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Segmented control.Border",
+      "canonicalPath": "component.segmented-control.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Segmented control.Text",
+      "canonicalPath": "component.segmented-control.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Select.Dropdown.Background",
+      "canonicalPath": "component.select.dropdown.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Select.Dropdown.Border",
+      "canonicalPath": "component.select.dropdown.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Select.Input.Background",
+      "canonicalPath": "component.select.input.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Select.Input.Border",
+      "canonicalPath": "component.select.input.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Select.Input.Text",
+      "canonicalPath": "component.select.input.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Select.Option.Active.Background",
+      "canonicalPath": "component.select.option.active.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Select.Option.Active.Text",
+      "canonicalPath": "component.select.option.active.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
       "sourcePath": "Status badge.Danger.Outline.Background",
       "canonicalPath": "component.status-badge.danger.outline.background",
       "category": "component-color"
@@ -665,6 +899,18 @@
       "category": "component-color"
     },
     {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Tooltip.Background",
+      "canonicalPath": "component.tooltip.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Dark.tokens.json",
+      "sourcePath": "Tooltip.Text",
+      "canonicalPath": "component.tooltip.text",
+      "category": "component-color"
+    },
+    {
       "file": "components/Dimensions.tokens.json",
       "sourcePath": "Alert banner.Padding x",
       "canonicalPath": "component.alert-banner.padding.x",
@@ -726,6 +972,72 @@
     },
     {
       "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Date picker.Cell size",
+      "canonicalPath": "component.date-picker.cell.size",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Date picker.Height",
+      "canonicalPath": "component.date-picker.height",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Loading spinner.Size.Lg",
+      "canonicalPath": "component.loading-spinner.size.lg",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Loading spinner.Size.Md",
+      "canonicalPath": "component.loading-spinner.size.md",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Loading spinner.Size.Sm",
+      "canonicalPath": "component.loading-spinner.size.sm",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Notification.Padding x",
+      "canonicalPath": "component.notification.padding.x",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Notification.Padding y",
+      "canonicalPath": "component.notification.padding.y",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Segmented control.Height",
+      "canonicalPath": "component.segmented-control.height",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Segmented control.Padding x",
+      "canonicalPath": "component.segmented-control.padding.x",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Select.Height",
+      "canonicalPath": "component.select.height",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Select.Padding x",
+      "canonicalPath": "component.select.padding.x",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
       "sourcePath": "Status badge.Height",
       "canonicalPath": "component.status-badge.height",
       "category": "component-dimension"
@@ -746,6 +1058,18 @@
       "file": "components/Dimensions.tokens.json",
       "sourcePath": "Text input.Padding x",
       "canonicalPath": "component.text-input.padding.x",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Tooltip.Padding x",
+      "canonicalPath": "component.tooltip.padding.x",
+      "category": "component-dimension"
+    },
+    {
+      "file": "components/Dimensions.tokens.json",
+      "sourcePath": "Tooltip.Padding y",
+      "canonicalPath": "component.tooltip.padding.y",
       "category": "component-dimension"
     },
     {
@@ -1074,6 +1398,240 @@
     },
     {
       "file": "components/Light.tokens.json",
+      "sourcePath": "Date picker.Disabled.Background",
+      "canonicalPath": "component.date-picker.disabled.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Date picker.Disabled.Text",
+      "canonicalPath": "component.date-picker.disabled.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Date picker.Hover.Background",
+      "canonicalPath": "component.date-picker.hover.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Date picker.Hover.Text",
+      "canonicalPath": "component.date-picker.hover.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Date picker.Range.Background",
+      "canonicalPath": "component.date-picker.range.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Date picker.Range.Text",
+      "canonicalPath": "component.date-picker.range.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Date picker.Selected.Background",
+      "canonicalPath": "component.date-picker.selected.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Date picker.Selected.Text",
+      "canonicalPath": "component.date-picker.selected.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Date picker.Today.Border",
+      "canonicalPath": "component.date-picker.today.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Date picker.Today.Text",
+      "canonicalPath": "component.date-picker.today.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Loading spinner.Background",
+      "canonicalPath": "component.loading-spinner.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Loading spinner.Foreground",
+      "canonicalPath": "component.loading-spinner.foreground",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Notification.Danger.Background",
+      "canonicalPath": "component.notification.danger.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Notification.Danger.Border",
+      "canonicalPath": "component.notification.danger.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Notification.Danger.Text",
+      "canonicalPath": "component.notification.danger.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Notification.Default.Background",
+      "canonicalPath": "component.notification.default.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Notification.Default.Border",
+      "canonicalPath": "component.notification.default.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Notification.Default.Text",
+      "canonicalPath": "component.notification.default.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Notification.Info.Background",
+      "canonicalPath": "component.notification.info.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Notification.Info.Border",
+      "canonicalPath": "component.notification.info.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Notification.Info.Text",
+      "canonicalPath": "component.notification.info.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Notification.Success.Background",
+      "canonicalPath": "component.notification.success.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Notification.Success.Border",
+      "canonicalPath": "component.notification.success.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Notification.Success.Text",
+      "canonicalPath": "component.notification.success.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Notification.Warning.Background",
+      "canonicalPath": "component.notification.warning.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Notification.Warning.Border",
+      "canonicalPath": "component.notification.warning.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Notification.Warning.Text",
+      "canonicalPath": "component.notification.warning.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Segmented control.Active.Background",
+      "canonicalPath": "component.segmented-control.active.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Segmented control.Active.Text",
+      "canonicalPath": "component.segmented-control.active.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Segmented control.Background",
+      "canonicalPath": "component.segmented-control.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Segmented control.Border",
+      "canonicalPath": "component.segmented-control.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Segmented control.Text",
+      "canonicalPath": "component.segmented-control.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Select.Dropdown.Background",
+      "canonicalPath": "component.select.dropdown.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Select.Dropdown.Border",
+      "canonicalPath": "component.select.dropdown.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Select.Input.Background",
+      "canonicalPath": "component.select.input.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Select.Input.Border",
+      "canonicalPath": "component.select.input.border",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Select.Input.Text",
+      "canonicalPath": "component.select.input.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Select.Option.Active.Background",
+      "canonicalPath": "component.select.option.active.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Select.Option.Active.Text",
+      "canonicalPath": "component.select.option.active.text",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
       "sourcePath": "Status badge.Danger.Outline.Background",
       "canonicalPath": "component.status-badge.danger.outline.background",
       "category": "component-color"
@@ -1406,6 +1964,18 @@
       "file": "components/Light.tokens.json",
       "sourcePath": "Text input.Text.Placeholder",
       "canonicalPath": "component.text-input.text.placeholder",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Tooltip.Background",
+      "canonicalPath": "component.tooltip.background",
+      "category": "component-color"
+    },
+    {
+      "file": "components/Light.tokens.json",
+      "sourcePath": "Tooltip.Text",
+      "canonicalPath": "component.tooltip.text",
       "category": "component-color"
     },
     {

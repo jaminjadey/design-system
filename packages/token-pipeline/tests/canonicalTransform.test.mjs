@@ -167,6 +167,68 @@ test("can map configured component categories from semantic mode files", () => {
   assert.deepEqual(mapping?.canonicalPath, ["component", "button", "secondary", "border"]);
 });
 
+test("can map mixed Figma component-like colour groups by configured leaf prefixes", () => {
+  const config = {
+    ...defaultCanonicalMappingConfig,
+    files: {
+      ...defaultCanonicalMappingConfig.files,
+      componentColors: [
+        {
+          file: "tokens/Light.tokens.json",
+          sourceMode: "Light",
+          mode: "light"
+        },
+        {
+          file: "tokens/Dark.tokens.json",
+          sourceMode: "Dark",
+          mode: "dark"
+        }
+      ]
+    }
+  };
+
+  assert.deepEqual(
+    sourcePathToCanonicalPath(
+      colorRecord(
+        "tokens/Light.tokens.json",
+        ["Form input backgrounds", "Segmented control active background"],
+        "#ffffff"
+      ),
+      config
+    )?.canonicalPath,
+    ["component", "segmented-control", "active", "background"]
+  );
+  assert.deepEqual(
+    sourcePathToCanonicalPath(
+      colorRecord(
+        "tokens/Light.tokens.json",
+        ["Notifications", "Alert notification text"],
+        "#991b1b"
+      ),
+      config
+    )?.canonicalPath,
+    ["component", "notification", "danger", "text"]
+  );
+  assert.deepEqual(
+    sourcePathToCanonicalPath(
+      colorRecord(
+        "tokens/Light.tokens.json",
+        ["Date picker backgrounds", "Selected date background"],
+        "#0891b2"
+      ),
+      config
+    )?.canonicalPath,
+    ["component", "date-picker", "selected", "background"]
+  );
+  assert.deepEqual(
+    sourcePathToCanonicalPath(
+      colorRecord("tokens/Light.tokens.json", ["Loading states", "Spinner foreground"], "#0891b2"),
+      config
+    )?.canonicalPath,
+    ["component", "loading-spinner", "foreground"]
+  );
+});
+
 test("defaults shadow config when older pipeline configs omit it", () => {
   const configWithoutShadows = JSON.parse(JSON.stringify(defaultCanonicalMappingConfig));
   delete configWithoutShadows.shadows;

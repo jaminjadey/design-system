@@ -9,9 +9,9 @@ Status: **pass**
 
 | Metric | Value |
 | --- | ---: |
-| Tokens | 347 |
-| Source records read | 713 |
-| Records mapped | 713 |
+| Tokens | 401 |
+| Source records read | 808 |
+| Records mapped | 808 |
 | Records skipped | 0 |
 | Unsupported records | 0 |
 | Warnings | 0 |
@@ -22,7 +22,7 @@ Status: **pass**
 | Category | Tokens |
 | --- | ---: |
 | color | 153 |
-| component | 124 |
+| component | 178 |
 | radius | 15 |
 | shadow | 1 |
 | space | 21 |
@@ -33,7 +33,7 @@ Status: **pass**
 | Type | Tokens |
 | --- | ---: |
 | color | 153 |
-| component | 124 |
+| component | 178 |
 | dimension | 21 |
 | radius | 15 |
 | shadow | 1 |
@@ -43,9 +43,9 @@ Status: **pass**
 
 | Metric | Value |
 | --- | ---: |
-| Tokens with CSS output | 347 |
+| Tokens with CSS output | 401 |
 | CSS output coverage | 100% |
-| Direct CSS variables | 314 |
+| Direct CSS variables | 368 |
 | Typography generated variables | 99 |
 | Duplicate CSS variables | 0 |
 | Tokens without CSS output | 0 |
@@ -55,16 +55,16 @@ Status: **pass**
 | Group | Total | Complete | Missing |
 | --- | ---: | ---: | ---: |
 | Semantic colours | 67 | 67 | 0 |
-| Component colours | 110 | 110 | 0 |
+| Component colours | 151 | 151 | 0 |
 | Shadows | 1 | 1 | 0 |
 
 ## Source Files
 
 | File | Mapped records | Generated tokens | Token types |
 | --- | ---: | ---: | --- |
-| components/Dark.tokens.json | 110 | 110 | component |
-| components/Dimensions.tokens.json | 14 | 14 | component |
-| components/Light.tokens.json | 110 | 0 | - |
+| components/Dark.tokens.json | 151 | 151 | component |
+| components/Dimensions.tokens.json | 27 | 27 | component |
+| components/Light.tokens.json | 151 | 0 | - |
 | corners/Mode 1.tokens.json | 15 | 15 | radius |
 | primitives/Default.tokens.json | 86 | 86 | color |
 | spacing/Mode 1.tokens.json | 21 | 21 | dimension |

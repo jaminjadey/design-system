@@ -148,8 +148,8 @@ can write to the token source directory that `@demo-ds/tokens` builds from.
 
 Canonical mapping rules live in `token-pipeline.config.json`. Configure that
 file when primitive groups, semantic groups, component groups, source mode
-names, spacing/radius paths, typography fields, or unsupported-token policy
-differ from the demo.
+names, component leaf-name patterns, spacing/radius paths, typography fields,
+or unsupported-token policy differ from the demo.
 
 ## How To Use The Packages
 
@@ -157,7 +157,7 @@ Wrap an app with the demo theme provider:
 
 ```tsx
 import { DemoThemeProvider } from "@demo-ds/mantine-theme";
-import { Button, Card, PageHeader } from "@demo-ds/components";
+import { Button, Card, PageHeader, Select } from "@demo-ds/components";
 import "@demo-ds/mantine-theme/styles.css";
 
 export function App() {
@@ -166,6 +166,13 @@ export function App() {
       <PageHeader title="Project overview" />
       <Card>
         <Button>New item</Button>
+        <Select
+          label="Status"
+          data={[
+            { value: "draft", label: "Draft" },
+            { value: "live", label: "Live" }
+          ]}
+        />
       </Card>
     </DemoThemeProvider>
   );

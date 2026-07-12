@@ -265,6 +265,212 @@
       }
     }
   },
+  "Date picker": {
+    "Disabled": {
+      "Background": {
+        "$type": "color",
+        "$value": "#F1F5F9"
+      },
+      "Text": {
+        "$type": "color",
+        "$value": "#94A3B8"
+      }
+    },
+    "Hover": {
+      "Background": {
+        "$type": "color",
+        "$value": "#E0F2FE"
+      },
+      "Text": {
+        "$type": "color",
+        "$value": "#155E75"
+      }
+    },
+    "Range": {
+      "Background": {
+        "$type": "color",
+        "$value": "#ECFEFF"
+      },
+      "Text": {
+        "$type": "color",
+        "$value": "#155E75"
+      }
+    },
+    "Selected": {
+      "Background": {
+        "$type": "color",
+        "$value": "#0891B2"
+      },
+      "Text": {
+        "$type": "color",
+        "$value": "#FFFFFF"
+      }
+    },
+    "Today": {
+      "Border": {
+        "$type": "color",
+        "$value": "#0891B2"
+      },
+      "Text": {
+        "$type": "color",
+        "$value": "#155E75"
+      }
+    }
+  },
+  "Loading spinner": {
+    "Background": {
+      "$type": "color",
+      "$value": "#CFFAFE"
+    },
+    "Foreground": {
+      "$type": "color",
+      "$value": "#0891B2"
+    }
+  },
+  "Notification": {
+    "Danger": {
+      "Background": {
+        "$type": "color",
+        "$value": "#FEF2F2"
+      },
+      "Border": {
+        "$type": "color",
+        "$value": "#FECACA"
+      },
+      "Text": {
+        "$type": "color",
+        "$value": "#991B1B"
+      }
+    },
+    "Default": {
+      "Background": {
+        "$type": "color",
+        "$value": "#F8FAFC"
+      },
+      "Border": {
+        "$type": "color",
+        "$value": "#CBD5E1"
+      },
+      "Text": {
+        "$type": "color",
+        "$value": "#334155"
+      }
+    },
+    "Info": {
+      "Background": {
+        "$type": "color",
+        "$value": "#ECFEFF"
+      },
+      "Border": {
+        "$type": "color",
+        "$value": "#A5F3FC"
+      },
+      "Text": {
+        "$type": "color",
+        "$value": "#155E75"
+      }
+    },
+    "Success": {
+      "Background": {
+        "$type": "color",
+        "$value": "#F0FDF4"
+      },
+      "Border": {
+        "$type": "color",
+        "$value": "#BBF7D0"
+      },
+      "Text": {
+        "$type": "color",
+        "$value": "#166534"
+      }
+    },
+    "Warning": {
+      "Background": {
+        "$type": "color",
+        "$value": "#FFFBEB"
+      },
+      "Border": {
+        "$type": "color",
+        "$value": "#FDE68A"
+      },
+      "Text": {
+        "$type": "color",
+        "$value": "#92400E"
+      }
+    }
+  },
+  "Segmented control": {
+    "Active": {
+      "Background": {
+        "$type": "color",
+        "$value": "#FFFFFF"
+      },
+      "Text": {
+        "$type": "color",
+        "$value": "#155E75"
+      }
+    },
+    "Background": {
+      "$type": "color",
+      "$value": "#F1F5F9"
+    },
+    "Border": {
+      "$type": "color",
+      "$value": "#CBD5E1"
+    },
+    "Text": {
+      "$type": "color",
+      "$value": "#334155"
+    }
+  },
+  "Select": {
+    "Dropdown": {
+      "Background": {
+        "$type": "color",
+        "$value": "#FFFFFF"
+      },
+      "Border": {
+        "$type": "color",
+        "$value": "#CBD5E1"
+      }
+    },
+    "Input": {
+      "Background": {
+        "$type": "color",
+        "$value": "#FFFFFF"
+      },
+      "Border": {
+        "$type": "color",
+        "$value": "#CBD5E1"
+      },
+      "Text": {
+        "$type": "color",
+        "$value": "#0F172A"
+      }
+    },
+    "Option": {
+      "Active": {
+        "Background": {
+          "$type": "color",
+          "$value": "#E0F2FE"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "#155E75"
+        }
+      }
+    }
+  },
+  "Tooltip": {
+    "Background": {
+      "$type": "color",
+      "$value": "#0F172A"
+    },
+    "Text": {
+      "$type": "color",
+      "$value": "#FFFFFF"
+    }
+  },
   "Status badge": {
     "Danger": {
       "Outline": {

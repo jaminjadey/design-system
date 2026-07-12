@@ -159,18 +159,27 @@ function mapConfiguredComponentPath(
     return undefined;
   }
 
-  const leafParts = trimComponentLeafParts(normaliseGenericSourcePath(leafPath), prefix, config);
+  const normalisedLeafParts = trimComponentLeafSuffixes(
+    normaliseGenericSourcePath(leafPath),
+    config
+  );
+  const prefixedPath = mapComponentLeafPrefix(normalisedLeafParts, config);
+  if (prefixedPath !== undefined) {
+    return prefixedPath;
+  }
+
+  const leafParts = removeLeadingPath(
+    normalisedLeafParts,
+    prefix.flatMap((segment) => segment.split("-"))
+  );
   return [...prefix, ...(leafParts.length === 0 ? ["default"] : leafParts)];
 }
 
-function trimComponentLeafParts(
+function trimComponentLeafSuffixes(
   leafParts: readonly string[],
-  prefix: readonly string[],
   config: CanonicalMappingConfig
 ): string[] {
-  const prefixParts = prefix.flatMap((segment) => segment.split("-"));
-  let trimmed = removeLeadingPath(leafParts, prefixParts);
-
+  let trimmed = [...leafParts];
   for (const suffix of config.components.leafSuffixes) {
     const suffixSlug = normaliseNameSegment(suffix);
     if (trimmed[trimmed.length - 1] === suffixSlug) {
@@ -179,6 +188,26 @@ function trimComponentLeafParts(
   }
 
   return trimmed;
+}
+
+function mapComponentLeafPrefix(
+  leafParts: readonly string[],
+  config: CanonicalMappingConfig
+): string[] | undefined {
+  const matches = Object.entries(config.components.leafPrefixes)
+    .map(([sourcePrefix, canonicalPrefix]) => ({
+      sourceParts: normaliseNameSegment(sourcePrefix).split("-"),
+      canonicalPrefix
+    }))
+    .filter(({ sourceParts }) => startsWithPath(leafParts, sourceParts))
+    .sort((left, right) => right.sourceParts.length - left.sourceParts.length);
+
+  const match = matches[0];
+  if (match === undefined) {
+    return undefined;
+  }
+
+  return [...match.canonicalPrefix, ...leafParts.slice(match.sourceParts.length)];
 }
 
 function removeLeadingPath(path: readonly string[], prefix: readonly string[]): string[] {
@@ -191,6 +220,14 @@ function removeLeadingPath(path: readonly string[], prefix: readonly string[]): 
   }
 
   return path.slice(prefix.length);
+}
+
+function startsWithPath(path: readonly string[], prefix: readonly string[]): boolean {
+  return (
+    prefix.length > 0 &&
+    prefix.length <= path.length &&
+    prefix.every((segment, index) => path[index] === segment)
+  );
 }
 
 function mapShadowPart(

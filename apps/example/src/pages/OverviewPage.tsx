@@ -1,8 +1,16 @@
-import { AlertBanner, Button, Card, StatusBadge } from "@demo-ds/components";
+import {
+  AlertBanner,
+  Button,
+  Card,
+  LoadingSpinner,
+  NotificationBanner,
+  StatusBadge,
+  Tooltip
+} from "@demo-ds/components";
 
 const healthItems = [
   { label: "Design tokens", value: "222", tone: "success" as const },
-  { label: "Components", value: "7", tone: "info" as const },
+  { label: "Components", value: "13", tone: "info" as const },
   { label: "Open reviews", value: "3", tone: "warning" as const }
 ];
 
@@ -24,6 +32,11 @@ export function OverviewPage() {
         This app imports public package exports only and uses generated token CSS variables at
         runtime.
       </AlertBanner>
+
+      <NotificationBanner tone="success" title="Component tokens active">
+        Additional wrappers are using synthetic component-level tokens for states, overlays, and
+        controls.
+      </NotificationBanner>
 
       <div className="metric-grid">
         {healthItems.map((item) => (
@@ -58,12 +71,15 @@ export function OverviewPage() {
               <Button emphasis="medium" tone="success">
                 Confirm
               </Button>
-              <Button emphasis="low" tone="neutral">
-                Secondary
-              </Button>
+              <Tooltip label="Secondary actions use neutral tokens">
+                <Button emphasis="low" tone="neutral">
+                  Secondary
+                </Button>
+              </Tooltip>
               <Button emphasis="medium" tone="danger">
                 Remove
               </Button>
+              <LoadingSpinner label="Syncing" size="sm" />
             </div>
           </div>
         </Card>
