@@ -13,6 +13,7 @@
     "format:check": "prettier . --check && node scripts/format-check.mjs",
     "format": "prettier . --write",
     "private:check": "node scripts/check-private-paths.mjs",
+    "private:compare": "node scripts/compare-private-values.mjs",
     "tokens:build": "pnpm --filter @demo-ds/tokens build",
     "tokens:quality": "pnpm tokens:build && pnpm tokens:quality:check",
     "tokens:quality:check": "node scripts/check-token-quality.mjs",

@@ -368,11 +368,11 @@
     },
     "Destructive secondary border": {
       "$type": "color",
-      "$value": "{Font colours.Alert text}"
+      "$value": "#8A1F3D"
     },
     "Destructive secondary text": {
       "$type": "color",
-      "$value": "{Font colours.Alert text}"
+      "$value": "#8A1F3D"
     }
   },
   "Icon colour picker": {
