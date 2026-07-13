@@ -2,31 +2,31 @@
   "files": [
     {
       "source": "primitive-colours.raw.json",
-      "target": "primitives/Default.tokens.json",
+      "target": "primitives/colours.tokens.json",
       "stripPathPrefix": ["Primitive colours"]
     },
     {
       "source": "semantic-light.raw.json",
-      "target": "tokens/Light.tokens.json",
+      "target": "semantics/light.tokens.json",
       "stripPathPrefix": ["Semantic colours"]
     },
     {
       "source": "semantic-dark.raw.json",
-      "target": "tokens/Dark.tokens.json",
+      "target": "semantics/dark.tokens.json",
       "stripPathPrefix": ["Semantic colours"]
     },
     {
       "source": "spacing.raw.json",
-      "target": "spacing/Mode 1.tokens.json",
+      "target": "space.tokens.json",
       "stripPathPrefix": ["Spacing"]
     },
     {
       "source": "radius.raw.json",
-      "target": "corners/Mode 1.tokens.json"
+      "target": "radius.tokens.json"
     },
     {
       "source": "typography.raw.json",
-      "target": "typography/Default.tokens.json",
+      "target": "typography.tokens.json",
       "stripPathPrefix": ["Typography"]
     }
   ]

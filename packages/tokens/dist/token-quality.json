@@ -84,7 +84,7 @@
     ],
     "files": [
       {
-        "file": "components/Dark.tokens.json",
+        "file": "components/dark.tokens.json",
         "mappedRecords": 151,
         "generatedTokens": 151,
         "tokenTypes": [
@@ -92,7 +92,7 @@
         ]
       },
       {
-        "file": "components/Dimensions.tokens.json",
+        "file": "components/dimensions.tokens.json",
         "mappedRecords": 27,
         "generatedTokens": 27,
         "tokenTypes": [
@@ -100,21 +100,13 @@
         ]
       },
       {
-        "file": "components/Light.tokens.json",
+        "file": "components/light.tokens.json",
         "mappedRecords": 151,
         "generatedTokens": 0,
         "tokenTypes": []
       },
       {
-        "file": "corners/Mode 1.tokens.json",
-        "mappedRecords": 15,
-        "generatedTokens": 15,
-        "tokenTypes": [
-          "radius"
-        ]
-      },
-      {
-        "file": "primitives/Default.tokens.json",
+        "file": "primitives/colours.tokens.json",
         "mappedRecords": 86,
         "generatedTokens": 86,
         "tokenTypes": [
@@ -122,15 +114,15 @@
         ]
       },
       {
-        "file": "spacing/Mode 1.tokens.json",
-        "mappedRecords": 21,
-        "generatedTokens": 21,
+        "file": "radius.tokens.json",
+        "mappedRecords": 15,
+        "generatedTokens": 15,
         "tokenTypes": [
-          "dimension"
+          "radius"
         ]
       },
       {
-        "file": "tokens/Dark.tokens.json",
+        "file": "semantics/dark.tokens.json",
         "mappedRecords": 129,
         "generatedTokens": 68,
         "tokenTypes": [
@@ -139,13 +131,21 @@
         ]
       },
       {
-        "file": "tokens/Light.tokens.json",
+        "file": "semantics/light.tokens.json",
         "mappedRecords": 129,
         "generatedTokens": 0,
         "tokenTypes": []
       },
       {
-        "file": "typography/Default.tokens.json",
+        "file": "space.tokens.json",
+        "mappedRecords": 21,
+        "generatedTokens": 21,
+        "tokenTypes": [
+          "dimension"
+        ]
+      },
+      {
+        "file": "typography.tokens.json",
         "mappedRecords": 99,
         "generatedTokens": 33,
         "tokenTypes": [

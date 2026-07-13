@@ -77,35 +77,35 @@ export interface TokenPipelineConfig {
 
 export const defaultCanonicalMappingConfig: CanonicalMappingConfig = {
   files: {
-    primitiveColors: ["primitives/Default.tokens.json"],
+    primitiveColors: ["primitives/colours.tokens.json"],
     semanticColors: [
       {
-        file: "tokens/Light.tokens.json",
+        file: "semantics/light.tokens.json",
         sourceMode: "Light",
         mode: "light"
       },
       {
-        file: "tokens/Dark.tokens.json",
+        file: "semantics/dark.tokens.json",
         sourceMode: "Dark",
         mode: "dark"
       }
     ],
     componentColors: [
       {
-        file: "components/Light.tokens.json",
+        file: "components/light.tokens.json",
         sourceMode: "Light",
         mode: "light"
       },
       {
-        file: "components/Dark.tokens.json",
+        file: "components/dark.tokens.json",
         sourceMode: "Dark",
         mode: "dark"
       }
     ],
-    componentDimensions: "components/Dimensions.tokens.json",
-    spacing: "spacing/Mode 1.tokens.json",
-    radius: "corners/Mode 1.tokens.json",
-    typography: "typography/Default.tokens.json"
+    componentDimensions: "components/dimensions.tokens.json",
+    spacing: "space.tokens.json",
+    radius: "radius.tokens.json",
+    typography: "typography.tokens.json"
   },
   primitiveColors: {
     ignoredPathSegments: ["colour", "colours", "color", "colors"]

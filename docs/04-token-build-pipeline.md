@@ -66,15 +66,15 @@ by the package build.
 Inputs:
 
 ```txt
-packages/tokens/fixtures/extracted/primitives/Default.tokens.json
-packages/tokens/fixtures/extracted/tokens/Light.tokens.json
-packages/tokens/fixtures/extracted/tokens/Dark.tokens.json
-packages/tokens/fixtures/extracted/components/Light.tokens.json
-packages/tokens/fixtures/extracted/components/Dark.tokens.json
-packages/tokens/fixtures/extracted/components/Dimensions.tokens.json
-packages/tokens/fixtures/extracted/spacing/Mode 1.tokens.json
-packages/tokens/fixtures/extracted/corners/Mode 1.tokens.json
-packages/tokens/fixtures/extracted/typography/Default.tokens.json
+packages/tokens/fixtures/extracted/primitives/colours.tokens.json
+packages/tokens/fixtures/extracted/semantics/light.tokens.json
+packages/tokens/fixtures/extracted/semantics/dark.tokens.json
+packages/tokens/fixtures/extracted/components/light.tokens.json
+packages/tokens/fixtures/extracted/components/dark.tokens.json
+packages/tokens/fixtures/extracted/components/dimensions.tokens.json
+packages/tokens/fixtures/extracted/space.tokens.json
+packages/tokens/fixtures/extracted/radius.tokens.json
+packages/tokens/fixtures/extracted/typography.tokens.json
 ```
 
 Responsibilities:

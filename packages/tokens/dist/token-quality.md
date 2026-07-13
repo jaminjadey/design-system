@@ -62,15 +62,15 @@ Status: **pass**
 
 | File | Mapped records | Generated tokens | Token types |
 | --- | ---: | ---: | --- |
-| components/Dark.tokens.json | 151 | 151 | component |
-| components/Dimensions.tokens.json | 27 | 27 | component |
-| components/Light.tokens.json | 151 | 0 | - |
-| corners/Mode 1.tokens.json | 15 | 15 | radius |
-| primitives/Default.tokens.json | 86 | 86 | color |
-| spacing/Mode 1.tokens.json | 21 | 21 | dimension |
-| tokens/Dark.tokens.json | 129 | 68 | color, shadow |
-| tokens/Light.tokens.json | 129 | 0 | - |
-| typography/Default.tokens.json | 99 | 33 | typography |
+| components/dark.tokens.json | 151 | 151 | component |
+| components/dimensions.tokens.json | 27 | 27 | component |
+| components/light.tokens.json | 151 | 0 | - |
+| primitives/colours.tokens.json | 86 | 86 | color |
+| radius.tokens.json | 15 | 15 | radius |
+| semantics/dark.tokens.json | 129 | 68 | color, shadow |
+| semantics/light.tokens.json | 129 | 0 | - |
+| space.tokens.json | 21 | 21 | dimension |
+| typography.tokens.json | 99 | 33 | typography |
 
 ## Findings
 

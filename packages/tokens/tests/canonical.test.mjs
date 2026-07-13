@@ -152,7 +152,7 @@ test("generated token quality report explains contract health", () => {
   assert.ok(tokenQuality.source.generatedFiles.includes("token-quality.json"));
   assert.ok(
     tokenQuality.source.files.some(
-      (file) => file.file === "tokens/Light.tokens.json" && file.mappedRecords > 0
+      (file) => file.file === "semantics/light.tokens.json" && file.mappedRecords > 0
     )
   );
 });

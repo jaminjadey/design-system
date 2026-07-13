@@ -23,12 +23,12 @@ test("flattens nested source token objects into source records", () => {
         }
       }
     },
-    "tokens/Light.tokens.json"
+    "semantics/light.tokens.json"
   );
 
   assert.deepEqual(records, [
     {
-      file: "tokens/Light.tokens.json",
+      file: "semantics/light.tokens.json",
       sourcePath: ["Font colours", "Default text"],
       type: "color",
       value: "#083344"
@@ -43,7 +43,7 @@ test("normalises source names to kebab-case segments", () => {
 
 test("maps source paths to canonical paths", () => {
   const mapping = sourcePathToCanonicalPath({
-    file: "tokens/Light.tokens.json",
+    file: "semantics/light.tokens.json",
     sourcePath: ["Font colours", "Default text"],
     type: "color",
     value: "#083344"
@@ -55,7 +55,7 @@ test("maps source paths to canonical paths", () => {
 
 test("maps configured shadow parts to canonical shadow tokens", () => {
   const mapping = sourcePathToCanonicalPath({
-    file: "tokens/Light.tokens.json",
+    file: "semantics/light.tokens.json",
     sourcePath: ["Drop shadows - cards", "Position Y"],
     type: "number",
     value: 2
@@ -69,7 +69,7 @@ test("maps configured shadow parts to canonical shadow tokens", () => {
 
 test("maps component colour source paths to component token paths", () => {
   const mapping = sourcePathToCanonicalPath({
-    file: "components/Light.tokens.json",
+    file: "components/light.tokens.json",
     sourcePath: ["Button", "Primary", "High", "Background"],
     type: "color",
     value: "#155e75"
@@ -88,7 +88,7 @@ test("maps component colour source paths to component token paths", () => {
 
 test("maps component dimensions to px component tokens", () => {
   const document = buildCanonicalTokensFromRecords([
-    numberRecord("components/Dimensions.tokens.json", ["Button", "Padding x", "Md"], 16)
+    numberRecord("components/dimensions.tokens.json", ["Button", "Padding x", "Md"], 16)
   ]);
   const token = collectCanonicalTokens(document).find(
     (candidate) => candidate.name === "component.button.padding.x.md"
@@ -104,12 +104,12 @@ test("maps component dimensions to px component tokens", () => {
 test("merges light and dark component colour values", () => {
   const document = buildCanonicalTokensFromRecords([
     colorRecord(
-      "components/Light.tokens.json",
+      "components/light.tokens.json",
       ["Button", "Primary", "High", "Background"],
       "#155e75"
     ),
     colorRecord(
-      "components/Dark.tokens.json",
+      "components/dark.tokens.json",
       ["Button", "Primary", "High", "Background"],
       "#0e7490"
     )
@@ -134,12 +134,12 @@ test("can map configured component categories from semantic mode files", () => {
       ...defaultCanonicalMappingConfig.files,
       componentColors: [
         {
-          file: "tokens/Light.tokens.json",
+          file: "semantics/light.tokens.json",
           sourceMode: "Light",
           mode: "light"
         },
         {
-          file: "tokens/Dark.tokens.json",
+          file: "semantics/dark.tokens.json",
           sourceMode: "Dark",
           mode: "dark"
         }
@@ -155,7 +155,7 @@ test("can map configured component categories from semantic mode files", () => {
   };
   const mapping = sourcePathToCanonicalPath(
     {
-      file: "tokens/Light.tokens.json",
+      file: "semantics/light.tokens.json",
       sourcePath: ["Button colours", "Button secondary border"],
       type: "color",
       value: "#155e75"
@@ -174,12 +174,12 @@ test("can map mixed Figma component-like colour groups by configured leaf prefix
       ...defaultCanonicalMappingConfig.files,
       componentColors: [
         {
-          file: "tokens/Light.tokens.json",
+          file: "semantics/light.tokens.json",
           sourceMode: "Light",
           mode: "light"
         },
         {
-          file: "tokens/Dark.tokens.json",
+          file: "semantics/dark.tokens.json",
           sourceMode: "Dark",
           mode: "dark"
         }
@@ -190,7 +190,7 @@ test("can map mixed Figma component-like colour groups by configured leaf prefix
   assert.deepEqual(
     sourcePathToCanonicalPath(
       colorRecord(
-        "tokens/Light.tokens.json",
+        "semantics/light.tokens.json",
         ["Form input backgrounds", "Segmented control active background"],
         "#ffffff"
       ),
@@ -201,7 +201,7 @@ test("can map mixed Figma component-like colour groups by configured leaf prefix
   assert.deepEqual(
     sourcePathToCanonicalPath(
       colorRecord(
-        "tokens/Light.tokens.json",
+        "semantics/light.tokens.json",
         ["Notifications", "Alert notification text"],
         "#991b1b"
       ),
@@ -212,7 +212,7 @@ test("can map mixed Figma component-like colour groups by configured leaf prefix
   assert.deepEqual(
     sourcePathToCanonicalPath(
       colorRecord(
-        "tokens/Light.tokens.json",
+        "semantics/light.tokens.json",
         ["Date picker backgrounds", "Selected date background"],
         "#0891b2"
       ),
@@ -222,7 +222,11 @@ test("can map mixed Figma component-like colour groups by configured leaf prefix
   );
   assert.deepEqual(
     sourcePathToCanonicalPath(
-      colorRecord("tokens/Light.tokens.json", ["Loading states", "Spinner foreground"], "#0891b2"),
+      colorRecord(
+        "semantics/light.tokens.json",
+        ["Loading states", "Spinner foreground"],
+        "#0891b2"
+      ),
       config
     )?.canonicalPath,
     ["component", "loading-spinner", "foreground"]
@@ -294,8 +298,8 @@ test("normalises colour values to uppercase hex", () => {
 
 test("merges semantic colour light and dark values", () => {
   const document = buildCanonicalTokensFromRecords([
-    colorRecord("tokens/Light.tokens.json", ["Font colours", "Default text"], "#083344"),
-    colorRecord("tokens/Dark.tokens.json", ["Font colours", "Default text"], "#fdfdfd")
+    colorRecord("semantics/light.tokens.json", ["Font colours", "Default text"], "#083344"),
+    colorRecord("semantics/dark.tokens.json", ["Font colours", "Default text"], "#fdfdfd")
   ]);
   const token = collectCanonicalTokens(document).find(
     (candidate) => candidate.name === "color.semantic.text.default"
@@ -309,7 +313,7 @@ test("merges semantic colour light and dark values", () => {
 
 test("maps radius source typo and corner size names", () => {
   const document = buildCanonicalTokensFromRecords([
-    numberRecord("corners/Mode 1.tokens.json", ["Corder-radius", "Corner-Med"], 8)
+    numberRecord("radius.tokens.json", ["Corder-radius", "Corner-Med"], 8)
   ]);
   const token = collectCanonicalTokens(document).find(
     (candidate) => candidate.name === "radius.md"
@@ -322,9 +326,9 @@ test("maps radius source typo and corner size names", () => {
 
 test("groups typography FontSize, LineHeight, and FontWeight records", () => {
   const document = buildCanonicalTokensFromRecords([
-    numberRecord("typography/Default.tokens.json", ["H1", "FontSize"], 32),
-    numberRecord("typography/Default.tokens.json", ["H1", "LineHeight"], 40),
-    numberRecord("typography/Default.tokens.json", ["H1", "FontWeight"], 700)
+    numberRecord("typography.tokens.json", ["H1", "FontSize"], 32),
+    numberRecord("typography.tokens.json", ["H1", "LineHeight"], 40),
+    numberRecord("typography.tokens.json", ["H1", "FontWeight"], 700)
   ]);
   const token = collectCanonicalTokens(document).find(
     (candidate) => candidate.name === "typography.heading.h1"
@@ -339,14 +343,14 @@ test("groups typography FontSize, LineHeight, and FontWeight records", () => {
 
 test("groups shadow geometry into mode-aware shadow tokens", () => {
   const document = buildCanonicalTokensFromRecords([
-    numberRecord("tokens/Light.tokens.json", ["Drop shadows - cards", "Position X"], 0),
-    numberRecord("tokens/Light.tokens.json", ["Drop shadows - cards", "Position Y"], 2),
-    numberRecord("tokens/Light.tokens.json", ["Drop shadows - cards", "Blur"], 8),
-    numberRecord("tokens/Light.tokens.json", ["Drop shadows - cards", "Spread"], 0),
-    numberRecord("tokens/Dark.tokens.json", ["Drop shadows - cards", "Position X"], 0),
-    numberRecord("tokens/Dark.tokens.json", ["Drop shadows - cards", "Position Y"], 3),
-    numberRecord("tokens/Dark.tokens.json", ["Drop shadows - cards", "Blur"], 12),
-    numberRecord("tokens/Dark.tokens.json", ["Drop shadows - cards", "Spread"], 1)
+    numberRecord("semantics/light.tokens.json", ["Drop shadows - cards", "Position X"], 0),
+    numberRecord("semantics/light.tokens.json", ["Drop shadows - cards", "Position Y"], 2),
+    numberRecord("semantics/light.tokens.json", ["Drop shadows - cards", "Blur"], 8),
+    numberRecord("semantics/light.tokens.json", ["Drop shadows - cards", "Spread"], 0),
+    numberRecord("semantics/dark.tokens.json", ["Drop shadows - cards", "Position X"], 0),
+    numberRecord("semantics/dark.tokens.json", ["Drop shadows - cards", "Position Y"], 3),
+    numberRecord("semantics/dark.tokens.json", ["Drop shadows - cards", "Blur"], 12),
+    numberRecord("semantics/dark.tokens.json", ["Drop shadows - cards", "Spread"], 1)
   ]);
   const token = collectCanonicalTokens(document).find(
     (candidate) => candidate.name === "shadow.card"
@@ -376,18 +380,18 @@ test("groups shadow geometry into mode-aware shadow tokens", () => {
 
 test("groups optional shadow colour and opacity when present", () => {
   const document = buildCanonicalTokensFromRecords([
-    numberRecord("tokens/Light.tokens.json", ["Drop shadows - cards", "Position X"], 0),
-    numberRecord("tokens/Light.tokens.json", ["Drop shadows - cards", "Position Y"], 2),
-    numberRecord("tokens/Light.tokens.json", ["Drop shadows - cards", "Blur"], 8),
-    numberRecord("tokens/Light.tokens.json", ["Drop shadows - cards", "Spread"], 0),
-    colorRecord("tokens/Light.tokens.json", ["Drop shadows - cards", "Colour"], "#334155"),
-    numberRecord("tokens/Light.tokens.json", ["Drop shadows - cards", "Opacity"], 0.2),
-    numberRecord("tokens/Dark.tokens.json", ["Drop shadows - cards", "Position X"], 0),
-    numberRecord("tokens/Dark.tokens.json", ["Drop shadows - cards", "Position Y"], 2),
-    numberRecord("tokens/Dark.tokens.json", ["Drop shadows - cards", "Blur"], 8),
-    numberRecord("tokens/Dark.tokens.json", ["Drop shadows - cards", "Spread"], 0),
-    colorRecord("tokens/Dark.tokens.json", ["Drop shadows - cards", "Colour"], "#020617"),
-    numberRecord("tokens/Dark.tokens.json", ["Drop shadows - cards", "Opacity"], 0.4)
+    numberRecord("semantics/light.tokens.json", ["Drop shadows - cards", "Position X"], 0),
+    numberRecord("semantics/light.tokens.json", ["Drop shadows - cards", "Position Y"], 2),
+    numberRecord("semantics/light.tokens.json", ["Drop shadows - cards", "Blur"], 8),
+    numberRecord("semantics/light.tokens.json", ["Drop shadows - cards", "Spread"], 0),
+    colorRecord("semantics/light.tokens.json", ["Drop shadows - cards", "Colour"], "#334155"),
+    numberRecord("semantics/light.tokens.json", ["Drop shadows - cards", "Opacity"], 0.2),
+    numberRecord("semantics/dark.tokens.json", ["Drop shadows - cards", "Position X"], 0),
+    numberRecord("semantics/dark.tokens.json", ["Drop shadows - cards", "Position Y"], 2),
+    numberRecord("semantics/dark.tokens.json", ["Drop shadows - cards", "Blur"], 8),
+    numberRecord("semantics/dark.tokens.json", ["Drop shadows - cards", "Spread"], 0),
+    colorRecord("semantics/dark.tokens.json", ["Drop shadows - cards", "Colour"], "#020617"),
+    numberRecord("semantics/dark.tokens.json", ["Drop shadows - cards", "Opacity"], 0.4)
   ]);
   const token = collectCanonicalTokens(document).find(
     (candidate) => candidate.name === "shadow.card"
@@ -401,8 +405,8 @@ test("groups optional shadow colour and opacity when present", () => {
 
 test("build report explains mapped, renamed, and skipped source records", () => {
   const { document, report } = buildCanonicalTokensFromRecordsWithReport([
-    colorRecord("tokens/Light.tokens.json", ["Font colours", "Default text"], "#083344"),
-    colorRecord("tokens/Dark.tokens.json", ["Font colours", "Default text"], "#fdfdfd"),
+    colorRecord("semantics/light.tokens.json", ["Font colours", "Default text"], "#083344"),
+    colorRecord("semantics/dark.tokens.json", ["Font colours", "Default text"], "#fdfdfd"),
     { file: "other.tokens.json", sourcePath: ["Unsupported"], type: "shadow", value: "none" }
   ]);
   const token = collectCanonicalTokens(document).find(

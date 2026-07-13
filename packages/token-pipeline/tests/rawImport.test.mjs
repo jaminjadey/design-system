@@ -48,7 +48,7 @@ test("writes normalised source files and import report deterministically", async
 
   const report = await writeRawTokenImportOutput(fixtureDirectory, outputDirectory, config);
   const primitiveText = await readFile(
-    join(outputDirectory, "primitives", "Default.tokens.json"),
+    join(outputDirectory, "primitives", "colours.tokens.json"),
     "utf8"
   );
   const reportText = await readFile(join(outputDirectory, "import-report.json"), "utf8");
@@ -61,7 +61,7 @@ test("writes normalised source files and import report deterministically", async
 test("imports raw token files written with a UTF-8 byte order mark", async () => {
   const outputDirectory = await mkdtemp(join(tmpdir(), "demo-ds-raw-import-output-"));
   const inputDirectory = await mkdtemp(join(tmpdir(), "demo-ds-raw-import-input-"));
-  const sourcePath = join(inputDirectory, "primitives", "Default.tokens.json");
+  const sourcePath = join(inputDirectory, "primitives", "colours.tokens.json");
 
   await mkdir(dirname(sourcePath), { recursive: true });
   await writeFile(
@@ -80,8 +80,8 @@ test("imports raw token files written with a UTF-8 byte order mark", async () =>
   const report = await writeRawTokenImportOutput(inputDirectory, outputDirectory, {
     files: [
       {
-        source: "primitives/Default.tokens.json",
-        target: "primitives/Default.tokens.json",
+        source: "primitives/colours.tokens.json",
+        target: "primitives/colours.tokens.json",
         stripPathPrefix: ["Colour"]
       }
     ]
@@ -96,7 +96,7 @@ test("imports synthetic raw component tokens into component source files", () =>
     [
       {
         source: "components-light.raw.json",
-        target: "components/Light.tokens.json",
+        target: "components/light.tokens.json",
         value: {
           Button: {
             Primary: {
@@ -109,7 +109,7 @@ test("imports synthetic raw component tokens into component source files", () =>
       },
       {
         source: "components-dimensions.raw.json",
-        target: "components/Dimensions.tokens.json",
+        target: "components/dimensions.tokens.json",
         value: {
           Button: {
             Height: {
@@ -123,11 +123,11 @@ test("imports synthetic raw component tokens into component source files", () =>
       files: [
         {
           source: "components-light.raw.json",
-          target: "components/Light.tokens.json"
+          target: "components/light.tokens.json"
         },
         {
           source: "components-dimensions.raw.json",
-          target: "components/Dimensions.tokens.json"
+          target: "components/dimensions.tokens.json"
         }
       ]
     }
@@ -135,13 +135,13 @@ test("imports synthetic raw component tokens into component source files", () =>
 
   assert.deepEqual(result.records, [
     {
-      file: "components/Dimensions.tokens.json",
+      file: "components/dimensions.tokens.json",
       sourcePath: ["Button", "Height", "Md"],
       type: "number",
       value: 36
     },
     {
-      file: "components/Light.tokens.json",
+      file: "components/light.tokens.json",
       sourcePath: ["Button", "Primary", "High", "Background"],
       type: "color",
       value: "#155e75"
@@ -166,7 +166,7 @@ test("strips raw metadata keys before emitting normalised source tokens", () => 
     [
       {
         source: "metadata.raw.json",
-        target: "primitives/Default.tokens.json",
+        target: "primitives/colours.tokens.json",
         stripPathPrefix: ["Primitive colours"],
         value: {
           "Primitive colours": {
@@ -190,21 +190,21 @@ test("strips raw metadata keys before emitting normalised source tokens", () => 
       files: [
         {
           source: "metadata.raw.json",
-          target: "primitives/Default.tokens.json",
+          target: "primitives/colours.tokens.json",
           stripPathPrefix: ["Primitive colours"]
         }
       ]
     }
   );
 
-  const normalised = JSON.stringify(result.normalisedFiles.get("primitives/Default.tokens.json"));
+  const normalised = JSON.stringify(result.normalisedFiles.get("primitives/colours.tokens.json"));
   assert.equal(result.report.metadataKeysStripped, 3);
   assert.doesNotMatch(
     normalised,
     /\$extensions|com\.figma|VariableID|VariableCollectionId|targetVariable/u
   );
   assert.deepEqual(result.records[0], {
-    file: "primitives/Default.tokens.json",
+    file: "primitives/colours.tokens.json",
     sourcePath: ["Primary", "600"],
     type: "color",
     value: {
@@ -220,7 +220,7 @@ test("rejects forbidden marker values in raw exports", () => {
         [
           {
             source: "unsafe.raw.json",
-            target: "primitives/Default.tokens.json",
+            target: "primitives/colours.tokens.json",
             value: {
               "Primitive colours": {
                 Primary: {
@@ -237,7 +237,7 @@ test("rejects forbidden marker values in raw exports", () => {
           files: [
             {
               source: "unsafe.raw.json",
-              target: "primitives/Default.tokens.json"
+              target: "primitives/colours.tokens.json"
             }
           ]
         }
@@ -253,7 +253,7 @@ test("fails explicit unsupported design token types by default", () => {
         [
           {
             source: "unsupported.raw.json",
-            target: "primitives/Default.tokens.json",
+            target: "primitives/colours.tokens.json",
             value: {
               Effects: {
                 Card: {
@@ -268,7 +268,7 @@ test("fails explicit unsupported design token types by default", () => {
           files: [
             {
               source: "unsupported.raw.json",
-              target: "primitives/Default.tokens.json"
+              target: "primitives/colours.tokens.json"
             }
           ]
         }
@@ -282,7 +282,7 @@ test("can report unsupported raw token findings with useful file and path detail
     [
       {
         source: "unsupported.raw.json",
-        target: "primitives/Default.tokens.json",
+        target: "primitives/colours.tokens.json",
         value: {
           Effects: {
             Card: {
@@ -298,7 +298,7 @@ test("can report unsupported raw token findings with useful file and path detail
       files: [
         {
           source: "unsupported.raw.json",
-          target: "primitives/Default.tokens.json"
+          target: "primitives/colours.tokens.json"
         }
       ]
     }

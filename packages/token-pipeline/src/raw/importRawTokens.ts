@@ -463,7 +463,7 @@ function normaliseTypographyGroup(
   rawPath: readonly string[],
   context: ImportContext
 ): ReadonlyArray<readonly ["FontSize" | "LineHeight" | "FontWeight", number]> | undefined {
-  if (!isObject(value) || !document.target.endsWith("typography/Default.tokens.json")) {
+  if (!isObject(value) || !isTypographyTarget(document.target)) {
     return undefined;
   }
 
@@ -826,7 +826,11 @@ function inferTokenHint(
   target: string,
   rawPath: readonly string[]
 ): "color" | "number" | "unknown" {
-  if (target.startsWith("primitives/") || target.startsWith("tokens/")) {
+  if (
+    target.startsWith("primitives/") ||
+    target.startsWith("semantics/") ||
+    target.startsWith("tokens/")
+  ) {
     return "color";
   }
 
@@ -834,16 +838,28 @@ function inferTokenHint(
     return target.toLowerCase().includes("dimension") ? "number" : "color";
   }
 
-  if (target.startsWith("spacing/") || target.startsWith("corners/")) {
+  if (isSpaceTarget(target) || isRadiusTarget(target)) {
     return "number";
   }
 
-  if (target.startsWith("typography/")) {
+  if (isTypographyTarget(target)) {
     const leaf = rawPath[rawPath.length - 1]?.toLowerCase();
     return leaf !== undefined && typographyProperties.has(leaf) ? "number" : "unknown";
   }
 
   return "unknown";
+}
+
+function isSpaceTarget(target: string): boolean {
+  return target === "space.tokens.json" || target.startsWith("spacing/");
+}
+
+function isRadiusTarget(target: string): boolean {
+  return target === "radius.tokens.json" || target.startsWith("corners/");
+}
+
+function isTypographyTarget(target: string): boolean {
+  return target === "typography.tokens.json" || target.startsWith("typography/");
 }
 
 function getCaseInsensitiveString(value: Record<string, unknown>, key: string): string | undefined {

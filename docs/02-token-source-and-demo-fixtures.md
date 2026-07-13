@@ -6,15 +6,15 @@ The demo token source lives in:
 
 ```txt
 packages/tokens/fixtures/extracted/
-  primitives/Default.tokens.json
-  tokens/Light.tokens.json
-  tokens/Dark.tokens.json
-  components/Light.tokens.json
-  components/Dark.tokens.json
-  components/Dimensions.tokens.json
-  spacing/Mode 1.tokens.json
-  corners/Mode 1.tokens.json
-  typography/Default.tokens.json
+  primitives/colours.tokens.json
+  semantics/light.tokens.json
+  semantics/dark.tokens.json
+  components/light.tokens.json
+  components/dark.tokens.json
+  components/dimensions.tokens.json
+  space.tokens.json
+  radius.tokens.json
+  typography.tokens.json
   manifest.json
   README.md
 ```
@@ -42,7 +42,7 @@ cannot be committed accidentally.
 | Dark semantic tokens  | Mode-specific semantic colours for dark UI.                            |
 | Component tokens      | Synthetic component-level values for wrappers and variants.            |
 | Spacing               | Numeric scale mapped to dimension tokens.                              |
-| Corners               | Numeric radius scale mapped to radius tokens.                          |
+| Radius                | Numeric corner scale mapped to radius tokens.                          |
 | Typography            | Font size, line height, and weight groups.                             |
 
 ## Source Scan
@@ -70,7 +70,7 @@ Expected output:
 
 ```txt
 Fixture safety scan passed
-Files scanned: 8
+Files scanned: 11
 Forbidden markers found: 0
 ```
 
@@ -108,7 +108,7 @@ normalised token-source output:
   "files": [
     {
       "source": "primitive-colours.raw.json",
-      "target": "primitives/Default.tokens.json",
+      "target": "primitives/colours.tokens.json",
       "stripPathPrefix": ["Primitive colours"]
     }
   ]

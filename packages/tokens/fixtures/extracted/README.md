@@ -2,6 +2,19 @@
 
 These files are synthetic token fixtures for the demo design-system pipeline.
 
+```txt
+packages/tokens/fixtures/extracted/
+  primitives/colours.tokens.json
+  semantics/light.tokens.json
+  semantics/dark.tokens.json
+  components/light.tokens.json
+  components/dark.tokens.json
+  components/dimensions.tokens.json
+  space.tokens.json
+  radius.tokens.json
+  typography.tokens.json
+```
+
 They intentionally use generic categories and values while preserving the kind
 of structure a token export may contain: primitive palettes, light/dark semantic
 tokens, component-level values, spacing, radius, and typography scales.

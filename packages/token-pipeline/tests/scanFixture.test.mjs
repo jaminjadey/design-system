@@ -13,22 +13,22 @@ import {
 
 test("discovers fixture files recursively in stable order", async () => {
   const root = await mkdtemp(join(tmpdir(), "demo-ds-fixtures-"));
-  await mkdir(join(root, "tokens"), { recursive: true });
-  await writeFile(join(root, "tokens", "Light.tokens.json"), "{}\n");
+  await mkdir(join(root, "semantics"), { recursive: true });
+  await writeFile(join(root, "semantics", "light.tokens.json"), "{}\n");
   await writeFile(join(root, "README.md"), "Synthetic fixtures.\n");
 
   const files = await discoverFixtureFiles(root);
 
   assert.deepEqual(
     files.map((file) => file.relativePath),
-    ["README.md", "tokens/Light.tokens.json"]
+    ["README.md", "semantics/light.tokens.json"]
   );
   assert.ok(files.every((file) => file.isTextLike));
 });
 
 test("passes synthetic safe fixture text", () => {
   const findings = scanFixtureText({
-    filePath: "tokens/Light.tokens.json",
+    filePath: "semantics/light.tokens.json",
     text: JSON.stringify({
       color: {
         semantic: {
@@ -47,20 +47,20 @@ test("passes synthetic safe fixture text", () => {
 
 test("fails synthetic unsafe raw marker text with useful file and line details", () => {
   const findings = scanFixtureText({
-    filePath: "tokens/Dark.tokens.json",
+    filePath: "semantics/dark.tokens.json",
     text: '{\n  "value": "PRIVATE_COMPANY_NAME_PLACEHOLDER"\n}\n'
   });
 
   assert.equal(findings.length, 1);
-  assert.equal(findings[0].filePath, "tokens/Dark.tokens.json");
+  assert.equal(findings[0].filePath, "semantics/dark.tokens.json");
   assert.equal(findings[0].marker, "PRIVATE_COMPANY_NAME_PLACEHOLDER");
   assert.equal(findings[0].line, 2);
-  assert.match(formatSafetyFinding(findings[0]), /tokens\/Dark\.tokens\.json:2:13/u);
+  assert.match(formatSafetyFinding(findings[0]), /semantics\/dark\.tokens\.json:2:13/u);
 });
 
 test("fails synthetic unsafe JSON key metadata", () => {
   const findings = scanFixtureText({
-    filePath: "primitives/Default.tokens.json",
+    filePath: "primitives/colours.tokens.json",
     text: JSON.stringify({
       color: {
         $extensions: {

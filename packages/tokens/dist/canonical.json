@@ -31,7 +31,7 @@
             },
             "cssVariable": "--ds-component-alert-banner-danger-background",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Alert banner.Danger.Background"
             }
           },
@@ -51,7 +51,7 @@
             },
             "cssVariable": "--ds-component-alert-banner-danger-border",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Alert banner.Danger.Border"
             }
           },
@@ -71,7 +71,7 @@
             },
             "cssVariable": "--ds-component-alert-banner-danger-text",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Alert banner.Danger.Text"
             }
           }
@@ -93,7 +93,7 @@
             },
             "cssVariable": "--ds-component-alert-banner-info-background",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Alert banner.Info.Background"
             }
           },
@@ -113,7 +113,7 @@
             },
             "cssVariable": "--ds-component-alert-banner-info-border",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Alert banner.Info.Border"
             }
           },
@@ -133,7 +133,7 @@
             },
             "cssVariable": "--ds-component-alert-banner-info-text",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Alert banner.Info.Text"
             }
           }
@@ -153,7 +153,7 @@
             "unit": "px",
             "cssVariable": "--ds-component-alert-banner-padding-x",
             "source": {
-              "file": "components/Dimensions.tokens.json",
+              "file": "components/dimensions.tokens.json",
               "path": "Alert banner.Padding x"
             }
           },
@@ -171,7 +171,7 @@
             "unit": "px",
             "cssVariable": "--ds-component-alert-banner-padding-y",
             "source": {
-              "file": "components/Dimensions.tokens.json",
+              "file": "components/dimensions.tokens.json",
               "path": "Alert banner.Padding y"
             }
           }
@@ -193,7 +193,7 @@
             },
             "cssVariable": "--ds-component-alert-banner-success-background",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Alert banner.Success.Background"
             }
           },
@@ -213,7 +213,7 @@
             },
             "cssVariable": "--ds-component-alert-banner-success-border",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Alert banner.Success.Border"
             }
           },
@@ -233,7 +233,7 @@
             },
             "cssVariable": "--ds-component-alert-banner-success-text",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Alert banner.Success.Text"
             }
           }
@@ -255,7 +255,7 @@
             },
             "cssVariable": "--ds-component-alert-banner-warning-background",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Alert banner.Warning.Background"
             }
           },
@@ -275,7 +275,7 @@
             },
             "cssVariable": "--ds-component-alert-banner-warning-border",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Alert banner.Warning.Border"
             }
           },
@@ -295,7 +295,7 @@
             },
             "cssVariable": "--ds-component-alert-banner-warning-text",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Alert banner.Warning.Text"
             }
           }
@@ -321,7 +321,7 @@
               },
               "cssVariable": "--ds-component-button-danger-high-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Danger.High.Background"
               }
             },
@@ -342,7 +342,7 @@
               },
               "cssVariable": "--ds-component-button-danger-high-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Danger.High.Border"
               }
             },
@@ -363,7 +363,7 @@
               },
               "cssVariable": "--ds-component-button-danger-high-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Danger.High.Text"
               }
             }
@@ -386,7 +386,7 @@
               },
               "cssVariable": "--ds-component-button-danger-low-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Danger.Low.Background"
               }
             },
@@ -407,7 +407,7 @@
               },
               "cssVariable": "--ds-component-button-danger-low-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Danger.Low.Border"
               }
             },
@@ -428,7 +428,7 @@
               },
               "cssVariable": "--ds-component-button-danger-low-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Danger.Low.Text"
               }
             }
@@ -451,7 +451,7 @@
               },
               "cssVariable": "--ds-component-button-danger-medium-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Danger.Medium.Background"
               }
             },
@@ -472,7 +472,7 @@
               },
               "cssVariable": "--ds-component-button-danger-medium-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Danger.Medium.Border"
               }
             },
@@ -493,7 +493,7 @@
               },
               "cssVariable": "--ds-component-button-danger-medium-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Danger.Medium.Text"
               }
             }
@@ -516,7 +516,7 @@
             },
             "cssVariable": "--ds-component-button-disabled-background",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Button.Disabled.Background"
             }
           },
@@ -536,7 +536,7 @@
             },
             "cssVariable": "--ds-component-button-disabled-border",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Button.Disabled.Border"
             }
           },
@@ -556,7 +556,7 @@
             },
             "cssVariable": "--ds-component-button-disabled-text",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Button.Disabled.Text"
             }
           }
@@ -574,7 +574,7 @@
           "unit": "px",
           "cssVariable": "--ds-component-button-gap",
           "source": {
-            "file": "components/Dimensions.tokens.json",
+            "file": "components/dimensions.tokens.json",
             "path": "Button.Gap"
           }
         },
@@ -593,7 +593,7 @@
             "unit": "px",
             "cssVariable": "--ds-component-button-height-lg",
             "source": {
-              "file": "components/Dimensions.tokens.json",
+              "file": "components/dimensions.tokens.json",
               "path": "Button.Height.Lg"
             }
           },
@@ -611,7 +611,7 @@
             "unit": "px",
             "cssVariable": "--ds-component-button-height-md",
             "source": {
-              "file": "components/Dimensions.tokens.json",
+              "file": "components/dimensions.tokens.json",
               "path": "Button.Height.Md"
             }
           },
@@ -629,7 +629,7 @@
             "unit": "px",
             "cssVariable": "--ds-component-button-height-sm",
             "source": {
-              "file": "components/Dimensions.tokens.json",
+              "file": "components/dimensions.tokens.json",
               "path": "Button.Height.Sm"
             }
           }
@@ -653,7 +653,7 @@
               },
               "cssVariable": "--ds-component-button-neutral-high-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Neutral.High.Background"
               }
             },
@@ -674,7 +674,7 @@
               },
               "cssVariable": "--ds-component-button-neutral-high-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Neutral.High.Border"
               }
             },
@@ -695,7 +695,7 @@
               },
               "cssVariable": "--ds-component-button-neutral-high-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Neutral.High.Text"
               }
             }
@@ -718,7 +718,7 @@
               },
               "cssVariable": "--ds-component-button-neutral-low-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Neutral.Low.Background"
               }
             },
@@ -739,7 +739,7 @@
               },
               "cssVariable": "--ds-component-button-neutral-low-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Neutral.Low.Border"
               }
             },
@@ -760,7 +760,7 @@
               },
               "cssVariable": "--ds-component-button-neutral-low-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Neutral.Low.Text"
               }
             }
@@ -783,7 +783,7 @@
               },
               "cssVariable": "--ds-component-button-neutral-medium-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Neutral.Medium.Background"
               }
             },
@@ -804,7 +804,7 @@
               },
               "cssVariable": "--ds-component-button-neutral-medium-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Neutral.Medium.Border"
               }
             },
@@ -825,7 +825,7 @@
               },
               "cssVariable": "--ds-component-button-neutral-medium-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Neutral.Medium.Text"
               }
             }
@@ -848,7 +848,7 @@
               "unit": "px",
               "cssVariable": "--ds-component-button-padding-x-lg",
               "source": {
-                "file": "components/Dimensions.tokens.json",
+                "file": "components/dimensions.tokens.json",
                 "path": "Button.Padding x.Lg"
               }
             },
@@ -867,7 +867,7 @@
               "unit": "px",
               "cssVariable": "--ds-component-button-padding-x-md",
               "source": {
-                "file": "components/Dimensions.tokens.json",
+                "file": "components/dimensions.tokens.json",
                 "path": "Button.Padding x.Md"
               }
             },
@@ -886,7 +886,7 @@
               "unit": "px",
               "cssVariable": "--ds-component-button-padding-x-sm",
               "source": {
-                "file": "components/Dimensions.tokens.json",
+                "file": "components/dimensions.tokens.json",
                 "path": "Button.Padding x.Sm"
               }
             }
@@ -911,7 +911,7 @@
               },
               "cssVariable": "--ds-component-button-primary-high-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Primary.High.Background"
               }
             },
@@ -932,7 +932,7 @@
               },
               "cssVariable": "--ds-component-button-primary-high-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Primary.High.Border"
               }
             },
@@ -953,7 +953,7 @@
               },
               "cssVariable": "--ds-component-button-primary-high-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Primary.High.Text"
               }
             }
@@ -976,7 +976,7 @@
               },
               "cssVariable": "--ds-component-button-primary-low-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Primary.Low.Background"
               }
             },
@@ -997,7 +997,7 @@
               },
               "cssVariable": "--ds-component-button-primary-low-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Primary.Low.Border"
               }
             },
@@ -1018,7 +1018,7 @@
               },
               "cssVariable": "--ds-component-button-primary-low-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Primary.Low.Text"
               }
             }
@@ -1041,7 +1041,7 @@
               },
               "cssVariable": "--ds-component-button-primary-medium-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Primary.Medium.Background"
               }
             },
@@ -1062,7 +1062,7 @@
               },
               "cssVariable": "--ds-component-button-primary-medium-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Primary.Medium.Border"
               }
             },
@@ -1083,7 +1083,7 @@
               },
               "cssVariable": "--ds-component-button-primary-medium-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Primary.Medium.Text"
               }
             }
@@ -1108,7 +1108,7 @@
               },
               "cssVariable": "--ds-component-button-success-high-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Success.High.Background"
               }
             },
@@ -1129,7 +1129,7 @@
               },
               "cssVariable": "--ds-component-button-success-high-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Success.High.Border"
               }
             },
@@ -1150,7 +1150,7 @@
               },
               "cssVariable": "--ds-component-button-success-high-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Success.High.Text"
               }
             }
@@ -1173,7 +1173,7 @@
               },
               "cssVariable": "--ds-component-button-success-low-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Success.Low.Background"
               }
             },
@@ -1194,7 +1194,7 @@
               },
               "cssVariable": "--ds-component-button-success-low-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Success.Low.Border"
               }
             },
@@ -1215,7 +1215,7 @@
               },
               "cssVariable": "--ds-component-button-success-low-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Success.Low.Text"
               }
             }
@@ -1238,7 +1238,7 @@
               },
               "cssVariable": "--ds-component-button-success-medium-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Success.Medium.Background"
               }
             },
@@ -1259,7 +1259,7 @@
               },
               "cssVariable": "--ds-component-button-success-medium-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Success.Medium.Border"
               }
             },
@@ -1280,7 +1280,7 @@
               },
               "cssVariable": "--ds-component-button-success-medium-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Button.Success.Medium.Text"
               }
             }
@@ -1301,7 +1301,7 @@
           "unit": "px",
           "cssVariable": "--ds-component-card-padding",
           "source": {
-            "file": "components/Dimensions.tokens.json",
+            "file": "components/dimensions.tokens.json",
             "path": "Card.Padding"
           }
         },
@@ -1322,7 +1322,7 @@
             },
             "cssVariable": "--ds-component-card-surface-background",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Card.Surface.Background"
             }
           },
@@ -1342,7 +1342,7 @@
             },
             "cssVariable": "--ds-component-card-surface-border",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Card.Surface.Border"
             }
           },
@@ -1362,7 +1362,7 @@
             },
             "cssVariable": "--ds-component-card-surface-text",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Card.Surface.Text"
             }
           }
@@ -1384,7 +1384,7 @@
             "unit": "px",
             "cssVariable": "--ds-component-date-picker-cell-size",
             "source": {
-              "file": "components/Dimensions.tokens.json",
+              "file": "components/dimensions.tokens.json",
               "path": "Date picker.Cell size"
             }
           }
@@ -1406,7 +1406,7 @@
             },
             "cssVariable": "--ds-component-date-picker-disabled-background",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Date picker.Disabled.Background"
             }
           },
@@ -1426,7 +1426,7 @@
             },
             "cssVariable": "--ds-component-date-picker-disabled-text",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Date picker.Disabled.Text"
             }
           }
@@ -1444,7 +1444,7 @@
           "unit": "px",
           "cssVariable": "--ds-component-date-picker-height",
           "source": {
-            "file": "components/Dimensions.tokens.json",
+            "file": "components/dimensions.tokens.json",
             "path": "Date picker.Height"
           }
         },
@@ -1465,7 +1465,7 @@
             },
             "cssVariable": "--ds-component-date-picker-hover-background",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Date picker.Hover.Background"
             }
           },
@@ -1485,7 +1485,7 @@
             },
             "cssVariable": "--ds-component-date-picker-hover-text",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Date picker.Hover.Text"
             }
           }
@@ -1507,7 +1507,7 @@
             },
             "cssVariable": "--ds-component-date-picker-range-background",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Date picker.Range.Background"
             }
           },
@@ -1527,7 +1527,7 @@
             },
             "cssVariable": "--ds-component-date-picker-range-text",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Date picker.Range.Text"
             }
           }
@@ -1549,7 +1549,7 @@
             },
             "cssVariable": "--ds-component-date-picker-selected-background",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Date picker.Selected.Background"
             }
           },
@@ -1569,7 +1569,7 @@
             },
             "cssVariable": "--ds-component-date-picker-selected-text",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Date picker.Selected.Text"
             }
           }
@@ -1591,7 +1591,7 @@
             },
             "cssVariable": "--ds-component-date-picker-today-border",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Date picker.Today.Border"
             }
           },
@@ -1611,7 +1611,7 @@
             },
             "cssVariable": "--ds-component-date-picker-today-text",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Date picker.Today.Text"
             }
           }
@@ -1633,7 +1633,7 @@
           },
           "cssVariable": "--ds-component-loading-spinner-background",
           "source": {
-            "file": "components/Dark.tokens.json",
+            "file": "components/dark.tokens.json",
             "path": "Loading spinner.Background"
           }
         },
@@ -1652,7 +1652,7 @@
           },
           "cssVariable": "--ds-component-loading-spinner-foreground",
           "source": {
-            "file": "components/Dark.tokens.json",
+            "file": "components/dark.tokens.json",
             "path": "Loading spinner.Foreground"
           }
         },
@@ -1671,7 +1671,7 @@
             "unit": "px",
             "cssVariable": "--ds-component-loading-spinner-size-lg",
             "source": {
-              "file": "components/Dimensions.tokens.json",
+              "file": "components/dimensions.tokens.json",
               "path": "Loading spinner.Size.Lg"
             }
           },
@@ -1689,7 +1689,7 @@
             "unit": "px",
             "cssVariable": "--ds-component-loading-spinner-size-md",
             "source": {
-              "file": "components/Dimensions.tokens.json",
+              "file": "components/dimensions.tokens.json",
               "path": "Loading spinner.Size.Md"
             }
           },
@@ -1707,7 +1707,7 @@
             "unit": "px",
             "cssVariable": "--ds-component-loading-spinner-size-sm",
             "source": {
-              "file": "components/Dimensions.tokens.json",
+              "file": "components/dimensions.tokens.json",
               "path": "Loading spinner.Size.Sm"
             }
           }
@@ -1731,7 +1731,7 @@
             },
             "cssVariable": "--ds-component-notification-danger-background",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Notification.Danger.Background"
             }
           },
@@ -1751,7 +1751,7 @@
             },
             "cssVariable": "--ds-component-notification-danger-border",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Notification.Danger.Border"
             }
           },
@@ -1771,7 +1771,7 @@
             },
             "cssVariable": "--ds-component-notification-danger-text",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Notification.Danger.Text"
             }
           }
@@ -1793,7 +1793,7 @@
             },
             "cssVariable": "--ds-component-notification-default-background",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Notification.Default.Background"
             }
           },
@@ -1813,7 +1813,7 @@
             },
             "cssVariable": "--ds-component-notification-default-border",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Notification.Default.Border"
             }
           },
@@ -1833,7 +1833,7 @@
             },
             "cssVariable": "--ds-component-notification-default-text",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Notification.Default.Text"
             }
           }
@@ -1855,7 +1855,7 @@
             },
             "cssVariable": "--ds-component-notification-info-background",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Notification.Info.Background"
             }
           },
@@ -1875,7 +1875,7 @@
             },
             "cssVariable": "--ds-component-notification-info-border",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Notification.Info.Border"
             }
           },
@@ -1895,7 +1895,7 @@
             },
             "cssVariable": "--ds-component-notification-info-text",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Notification.Info.Text"
             }
           }
@@ -1915,7 +1915,7 @@
             "unit": "px",
             "cssVariable": "--ds-component-notification-padding-x",
             "source": {
-              "file": "components/Dimensions.tokens.json",
+              "file": "components/dimensions.tokens.json",
               "path": "Notification.Padding x"
             }
           },
@@ -1933,7 +1933,7 @@
             "unit": "px",
             "cssVariable": "--ds-component-notification-padding-y",
             "source": {
-              "file": "components/Dimensions.tokens.json",
+              "file": "components/dimensions.tokens.json",
               "path": "Notification.Padding y"
             }
           }
@@ -1955,7 +1955,7 @@
             },
             "cssVariable": "--ds-component-notification-success-background",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Notification.Success.Background"
             }
           },
@@ -1975,7 +1975,7 @@
             },
             "cssVariable": "--ds-component-notification-success-border",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Notification.Success.Border"
             }
           },
@@ -1995,7 +1995,7 @@
             },
             "cssVariable": "--ds-component-notification-success-text",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Notification.Success.Text"
             }
           }
@@ -2017,7 +2017,7 @@
             },
             "cssVariable": "--ds-component-notification-warning-background",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Notification.Warning.Background"
             }
           },
@@ -2037,7 +2037,7 @@
             },
             "cssVariable": "--ds-component-notification-warning-border",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Notification.Warning.Border"
             }
           },
@@ -2057,7 +2057,7 @@
             },
             "cssVariable": "--ds-component-notification-warning-text",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Notification.Warning.Text"
             }
           }
@@ -2081,7 +2081,7 @@
             },
             "cssVariable": "--ds-component-segmented-control-active-background",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Segmented control.Active.Background"
             }
           },
@@ -2101,7 +2101,7 @@
             },
             "cssVariable": "--ds-component-segmented-control-active-text",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Segmented control.Active.Text"
             }
           }
@@ -2121,7 +2121,7 @@
           },
           "cssVariable": "--ds-component-segmented-control-background",
           "source": {
-            "file": "components/Dark.tokens.json",
+            "file": "components/dark.tokens.json",
             "path": "Segmented control.Background"
           }
         },
@@ -2140,7 +2140,7 @@
           },
           "cssVariable": "--ds-component-segmented-control-border",
           "source": {
-            "file": "components/Dark.tokens.json",
+            "file": "components/dark.tokens.json",
             "path": "Segmented control.Border"
           }
         },
@@ -2157,7 +2157,7 @@
           "unit": "px",
           "cssVariable": "--ds-component-segmented-control-height",
           "source": {
-            "file": "components/Dimensions.tokens.json",
+            "file": "components/dimensions.tokens.json",
             "path": "Segmented control.Height"
           }
         },
@@ -2176,7 +2176,7 @@
             "unit": "px",
             "cssVariable": "--ds-component-segmented-control-padding-x",
             "source": {
-              "file": "components/Dimensions.tokens.json",
+              "file": "components/dimensions.tokens.json",
               "path": "Segmented control.Padding x"
             }
           }
@@ -2196,7 +2196,7 @@
           },
           "cssVariable": "--ds-component-segmented-control-text",
           "source": {
-            "file": "components/Dark.tokens.json",
+            "file": "components/dark.tokens.json",
             "path": "Segmented control.Text"
           }
         }
@@ -2219,7 +2219,7 @@
             },
             "cssVariable": "--ds-component-select-dropdown-background",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Select.Dropdown.Background"
             }
           },
@@ -2239,7 +2239,7 @@
             },
             "cssVariable": "--ds-component-select-dropdown-border",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Select.Dropdown.Border"
             }
           }
@@ -2257,7 +2257,7 @@
           "unit": "px",
           "cssVariable": "--ds-component-select-height",
           "source": {
-            "file": "components/Dimensions.tokens.json",
+            "file": "components/dimensions.tokens.json",
             "path": "Select.Height"
           }
         },
@@ -2278,7 +2278,7 @@
             },
             "cssVariable": "--ds-component-select-input-background",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Select.Input.Background"
             }
           },
@@ -2298,7 +2298,7 @@
             },
             "cssVariable": "--ds-component-select-input-border",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Select.Input.Border"
             }
           },
@@ -2318,7 +2318,7 @@
             },
             "cssVariable": "--ds-component-select-input-text",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Select.Input.Text"
             }
           }
@@ -2342,7 +2342,7 @@
               },
               "cssVariable": "--ds-component-select-option-active-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Select.Option.Active.Background"
               }
             },
@@ -2363,7 +2363,7 @@
               },
               "cssVariable": "--ds-component-select-option-active-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Select.Option.Active.Text"
               }
             }
@@ -2384,7 +2384,7 @@
             "unit": "px",
             "cssVariable": "--ds-component-select-padding-x",
             "source": {
-              "file": "components/Dimensions.tokens.json",
+              "file": "components/dimensions.tokens.json",
               "path": "Select.Padding x"
             }
           }
@@ -2410,7 +2410,7 @@
               },
               "cssVariable": "--ds-component-status-badge-danger-outline-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Danger.Outline.Background"
               }
             },
@@ -2431,7 +2431,7 @@
               },
               "cssVariable": "--ds-component-status-badge-danger-outline-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Danger.Outline.Border"
               }
             },
@@ -2452,7 +2452,7 @@
               },
               "cssVariable": "--ds-component-status-badge-danger-outline-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Danger.Outline.Text"
               }
             }
@@ -2475,7 +2475,7 @@
               },
               "cssVariable": "--ds-component-status-badge-danger-soft-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Danger.Soft.Background"
               }
             },
@@ -2496,7 +2496,7 @@
               },
               "cssVariable": "--ds-component-status-badge-danger-soft-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Danger.Soft.Border"
               }
             },
@@ -2517,7 +2517,7 @@
               },
               "cssVariable": "--ds-component-status-badge-danger-soft-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Danger.Soft.Text"
               }
             }
@@ -2540,7 +2540,7 @@
               },
               "cssVariable": "--ds-component-status-badge-danger-solid-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Danger.Solid.Background"
               }
             },
@@ -2561,7 +2561,7 @@
               },
               "cssVariable": "--ds-component-status-badge-danger-solid-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Danger.Solid.Border"
               }
             },
@@ -2582,7 +2582,7 @@
               },
               "cssVariable": "--ds-component-status-badge-danger-solid-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Danger.Solid.Text"
               }
             }
@@ -2601,7 +2601,7 @@
           "unit": "px",
           "cssVariable": "--ds-component-status-badge-height",
           "source": {
-            "file": "components/Dimensions.tokens.json",
+            "file": "components/dimensions.tokens.json",
             "path": "Status badge.Height"
           }
         },
@@ -2624,7 +2624,7 @@
               },
               "cssVariable": "--ds-component-status-badge-info-outline-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Info.Outline.Background"
               }
             },
@@ -2645,7 +2645,7 @@
               },
               "cssVariable": "--ds-component-status-badge-info-outline-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Info.Outline.Border"
               }
             },
@@ -2666,7 +2666,7 @@
               },
               "cssVariable": "--ds-component-status-badge-info-outline-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Info.Outline.Text"
               }
             }
@@ -2689,7 +2689,7 @@
               },
               "cssVariable": "--ds-component-status-badge-info-soft-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Info.Soft.Background"
               }
             },
@@ -2710,7 +2710,7 @@
               },
               "cssVariable": "--ds-component-status-badge-info-soft-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Info.Soft.Border"
               }
             },
@@ -2731,7 +2731,7 @@
               },
               "cssVariable": "--ds-component-status-badge-info-soft-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Info.Soft.Text"
               }
             }
@@ -2754,7 +2754,7 @@
               },
               "cssVariable": "--ds-component-status-badge-info-solid-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Info.Solid.Background"
               }
             },
@@ -2775,7 +2775,7 @@
               },
               "cssVariable": "--ds-component-status-badge-info-solid-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Info.Solid.Border"
               }
             },
@@ -2796,7 +2796,7 @@
               },
               "cssVariable": "--ds-component-status-badge-info-solid-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Info.Solid.Text"
               }
             }
@@ -2821,7 +2821,7 @@
               },
               "cssVariable": "--ds-component-status-badge-neutral-outline-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Neutral.Outline.Background"
               }
             },
@@ -2842,7 +2842,7 @@
               },
               "cssVariable": "--ds-component-status-badge-neutral-outline-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Neutral.Outline.Border"
               }
             },
@@ -2863,7 +2863,7 @@
               },
               "cssVariable": "--ds-component-status-badge-neutral-outline-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Neutral.Outline.Text"
               }
             }
@@ -2886,7 +2886,7 @@
               },
               "cssVariable": "--ds-component-status-badge-neutral-soft-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Neutral.Soft.Background"
               }
             },
@@ -2907,7 +2907,7 @@
               },
               "cssVariable": "--ds-component-status-badge-neutral-soft-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Neutral.Soft.Border"
               }
             },
@@ -2928,7 +2928,7 @@
               },
               "cssVariable": "--ds-component-status-badge-neutral-soft-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Neutral.Soft.Text"
               }
             }
@@ -2951,7 +2951,7 @@
               },
               "cssVariable": "--ds-component-status-badge-neutral-solid-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Neutral.Solid.Background"
               }
             },
@@ -2972,7 +2972,7 @@
               },
               "cssVariable": "--ds-component-status-badge-neutral-solid-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Neutral.Solid.Border"
               }
             },
@@ -2993,7 +2993,7 @@
               },
               "cssVariable": "--ds-component-status-badge-neutral-solid-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Neutral.Solid.Text"
               }
             }
@@ -3014,7 +3014,7 @@
             "unit": "px",
             "cssVariable": "--ds-component-status-badge-padding-x",
             "source": {
-              "file": "components/Dimensions.tokens.json",
+              "file": "components/dimensions.tokens.json",
               "path": "Status badge.Padding x"
             }
           }
@@ -3038,7 +3038,7 @@
               },
               "cssVariable": "--ds-component-status-badge-success-outline-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Success.Outline.Background"
               }
             },
@@ -3059,7 +3059,7 @@
               },
               "cssVariable": "--ds-component-status-badge-success-outline-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Success.Outline.Border"
               }
             },
@@ -3080,7 +3080,7 @@
               },
               "cssVariable": "--ds-component-status-badge-success-outline-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Success.Outline.Text"
               }
             }
@@ -3103,7 +3103,7 @@
               },
               "cssVariable": "--ds-component-status-badge-success-soft-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Success.Soft.Background"
               }
             },
@@ -3124,7 +3124,7 @@
               },
               "cssVariable": "--ds-component-status-badge-success-soft-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Success.Soft.Border"
               }
             },
@@ -3145,7 +3145,7 @@
               },
               "cssVariable": "--ds-component-status-badge-success-soft-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Success.Soft.Text"
               }
             }
@@ -3168,7 +3168,7 @@
               },
               "cssVariable": "--ds-component-status-badge-success-solid-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Success.Solid.Background"
               }
             },
@@ -3189,7 +3189,7 @@
               },
               "cssVariable": "--ds-component-status-badge-success-solid-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Success.Solid.Border"
               }
             },
@@ -3210,7 +3210,7 @@
               },
               "cssVariable": "--ds-component-status-badge-success-solid-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Success.Solid.Text"
               }
             }
@@ -3235,7 +3235,7 @@
               },
               "cssVariable": "--ds-component-status-badge-warning-outline-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Warning.Outline.Background"
               }
             },
@@ -3256,7 +3256,7 @@
               },
               "cssVariable": "--ds-component-status-badge-warning-outline-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Warning.Outline.Border"
               }
             },
@@ -3277,7 +3277,7 @@
               },
               "cssVariable": "--ds-component-status-badge-warning-outline-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Warning.Outline.Text"
               }
             }
@@ -3300,7 +3300,7 @@
               },
               "cssVariable": "--ds-component-status-badge-warning-soft-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Warning.Soft.Background"
               }
             },
@@ -3321,7 +3321,7 @@
               },
               "cssVariable": "--ds-component-status-badge-warning-soft-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Warning.Soft.Border"
               }
             },
@@ -3342,7 +3342,7 @@
               },
               "cssVariable": "--ds-component-status-badge-warning-soft-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Warning.Soft.Text"
               }
             }
@@ -3365,7 +3365,7 @@
               },
               "cssVariable": "--ds-component-status-badge-warning-solid-background",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Warning.Solid.Background"
               }
             },
@@ -3386,7 +3386,7 @@
               },
               "cssVariable": "--ds-component-status-badge-warning-solid-border",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Warning.Solid.Border"
               }
             },
@@ -3407,7 +3407,7 @@
               },
               "cssVariable": "--ds-component-status-badge-warning-solid-text",
               "source": {
-                "file": "components/Dark.tokens.json",
+                "file": "components/dark.tokens.json",
                 "path": "Status badge.Warning.Solid.Text"
               }
             }
@@ -3432,7 +3432,7 @@
             },
             "cssVariable": "--ds-component-text-input-background-default",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Text input.Background.Default"
             }
           },
@@ -3452,7 +3452,7 @@
             },
             "cssVariable": "--ds-component-text-input-background-disabled",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Text input.Background.Disabled"
             }
           }
@@ -3474,7 +3474,7 @@
             },
             "cssVariable": "--ds-component-text-input-border-default",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Text input.Border.Default"
             }
           },
@@ -3494,7 +3494,7 @@
             },
             "cssVariable": "--ds-component-text-input-border-disabled",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Text input.Border.Disabled"
             }
           },
@@ -3514,7 +3514,7 @@
             },
             "cssVariable": "--ds-component-text-input-border-error",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Text input.Border.Error"
             }
           },
@@ -3534,7 +3534,7 @@
             },
             "cssVariable": "--ds-component-text-input-border-focus",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Text input.Border.Focus"
             }
           }
@@ -3552,7 +3552,7 @@
           "unit": "px",
           "cssVariable": "--ds-component-text-input-height",
           "source": {
-            "file": "components/Dimensions.tokens.json",
+            "file": "components/dimensions.tokens.json",
             "path": "Text input.Height"
           }
         },
@@ -3571,7 +3571,7 @@
             "unit": "px",
             "cssVariable": "--ds-component-text-input-padding-x",
             "source": {
-              "file": "components/Dimensions.tokens.json",
+              "file": "components/dimensions.tokens.json",
               "path": "Text input.Padding x"
             }
           }
@@ -3593,7 +3593,7 @@
             },
             "cssVariable": "--ds-component-text-input-text-default",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Text input.Text.Default"
             }
           },
@@ -3613,7 +3613,7 @@
             },
             "cssVariable": "--ds-component-text-input-text-disabled",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Text input.Text.Disabled"
             }
           },
@@ -3633,7 +3633,7 @@
             },
             "cssVariable": "--ds-component-text-input-text-error",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Text input.Text.Error"
             }
           },
@@ -3653,7 +3653,7 @@
             },
             "cssVariable": "--ds-component-text-input-text-helper",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Text input.Text.Helper"
             }
           },
@@ -3673,7 +3673,7 @@
             },
             "cssVariable": "--ds-component-text-input-text-placeholder",
             "source": {
-              "file": "components/Dark.tokens.json",
+              "file": "components/dark.tokens.json",
               "path": "Text input.Text.Placeholder"
             }
           }
@@ -3695,7 +3695,7 @@
           },
           "cssVariable": "--ds-component-tooltip-background",
           "source": {
-            "file": "components/Dark.tokens.json",
+            "file": "components/dark.tokens.json",
             "path": "Tooltip.Background"
           }
         },
@@ -3714,7 +3714,7 @@
             "unit": "px",
             "cssVariable": "--ds-component-tooltip-padding-x",
             "source": {
-              "file": "components/Dimensions.tokens.json",
+              "file": "components/dimensions.tokens.json",
               "path": "Tooltip.Padding x"
             }
           },
@@ -3732,7 +3732,7 @@
             "unit": "px",
             "cssVariable": "--ds-component-tooltip-padding-y",
             "source": {
-              "file": "components/Dimensions.tokens.json",
+              "file": "components/dimensions.tokens.json",
               "path": "Tooltip.Padding y"
             }
           }
@@ -3752,7 +3752,7 @@
           },
           "cssVariable": "--ds-component-tooltip-text",
           "source": {
-            "file": "components/Dark.tokens.json",
+            "file": "components/dark.tokens.json",
             "path": "Tooltip.Text"
           }
         }
@@ -3775,7 +3775,7 @@
               "value": "#F5F3FF",
               "cssVariable": "--ds-color-primitive-accent-a-5",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent A.5"
               }
             },
@@ -3792,7 +3792,7 @@
               "value": "#EDE9FE",
               "cssVariable": "--ds-color-primitive-accent-a-10",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent A.10"
               }
             },
@@ -3809,7 +3809,7 @@
               "value": "#DDD6FE",
               "cssVariable": "--ds-color-primitive-accent-a-20",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent A.20"
               }
             },
@@ -3826,7 +3826,7 @@
               "value": "#C4B5FD",
               "cssVariable": "--ds-color-primitive-accent-a-30",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent A.30"
               }
             },
@@ -3843,7 +3843,7 @@
               "value": "#A78BFA",
               "cssVariable": "--ds-color-primitive-accent-a-40",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent A.40"
               }
             },
@@ -3860,7 +3860,7 @@
               "value": "#8B5CF6",
               "cssVariable": "--ds-color-primitive-accent-a-50",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent A.50"
               }
             },
@@ -3877,7 +3877,7 @@
               "value": "#7C3AED",
               "cssVariable": "--ds-color-primitive-accent-a-60",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent A.60"
               }
             },
@@ -3894,7 +3894,7 @@
               "value": "#6D28D9",
               "cssVariable": "--ds-color-primitive-accent-a-70",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent A.70"
               }
             },
@@ -3911,7 +3911,7 @@
               "value": "#5B21B6",
               "cssVariable": "--ds-color-primitive-accent-a-80",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent A.80"
               }
             },
@@ -3928,7 +3928,7 @@
               "value": "#4C1D95",
               "cssVariable": "--ds-color-primitive-accent-a-90",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent A.90"
               }
             },
@@ -3945,7 +3945,7 @@
               "value": "#2E1065",
               "cssVariable": "--ds-color-primitive-accent-a-100",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent A.100"
               }
             }
@@ -3964,7 +3964,7 @@
               "value": "#FFF7ED",
               "cssVariable": "--ds-color-primitive-accent-b-5",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent B.5"
               }
             },
@@ -3981,7 +3981,7 @@
               "value": "#FFEDD5",
               "cssVariable": "--ds-color-primitive-accent-b-10",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent B.10"
               }
             },
@@ -3998,7 +3998,7 @@
               "value": "#FED7AA",
               "cssVariable": "--ds-color-primitive-accent-b-20",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent B.20"
               }
             },
@@ -4015,7 +4015,7 @@
               "value": "#FDBA74",
               "cssVariable": "--ds-color-primitive-accent-b-30",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent B.30"
               }
             },
@@ -4032,7 +4032,7 @@
               "value": "#FB923C",
               "cssVariable": "--ds-color-primitive-accent-b-40",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent B.40"
               }
             },
@@ -4049,7 +4049,7 @@
               "value": "#F97316",
               "cssVariable": "--ds-color-primitive-accent-b-50",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent B.50"
               }
             },
@@ -4066,7 +4066,7 @@
               "value": "#EA580C",
               "cssVariable": "--ds-color-primitive-accent-b-60",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent B.60"
               }
             },
@@ -4083,7 +4083,7 @@
               "value": "#C2410C",
               "cssVariable": "--ds-color-primitive-accent-b-70",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent B.70"
               }
             }
@@ -4102,7 +4102,7 @@
               "value": "#F7FEE7",
               "cssVariable": "--ds-color-primitive-accent-c-5",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent C.5"
               }
             },
@@ -4119,7 +4119,7 @@
               "value": "#ECFCCB",
               "cssVariable": "--ds-color-primitive-accent-c-10",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent C.10"
               }
             },
@@ -4136,7 +4136,7 @@
               "value": "#D9F99D",
               "cssVariable": "--ds-color-primitive-accent-c-20",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent C.20"
               }
             },
@@ -4153,7 +4153,7 @@
               "value": "#BEF264",
               "cssVariable": "--ds-color-primitive-accent-c-30",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent C.30"
               }
             },
@@ -4170,7 +4170,7 @@
               "value": "#A3E635",
               "cssVariable": "--ds-color-primitive-accent-c-40",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent C.40"
               }
             },
@@ -4187,7 +4187,7 @@
               "value": "#84CC16",
               "cssVariable": "--ds-color-primitive-accent-c-50",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent C.50"
               }
             },
@@ -4204,7 +4204,7 @@
               "value": "#65A30D",
               "cssVariable": "--ds-color-primitive-accent-c-60",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent C.60"
               }
             },
@@ -4221,7 +4221,7 @@
               "value": "#4D7C0F",
               "cssVariable": "--ds-color-primitive-accent-c-70",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Accent C.70"
               }
             }
@@ -4242,7 +4242,7 @@
                 "value": "#E0F2FE",
                 "cssVariable": "--ds-color-primitive-accent-d-accent-d",
                 "source": {
-                  "file": "primitives/Default.tokens.json",
+                  "file": "primitives/colours.tokens.json",
                   "path": "Accent D.Accent D"
                 }
               }
@@ -4262,7 +4262,7 @@
             "value": "#111827",
             "cssVariable": "--ds-color-primitive-base-black",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Base colours.Black"
             }
           },
@@ -4280,7 +4280,7 @@
               "value": "#F8FAFC",
               "cssVariable": "--ds-color-primitive-base-surface-subtle",
               "source": {
-                "file": "primitives/Default.tokens.json",
+                "file": "primitives/colours.tokens.json",
                 "path": "Base colours.Surface subtle"
               }
             }
@@ -4297,7 +4297,7 @@
             "value": "#FDFDFD",
             "cssVariable": "--ds-color-primitive-base-white",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Base colours.White"
             }
           }
@@ -4315,7 +4315,7 @@
             "value": "#FEF2F2",
             "cssVariable": "--ds-color-primitive-danger-5",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Danger.5"
             }
           },
@@ -4331,7 +4331,7 @@
             "value": "#FEE2E2",
             "cssVariable": "--ds-color-primitive-danger-10",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Danger.10"
             }
           },
@@ -4347,7 +4347,7 @@
             "value": "#FECACA",
             "cssVariable": "--ds-color-primitive-danger-20",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Danger.20"
             }
           },
@@ -4363,7 +4363,7 @@
             "value": "#FCA5A5",
             "cssVariable": "--ds-color-primitive-danger-30",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Danger.30"
             }
           },
@@ -4379,7 +4379,7 @@
             "value": "#F87171",
             "cssVariable": "--ds-color-primitive-danger-40",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Danger.40"
             }
           },
@@ -4395,7 +4395,7 @@
             "value": "#EF4444",
             "cssVariable": "--ds-color-primitive-danger-50",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Danger.50"
             }
           },
@@ -4411,7 +4411,7 @@
             "value": "#DC2626",
             "cssVariable": "--ds-color-primitive-danger-60",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Danger.60"
             }
           },
@@ -4427,7 +4427,7 @@
             "value": "#B91C1C",
             "cssVariable": "--ds-color-primitive-danger-70",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Danger.70"
             }
           },
@@ -4443,7 +4443,7 @@
             "value": "#991B1B",
             "cssVariable": "--ds-color-primitive-danger-80",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Danger.80"
             }
           },
@@ -4459,7 +4459,7 @@
             "value": "#7F1D1D",
             "cssVariable": "--ds-color-primitive-danger-90",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Danger.90"
             }
           },
@@ -4475,7 +4475,7 @@
             "value": "#450A0A",
             "cssVariable": "--ds-color-primitive-danger-100",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Danger.100"
             }
           }
@@ -4493,7 +4493,7 @@
             "value": "#F8FAFC",
             "cssVariable": "--ds-color-primitive-neutral-5",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Neutral.5"
             }
           },
@@ -4509,7 +4509,7 @@
             "value": "#F1F5F9",
             "cssVariable": "--ds-color-primitive-neutral-10",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Neutral.10"
             }
           },
@@ -4525,7 +4525,7 @@
             "value": "#E2E8F0",
             "cssVariable": "--ds-color-primitive-neutral-20",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Neutral.20"
             }
           },
@@ -4541,7 +4541,7 @@
             "value": "#CBD5E1",
             "cssVariable": "--ds-color-primitive-neutral-30",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Neutral.30"
             }
           },
@@ -4557,7 +4557,7 @@
             "value": "#94A3B8",
             "cssVariable": "--ds-color-primitive-neutral-40",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Neutral.40"
             }
           },
@@ -4573,7 +4573,7 @@
             "value": "#64748B",
             "cssVariable": "--ds-color-primitive-neutral-50",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Neutral.50"
             }
           },
@@ -4589,7 +4589,7 @@
             "value": "#475569",
             "cssVariable": "--ds-color-primitive-neutral-60",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Neutral.60"
             }
           },
@@ -4605,7 +4605,7 @@
             "value": "#334155",
             "cssVariable": "--ds-color-primitive-neutral-70",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Neutral.70"
             }
           },
@@ -4621,7 +4621,7 @@
             "value": "#1E293B",
             "cssVariable": "--ds-color-primitive-neutral-80",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Neutral.80"
             }
           },
@@ -4637,7 +4637,7 @@
             "value": "#0F172A",
             "cssVariable": "--ds-color-primitive-neutral-90",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Neutral.90"
             }
           },
@@ -4653,7 +4653,7 @@
             "value": "#020617",
             "cssVariable": "--ds-color-primitive-neutral-100",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Neutral.100"
             }
           }
@@ -4671,7 +4671,7 @@
             "value": "#ECFEFF",
             "cssVariable": "--ds-color-primitive-primary-5",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Primary.5"
             }
           },
@@ -4687,7 +4687,7 @@
             "value": "#CFFAFE",
             "cssVariable": "--ds-color-primitive-primary-10",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Primary.10"
             }
           },
@@ -4703,7 +4703,7 @@
             "value": "#A5F3FC",
             "cssVariable": "--ds-color-primitive-primary-20",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Primary.20"
             }
           },
@@ -4719,7 +4719,7 @@
             "value": "#67E8F9",
             "cssVariable": "--ds-color-primitive-primary-30",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Primary.30"
             }
           },
@@ -4735,7 +4735,7 @@
             "value": "#22D3EE",
             "cssVariable": "--ds-color-primitive-primary-40",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Primary.40"
             }
           },
@@ -4751,7 +4751,7 @@
             "value": "#06B6D4",
             "cssVariable": "--ds-color-primitive-primary-50",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Primary.50"
             }
           },
@@ -4767,7 +4767,7 @@
             "value": "#0891B2",
             "cssVariable": "--ds-color-primitive-primary-60",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Primary.60"
             }
           },
@@ -4783,7 +4783,7 @@
             "value": "#0E7490",
             "cssVariable": "--ds-color-primitive-primary-70",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Primary.70"
             }
           },
@@ -4799,7 +4799,7 @@
             "value": "#155E75",
             "cssVariable": "--ds-color-primitive-primary-80",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Primary.80"
             }
           },
@@ -4815,7 +4815,7 @@
             "value": "#164E63",
             "cssVariable": "--ds-color-primitive-primary-90",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Primary.90"
             }
           },
@@ -4831,7 +4831,7 @@
             "value": "#083344",
             "cssVariable": "--ds-color-primitive-primary-100",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Primary.100"
             }
           }
@@ -4849,7 +4849,7 @@
             "value": "#F0FDF4",
             "cssVariable": "--ds-color-primitive-success-5",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Success.5"
             }
           },
@@ -4865,7 +4865,7 @@
             "value": "#DCFCE7",
             "cssVariable": "--ds-color-primitive-success-10",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Success.10"
             }
           },
@@ -4881,7 +4881,7 @@
             "value": "#BBF7D0",
             "cssVariable": "--ds-color-primitive-success-20",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Success.20"
             }
           },
@@ -4897,7 +4897,7 @@
             "value": "#86EFAC",
             "cssVariable": "--ds-color-primitive-success-30",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Success.30"
             }
           },
@@ -4913,7 +4913,7 @@
             "value": "#4ADE80",
             "cssVariable": "--ds-color-primitive-success-40",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Success.40"
             }
           },
@@ -4929,7 +4929,7 @@
             "value": "#22C55E",
             "cssVariable": "--ds-color-primitive-success-50",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Success.50"
             }
           },
@@ -4945,7 +4945,7 @@
             "value": "#16A34A",
             "cssVariable": "--ds-color-primitive-success-60",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Success.60"
             }
           },
@@ -4961,7 +4961,7 @@
             "value": "#15803D",
             "cssVariable": "--ds-color-primitive-success-70",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Success.70"
             }
           },
@@ -4977,7 +4977,7 @@
             "value": "#166534",
             "cssVariable": "--ds-color-primitive-success-80",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Success.80"
             }
           },
@@ -4993,7 +4993,7 @@
             "value": "#14532D",
             "cssVariable": "--ds-color-primitive-success-90",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Success.90"
             }
           },
@@ -5009,7 +5009,7 @@
             "value": "#052E16",
             "cssVariable": "--ds-color-primitive-success-100",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Success.100"
             }
           }
@@ -5027,7 +5027,7 @@
             "value": "#FFFBEB",
             "cssVariable": "--ds-color-primitive-warning-5",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Warning.5"
             }
           },
@@ -5043,7 +5043,7 @@
             "value": "#FEF3C7",
             "cssVariable": "--ds-color-primitive-warning-10",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Warning.10"
             }
           },
@@ -5059,7 +5059,7 @@
             "value": "#FDE68A",
             "cssVariable": "--ds-color-primitive-warning-20",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Warning.20"
             }
           },
@@ -5075,7 +5075,7 @@
             "value": "#FCD34D",
             "cssVariable": "--ds-color-primitive-warning-30",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Warning.30"
             }
           },
@@ -5091,7 +5091,7 @@
             "value": "#FBBF24",
             "cssVariable": "--ds-color-primitive-warning-40",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Warning.40"
             }
           },
@@ -5107,7 +5107,7 @@
             "value": "#F59E0B",
             "cssVariable": "--ds-color-primitive-warning-50",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Warning.50"
             }
           },
@@ -5123,7 +5123,7 @@
             "value": "#D97706",
             "cssVariable": "--ds-color-primitive-warning-60",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Warning.60"
             }
           },
@@ -5139,7 +5139,7 @@
             "value": "#B45309",
             "cssVariable": "--ds-color-primitive-warning-70",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Warning.70"
             }
           },
@@ -5155,7 +5155,7 @@
             "value": "#92400E",
             "cssVariable": "--ds-color-primitive-warning-80",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Warning.80"
             }
           },
@@ -5171,7 +5171,7 @@
             "value": "#78350F",
             "cssVariable": "--ds-color-primitive-warning-90",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Warning.90"
             }
           },
@@ -5187,7 +5187,7 @@
             "value": "#451A03",
             "cssVariable": "--ds-color-primitive-warning-100",
             "source": {
-              "file": "primitives/Default.tokens.json",
+              "file": "primitives/colours.tokens.json",
               "path": "Warning.100"
             }
           }
@@ -5210,7 +5210,7 @@
             },
             "cssVariable": "--ds-color-background-body",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Background general colours.Body background"
             }
           },
@@ -5229,7 +5229,7 @@
             },
             "cssVariable": "--ds-color-background-card",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Background general colours.Card background"
             }
           }
@@ -5250,7 +5250,7 @@
             },
             "cssVariable": "--ds-color-border-alert",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Border colours.Alert border"
             }
           },
@@ -5269,7 +5269,7 @@
             },
             "cssVariable": "--ds-color-border-dark",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Border colours.Dark border"
             }
           },
@@ -5288,7 +5288,7 @@
             },
             "cssVariable": "--ds-color-border-info",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Border colours.Info border"
             }
           },
@@ -5307,7 +5307,7 @@
             },
             "cssVariable": "--ds-color-border-light",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Border colours.Light border"
             }
           },
@@ -5326,7 +5326,7 @@
             },
             "cssVariable": "--ds-color-border-lighter",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Border colours.Lighter border"
             }
           },
@@ -5345,7 +5345,7 @@
             },
             "cssVariable": "--ds-color-border-lightest",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Border colours.Lightest border"
             }
           },
@@ -5364,7 +5364,7 @@
             },
             "cssVariable": "--ds-color-border-medium",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Border colours.Medium border"
             }
           },
@@ -5385,7 +5385,7 @@
               },
               "cssVariable": "--ds-color-border-segmented-control",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Border colours.Segmented control border"
               }
             }
@@ -5407,7 +5407,7 @@
               },
               "cssVariable": "--ds-color-border-selection-input",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Border colours.Selection input border"
               }
             }
@@ -5429,7 +5429,7 @@
               },
               "cssVariable": "--ds-color-border-text-input",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Border colours.Text input border"
               },
               "active": {
@@ -5449,7 +5449,7 @@
                 },
                 "cssVariable": "--ds-color-border-text-input-active",
                 "source": {
-                  "file": "tokens/Dark.tokens.json",
+                  "file": "semantics/dark.tokens.json",
                   "path": "Border colours.Text input active border"
                 }
               },
@@ -5470,7 +5470,7 @@
                 },
                 "cssVariable": "--ds-color-border-text-input-danger",
                 "source": {
-                  "file": "tokens/Dark.tokens.json",
+                  "file": "semantics/dark.tokens.json",
                   "path": "Border colours.Text input danger border"
                 }
               },
@@ -5491,7 +5491,7 @@
                 },
                 "cssVariable": "--ds-color-border-text-input-dropdown",
                 "source": {
-                  "file": "tokens/Dark.tokens.json",
+                  "file": "semantics/dark.tokens.json",
                   "path": "Border colours.Text input dropdown border"
                 }
               }
@@ -5512,7 +5512,7 @@
             },
             "cssVariable": "--ds-color-border-warning",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Border colours.Warning border"
             }
           }
@@ -5535,7 +5535,7 @@
               },
               "cssVariable": "--ds-color-button-button-secondary",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Button colours.Button secondary border"
               },
               "disabled": {
@@ -5555,7 +5555,7 @@
                 },
                 "cssVariable": "--ds-color-button-button-secondary-disabled",
                 "source": {
-                  "file": "tokens/Dark.tokens.json",
+                  "file": "semantics/dark.tokens.json",
                   "path": "Button colours.Button secondary disabled border"
                 }
               }
@@ -5576,7 +5576,7 @@
             },
             "cssVariable": "--ds-color-button-destructive",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Button colours.Destructive background"
             },
             "hover": {
@@ -5595,7 +5595,7 @@
               },
               "cssVariable": "--ds-color-button-destructive-hover",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Button colours.Destructive hover background"
               }
             },
@@ -5615,7 +5615,7 @@
               },
               "cssVariable": "--ds-color-button-destructive-secondary",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Button colours.Destructive secondary border"
               }
             }
@@ -5635,7 +5635,7 @@
             },
             "cssVariable": "--ds-color-button-disabled",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Button colours.Disabled background"
             }
           },
@@ -5654,7 +5654,7 @@
             },
             "cssVariable": "--ds-color-button-primary",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Button colours.Primary background"
             },
             "hover": {
@@ -5673,7 +5673,7 @@
               },
               "cssVariable": "--ds-color-button-primary-hover",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Button colours.Primary hover background"
               }
             }
@@ -5693,7 +5693,7 @@
             },
             "cssVariable": "--ds-color-button-secondary",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Button colours.Secondary background"
             },
             "hover": {
@@ -5712,7 +5712,7 @@
               },
               "cssVariable": "--ds-color-button-secondary-hover",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Button colours.Secondary hover background"
               }
             }
@@ -5738,7 +5738,7 @@
                 },
                 "cssVariable": "--ds-color-date-picker-background-datepicker-range",
                 "source": {
-                  "file": "tokens/Dark.tokens.json",
+                  "file": "semantics/dark.tokens.json",
                   "path": "Date picker backgrounds.Datepicker range background"
                 }
               }
@@ -5761,7 +5761,7 @@
                 },
                 "cssVariable": "--ds-color-date-picker-background-disabled-date",
                 "source": {
-                  "file": "tokens/Dark.tokens.json",
+                  "file": "semantics/dark.tokens.json",
                   "path": "Date picker backgrounds.Disabled date background"
                 }
               }
@@ -5784,7 +5784,7 @@
                 },
                 "cssVariable": "--ds-color-date-picker-background-hover-date",
                 "source": {
-                  "file": "tokens/Dark.tokens.json",
+                  "file": "semantics/dark.tokens.json",
                   "path": "Date picker backgrounds.Hover date background"
                 }
               }
@@ -5807,7 +5807,7 @@
                 },
                 "cssVariable": "--ds-color-date-picker-background-selected-date",
                 "source": {
-                  "file": "tokens/Dark.tokens.json",
+                  "file": "semantics/dark.tokens.json",
                   "path": "Date picker backgrounds.Selected date background"
                 }
               }
@@ -5830,7 +5830,7 @@
                 },
                 "cssVariable": "--ds-color-date-picker-background-today-date",
                 "source": {
-                  "file": "tokens/Dark.tokens.json",
+                  "file": "semantics/dark.tokens.json",
                   "path": "Date picker backgrounds.Today date background"
                 }
               }
@@ -5857,7 +5857,7 @@
                 },
                 "cssVariable": "--ds-color-form-background-input-disabled",
                 "source": {
-                  "file": "tokens/Dark.tokens.json",
+                  "file": "semantics/dark.tokens.json",
                   "path": "Form input backgrounds.Input disabled background"
                 }
               }
@@ -5880,7 +5880,7 @@
                 },
                 "cssVariable": "--ds-color-form-background-segmented-control",
                 "source": {
-                  "file": "tokens/Dark.tokens.json",
+                  "file": "semantics/dark.tokens.json",
                   "path": "Form input backgrounds.Segmented control background"
                 },
                 "active": {
@@ -5901,7 +5901,7 @@
                   },
                   "cssVariable": "--ds-color-form-background-segmented-control-active",
                   "source": {
-                    "file": "tokens/Dark.tokens.json",
+                    "file": "semantics/dark.tokens.json",
                     "path": "Form input backgrounds.Segmented control active background"
                   }
                 }
@@ -5925,7 +5925,7 @@
                 },
                 "cssVariable": "--ds-color-form-background-selection-input",
                 "source": {
-                  "file": "tokens/Dark.tokens.json",
+                  "file": "semantics/dark.tokens.json",
                   "path": "Form input backgrounds.Selection input background"
                 },
                 "active": {
@@ -5946,7 +5946,7 @@
                   },
                   "cssVariable": "--ds-color-form-background-selection-input-active",
                   "source": {
-                    "file": "tokens/Dark.tokens.json",
+                    "file": "semantics/dark.tokens.json",
                     "path": "Form input backgrounds.Selection input active"
                   }
                 }
@@ -5970,7 +5970,7 @@
                 },
                 "cssVariable": "--ds-color-form-background-text-input",
                 "source": {
-                  "file": "tokens/Dark.tokens.json",
+                  "file": "semantics/dark.tokens.json",
                   "path": "Form input backgrounds.Text input background"
                 },
                 "dropdown": {
@@ -5991,7 +5991,7 @@
                   },
                   "cssVariable": "--ds-color-form-background-text-input-dropdown",
                   "source": {
-                    "file": "tokens/Dark.tokens.json",
+                    "file": "semantics/dark.tokens.json",
                     "path": "Form input backgrounds.Text input dropdown background"
                   }
                 }
@@ -6017,7 +6017,7 @@
               },
               "cssVariable": "--ds-color-icon-accent-a",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Icon colour picker.Accent A"
               },
               "icon": {
@@ -6037,7 +6037,7 @@
                 },
                 "cssVariable": "--ds-color-icon-accent-a-icon",
                 "source": {
-                  "file": "tokens/Dark.tokens.json",
+                  "file": "semantics/dark.tokens.json",
                   "path": "Icons.Accent A icon background"
                 }
               },
@@ -6060,7 +6060,7 @@
                   },
                   "cssVariable": "--ds-color-icon-accent-a-item-icon",
                   "source": {
-                    "file": "tokens/Dark.tokens.json",
+                    "file": "semantics/dark.tokens.json",
                     "path": "Icons.Accent A item icon background"
                   }
                 }
@@ -6082,7 +6082,7 @@
               },
               "cssVariable": "--ds-color-icon-accent-b",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Icon colour picker.Accent B"
               },
               "icon": {
@@ -6102,7 +6102,7 @@
                 },
                 "cssVariable": "--ds-color-icon-accent-b-icon",
                 "source": {
-                  "file": "tokens/Dark.tokens.json",
+                  "file": "semantics/dark.tokens.json",
                   "path": "Icons.Accent B icon colour"
                 }
               },
@@ -6125,7 +6125,7 @@
                   },
                   "cssVariable": "--ds-color-icon-accent-b-item-icon",
                   "source": {
-                    "file": "tokens/Dark.tokens.json",
+                    "file": "semantics/dark.tokens.json",
                     "path": "Icons.Accent B item icon background"
                   }
                 }
@@ -6149,7 +6149,7 @@
               },
               "cssVariable": "--ds-color-icon-danger-icon",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Icons.Danger icon colour"
               }
             }
@@ -6173,7 +6173,7 @@
                 },
                 "cssVariable": "--ds-color-icon-empty-state-icon",
                 "source": {
-                  "file": "tokens/Dark.tokens.json",
+                  "file": "semantics/dark.tokens.json",
                   "path": "Icons.Empty state icon colour"
                 }
               }
@@ -6196,7 +6196,7 @@
               },
               "cssVariable": "--ds-color-icon-neutral-icon",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Icons.Neutral icon colour"
               }
             }
@@ -6216,7 +6216,7 @@
             },
             "cssVariable": "--ds-color-icon-primary",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Icon colour picker.Primary"
             },
             "icon": {
@@ -6235,7 +6235,7 @@
               },
               "cssVariable": "--ds-color-icon-primary-icon",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Icons.Primary icon colour"
               }
             },
@@ -6257,7 +6257,7 @@
                 },
                 "cssVariable": "--ds-color-icon-primary-item-icon",
                 "source": {
-                  "file": "tokens/Dark.tokens.json",
+                  "file": "semantics/dark.tokens.json",
                   "path": "Icons.Primary item icon background"
                 }
               }
@@ -6278,7 +6278,7 @@
             },
             "cssVariable": "--ds-color-icon-success",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Icon colour picker.Success"
             },
             "icon": {
@@ -6297,7 +6297,7 @@
               },
               "cssVariable": "--ds-color-icon-success-icon",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Icons.Success icon colour"
               }
             },
@@ -6319,7 +6319,7 @@
                 },
                 "cssVariable": "--ds-color-icon-success-item-icon",
                 "source": {
-                  "file": "tokens/Dark.tokens.json",
+                  "file": "semantics/dark.tokens.json",
                   "path": "Icons.Success item icon background"
                 }
               }
@@ -6342,7 +6342,7 @@
               },
               "cssVariable": "--ds-color-icon-user-icon",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Icons.User icon colour"
               }
             }
@@ -6364,7 +6364,7 @@
               },
               "cssVariable": "--ds-color-icon-warning-icon",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Icons.Warning icon colour"
               }
             }
@@ -6386,7 +6386,7 @@
             },
             "cssVariable": "--ds-color-loading-spinner",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Loading states.Spinner background"
             }
           }
@@ -6407,7 +6407,7 @@
             },
             "cssVariable": "--ds-color-lozenge-danger",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Lozenge.Danger text"
             }
           },
@@ -6426,7 +6426,7 @@
             },
             "cssVariable": "--ds-color-lozenge-neutral",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Lozenge.Neutral text"
             }
           },
@@ -6445,7 +6445,7 @@
             },
             "cssVariable": "--ds-color-lozenge-primary",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Lozenge.Primary text"
             }
           },
@@ -6464,7 +6464,7 @@
             },
             "cssVariable": "--ds-color-lozenge-success",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Lozenge.Success text"
             }
           },
@@ -6483,7 +6483,7 @@
             },
             "cssVariable": "--ds-color-lozenge-warning",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Lozenge.Warning text"
             }
           }
@@ -6506,7 +6506,7 @@
               },
               "cssVariable": "--ds-color-mark-external-payment",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Marks.External payment mark"
               }
             }
@@ -6530,7 +6530,7 @@
               },
               "cssVariable": "--ds-color-navigation-dot-active",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Navigation.Dot active"
               }
             },
@@ -6550,7 +6550,7 @@
               },
               "cssVariable": "--ds-color-navigation-dot-inactive",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Navigation.Dot inactive"
               }
             }
@@ -6574,7 +6574,7 @@
                 },
                 "cssVariable": "--ds-color-navigation-mobile-active-item",
                 "source": {
-                  "file": "tokens/Dark.tokens.json",
+                  "file": "semantics/dark.tokens.json",
                   "path": "Navigation.Mobile active item"
                 }
               }
@@ -6599,7 +6599,7 @@
               },
               "cssVariable": "--ds-color-notification-alert-notification",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Notifications.Alert notification background"
               }
             }
@@ -6621,7 +6621,7 @@
               },
               "cssVariable": "--ds-color-notification-default-notification",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Notifications.Default notification background"
               }
             }
@@ -6643,7 +6643,7 @@
               },
               "cssVariable": "--ds-color-notification-info-notification",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Notifications.Info notification background"
               }
             }
@@ -6665,7 +6665,7 @@
               },
               "cssVariable": "--ds-color-notification-success-notification",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Notifications.Success notification background"
               }
             }
@@ -6687,7 +6687,7 @@
               },
               "cssVariable": "--ds-color-notification-warning-notification",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Notifications.Warning notification background"
               }
             }
@@ -6709,7 +6709,7 @@
             },
             "cssVariable": "--ds-color-text-alert",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Font colours.Alert text"
             }
           },
@@ -6730,7 +6730,7 @@
               },
               "cssVariable": "--ds-color-text-button-disabled",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Font colours.Button disabled text"
               }
             },
@@ -6750,7 +6750,7 @@
               },
               "cssVariable": "--ds-color-text-button-secondary",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Font colours.Button secondary text"
               }
             }
@@ -6774,7 +6774,7 @@
                 },
                 "cssVariable": "--ds-color-text-card-heading-primary",
                 "source": {
-                  "file": "tokens/Dark.tokens.json",
+                  "file": "semantics/dark.tokens.json",
                   "path": "Font colours.Card heading primary text"
                 }
               }
@@ -6795,7 +6795,7 @@
             },
             "cssVariable": "--ds-color-text-default",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Font colours.Default text"
             }
           },
@@ -6814,7 +6814,7 @@
             },
             "cssVariable": "--ds-color-text-inverted",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Font colours.Inverted text"
             }
           },
@@ -6833,7 +6833,7 @@
             },
             "cssVariable": "--ds-color-text-light",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Font colours.Light text"
             }
           },
@@ -6852,7 +6852,7 @@
             },
             "cssVariable": "--ds-color-text-lighter",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Font colours.Lighter text"
             }
           },
@@ -6871,7 +6871,7 @@
             },
             "cssVariable": "--ds-color-text-lightest",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Font colours.Lightest text"
             }
           },
@@ -6892,7 +6892,7 @@
               },
               "cssVariable": "--ds-color-text-link-default",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Font colours.Link default"
               }
             },
@@ -6912,7 +6912,7 @@
               },
               "cssVariable": "--ds-color-text-link-disabled",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Font colours.Link disabled"
               }
             },
@@ -6932,7 +6932,7 @@
               },
               "cssVariable": "--ds-color-text-link-hover",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Font colours.Link hover"
               }
             }
@@ -6954,7 +6954,7 @@
               },
               "cssVariable": "--ds-color-text-messaging-bubble",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Font colours.Messaging bubble"
               }
             }
@@ -6974,7 +6974,7 @@
             },
             "cssVariable": "--ds-color-text-success",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Font colours.Success text"
             }
           },
@@ -6993,7 +6993,7 @@
             },
             "cssVariable": "--ds-color-text-warning",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Font colours.Warning text"
             }
           }
@@ -7014,7 +7014,7 @@
             },
             "cssVariable": "--ds-color-tooltip-tooltip",
             "source": {
-              "file": "tokens/Dark.tokens.json",
+              "file": "semantics/dark.tokens.json",
               "path": "Tooltips.Tooltip background"
             },
             "icon": {
@@ -7033,7 +7033,7 @@
               },
               "cssVariable": "--ds-color-tooltip-tooltip-icon",
               "source": {
-                "file": "tokens/Dark.tokens.json",
+                "file": "semantics/dark.tokens.json",
                 "path": "Tooltips.Tooltip icon"
               }
             }
@@ -7053,7 +7053,7 @@
         "unit": "px",
         "cssVariable": "--ds-space-10xl",
         "source": {
-          "file": "spacing/Mode 1.tokens.json",
+          "file": "space.tokens.json",
           "path": "Space-10XL"
         }
       },
@@ -7068,7 +7068,7 @@
         "unit": "px",
         "cssVariable": "--ds-space-11xl",
         "source": {
-          "file": "spacing/Mode 1.tokens.json",
+          "file": "space.tokens.json",
           "path": "Space-11XL"
         }
       },
@@ -7083,7 +7083,7 @@
         "unit": "px",
         "cssVariable": "--ds-space-12xl",
         "source": {
-          "file": "spacing/Mode 1.tokens.json",
+          "file": "space.tokens.json",
           "path": "Space-12XL"
         }
       },
@@ -7098,7 +7098,7 @@
         "unit": "px",
         "cssVariable": "--ds-space-13xl",
         "source": {
-          "file": "spacing/Mode 1.tokens.json",
+          "file": "space.tokens.json",
           "path": "Space-13XL"
         }
       },
@@ -7113,7 +7113,7 @@
         "unit": "px",
         "cssVariable": "--ds-space-14xl",
         "source": {
-          "file": "spacing/Mode 1.tokens.json",
+          "file": "space.tokens.json",
           "path": "Space-14XL"
         }
       },
@@ -7128,7 +7128,7 @@
         "unit": "px",
         "cssVariable": "--ds-space-15xl",
         "source": {
-          "file": "spacing/Mode 1.tokens.json",
+          "file": "space.tokens.json",
           "path": "Space-15XL"
         }
       },
@@ -7143,7 +7143,7 @@
         "unit": "px",
         "cssVariable": "--ds-space-16xl",
         "source": {
-          "file": "spacing/Mode 1.tokens.json",
+          "file": "space.tokens.json",
           "path": "Space-16XL"
         }
       },
@@ -7158,7 +7158,7 @@
         "unit": "px",
         "cssVariable": "--ds-space-17xl",
         "source": {
-          "file": "spacing/Mode 1.tokens.json",
+          "file": "space.tokens.json",
           "path": "Space-17XL"
         }
       },
@@ -7173,7 +7173,7 @@
         "unit": "px",
         "cssVariable": "--ds-space-2xl",
         "source": {
-          "file": "spacing/Mode 1.tokens.json",
+          "file": "space.tokens.json",
           "path": "Space-2XL"
         }
       },
@@ -7188,7 +7188,7 @@
         "unit": "px",
         "cssVariable": "--ds-space-3xl",
         "source": {
-          "file": "spacing/Mode 1.tokens.json",
+          "file": "space.tokens.json",
           "path": "Space-3XL"
         }
       },
@@ -7203,7 +7203,7 @@
         "unit": "px",
         "cssVariable": "--ds-space-4xl",
         "source": {
-          "file": "spacing/Mode 1.tokens.json",
+          "file": "space.tokens.json",
           "path": "Space-4XL"
         }
       },
@@ -7218,7 +7218,7 @@
         "unit": "px",
         "cssVariable": "--ds-space-5xl",
         "source": {
-          "file": "spacing/Mode 1.tokens.json",
+          "file": "space.tokens.json",
           "path": "Space-5XL"
         }
       },
@@ -7233,7 +7233,7 @@
         "unit": "px",
         "cssVariable": "--ds-space-6xl",
         "source": {
-          "file": "spacing/Mode 1.tokens.json",
+          "file": "space.tokens.json",
           "path": "Space-6XL"
         }
       },
@@ -7248,7 +7248,7 @@
         "unit": "px",
         "cssVariable": "--ds-space-7xl",
         "source": {
-          "file": "spacing/Mode 1.tokens.json",
+          "file": "space.tokens.json",
           "path": "Space-7XL"
         }
       },
@@ -7263,7 +7263,7 @@
         "unit": "px",
         "cssVariable": "--ds-space-8xl",
         "source": {
-          "file": "spacing/Mode 1.tokens.json",
+          "file": "space.tokens.json",
           "path": "Space-8XL"
         }
       },
@@ -7278,7 +7278,7 @@
         "unit": "px",
         "cssVariable": "--ds-space-9xl",
         "source": {
-          "file": "spacing/Mode 1.tokens.json",
+          "file": "space.tokens.json",
           "path": "Space-9XL"
         }
       },
@@ -7293,7 +7293,7 @@
         "unit": "px",
         "cssVariable": "--ds-space-lg",
         "source": {
-          "file": "spacing/Mode 1.tokens.json",
+          "file": "space.tokens.json",
           "path": "Space-Lge"
         }
       },
@@ -7308,7 +7308,7 @@
         "unit": "px",
         "cssVariable": "--ds-space-md",
         "source": {
-          "file": "spacing/Mode 1.tokens.json",
+          "file": "space.tokens.json",
           "path": "Space-Med"
         }
       },
@@ -7323,7 +7323,7 @@
         "unit": "px",
         "cssVariable": "--ds-space-sm",
         "source": {
-          "file": "spacing/Mode 1.tokens.json",
+          "file": "space.tokens.json",
           "path": "Space-Sml"
         }
       },
@@ -7338,7 +7338,7 @@
         "unit": "px",
         "cssVariable": "--ds-space-xl",
         "source": {
-          "file": "spacing/Mode 1.tokens.json",
+          "file": "space.tokens.json",
           "path": "Space-XL"
         }
       },
@@ -7353,7 +7353,7 @@
         "unit": "px",
         "cssVariable": "--ds-space-xs",
         "source": {
-          "file": "spacing/Mode 1.tokens.json",
+          "file": "space.tokens.json",
           "path": "Space-ExtraSml"
         }
       }
@@ -7370,7 +7370,7 @@
         "unit": "px",
         "cssVariable": "--ds-radius-10xl",
         "source": {
-          "file": "corners/Mode 1.tokens.json",
+          "file": "radius.tokens.json",
           "path": "Corder-radius.Corner-10XL"
         }
       },
@@ -7385,7 +7385,7 @@
         "unit": "px",
         "cssVariable": "--ds-radius-11xl",
         "source": {
-          "file": "corners/Mode 1.tokens.json",
+          "file": "radius.tokens.json",
           "path": "Corder-radius.Corner-11XL"
         }
       },
@@ -7400,7 +7400,7 @@
         "unit": "px",
         "cssVariable": "--ds-radius-2xl",
         "source": {
-          "file": "corners/Mode 1.tokens.json",
+          "file": "radius.tokens.json",
           "path": "Corder-radius.Corner-2XL"
         }
       },
@@ -7415,7 +7415,7 @@
         "unit": "px",
         "cssVariable": "--ds-radius-3xl",
         "source": {
-          "file": "corners/Mode 1.tokens.json",
+          "file": "radius.tokens.json",
           "path": "Corder-radius.Corner-3XL"
         }
       },
@@ -7430,7 +7430,7 @@
         "unit": "px",
         "cssVariable": "--ds-radius-4xl",
         "source": {
-          "file": "corners/Mode 1.tokens.json",
+          "file": "radius.tokens.json",
           "path": "Corder-radius.Corner-4XL"
         }
       },
@@ -7445,7 +7445,7 @@
         "unit": "px",
         "cssVariable": "--ds-radius-5xl",
         "source": {
-          "file": "corners/Mode 1.tokens.json",
+          "file": "radius.tokens.json",
           "path": "Corder-radius.Corner-5XL"
         }
       },
@@ -7460,7 +7460,7 @@
         "unit": "px",
         "cssVariable": "--ds-radius-6xl",
         "source": {
-          "file": "corners/Mode 1.tokens.json",
+          "file": "radius.tokens.json",
           "path": "Corder-radius.Corner-6XL"
         }
       },
@@ -7475,7 +7475,7 @@
         "unit": "px",
         "cssVariable": "--ds-radius-7xl",
         "source": {
-          "file": "corners/Mode 1.tokens.json",
+          "file": "radius.tokens.json",
           "path": "Corder-radius.Corner-7XL"
         }
       },
@@ -7490,7 +7490,7 @@
         "unit": "px",
         "cssVariable": "--ds-radius-8xl",
         "source": {
-          "file": "corners/Mode 1.tokens.json",
+          "file": "radius.tokens.json",
           "path": "Corder-radius.Corner-8XL"
         }
       },
@@ -7505,7 +7505,7 @@
         "unit": "px",
         "cssVariable": "--ds-radius-9xl",
         "source": {
-          "file": "corners/Mode 1.tokens.json",
+          "file": "radius.tokens.json",
           "path": "Corder-radius.Corner-9XL"
         }
       },
@@ -7520,7 +7520,7 @@
         "unit": "px",
         "cssVariable": "--ds-radius-lg",
         "source": {
-          "file": "corners/Mode 1.tokens.json",
+          "file": "radius.tokens.json",
           "path": "Corder-radius.Corner-Lge"
         }
       },
@@ -7535,7 +7535,7 @@
         "unit": "px",
         "cssVariable": "--ds-radius-md",
         "source": {
-          "file": "corners/Mode 1.tokens.json",
+          "file": "radius.tokens.json",
           "path": "Corder-radius.Corner-Med"
         }
       },
@@ -7550,7 +7550,7 @@
         "unit": "px",
         "cssVariable": "--ds-radius-sm",
         "source": {
-          "file": "corners/Mode 1.tokens.json",
+          "file": "radius.tokens.json",
           "path": "Corder-radius.Corner-Sml"
         }
       },
@@ -7565,7 +7565,7 @@
         "unit": "px",
         "cssVariable": "--ds-radius-xl",
         "source": {
-          "file": "corners/Mode 1.tokens.json",
+          "file": "radius.tokens.json",
           "path": "Corder-radius.Corner-XL"
         }
       },
@@ -7580,7 +7580,7 @@
         "unit": "px",
         "cssVariable": "--ds-radius-xs",
         "source": {
-          "file": "corners/Mode 1.tokens.json",
+          "file": "radius.tokens.json",
           "path": "Corder-radius.Corner-X-sml"
         }
       }
@@ -7613,7 +7613,7 @@
         },
         "cssVariable": "--ds-shadow-card",
         "source": {
-          "file": "tokens/Dark.tokens.json",
+          "file": "semantics/dark.tokens.json",
           "path": "Drop shadows - cards.Position X"
         }
       }
@@ -7638,7 +7638,7 @@
                 "fontWeight": 700
               },
               "source": {
-                "file": "typography/Default.tokens.json",
+                "file": "typography.tokens.json",
                 "path": "Bdy ex sml bold.FontSize"
               }
             },
@@ -7658,7 +7658,7 @@
                 "fontWeight": 500
               },
               "source": {
-                "file": "typography/Default.tokens.json",
+                "file": "typography.tokens.json",
                 "path": "Bdy ex sml medium.FontSize"
               }
             },
@@ -7678,7 +7678,7 @@
                 "fontWeight": 400
               },
               "source": {
-                "file": "typography/Default.tokens.json",
+                "file": "typography.tokens.json",
                 "path": "Bdy ex sml regular.FontSize"
               }
             },
@@ -7700,7 +7700,7 @@
                   "fontWeight": 600
                 },
                 "source": {
-                  "file": "typography/Default.tokens.json",
+                  "file": "typography.tokens.json",
                   "path": "Bdy ex sml semiBold.FontSize"
                 }
               }
@@ -7723,7 +7723,7 @@
               "fontWeight": 700
             },
             "source": {
-              "file": "typography/Default.tokens.json",
+              "file": "typography.tokens.json",
               "path": "Bdy lge bold.FontSize"
             }
           },
@@ -7742,7 +7742,7 @@
               "fontWeight": 500
             },
             "source": {
-              "file": "typography/Default.tokens.json",
+              "file": "typography.tokens.json",
               "path": "Bdy lge medium.FontSize"
             }
           },
@@ -7761,7 +7761,7 @@
               "fontWeight": 400
             },
             "source": {
-              "file": "typography/Default.tokens.json",
+              "file": "typography.tokens.json",
               "path": "Bdy lge regular.FontSize"
             }
           },
@@ -7780,7 +7780,7 @@
               "fontWeight": 600
             },
             "source": {
-              "file": "typography/Default.tokens.json",
+              "file": "typography.tokens.json",
               "path": "Bdy lge semibold.FontSize"
             }
           }
@@ -7801,7 +7801,7 @@
               "fontWeight": 700
             },
             "source": {
-              "file": "typography/Default.tokens.json",
+              "file": "typography.tokens.json",
               "path": "Bdy med bold.FontSize"
             }
           },
@@ -7820,7 +7820,7 @@
               "fontWeight": 500
             },
             "source": {
-              "file": "typography/Default.tokens.json",
+              "file": "typography.tokens.json",
               "path": "Bdy med medium.FontSize"
             }
           },
@@ -7839,7 +7839,7 @@
               "fontWeight": 400
             },
             "source": {
-              "file": "typography/Default.tokens.json",
+              "file": "typography.tokens.json",
               "path": "Bdy med regular.FontSize"
             }
           },
@@ -7858,7 +7858,7 @@
               "fontWeight": 600
             },
             "source": {
-              "file": "typography/Default.tokens.json",
+              "file": "typography.tokens.json",
               "path": "Bdy med semibold.FontSize"
             }
           }
@@ -7879,7 +7879,7 @@
               "fontWeight": 700
             },
             "source": {
-              "file": "typography/Default.tokens.json",
+              "file": "typography.tokens.json",
               "path": "Bdy sml bold.FontSize"
             }
           },
@@ -7898,7 +7898,7 @@
               "fontWeight": 500
             },
             "source": {
-              "file": "typography/Default.tokens.json",
+              "file": "typography.tokens.json",
               "path": "Bdy sml medium.FontSize"
             }
           },
@@ -7917,7 +7917,7 @@
               "fontWeight": 400
             },
             "source": {
-              "file": "typography/Default.tokens.json",
+              "file": "typography.tokens.json",
               "path": "Bdy sml regular.FontSize"
             }
           },
@@ -7936,7 +7936,7 @@
               "fontWeight": 600
             },
             "source": {
-              "file": "typography/Default.tokens.json",
+              "file": "typography.tokens.json",
               "path": "Bdy sml semibold.FontSize"
             }
           }
@@ -7959,7 +7959,7 @@
               "fontWeight": 700
             },
             "source": {
-              "file": "typography/Default.tokens.json",
+              "file": "typography.tokens.json",
               "path": "Display 2XL Bold.FontSize"
             }
           },
@@ -7978,7 +7978,7 @@
               "fontWeight": 500
             },
             "source": {
-              "file": "typography/Default.tokens.json",
+              "file": "typography.tokens.json",
               "path": "Display 2XL Medium.FontSize"
             }
           }
@@ -7999,7 +7999,7 @@
               "fontWeight": 700
             },
             "source": {
-              "file": "typography/Default.tokens.json",
+              "file": "typography.tokens.json",
               "path": "Display LG Bold.FontSize"
             }
           },
@@ -8018,7 +8018,7 @@
               "fontWeight": 500
             },
             "source": {
-              "file": "typography/Default.tokens.json",
+              "file": "typography.tokens.json",
               "path": "Display LG Medium.FontSize"
             }
           }
@@ -8039,7 +8039,7 @@
               "fontWeight": 700
             },
             "source": {
-              "file": "typography/Default.tokens.json",
+              "file": "typography.tokens.json",
               "path": "Display MD Bold.FontSize"
             }
           },
@@ -8058,7 +8058,7 @@
               "fontWeight": 500
             },
             "source": {
-              "file": "typography/Default.tokens.json",
+              "file": "typography.tokens.json",
               "path": "Display MD Medium.FontSize"
             }
           }
@@ -8079,7 +8079,7 @@
               "fontWeight": 700
             },
             "source": {
-              "file": "typography/Default.tokens.json",
+              "file": "typography.tokens.json",
               "path": "Display SM Bold.FontSize"
             }
           },
@@ -8098,7 +8098,7 @@
               "fontWeight": 500
             },
             "source": {
-              "file": "typography/Default.tokens.json",
+              "file": "typography.tokens.json",
               "path": "Display SM Medium.FontSize"
             }
           }
@@ -8119,7 +8119,7 @@
               "fontWeight": 700
             },
             "source": {
-              "file": "typography/Default.tokens.json",
+              "file": "typography.tokens.json",
               "path": "Display XL Bold.FontSize"
             }
           },
@@ -8138,7 +8138,7 @@
               "fontWeight": 500
             },
             "source": {
-              "file": "typography/Default.tokens.json",
+              "file": "typography.tokens.json",
               "path": "Display XL Medium.FontSize"
             }
           }
@@ -8159,7 +8159,7 @@
             "fontWeight": 700
           },
           "source": {
-            "file": "typography/Default.tokens.json",
+            "file": "typography.tokens.json",
             "path": "H1.FontSize"
           }
         },
@@ -8177,7 +8177,7 @@
             "fontWeight": 600
           },
           "source": {
-            "file": "typography/Default.tokens.json",
+            "file": "typography.tokens.json",
             "path": "H2.FontSize"
           }
         },
@@ -8195,7 +8195,7 @@
             "fontWeight": 600
           },
           "source": {
-            "file": "typography/Default.tokens.json",
+            "file": "typography.tokens.json",
             "path": "H3.FontSize"
           }
         },
@@ -8213,7 +8213,7 @@
             "fontWeight": 600
           },
           "source": {
-            "file": "typography/Default.tokens.json",
+            "file": "typography.tokens.json",
             "path": "H4.FontSize"
           }
         },
@@ -8231,7 +8231,7 @@
             "fontWeight": 600
           },
           "source": {
-            "file": "typography/Default.tokens.json",
+            "file": "typography.tokens.json",
             "path": "H5.FontSize"
           }
         },
@@ -8249,7 +8249,7 @@
             "fontWeight": 600
           },
           "source": {
-            "file": "typography/Default.tokens.json",
+            "file": "typography.tokens.json",
             "path": "H6.FontSize"
           }
         }
@@ -8267,7 +8267,7 @@
           "fontWeight": 600
         },
         "source": {
-          "file": "typography/Default.tokens.json",
+          "file": "typography.tokens.json",
           "path": "Oversized.FontSize"
         }
       }
